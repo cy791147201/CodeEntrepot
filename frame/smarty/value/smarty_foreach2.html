@@ -1,0 +1,33 @@
+<!--遍历数组-->
+<{$var=[1,2,3,4,5]}>
+<{$vars=[]}>
+<{foreach $vars as $key=>$value}>
+	<{$key}>=><{$value}>
+<{foreachelse}>
+	数组为空或没有分配
+<{/foreach}><br/>
+
+<{foreach $var as $value}>
+	<{$value}>
+<{/foreach}><br/>
+
+<{foreach $var as $key=>$value}>
+	<{$key}>=><{$value}>
+<{/foreach}><br/>
+
+smarty2下的foreach<br/>
+<{foreach name="one" from=$var item="value" key=k}>
+	<{if $smarty.foreach.one.first}>
+	则是第一次
+	<{/if}>
+	<{if $smarty.foreach.one.last}>
+	则是最后一次
+	<{/if}>
+	<{$smarty.foreach.one.iteration}>=><{$k}>=><{$value}>@
+<{/foreach}><br/>
+
+<{foreach name="one" from=$var item="value" key=k}>
+	<{$k}>=><{$value}>
+<{/foreach}><br/>
+
+one的循环总次数<{$smarty.foreach.one.total}><br/>

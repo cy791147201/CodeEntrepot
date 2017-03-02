@@ -1,0 +1,17 @@
+.father{
+    width: 2070px;
+    margin: 0px auto;
+    margin-top: 50px;
+}
+
+.infos{
+    width: 320px;
+    height: 900px;
+    float: left;
+}
+
+.DoInfo{
+    width: 1750px;
+    height: 900px;
+    float: left;
+}

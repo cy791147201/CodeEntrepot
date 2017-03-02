@@ -1,0 +1,1522 @@
+[ 2016-12-14T16:14:46+08:00 ] ::1 /kefuchoujiang/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.015600s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.015600s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015600s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015600s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-12-14T16:14:49+08:00 ] ::1 /kefuchoujiang/index.php/Home/Index/ShenCheck
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0312s ]
+SQL: SELECT * FROM `admin` WHERE `user` = 'nanxiwang' AND `pwd` = 'd60f72b1b6a16b0923ee94dbd6148247' LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015600s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015600s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-12-14T16:47:26+08:00 ] ::1 /kefuchoujiang/index.php/Home/Index/ShenCheck
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `admin` WHERE `user` = 'nanxiwang' AND `pwd` = 'd60f72b1b6a16b0923ee94dbd6148247' LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-12-14T16:55:48+08:00 ] ::1 /kefuchoujiang/index.php/Home/ShenInsert/ShenInsert
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `indent` [ RunTime:0.0020s ]
+SQL: INSERT INTO `indent` (`user`,`tel`,`address`,`combo`,`money`,`status`,`add_time`,`who_upd`,`upd_time`,`url`) VALUES ('0','11','0','0','0','1','1481705748','0','','http://localhost/ceshichoujiang/') [ RunTime:0.0440s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-12-14T16:56:02+08:00 ] ::1 /kefuchoujiang/index.php/Home/ShenInsert/ShenInsert
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `indent` [ RunTime:0.0010s ]
+SQL: INSERT INTO `indent` (`user`,`tel`,`address`,`combo`,`money`,`status`,`add_time`,`who_upd`,`upd_time`,`url`) VALUES ('0','11','0','0','0','1','1481705762','0','','http://localhost/ceshichoujiang/') [ RunTime:0.0150s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-12-14T16:56:09+08:00 ] ::1 /kefuchoujiang/index.php/Home/ShenInsert/ShenInsert
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `indent` [ RunTime:0.0010s ]
+SQL: INSERT INTO `indent` (`user`,`tel`,`address`,`combo`,`money`,`status`,`add_time`,`who_upd`,`upd_time`,`url`) VALUES ('0','11','0','0','0','1','1481705769','0','','http://localhost/ceshichoujiang/') [ RunTime:0.0190s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-12-14T16:56:33+08:00 ] ::1 /kefuchoujiang/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-12-14T16:56:38+08:00 ] ::1 /kefuchoujiang/index.php/Home/Index/ShenCheck
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `admin` WHERE `user` = 'shenshuang' AND `pwd` = '552e190abdbb090600b47727e9e53ab3' LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-12-14T16:56:39+08:00 ] ::1 /kefuchoujiang/index.php/Home/Index/ShenShow
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: id H:\Apache24\htdocs\kefuchoujiang\Home\Runtime\Cache\Home\6748d867ba9a391e97ce940b65adda61.php 第 24 行.
+NOTIC: [8] Undefined variable: name H:\Apache24\htdocs\kefuchoujiang\Home\Runtime\Cache\Home\6748d867ba9a391e97ce940b65adda61.php 第 28 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-12-14T16:56:39+08:00 ] ::1 /kefuchoujiang/index.php/Home/ShenShow/ShenRefresh.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `indent` [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `indent` WHERE `status` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `indent` WHERE `status` = 1 ORDER BY id DESC LIMIT 0,11   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: user H:\Apache24\htdocs\kefuchoujiang\Home\Home\Controller\ShenShowController.class.php 第 57 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-12-14T16:56:45+08:00 ] ::1 /kefuchoujiang/index.php/Home/ShenShow/ShenDo.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `indent` [ RunTime:0.0020s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `indent` WHERE `status` = 2 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `indent` WHERE `status` = 2 ORDER BY id DESC LIMIT 0,11   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `indent` WHERE `status` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `indent` WHERE `status` = 1 ORDER BY id DESC LIMIT 0,11   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: user H:\Apache24\htdocs\kefuchoujiang\Home\Home\Controller\ShenShowController.class.php 第 57 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-12-14T16:56:48+08:00 ] ::1 /kefuchoujiang/index.php/Home/ShenShow/ShenRefresh.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `indent` [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `indent` WHERE `status` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `indent` WHERE `status` = 1 ORDER BY id DESC LIMIT 0,11   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: user H:\Apache24\htdocs\kefuchoujiang\Home\Home\Controller\ShenShowController.class.php 第 57 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.017001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-12-14T16:56:51+08:00 ] ::1 /kefuchoujiang/index.php/Home/ShenShow/ShenRefresh.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `indent` [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `indent` WHERE `status` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `indent` WHERE `status` = 1 ORDER BY id DESC LIMIT 0,11   [ RunTime:0.0010s ]
+NOTIC: [8] Undefined index: user H:\Apache24\htdocs\kefuchoujiang\Home\Home\Controller\ShenShowController.class.php 第 57 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-12-14T16:56:51+08:00 ] ::1 /kefuchoujiang/index.php/Home/ShenShow/ShenInfo?id=2
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `indent` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `indent` WHERE `id` = 2 LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: form H:\Apache24\htdocs\kefuchoujiang\Home\Runtime\Cache\Home\c7b2ca3c8f633030361ab828b56b3b36.php 第 67 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-12-14T16:56:54+08:00 ] ::1 /kefuchoujiang/index.php/Home/ShenShow/ShenRefresh.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001001s ]
+SQL: SHOW COLUMNS FROM `indent` [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `indent` WHERE `status` = 1 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `indent` WHERE `status` = 1 ORDER BY id DESC LIMIT 0,11   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: user H:\Apache24\htdocs\kefuchoujiang\Home\Home\Controller\ShenShowController.class.php 第 57 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-12-14T16:56:55+08:00 ] ::1 /kefuchoujiang/index.php/Home/ShenShow/ShenEdit
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `indent` [ RunTime:0.0020s ]
+SQL: UPDATE `indent` SET `user`='1',`tel`='11',`address`='0',`combo`='0',`money`='0',`status`='2',`who_upd`='1',`upd_time`='1481705814' WHERE `id` = 2 [ RunTime:0.0660s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-12-14T16:56:56+08:00 ] ::1 /kefuchoujiang/index.php/Home/ShenShow/ShenDo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `indent` [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `indent` WHERE `status` = 2 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `indent` WHERE `status` = 2 ORDER BY id DESC LIMIT 0,11   [ RunTime:0.0020s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `indent` WHERE `status` = 1 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `indent` WHERE `status` = 1 ORDER BY id DESC LIMIT 0,11   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: user H:\Apache24\htdocs\kefuchoujiang\Home\Home\Controller\ShenShowController.class.php 第 57 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-12-14T16:56:57+08:00 ] ::1 /kefuchoujiang/index.php/Home/ShenShow/ShenRefresh.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001001s ]
+SQL: SHOW COLUMNS FROM `indent` [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `indent` WHERE `status` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `indent` WHERE `status` = 1 ORDER BY id DESC LIMIT 0,11   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: user H:\Apache24\htdocs\kefuchoujiang\Home\Home\Controller\ShenShowController.class.php 第 57 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-12-14T16:57:00+08:00 ] ::1 /kefuchoujiang/index.php/Home/ShenShow/ShenRefresh.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `indent` [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `indent` WHERE `status` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `indent` WHERE `status` = 1 ORDER BY id DESC LIMIT 0,11   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: user H:\Apache24\htdocs\kefuchoujiang\Home\Home\Controller\ShenShowController.class.php 第 57 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-12-14T16:57:03+08:00 ] ::1 /kefuchoujiang/index.php/Home/ShenShow/ShenRefresh.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `indent` [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `indent` WHERE `status` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `indent` WHERE `status` = 1 ORDER BY id DESC LIMIT 0,11   [ RunTime:0.0010s ]
+NOTIC: [8] Undefined index: user H:\Apache24\htdocs\kefuchoujiang\Home\Home\Controller\ShenShowController.class.php 第 57 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.016000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-12-14T16:57:06+08:00 ] ::1 /kefuchoujiang/index.php/Home/ShenShow/ShenRefresh.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `indent` [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `indent` WHERE `status` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `indent` WHERE `status` = 1 ORDER BY id DESC LIMIT 0,11   [ RunTime:0.0010s ]
+NOTIC: [8] Undefined index: user H:\Apache24\htdocs\kefuchoujiang\Home\Home\Controller\ShenShowController.class.php 第 57 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-12-14T16:57:09+08:00 ] ::1 /kefuchoujiang/index.php/Home/ShenShow/ShenRefresh.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `indent` [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `indent` WHERE `status` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `indent` WHERE `status` = 1 ORDER BY id DESC LIMIT 0,11   [ RunTime:0.0010s ]
+NOTIC: [8] Undefined index: user H:\Apache24\htdocs\kefuchoujiang\Home\Home\Controller\ShenShowController.class.php 第 57 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-12-14T16:57:13+08:00 ] ::1 /kefuchoujiang/index.php/Home/ShenShow/ShenRefresh.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `indent` [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `indent` WHERE `status` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `indent` WHERE `status` = 1 ORDER BY id DESC LIMIT 0,11   [ RunTime:0.0010s ]
+NOTIC: [8] Undefined index: user H:\Apache24\htdocs\kefuchoujiang\Home\Home\Controller\ShenShowController.class.php 第 57 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-12-14T16:57:16+08:00 ] ::1 /kefuchoujiang/index.php/Home/ShenShow/ShenRefresh.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `indent` [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `indent` WHERE `status` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `indent` WHERE `status` = 1 ORDER BY id DESC LIMIT 0,11   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: user H:\Apache24\htdocs\kefuchoujiang\Home\Home\Controller\ShenShowController.class.php 第 57 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-12-14T16:57:19+08:00 ] ::1 /kefuchoujiang/index.php/Home/ShenShow/ShenRefresh.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `indent` [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `indent` WHERE `status` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `indent` WHERE `status` = 1 ORDER BY id DESC LIMIT 0,11   [ RunTime:0.0010s ]
+NOTIC: [8] Undefined index: user H:\Apache24\htdocs\kefuchoujiang\Home\Home\Controller\ShenShowController.class.php 第 57 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001001s ]
+
+[ 2016-12-14T16:57:19+08:00 ] ::1 /kefuchoujiang/index.php/Home/ShenExcel/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: id H:\Apache24\htdocs\kefuchoujiang\Home\Runtime\Cache\Home\3ef5f05a635a5f4ea26d2a0bc36e2652.php 第 25 行.
+NOTIC: [8] Undefined variable: name H:\Apache24\htdocs\kefuchoujiang\Home\Runtime\Cache\Home\3ef5f05a635a5f4ea26d2a0bc36e2652.php 第 29 行.
+NOTIC: [8] Undefined variable: info H:\Apache24\htdocs\kefuchoujiang\Home\Runtime\Cache\Home\3ef5f05a635a5f4ea26d2a0bc36e2652.php 第 118 行.
+NOTIC: [8] Undefined variable: page H:\Apache24\htdocs\kefuchoujiang\Home\Runtime\Cache\Home\3ef5f05a635a5f4ea26d2a0bc36e2652.php 第 144 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-12-14T16:57:21+08:00 ] ::1 /kefuchoujiang/index.php/Home/ShenExcel/ShenCondition?style=2
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: style H:\Apache24\htdocs\kefuchoujiang\Home\Home\Controller\ShenExcelController.class.php 第 116 行.
+SQL: SHOW COLUMNS FROM `indent` [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `indent` WHERE `status` = 2 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `indent` WHERE `status` = 2 ORDER BY id DESC LIMIT 0,8   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: id H:\Apache24\htdocs\kefuchoujiang\Home\Runtime\Cache\Home\3ef5f05a635a5f4ea26d2a0bc36e2652.php 第 25 行.
+NOTIC: [8] Undefined variable: name H:\Apache24\htdocs\kefuchoujiang\Home\Runtime\Cache\Home\3ef5f05a635a5f4ea26d2a0bc36e2652.php 第 29 行.
+NOTIC: [8] Undefined index: who_add H:\Apache24\htdocs\kefuchoujiang\Home\Runtime\Cache\Home\3ef5f05a635a5f4ea26d2a0bc36e2652.php 第 132 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-12-14T16:57:31+08:00 ] ::1 /kefuchoujiang/index.php/Home/ShenExcel/ShenCondition
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `indent` [ RunTime:0.0010s ]
+NOTIC: [8] Undefined index: style H:\Apache24\htdocs\kefuchoujiang\Home\Home\Controller\ShenExcelController.class.php 第 151 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `indent` WHERE ( `add_time` > 1480582647 AND `add_time` < 1483088249  ) AND `status` = 2 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `indent` WHERE ( `add_time` > 1480582647 AND `add_time` < 1483088249  ) AND `status` = 2 ORDER BY id DESC LIMIT 0,8   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: id H:\Apache24\htdocs\kefuchoujiang\Home\Runtime\Cache\Home\3ef5f05a635a5f4ea26d2a0bc36e2652.php 第 25 行.
+NOTIC: [8] Undefined variable: name H:\Apache24\htdocs\kefuchoujiang\Home\Runtime\Cache\Home\3ef5f05a635a5f4ea26d2a0bc36e2652.php 第 29 行.
+NOTIC: [8] Undefined index: who_add H:\Apache24\htdocs\kefuchoujiang\Home\Runtime\Cache\Home\3ef5f05a635a5f4ea26d2a0bc36e2652.php 第 132 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-12-14T16:57:43+08:00 ] ::1 /kefuchoujiang/index.php/Home/ShenExcel/ShenCondition
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `indent` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `indent` WHERE ( `add_time` > 1480582654 AND `add_time` < 1483088259  ) AND `status` = 2 ORDER BY id DESC  [ RunTime:0.0000s ]
+
+[ 2016-12-14T17:01:53+08:00 ] ::1 /kefuchoujiang/index.php/Home/ShenInsert/ShenInsert
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002001s ]
+SQL: SHOW COLUMNS FROM `indent` [ RunTime:0.0010s ]
+SQL: INSERT INTO `indent` (`user`,`tel`,`address`,`combo`,`money`,`status`,`add_time`,`who_upd`,`upd_time`,`url`) VALUES ('0','1111','0','0','0','1','1481706113','0','','http://localhost/ceshichoujiang/') [ RunTime:0.0170s ]
+
+[ 2016-12-14T17:02:43+08:00 ] ::1 /kefuchoujiang/index.php/Home/ShenInsert/ShenInsert
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `indent` [ RunTime:0.0010s ]
+SQL: INSERT INTO `indent` (`user`,`tel`,`address`,`combo`,`money`,`status`,`add_time`,`who_upd`,`upd_time`,`url`) VALUES ('0','111111','0','0','0','1','1481706163','0','','http://localhost/ceshichoujiang/') [ RunTime:0.0230s ]
+
+[ 2016-12-14T17:04:07+08:00 ] ::1 /kefuchoujiang/index.php/Home/ShenInsert/ShenInsert
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `indent` [ RunTime:0.0000s ]
+SQL: INSERT INTO `indent` (`user`,`tel`,`address`,`combo`,`money`,`status`,`add_time`,`who_upd`,`upd_time`,`url`) VALUES ('0','222222','0','0','0','1','1481706247','0','','http://localhost/ceshichoujiang/') [ RunTime:0.0190s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-12-14T17:05:03+08:00 ] ::1 /kefuchoujiang/index.php/Home/ShenInsert/ShenInsert
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `indent` [ RunTime:0.0010s ]
+SQL: INSERT INTO `indent` (`user`,`tel`,`address`,`combo`,`money`,`status`,`add_time`,`who_upd`,`upd_time`,`url`) VALUES ('0','222222','0','0','0','1','1481706303','0','','http://localhost/ceshichoujiang/') [ RunTime:0.0190s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-12-14T17:05:33+08:00 ] ::1 /kefuchoujiang/index.php/Home/ShenInsert/ShenInsert
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-12-14T17:05:44+08:00 ] ::1 /kefuchoujiang/index.php/Home/ShenInsert/ShenInsert
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-12-14T17:05:51+08:00 ] ::1 /kefuchoujiang/index.php/Home/ShenInsert/ShenInsert
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `indent` [ RunTime:0.0000s ]
+SQL: INSERT INTO `indent` (`user`,`tel`,`address`,`combo`,`money`,`status`,`add_time`,`who_upd`,`upd_time`,`url`) VALUES ('0','33333333','0','0','0','1','1481706351','0','','http://localhost/ceshichoujiang/') [ RunTime:0.0270s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-12-14T17:06:27+08:00 ] ::1 /kefuchoujiang/index.php/Home/ShenInsert/ShenInsert
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `indent` [ RunTime:0.0010s ]
+SQL: INSERT INTO `indent` (`user`,`tel`,`address`,`combo`,`money`,`status`,`add_time`,`who_upd`,`upd_time`,`url`) VALUES ('0','444444','0','0','0','1','1481706386','0','','http://localhost/ceshichoujiang/') [ RunTime:0.0330s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-12-14T17:06:54+08:00 ] ::1 /kefuchoujiang/index.php/Home/ShenInsert/ShenInsert
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `indent` [ RunTime:0.0000s ]
+SQL: INSERT INTO `indent` (`user`,`tel`,`address`,`combo`,`money`,`status`,`add_time`,`who_upd`,`upd_time`,`url`) VALUES ('0','1111111','0','0','0','1','1481706414','0','','http://localhost/ceshichoujiang/') [ RunTime:0.0230s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-12-14T17:06:58+08:00 ] ::1 /kefuchoujiang/index.php/Home/ShenInsert/ShenInsert
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001001s ]
+SQL: SHOW COLUMNS FROM `indent` [ RunTime:0.0010s ]
+SQL: INSERT INTO `indent` (`user`,`tel`,`address`,`combo`,`money`,`status`,`add_time`,`who_upd`,`upd_time`,`url`) VALUES ('0','2147483647','0','0','0','1','1481706418','0','','http://localhost/ceshichoujiang/index.htm') [ RunTime:0.0150s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-12-14T17:07:14+08:00 ] ::1 /kefuchoujiang/index.php/Home/ShenInsert/ShenInsert
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `indent` [ RunTime:0.0010s ]
+SQL: INSERT INTO `indent` (`user`,`tel`,`address`,`combo`,`money`,`status`,`add_time`,`who_upd`,`upd_time`,`url`) VALUES ('0','0','0','0','0','1','1481706434','0','','http://localhost/ceshichoujiang/index.htm') [ RunTime:0.0240s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-12-14T17:07:25+08:00 ] ::1 /kefuchoujiang/index.php/Home/ShenInsert/ShenInsert
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `indent` [ RunTime:0.0010s ]
+SQL: INSERT INTO `indent` (`user`,`tel`,`address`,`combo`,`money`,`status`,`add_time`,`who_upd`,`upd_time`,`url`) VALUES ('0','11111111','0','0','0','1','1481706445','0','','http://localhost/ceshichoujiang/index.htm') [ RunTime:0.0250s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-12-14T17:07:58+08:00 ] ::1 /kefuchoujiang/index.php/Home/ShenInsert/ShenInsert
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `indent` [ RunTime:0.0010s ]
+SQL: INSERT INTO `indent` (`user`,`tel`,`address`,`combo`,`money`,`status`,`add_time`,`who_upd`,`upd_time`,`url`) VALUES ('0','222222','0','0','0','1','1481706478','0','','http://localhost/ceshichoujiang/index.htm') [ RunTime:0.0200s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-12-14T17:08:11+08:00 ] ::1 /kefuchoujiang/index.php/Home/ShenInsert/ShenInsert
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `indent` [ RunTime:0.0000s ]
+SQL: INSERT INTO `indent` (`user`,`tel`,`address`,`combo`,`money`,`status`,`add_time`,`who_upd`,`upd_time`,`url`) VALUES ('0','0','0','0','0','1','1481706491','0','','http://localhost/ceshichoujiang/index.htm') [ RunTime:0.0160s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-12-14T17:08:33+08:00 ] ::1 /kefuchoujiang/index.php/Home/ShenInsert/ShenInsert
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001001s ]
+SQL: SHOW COLUMNS FROM `indent` [ RunTime:0.0010s ]
+SQL: INSERT INTO `indent` (`user`,`tel`,`address`,`combo`,`money`,`status`,`add_time`,`who_upd`,`upd_time`,`url`) VALUES ('0','111111','0','0','0','1','1481706513','0','','http://localhost/ceshichoujiang/index.htm') [ RunTime:0.0180s ]
+
+[ 2016-12-14T17:09:12+08:00 ] ::1 /kefuchoujiang/index.php/Home/Index/ShenShow
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: id H:\Apache24\htdocs\kefuchoujiang\Home\Runtime\Cache\Home\6748d867ba9a391e97ce940b65adda61.php 第 24 行.
+NOTIC: [8] Undefined variable: name H:\Apache24\htdocs\kefuchoujiang\Home\Runtime\Cache\Home\6748d867ba9a391e97ce940b65adda61.php 第 28 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-12-14T17:09:12+08:00 ] ::1 /kefuchoujiang/index.php/Home/ShenShow/ShenRefresh.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `indent` [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `indent` WHERE `status` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `indent` WHERE `status` = 1 ORDER BY id DESC LIMIT 0,11   [ RunTime:0.0010s ]
+NOTIC: [8] Undefined index: user H:\Apache24\htdocs\kefuchoujiang\Home\Home\Controller\ShenShowController.class.php 第 57 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-12-14T17:09:12+08:00 ] ::1 /kefuchoujiang/index.php/Home/ShenShow/ShenDo.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `indent` [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `indent` WHERE `status` = 2 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `indent` WHERE `status` = 2 ORDER BY id DESC LIMIT 0,11   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `indent` WHERE `status` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `indent` WHERE `status` = 1 ORDER BY id DESC LIMIT 0,11   [ RunTime:0.0010s ]
+NOTIC: [8] Undefined index: user H:\Apache24\htdocs\kefuchoujiang\Home\Home\Controller\ShenShowController.class.php 第 57 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-12-14T17:09:15+08:00 ] ::1 /kefuchoujiang/index.php/Home/ShenShow/ShenRefresh.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `indent` [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `indent` WHERE `status` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `indent` WHERE `status` = 1 ORDER BY id DESC LIMIT 0,11   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: user H:\Apache24\htdocs\kefuchoujiang\Home\Home\Controller\ShenShowController.class.php 第 57 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-12-14T17:09:19+08:00 ] ::1 /kefuchoujiang/index.php/Home/ShenShow/ShenRefresh.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `indent` [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `indent` WHERE `status` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `indent` WHERE `status` = 1 ORDER BY id DESC LIMIT 0,11   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: user H:\Apache24\htdocs\kefuchoujiang\Home\Home\Controller\ShenShowController.class.php 第 57 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-12-14T17:09:22+08:00 ] ::1 /kefuchoujiang/index.php/Home/ShenShow/ShenRefresh.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001001s ]
+SQL: SHOW COLUMNS FROM `indent` [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `indent` WHERE `status` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `indent` WHERE `status` = 1 ORDER BY id DESC LIMIT 0,11   [ RunTime:0.0010s ]
+NOTIC: [8] Undefined index: user H:\Apache24\htdocs\kefuchoujiang\Home\Home\Controller\ShenShowController.class.php 第 57 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-12-14T17:09:25+08:00 ] ::1 /kefuchoujiang/index.php/Home/ShenShow/ShenRefresh.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `indent` [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `indent` WHERE `status` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `indent` WHERE `status` = 1 ORDER BY id DESC LIMIT 0,11   [ RunTime:0.0010s ]
+NOTIC: [8] Undefined index: user H:\Apache24\htdocs\kefuchoujiang\Home\Home\Controller\ShenShowController.class.php 第 57 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-12-14T17:09:28+08:00 ] ::1 /kefuchoujiang/index.php/Home/ShenShow/ShenRefresh.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `indent` [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `indent` WHERE `status` = 1 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `indent` WHERE `status` = 1 ORDER BY id DESC LIMIT 0,11   [ RunTime:0.0010s ]
+NOTIC: [8] Undefined index: user H:\Apache24\htdocs\kefuchoujiang\Home\Home\Controller\ShenShowController.class.php 第 57 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-12-14T17:09:31+08:00 ] ::1 /kefuchoujiang/index.php/Home/ShenShow/ShenRefresh.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `indent` [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `indent` WHERE `status` = 1 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `indent` WHERE `status` = 1 ORDER BY id DESC LIMIT 0,11   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: user H:\Apache24\htdocs\kefuchoujiang\Home\Home\Controller\ShenShowController.class.php 第 57 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-12-14T17:09:34+08:00 ] ::1 /kefuchoujiang/index.php/Home/ShenShow/ShenRefresh.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `indent` [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `indent` WHERE `status` = 1 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `indent` WHERE `status` = 1 ORDER BY id DESC LIMIT 0,11   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: user H:\Apache24\htdocs\kefuchoujiang\Home\Home\Controller\ShenShowController.class.php 第 57 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-12-14T17:09:36+08:00 ] ::1 /kefuchoujiang/index.php/Home/ShenShow/ShenUpdSta?id=2
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `indent` [ RunTime:0.0010s ]
+SQL: UPDATE `indent` SET `status`='1' WHERE `id` = 2 [ RunTime:0.0290s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-12-14T17:09:37+08:00 ] ::1 /kefuchoujiang/index.php/Home/ShenShow/ShenDo.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `indent` [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `indent` WHERE `status` = 2 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `indent` WHERE `status` = 2 ORDER BY id DESC LIMIT 0,11   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `indent` WHERE `status` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `indent` WHERE `status` = 1 ORDER BY id DESC LIMIT 0,11   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: user H:\Apache24\htdocs\kefuchoujiang\Home\Home\Controller\ShenShowController.class.php 第 57 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001001s ]
+
+[ 2016-12-14T17:09:37+08:00 ] ::1 /kefuchoujiang/index.php/Home/ShenShow/ShenRefresh.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `indent` [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `indent` WHERE `status` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `indent` WHERE `status` = 1 ORDER BY id DESC LIMIT 0,11   [ RunTime:0.0010s ]
+NOTIC: [8] Undefined index: user H:\Apache24\htdocs\kefuchoujiang\Home\Home\Controller\ShenShowController.class.php 第 57 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001001s ]
+
+[ 2016-12-14T17:09:41+08:00 ] ::1 /kefuchoujiang/index.php/Home/ShenShow/ShenRefresh.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `indent` [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `indent` WHERE `status` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `indent` WHERE `status` = 1 ORDER BY id DESC LIMIT 0,11   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: user H:\Apache24\htdocs\kefuchoujiang\Home\Home\Controller\ShenShowController.class.php 第 57 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-12-14T17:09:42+08:00 ] ::1 /kefuchoujiang/index.php/Home/ShenShow/ShenDel?id=5&status=8
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `indent` [ RunTime:0.0010s ]
+SQL: UPDATE `indent` SET `status`='8',`who_upd`='1',`upd_time`='1481706582' WHERE `id` = 5 [ RunTime:0.0310s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-12-14T17:09:43+08:00 ] ::1 /kefuchoujiang/index.php/Home/ShenShow/ShenDo.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `indent` [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `indent` WHERE `status` = 2 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `indent` WHERE `status` = 2 ORDER BY id DESC LIMIT 0,11   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `indent` WHERE `status` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `indent` WHERE `status` = 1 ORDER BY id DESC LIMIT 0,11   [ RunTime:0.0010s ]
+NOTIC: [8] Undefined index: user H:\Apache24\htdocs\kefuchoujiang\Home\Home\Controller\ShenShowController.class.php 第 57 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-12-14T17:09:44+08:00 ] ::1 /kefuchoujiang/index.php/Home/ShenShow/ShenRefresh.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `indent` [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `indent` WHERE `status` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `indent` WHERE `status` = 1 ORDER BY id DESC LIMIT 0,11   [ RunTime:0.0010s ]
+NOTIC: [8] Undefined index: user H:\Apache24\htdocs\kefuchoujiang\Home\Home\Controller\ShenShowController.class.php 第 57 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-12-14T17:09:45+08:00 ] ::1 /kefuchoujiang/index.php/Home/ShenExcel/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: id H:\Apache24\htdocs\kefuchoujiang\Home\Runtime\Cache\Home\3ef5f05a635a5f4ea26d2a0bc36e2652.php 第 25 行.
+NOTIC: [8] Undefined variable: name H:\Apache24\htdocs\kefuchoujiang\Home\Runtime\Cache\Home\3ef5f05a635a5f4ea26d2a0bc36e2652.php 第 29 行.
+NOTIC: [8] Undefined variable: info H:\Apache24\htdocs\kefuchoujiang\Home\Runtime\Cache\Home\3ef5f05a635a5f4ea26d2a0bc36e2652.php 第 118 行.
+NOTIC: [8] Undefined variable: page H:\Apache24\htdocs\kefuchoujiang\Home\Runtime\Cache\Home\3ef5f05a635a5f4ea26d2a0bc36e2652.php 第 144 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-12-14T17:09:49+08:00 ] ::1 /kefuchoujiang/index.php/Home/ShenExcel/ShenCondition?style=8
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: style H:\Apache24\htdocs\kefuchoujiang\Home\Home\Controller\ShenExcelController.class.php 第 116 行.
+SQL: SHOW COLUMNS FROM `indent` [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `indent` WHERE `status` = 8 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `indent` WHERE `status` = 8 ORDER BY id DESC LIMIT 0,8   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: id H:\Apache24\htdocs\kefuchoujiang\Home\Runtime\Cache\Home\3ef5f05a635a5f4ea26d2a0bc36e2652.php 第 25 行.
+NOTIC: [8] Undefined variable: name H:\Apache24\htdocs\kefuchoujiang\Home\Runtime\Cache\Home\3ef5f05a635a5f4ea26d2a0bc36e2652.php 第 29 行.
+NOTIC: [8] Undefined index: who_add H:\Apache24\htdocs\kefuchoujiang\Home\Runtime\Cache\Home\3ef5f05a635a5f4ea26d2a0bc36e2652.php 第 132 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-12-14T17:09:52+08:00 ] ::1 /kefuchoujiang/index.php/Home/ShenExcel/ShenCondition?style=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: style H:\Apache24\htdocs\kefuchoujiang\Home\Home\Controller\ShenExcelController.class.php 第 116 行.
+SQL: SHOW COLUMNS FROM `indent` [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `indent` WHERE `status` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `indent` WHERE `status` = 1 ORDER BY id DESC LIMIT 0,8   [ RunTime:0.0010s ]
+NOTIC: [2] date() expects parameter 2 to be long, string given H:\Apache24\htdocs\kefuchoujiang\Home\Home\Controller\ShenExcelController.class.php 第 267 行.
+NOTIC: [2] date() expects parameter 2 to be long, string given H:\Apache24\htdocs\kefuchoujiang\Home\Home\Controller\ShenExcelController.class.php 第 267 行.
+NOTIC: [2] date() expects parameter 2 to be long, string given H:\Apache24\htdocs\kefuchoujiang\Home\Home\Controller\ShenExcelController.class.php 第 267 行.
+NOTIC: [2] date() expects parameter 2 to be long, string given H:\Apache24\htdocs\kefuchoujiang\Home\Home\Controller\ShenExcelController.class.php 第 267 行.
+NOTIC: [2] date() expects parameter 2 to be long, string given H:\Apache24\htdocs\kefuchoujiang\Home\Home\Controller\ShenExcelController.class.php 第 267 行.
+NOTIC: [2] date() expects parameter 2 to be long, string given H:\Apache24\htdocs\kefuchoujiang\Home\Home\Controller\ShenExcelController.class.php 第 267 行.
+NOTIC: [2] date() expects parameter 2 to be long, string given H:\Apache24\htdocs\kefuchoujiang\Home\Home\Controller\ShenExcelController.class.php 第 267 行.
+NOTIC: [2] date() expects parameter 2 to be long, string given H:\Apache24\htdocs\kefuchoujiang\Home\Home\Controller\ShenExcelController.class.php 第 267 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: id H:\Apache24\htdocs\kefuchoujiang\Home\Runtime\Cache\Home\3ef5f05a635a5f4ea26d2a0bc36e2652.php 第 25 行.
+NOTIC: [8] Undefined variable: name H:\Apache24\htdocs\kefuchoujiang\Home\Runtime\Cache\Home\3ef5f05a635a5f4ea26d2a0bc36e2652.php 第 29 行.
+NOTIC: [8] Undefined index: who_add H:\Apache24\htdocs\kefuchoujiang\Home\Runtime\Cache\Home\3ef5f05a635a5f4ea26d2a0bc36e2652.php 第 132 行.
+NOTIC: [8] Undefined index: who_add H:\Apache24\htdocs\kefuchoujiang\Home\Runtime\Cache\Home\3ef5f05a635a5f4ea26d2a0bc36e2652.php 第 132 行.
+NOTIC: [8] Undefined index: who_add H:\Apache24\htdocs\kefuchoujiang\Home\Runtime\Cache\Home\3ef5f05a635a5f4ea26d2a0bc36e2652.php 第 132 行.
+NOTIC: [8] Undefined index: who_add H:\Apache24\htdocs\kefuchoujiang\Home\Runtime\Cache\Home\3ef5f05a635a5f4ea26d2a0bc36e2652.php 第 132 行.
+NOTIC: [8] Undefined index: who_add H:\Apache24\htdocs\kefuchoujiang\Home\Runtime\Cache\Home\3ef5f05a635a5f4ea26d2a0bc36e2652.php 第 132 行.
+NOTIC: [8] Undefined index: who_add H:\Apache24\htdocs\kefuchoujiang\Home\Runtime\Cache\Home\3ef5f05a635a5f4ea26d2a0bc36e2652.php 第 132 行.
+NOTIC: [8] Undefined index: who_add H:\Apache24\htdocs\kefuchoujiang\Home\Runtime\Cache\Home\3ef5f05a635a5f4ea26d2a0bc36e2652.php 第 132 行.
+NOTIC: [8] Undefined index: who_add H:\Apache24\htdocs\kefuchoujiang\Home\Runtime\Cache\Home\3ef5f05a635a5f4ea26d2a0bc36e2652.php 第 132 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-12-14T17:09:54+08:00 ] ::1 /kefuchoujiang/index.php/Home/ShenExcel/ShenCondition?style=9
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: style H:\Apache24\htdocs\kefuchoujiang\Home\Home\Controller\ShenExcelController.class.php 第 116 行.
+SQL: SHOW COLUMNS FROM `indent` [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `indent` WHERE `status` = 9 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `indent` WHERE `status` = 9 ORDER BY id DESC LIMIT 0,8   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: id H:\Apache24\htdocs\kefuchoujiang\Home\Runtime\Cache\Home\3ef5f05a635a5f4ea26d2a0bc36e2652.php 第 25 行.
+NOTIC: [8] Undefined variable: name H:\Apache24\htdocs\kefuchoujiang\Home\Runtime\Cache\Home\3ef5f05a635a5f4ea26d2a0bc36e2652.php 第 29 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.016000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-12-14T17:09:56+08:00 ] ::1 /kefuchoujiang/index.php/Home/ShenExcel/ShenCondition?style=2
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: style H:\Apache24\htdocs\kefuchoujiang\Home\Home\Controller\ShenExcelController.class.php 第 116 行.
+SQL: SHOW COLUMNS FROM `indent` [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `indent` WHERE `status` = 2 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `indent` WHERE `status` = 2 ORDER BY id DESC LIMIT 0,8   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: id H:\Apache24\htdocs\kefuchoujiang\Home\Runtime\Cache\Home\3ef5f05a635a5f4ea26d2a0bc36e2652.php 第 25 行.
+NOTIC: [8] Undefined variable: name H:\Apache24\htdocs\kefuchoujiang\Home\Runtime\Cache\Home\3ef5f05a635a5f4ea26d2a0bc36e2652.php 第 29 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-12-14T17:09:57+08:00 ] ::1 /kefuchoujiang/index.php/Home/ShenExcel/ShenCondition?style=9
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: style H:\Apache24\htdocs\kefuchoujiang\Home\Home\Controller\ShenExcelController.class.php 第 116 行.
+SQL: SHOW COLUMNS FROM `indent` [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `indent` WHERE `status` = 9 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `indent` WHERE `status` = 9 ORDER BY id DESC LIMIT 0,8   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: id H:\Apache24\htdocs\kefuchoujiang\Home\Runtime\Cache\Home\3ef5f05a635a5f4ea26d2a0bc36e2652.php 第 25 行.
+NOTIC: [8] Undefined variable: name H:\Apache24\htdocs\kefuchoujiang\Home\Runtime\Cache\Home\3ef5f05a635a5f4ea26d2a0bc36e2652.php 第 29 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-12-14T17:09:58+08:00 ] ::1 /kefuchoujiang/index.php/Home/ShenExcel/ShenCondition?style=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: style H:\Apache24\htdocs\kefuchoujiang\Home\Home\Controller\ShenExcelController.class.php 第 116 行.
+SQL: SHOW COLUMNS FROM `indent` [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `indent` WHERE `status` = 1 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `indent` WHERE `status` = 1 ORDER BY id DESC LIMIT 0,8   [ RunTime:0.0000s ]
+NOTIC: [2] date() expects parameter 2 to be long, string given H:\Apache24\htdocs\kefuchoujiang\Home\Home\Controller\ShenExcelController.class.php 第 267 行.
+NOTIC: [2] date() expects parameter 2 to be long, string given H:\Apache24\htdocs\kefuchoujiang\Home\Home\Controller\ShenExcelController.class.php 第 267 行.
+NOTIC: [2] date() expects parameter 2 to be long, string given H:\Apache24\htdocs\kefuchoujiang\Home\Home\Controller\ShenExcelController.class.php 第 267 行.
+NOTIC: [2] date() expects parameter 2 to be long, string given H:\Apache24\htdocs\kefuchoujiang\Home\Home\Controller\ShenExcelController.class.php 第 267 行.
+NOTIC: [2] date() expects parameter 2 to be long, string given H:\Apache24\htdocs\kefuchoujiang\Home\Home\Controller\ShenExcelController.class.php 第 267 行.
+NOTIC: [2] date() expects parameter 2 to be long, string given H:\Apache24\htdocs\kefuchoujiang\Home\Home\Controller\ShenExcelController.class.php 第 267 行.
+NOTIC: [2] date() expects parameter 2 to be long, string given H:\Apache24\htdocs\kefuchoujiang\Home\Home\Controller\ShenExcelController.class.php 第 267 行.
+NOTIC: [2] date() expects parameter 2 to be long, string given H:\Apache24\htdocs\kefuchoujiang\Home\Home\Controller\ShenExcelController.class.php 第 267 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: id H:\Apache24\htdocs\kefuchoujiang\Home\Runtime\Cache\Home\3ef5f05a635a5f4ea26d2a0bc36e2652.php 第 25 行.
+NOTIC: [8] Undefined variable: name H:\Apache24\htdocs\kefuchoujiang\Home\Runtime\Cache\Home\3ef5f05a635a5f4ea26d2a0bc36e2652.php 第 29 行.
+NOTIC: [8] Undefined index: who_add H:\Apache24\htdocs\kefuchoujiang\Home\Runtime\Cache\Home\3ef5f05a635a5f4ea26d2a0bc36e2652.php 第 132 行.
+NOTIC: [8] Undefined index: who_add H:\Apache24\htdocs\kefuchoujiang\Home\Runtime\Cache\Home\3ef5f05a635a5f4ea26d2a0bc36e2652.php 第 132 行.
+NOTIC: [8] Undefined index: who_add H:\Apache24\htdocs\kefuchoujiang\Home\Runtime\Cache\Home\3ef5f05a635a5f4ea26d2a0bc36e2652.php 第 132 行.
+NOTIC: [8] Undefined index: who_add H:\Apache24\htdocs\kefuchoujiang\Home\Runtime\Cache\Home\3ef5f05a635a5f4ea26d2a0bc36e2652.php 第 132 行.
+NOTIC: [8] Undefined index: who_add H:\Apache24\htdocs\kefuchoujiang\Home\Runtime\Cache\Home\3ef5f05a635a5f4ea26d2a0bc36e2652.php 第 132 行.
+NOTIC: [8] Undefined index: who_add H:\Apache24\htdocs\kefuchoujiang\Home\Runtime\Cache\Home\3ef5f05a635a5f4ea26d2a0bc36e2652.php 第 132 行.
+NOTIC: [8] Undefined index: who_add H:\Apache24\htdocs\kefuchoujiang\Home\Runtime\Cache\Home\3ef5f05a635a5f4ea26d2a0bc36e2652.php 第 132 行.
+NOTIC: [8] Undefined index: who_add H:\Apache24\htdocs\kefuchoujiang\Home\Runtime\Cache\Home\3ef5f05a635a5f4ea26d2a0bc36e2652.php 第 132 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-12-14T17:10:41+08:00 ] ::1 /kefuchoujiang/index.php/Home/ShenInsert/ShenInsert
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `indent` [ RunTime:0.0010s ]
+SQL: INSERT INTO `indent` (`user`,`tel`,`address`,`combo`,`money`,`status`,`add_time`,`who_upd`,`upd_time`,`url`) VALUES ('0','111111111','0','0','0','1','1481706641','0','','http://localhost/ceshichoujiang/index.htm') [ RunTime:0.0180s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-12-14T17:10:46+08:00 ] ::1 /kefuchoujiang/index.php/Home/ShenInsert/ShenInsert
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `indent` [ RunTime:0.0000s ]
+SQL: INSERT INTO `indent` (`user`,`tel`,`address`,`combo`,`money`,`status`,`add_time`,`who_upd`,`upd_time`,`url`) VALUES ('0','1111111111','0','0','0','1','1481706646','0','','http://localhost/ceshichoujiang/index.htm') [ RunTime:0.0220s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-12-14T17:12:06+08:00 ] ::1 /kefuchoujiang/index.php/Home/ShenInsert/ShenInsert
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002001s ]
+SQL: SHOW COLUMNS FROM `indent` [ RunTime:0.0010s ]
+SQL: INSERT INTO `indent` (`user`,`tel`,`address`,`combo`,`money`,`status`,`add_time`,`who_upd`,`upd_time`,`url`) VALUES ('0','11111111','0','0','0','1','1481706726','0','','http://localhost/ceshichoujiang/index.htm') [ RunTime:0.0270s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-12-14T17:12:17+08:00 ] ::1 /kefuchoujiang/index.php/Home/ShenInsert/ShenInsert
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `indent` [ RunTime:0.0000s ]
+SQL: INSERT INTO `indent` (`user`,`tel`,`address`,`combo`,`money`,`status`,`add_time`,`who_upd`,`upd_time`,`url`) VALUES ('0','111111','0','0','0','1','1481706737','0','','http://localhost/ceshichoujiang/index.htm') [ RunTime:0.0200s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-12-14T21:45:55+08:00 ] ::1 /kefuchoujiang/index.php/Home/ShenExcel/ShenCondition?style=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001001s ]
+NOTIC: [8] Undefined index: style H:\Apache24\htdocs\kefuchoujiang\Home\Home\Controller\ShenExcelController.class.php 第 116 行.
+SQL: SHOW COLUMNS FROM `indent` [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `indent` WHERE `status` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `indent` WHERE `status` = 1 ORDER BY id DESC LIMIT 0,8   [ RunTime:0.0010s ]
+NOTIC: [2] date() expects parameter 2 to be long, string given H:\Apache24\htdocs\kefuchoujiang\Home\Home\Controller\ShenExcelController.class.php 第 267 行.
+NOTIC: [2] date() expects parameter 2 to be long, string given H:\Apache24\htdocs\kefuchoujiang\Home\Home\Controller\ShenExcelController.class.php 第 267 行.
+NOTIC: [2] date() expects parameter 2 to be long, string given H:\Apache24\htdocs\kefuchoujiang\Home\Home\Controller\ShenExcelController.class.php 第 267 行.
+NOTIC: [2] date() expects parameter 2 to be long, string given H:\Apache24\htdocs\kefuchoujiang\Home\Home\Controller\ShenExcelController.class.php 第 267 行.
+NOTIC: [2] date() expects parameter 2 to be long, string given H:\Apache24\htdocs\kefuchoujiang\Home\Home\Controller\ShenExcelController.class.php 第 267 行.
+NOTIC: [2] date() expects parameter 2 to be long, string given H:\Apache24\htdocs\kefuchoujiang\Home\Home\Controller\ShenExcelController.class.php 第 267 行.
+NOTIC: [2] date() expects parameter 2 to be long, string given H:\Apache24\htdocs\kefuchoujiang\Home\Home\Controller\ShenExcelController.class.php 第 267 行.
+NOTIC: [2] date() expects parameter 2 to be long, string given H:\Apache24\htdocs\kefuchoujiang\Home\Home\Controller\ShenExcelController.class.php 第 267 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: id H:\Apache24\htdocs\kefuchoujiang\Home\Runtime\Cache\Home\3ef5f05a635a5f4ea26d2a0bc36e2652.php 第 25 行.
+NOTIC: [8] Undefined variable: name H:\Apache24\htdocs\kefuchoujiang\Home\Runtime\Cache\Home\3ef5f05a635a5f4ea26d2a0bc36e2652.php 第 29 行.
+NOTIC: [8] Undefined index: who_add H:\Apache24\htdocs\kefuchoujiang\Home\Runtime\Cache\Home\3ef5f05a635a5f4ea26d2a0bc36e2652.php 第 132 行.
+NOTIC: [8] Undefined index: who_add H:\Apache24\htdocs\kefuchoujiang\Home\Runtime\Cache\Home\3ef5f05a635a5f4ea26d2a0bc36e2652.php 第 132 行.
+NOTIC: [8] Undefined index: who_add H:\Apache24\htdocs\kefuchoujiang\Home\Runtime\Cache\Home\3ef5f05a635a5f4ea26d2a0bc36e2652.php 第 132 行.
+NOTIC: [8] Undefined index: who_add H:\Apache24\htdocs\kefuchoujiang\Home\Runtime\Cache\Home\3ef5f05a635a5f4ea26d2a0bc36e2652.php 第 132 行.
+NOTIC: [8] Undefined index: who_add H:\Apache24\htdocs\kefuchoujiang\Home\Runtime\Cache\Home\3ef5f05a635a5f4ea26d2a0bc36e2652.php 第 132 行.
+NOTIC: [8] Undefined index: who_add H:\Apache24\htdocs\kefuchoujiang\Home\Runtime\Cache\Home\3ef5f05a635a5f4ea26d2a0bc36e2652.php 第 132 行.
+NOTIC: [8] Undefined index: who_add H:\Apache24\htdocs\kefuchoujiang\Home\Runtime\Cache\Home\3ef5f05a635a5f4ea26d2a0bc36e2652.php 第 132 行.
+NOTIC: [8] Undefined index: who_add H:\Apache24\htdocs\kefuchoujiang\Home\Runtime\Cache\Home\3ef5f05a635a5f4ea26d2a0bc36e2652.php 第 132 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+

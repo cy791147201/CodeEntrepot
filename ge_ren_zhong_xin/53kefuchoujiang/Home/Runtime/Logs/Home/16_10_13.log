@@ -1,0 +1,12 @@
+[ 2016-10-13T09:23:27+08:00 ] 115.33.193.214 /index.php/Home/ShenInsert/ShenInsert
+ERR: 1048:Column 'url' cannot be null
+ [ SQL语句 ] : INSERT INTO `user` (`url`,`user`,`tel`,`time`,`status`,`who_upd`) VALUES (NULL,'','15511071505','1476321807','0','')
+ERR: 1048:Column 'url' cannot be null
+ [ SQL语句 ] : INSERT INTO `user` (`url`,`user`,`tel`,`time`,`status`,`who_upd`) VALUES (NULL,'','15511071505','1476321807','0','')
+
+[ 2016-10-13T09:39:47+08:00 ] 115.33.193.214 /index.php/Home/ShenInsert/ShenInsert
+ERR: 1048:Column 'url' cannot be null
+ [ SQL语句 ] : INSERT INTO `user` (`url`,`user`,`tel`,`time`,`status`,`who_upd`) VALUES (NULL,'','159753','1476322787','0','')
+ERR: 1048:Column 'url' cannot be null
+ [ SQL语句 ] : INSERT INTO `user` (`url`,`user`,`tel`,`time`,`status`,`who_upd`) VALUES (NULL,'','159753','1476322787','0','')
+

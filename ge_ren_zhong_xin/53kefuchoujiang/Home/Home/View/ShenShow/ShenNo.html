@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <link rel = 'stylesheet' type = 'text/css' href = '__ROOT__/Public/HomeCss/left.css'>
+    <link rel = 'stylesheet' type = 'text/css' href = '__ROOT__/Public/HomeCss/reset.css'>
+</head>
+<body>
+
+    <center> 
+
+        <div class = 'left'>
+            
+            <div class = 'tit'>
+                
+                <span>待处理</span>
+
+            </div>
+
+            <div class = 'TitName'>
+                
+                <li class = 'id'><span>用户id</span></li>
+        
+                <li class = 'tel'><span>用户电话</span></li>
+            
+                <li id = 'upd'><span>状态</span></li>
+
+            </div>
+
+            <foreach name = 'nodo' item = 'v'>
+
+                <div class = 'info'>
+                    
+                    <li class = 'id'><span>{$v.id}</span></li>
+           
+                    <li class = 'tel'><span>{$v.tel}</span></li>
+               
+                    <li id = 'upd'><span>{$v.status}</span></li>
+
+                </div>
+
+            </foreach>
+
+            <div class = 'page'>
+                
+                {$page1}
+
+            </div>
+
+        </div>
+
+    </center>
+
+</body>
+
+<script language="JavaScript">
+
+    // 自动刷新
+    function MyRefresh()
+    {
+        window.location.reload();
+    }
+
+    setTimeout('MyRefresh()',3000);
+
+</script>
+
+</html>

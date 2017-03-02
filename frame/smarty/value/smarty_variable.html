@@ -1,0 +1,35 @@
+<!--模板中付变量值-->
+<{assign var="name" value="shen" }>
+<{$name}><br/>
+<{assign "name" "shen"}>
+<{$name}><br/>
+<{$name="shen"}>
+<{$name}><br/>
+<!--模板中定义数组-->
+<{assign var=vars value=[1,2,3]}>
+<{$vars[0]}><br/>
+<{assign var=vars value=['a'=>'shen','b'=>'shuang']}>
+<{$vars['a']}><br/>
+<{assign var=vars value=[1,[2,3],3]}>
+<{$vars[0]}><br/>
+<{$vars[0]=5}>
+<{$vars[0]}><br/>
+<{$vars[1][1]}><br/>
+<{$a=10}>
+<{$b=10}>
+<{assign var=vars value=$a+$b}>
+<{$vars}><br/>
+<{assign var=vars value="`$a+$b`"}>
+<{$vars}><br/>
+<{assign var=vars value=$a+2}>
+<{$vars}><br/>
+<{$a=strlen($b)}>
+<{$vars}><br/>
+<{*<{$a=myfunct(($a+$b)*3)}>没有函数就不试了*}>
+<{$z="this is test "}>
+<{$a=<{$z}>}>
+<{$a}><br/>
+<{$a=<{$z}>+3}>
+<{$a}><br/>
+<{$a="this is tests <{$z}>"}>
+<{$a}><br/>

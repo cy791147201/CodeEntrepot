@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>导出excel</title>
+    <link rel = 'stylesheet' type = 'text/css' href = '__ROOT__/Public/HomeCss/reset.css'>
+    <link rel = 'stylesheet' type = 'text/css' href = '__ROOT__/Public/HomeCss/excel.css'>
+    <script type = 'text/javascript' src = '__ROOT__/Public/Js/My97DatePicker/WdatePicker.js'></script>
+    <include file  = 'Public/Html/tit.html' />
+</head>
+<body>
+
+<center>
+    
+    <div class = 'father'>
+
+        <div class = 'left'>
+            
+            <li><span style = 'font-size: 20px; font-weight: 600; background: #9191A6; display: block; ' >可导出excel列表</span></li>
+
+            <li><a href = '__CONTROLLER__/ShenCondition?style=2'><span>已处理</span></a></li>
+
+            <li><a href = '__CONTROLLER__/ShenCondition?style=9'><span>已处理已删除</span></a></li>
+
+            <li><a href = '__CONTROLLER__/ShenCondition?style=1'><span>未处理</span></a></li>
+
+            <li><a href = '__CONTROLLER__/ShenCondition?style=8'><span>未处理已删除</span></a></li>
+
+        </div>
+
+        <div class = 'right'>
+            
+            <div class = 'time'>
+                    
+                <span class = 'condition' >根据时间查询</span>
+
+                <form action = '__CONTROLLER__/ShenCondition' method = 'post' onsubmit = "return submitFun(this);" >
+
+                    <input type = 'text' name = 'start' size = '11' class = 'ui-text Wdate' onclick = "WdatePicker({dateFmt:'yyyy-MM-dd HH:mm:ss'});" id = 'start' />
+
+                    <span>&nbsp;&nbsp;&nbsp;至&nbsp;&nbsp;&nbsp;</span>
+
+                    <input type = 'text' name = 'end' size = '11' class = 'ui-text Wdate' onclick = "WdatePicker({dateFmt:'yyyy-MM-dd HH:mm:ss'});" id = 'end' />
+
+                    <input type = 'hidden' name = 'style' value = '{$style}' id = 'style' />
+
+                    <input type = 'submit' value = '提交查询' id = 'sub' name = 'find' />
+
+                    <input type = 'submit' value = '导出excel' id = 'sub' name = 'out' />
+
+                </form>
+
+            </div>
+
+            <div class = 'infos'>
+                
+                <div class = 'tit'>
+                    
+                    <li class = 'id'><span>用户id</span></li>
+
+                    <li class = 'name'><span>用户名</span></li>
+
+                    <li class = 'tel'><span>电话</span></li>
+
+                    <li class = 'address'><span>地址</span></li>
+
+                    <li class = 'combo'><span>套餐</span></li>
+
+                    <li class = 'money'><span>金额</span></li>
+
+                    <!-- <li class = 'WhoAdd'><span>谁添加的</span></li> -->
+
+                    <li class = 'AddTime'><span>添加时间</span></li>
+
+                    <li class = 'WhoUpd'><span>谁更新的</span></li>
+
+                    <li id = 'UpdTime'><span>更新时间</span></li>
+
+                </div>
+
+                <foreach name = 'info' item = 'v'>
+
+                    <div class = 'info'>
+                        
+                        <li class = 'id'><span>{$v.id}</span></li>
+
+                        <li class = 'name'><span>{$v.user}</span></li>
+
+                        <li class = 'tel'><span>{$v.tel}</span></li>
+
+                        <li id = 'addres'><span>{$v.address}</span></li>
+
+                        <li id = 'combo'><span>{$v.combo}</span></li>
+
+                        <li class = 'money'><span>{$v.money}</span></li>
+
+                        <!-- <li id = 'WhoAdd'><span>{$v.who_add}</span></li> -->
+
+                        <li id = 'AddTime'><span>{$v.add_time}</span></li>
+
+                        <li id = 'WhoUpd'><span>{$v.who_upd}</span></li>
+
+                        <li id = 'UpdTimes'><span>{$v.upd_time}</span></li>
+
+                    </div>
+
+                </foreach>
+
+                <div class = 'page'>
+                    
+                    {$page}
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</center>
+
+</body>
+
+<script language="javascript">
+
+    function submitFun(obj)
+    {
+        if(document.getElementById('style').value == 0 ){
+
+            alert('请选择左侧需要查询的状态');
+            return false;
+
+        }
+
+        if(document.getElementById('start').value.length < 1){
+
+            alert('请选择开始时间');
+            return false;
+
+        }
+
+        if(document.getElementById('end').value.length < 1){
+
+            alert('请选择结束时间');
+            return false;
+
+        }
+
+    }
+
+</script>
+
+<include file  = 'Public/Html/foot.html' />

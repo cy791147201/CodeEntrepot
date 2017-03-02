@@ -1,0 +1,115 @@
+.left{
+    width: 390px;
+    border: 1px solid black;
+    float: left;
+}
+
+.right{
+    width: 1290px;
+    border: 1px solid black;
+    float: left;
+    margin-left: 10px;
+}
+
+.tit{
+    width: 100%;
+    height: 60px;
+    line-height: 60px;
+    background: #CBCBCB;
+    border-bottom: 1px solid black;
+    font-size: 25px;
+}
+
+.TitName{
+    width: 100%;
+    height: 60px;
+    line-height: 60px;
+    background: #DDDDDD;
+    border-bottom: 1px solid black;
+}
+
+.TitName li{
+    float: left;
+    border-right: 1px solid #C7C7C7;
+}
+
+.id{
+    width: 80px;
+}
+
+.name{
+    width: 150px;  
+}
+
+.tel{
+    width: 150px; 
+}
+
+.details{
+    width: 50px;
+}
+
+.details1{
+    width: 80px;
+}
+
+.del{
+    width: 50px;
+}
+
+#upds{
+    width: 55.5px;
+    border-right: 0px;
+    /*background: red;*/
+    /*line-height: 30px;*/
+    color: red;
+}
+
+#upds1{
+    width: 58px;
+    border-right: 0px;
+    /*background: red;*/
+    /*line-height: 30px;*/
+    color: green;
+}
+
+
+.info{
+    width: 100%;
+    height: 60px;
+    line-height: 60px;
+    background: #D1D1D1;
+    border-bottom: 1px solid #808080;
+}
+
+.info:hover{
+    background: #EBCDDB;
+}
+
+.info li{
+    float: left;
+    border-right: 1px solid #C5C5C5;
+}
+
+.info li:hover{
+    background: #88D1D8;
+}
+
+.page{
+    width: 100%;
+    height: 60px;
+    line-height: 60px;
+    background: #BEBDBD;
+}
+
+.address{
+    width: 715px;
+    overflow: hidden;
+}
+
+.address1{
+    width: 715px;
+    height: 60px;
+    line-height: 30px;
+    overflow: hidden;
+}
