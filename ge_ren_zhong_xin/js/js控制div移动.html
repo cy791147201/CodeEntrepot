@@ -1,0 +1,43 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<style>
+/*需要给div绝对定位*/
+#div1 {width:100px; height:100px; position:absolute; background:red; left:0; top:50px;}
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>js控制div移动</title>
+<script type="text/javascript">
+var timer=null;
+
+function startMove()
+{
+	var oDiv=document.getElementById('div1');
+	// 清除定时器，解决连续点击input造成的div移动速度变快
+	clearInterval(timer);
+	// 设置定时器
+	timer=setInterval(function (){
+		设置速度，div的绝对定位的left
+		var iSpeed=5;
+		// 当div到达指定位置的时候
+		if(oDiv.offsetLeft>=300)	//是否到达终点
+		{
+			// 清除定时器，div不在移动
+			clearInterval(timer);	//到达终点
+		}
+		else
+		{
+			// 只有在div绝对定位小于指定大小的时候，div才会移动，解决div到达指定位置后，再次点击input后div继续移动的问题
+			oDiv.style.left=oDiv.offsetLeft+iSpeed+'px';	//到达之前
+		}
+	}, 30);
+}
+
+</script>
+</head>
+
+<body>
+<input type="button" value="开始运动" onclick="startMove()" />
+<div id="div1"></div>
+</body>
+</html>

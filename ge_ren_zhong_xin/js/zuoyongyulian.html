@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>延长作用域链</title>
+</head>
+<body>
+
+</body>
+<script type="text/javascript">
+	function buildUrl()
+	{
+		var qs = "?debug=true";
+
+		with(location){//location 等价与location href
+			var url = href + qs;
+		}
+		return url;
+	}
+
+	alert(buildUrl());
+</script>
+</html>

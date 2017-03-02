@@ -1,0 +1,103 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<style>
+#div1 {width:100px; height:100px; background:red; position:absolute;}
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>js中cookie记录div位置鼠标拖拽div</title>
+<script>
+// 设置cookie
+function setCookie(name, value, iDay)
+{
+	// 设置cookie过期时间
+	var oDate=new Date();
+	
+	oDate.setDate(oDate.getDate()+iDay);
+	// 设置cookie
+	document.cookie=name+'='+value+';expires='+oDate;
+}
+// 获取cookie
+function getCookie(name)
+{
+	//'username=abc; password=123456; aaa=123; bbb=4r4er'
+	// 分割cookie字符串
+	var arr=document.cookie.split('; ');
+	var i=0;
+	
+	//arr->['username=abc', 'password=123456', ...]
+	// 判断是否为需要的cookie的name
+	for(i=0;i<arr.length;i++)
+	{
+		//arr2->['username', 'abc']
+		var arr2=arr[i].split('=');
+		// 如果是反之该cookie的初始值
+		if(arr2[0]==name)
+		{
+			return arr2[1];
+		}
+	}
+	// 没有找到该cookie，返回空
+	return '';
+}
+// 移除cookie
+function removeCookie(name)
+{
+	setCookie(name, '1', -1);
+}
+// 自动加载
+window.onload=function ()
+{
+	// 获取div对象
+	var oDiv=document.getElementById('div1');
+	// div位置坐标
+	var disX=0;
+	var disY=0;
+	// 获取div位置坐标的cookie
+	var x=getCookie('x');
+	var y=getCookie('y');
+	// 如果存在div位置坐标的cookie，div的位置坐标就等于cookie中的位置坐标
+	if(x)
+	{
+		oDiv.style.left=x+'px';
+		oDiv.style.top=y+'px';
+	}
+	// div对象鼠标按下事件
+	oDiv.onmousedown=function (ev)
+	{
+		// 获取鼠标对象
+		var oEvent=ev||event;
+		// div的位置坐标就等于鼠标的位置坐标减去div的，位置上，位置左
+		disX=oEvent.clientX-oDiv.offsetLeft;
+		disY=oEvent.clientY-oDiv.offsetTop;
+		// 鼠标按下事件之后的鼠标移动事件
+		document.onmousemove=function (ev)
+		{
+			// 获取鼠标对象
+			var oEvent=ev||event;
+			// 设置div的绝对位置
+			oDiv.style.left=oEvent.clientX-disX+'px';
+			oDiv.style.top=oEvent.clientY-disY+'px';
+		};
+		// 鼠标按下事件后的鼠标抬起事件
+		document.onmouseup=function ()
+		{
+			// 清空鼠标移动和鼠标抬起事件
+			document.onmousemove=null;
+			document.onmouseup=null;
+			// 设置div的位置坐标cookie
+			setCookie('x', oDiv.offsetLeft, 5);
+			setCookie('y', oDiv.offsetTop, 5);
+		};
+		// 清除默认事件
+		return false;
+	};
+};
+</script>
+</head>
+
+<body>
+<div id="div1">
+</div>
+</body>
+</html>

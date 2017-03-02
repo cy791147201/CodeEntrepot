@@ -1,0 +1,1 @@
+var lang = {"emptyName":"お名前を入力してください","invalidMobile":"無効な電話番号","SelectRegion":"地域選択","emptyAddress":"詳しい住所を入力してください","emptyZcode":"郵便番号を入力してください","emptyEmail":"メールを入力してください","invalidVerify":"無効な認証コード","ajaxError":"Page timeout or execution error","submit":"送信","loading":"操作の間、待ってください...","actionEnd":"活動は終わった"};

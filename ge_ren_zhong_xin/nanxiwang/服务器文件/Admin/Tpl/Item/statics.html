@@ -1,0 +1,50 @@
+{:W("Main",array('module'=>MODULE_NAME,'action'=>ACTION_NAME,'do'=>$_GET['do']))}
+<link href = '__PUBLIC__/Alizi/pc/static.css' rel='stylesheet'>
+<body>
+    <div class='layout-main'>    
+        <div id = 'breadclumb' class = 'box'>
+            <h3><strong>{:lang('breadclumb_colon')}</strong>{:lang(MODULE_NAME)}<span></span><empty name = '_GET.id'>{:lang('list')}<else />{:lang('edit')}shen</empty></h3>
+        </div>
+        <div class = 'box clear-fix'>
+            <div class = 'tit'>
+                <li><span>{:lang(statics_hua)}</span></li>
+                <li><span>{:lang('download_body')}</span></li>
+                <li id = 'sn'><span>{:lang(item_number)}</span></li>
+                <li id = 'sn'><span>{:lang(body_number)}</span></li>
+                <li id = 'name'><span>{:lang(item_name)}</span></li>
+                <li id = 'link'><span>{:lang(statics_link)}</span></li>
+            </div>
+            <div class = 'info'>
+                <volist name = 'info' id = 'v'>
+                <div class = 'one'>
+                    <li>
+                        <a href = "index.php?m=Index&a=order&id={$v.g_id}&sn={$v.sn}&do=static" target = '_blank'><span>
+                        <if condition = '$v.s eq 0'>
+                        {:lang('statics_hua')}</span>
+                        <else />
+                        <span>{:lang('again_statics_hua')}</span>
+                        </if>
+                        </a>
+                    </li>
+                    <li>
+                        <if condition = '$v.s eq 0'>
+                        <a href = "index.php?m=Index&a=order&id={$v.g_id}&sn={$v.sn}&do=static&act=down" target = '_blank'><span>{:lang('download_and_statics_hua')}</span></a>
+                        <else />
+                        <a href = "adminpanel123.php?m=Item&a=download&path={$v.path}" target = '_blank'><span>{:lang('download')}</span></a>
+                        </if>
+                    </li>
+                    <li id = 'sn'><span>{$v.g_id}</span></li>
+                    <li id = 'sn'><span>{$v.sn}</span></li>
+                    <li id = 'name'><span>{$v.name}&nbsp;</span></li>
+                    <li id = 'link'>
+                        <if condition = '$v.s eq 0'><span></span>
+                            <else /><a href = '{$v.path}.htm' target = '_blank'><span>{$v.path}</span></a>
+                        </if>
+                    </li>       
+                </div>
+                </volist>
+            </div>
+        </div>
+    </div>
+</body>
+{:W("Foot")}    

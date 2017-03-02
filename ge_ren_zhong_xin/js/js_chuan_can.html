@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>获取不定数量的参数</title>
+<script type="text/javascript">
+	function GetArguments()
+	{
+		var res = 0;
+		var i = 0;
+		for(i = 0; i < arguments.length; i ++)
+		{
+			res += arguments[i];
+		}
+		alert(res);
+	}
+	GetArguments(1,2,3,5,4,6,555);
+</script>
+</head>
+<body>
+
+</body>
+</html>

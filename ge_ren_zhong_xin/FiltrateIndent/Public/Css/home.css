@@ -1,0 +1,299 @@
+body{
+    width: 100%;
+    height: 100%;
+    min-width: 1000px;
+}
+.page, .ListInfoInfo, .ListInfoTits, .ListInfoTit, #ListInfo, .AdminList, .title, .OneInfoTit, #OneInfo, #FindAdmin, #UpdAdmin, #ListUpdOne, .AdminHandle, #AddAdmin, #DelAdmin, #AdminHandle, .sub, #AddAdmin form input, #AddAdmin form select, #DelAdmin form input, #DelAdmin form select, #UpdAdmin form input, #UpdAdmin form select, #ListUpdOne form input, #ListUpdOne form select, #FindAdmin form input, #FindAdmin form select{
+    /*border: #D0D0D0 1px solid;*/
+    /*背景阴影*/
+    filter: progid:DXImageTransform.Microsoft.Shadow(color=#909090,direction=120,strength=3);/*ie*/
+    -moz-box-shadow: 2px 2px 10px #909090;/*firefox*/
+    -webkit-box-shadow: 2px 2px 10px #909090;/*safari或chrome*/
+    box-shadow: 2px 2px 10px #909090;/*opera或ie9*/
+}
+.sub, #ListUpdOne form input, #ListUpdOne form select, #AddAdmin form input, #AddAdmin form select, #DelAdmin form input, #DelAdmin form select, #UpdAdmin form input, #UpdAdmin form select, #FindAdmin form input, #FindAdmin form select{
+     border: 1px solid #D0D0D0;
+}
+#OneInfo, #FindAdmin, #UpdAdmin, .AdminHandle, #AddAdmin, #DelAdmin, #AdminHandle, .sub, #AddAdmin form input, #AddAdmin form select, #DelAdmin form input, #DelAdmin form select, #UpdAdmin form input, #UpdAdmin form select, #ListUpdOne form input, #ListUpdOne form select, #FindAdmin form input, #FindAdmin form select{
+    border-radius: 5px;
+}
+.page, .ListInfoTit, .AdminList, .AdminHandle, .sub, .title{
+    /*渐变色*/
+    /* Webkit: Safari 4-5, Chrome 1-9 */  
+    background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#F7CFF8), to(#AB0CC9));  
+    /* Webkit: Safari 5.1+, Chrome 10+ */  
+    background: -webkit-linear-gradient(left, #F7CFF8, #AB0CC9);  
+    /* Firefox 3.6+ */  
+    background: -moz-linear-gradient(left, #F7CFF8, #AB0CC9); 
+    /* Opera 11.10+ */  
+    background: -o-linear-gradient(left, #F7CFF8, #AB0CC9); 
+    /* IE 10 */  
+    background: -ms-linear-gradient(left, #F7CFF8, #AB0CC9);
+    /* IE < 10 */  
+    /* 注意：这一行必须写在最后 */  
+    FILTER: progid:DXImageTransform.Microsoft.Gradient(startColorStr=#F7CFF8, endColorStr=#AB0CC9);
+}
+.ListInfoTits, .ListInfoInfo:hover{
+    /*渐变色*/
+    /* Webkit: Safari 4-5, Chrome 1-9 */  
+    background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#FAE9FA), to(#E184F2));  
+    /* Webkit: Safari 5.1+, Chrome 10+ */  
+    background: -webkit-linear-gradient(left, #FAE9FA, #E184F2);  
+    /* Firefox 3.6+ */  
+    background: -moz-linear-gradient(left, #FAE9FA, #E184F2); 
+    /* Opera 11.10+ */  
+    background: -o-linear-gradient(left, #FAE9FA, #E184F2); 
+    /* IE 10 */  
+    background: -ms-linear-gradient(left, #FAE9FA, #E184F2);
+    /* IE < 10 */  
+    /* 注意：这一行必须写在最后 */  
+    FILTER: progid:DXImageTransform.Microsoft.Gradient(startColorStr=#FAE9FA, endColorStr=#E184F2);
+}
+.AdminList:hover, .AdminHandle:hover, .sub:hover{
+    /*渐变色*/
+    /* Webkit: Safari 4-5, Chrome 1-9 */  
+    background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#FCE2FD), to(#AB0CC9));  
+    /* Webkit: Safari 5.1+, Chrome 10+ */  
+    background: -webkit-linear-gradient(left, #FCE2FD, #AB0CC9);  
+    /* Firefox 3.6+ */  
+    background: -moz-linear-gradient(left, #FCE2FD, #AB0CC9); 
+    /* Opera 11.10+ */  
+    background: -o-linear-gradient(left, #FCE2FD, #AB0CC9); 
+    /* IE 10 */  
+    background: -ms-linear-gradient(left, #FCE2FD, #AB0CC9);
+    /* IE < 10 */  
+    /* 注意：这一行必须写在最后 */  
+    FILTER: progid:DXImageTransform.Microsoft.Gradient(startColorStr=#FCE2FD, endColorStr=#AB0CC9);
+}
+
+#AdminHandle{
+    width: 394px;
+    height: 214px;
+    margin: 0 auto;
+    /*display: none;*/
+}
+.AdminHandle{
+    width: 150px;
+    height: 60px;
+    line-height: 60px;
+    float: left;
+    margin-top: 30px;
+    margin-left: 31px;
+}
+.AdminList{
+    width: 100px;
+    height: 100px;
+    border-radius: 50px;
+    position: relative;
+    top: 57px;
+    left: 147px;
+}
+.AdminList a{
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+.AdminList span{
+    font-size: 22px;
+    position: relative;
+    top: -55px;
+}
+#FindAdmin, #UpdAdmin, #AddAdmin, #DelAdmin, #ListUpdOne{
+    width: 500px;
+    margin: 0 auto;
+    display: none;
+    overflow: hidden;
+}
+#UpdAdmin, #AddAdmin, #ListUpdOne{
+    height: 500px;
+}
+#DelAdmin, #FindAdmin{
+    height: 380px;
+}
+.title{
+    width: 100%;
+    height: 60px;
+    line-height: 60px;
+    color: #5A4D4D;
+    font-size: 17px;
+
+}
+.FindAdminNotice, .UpdAdminNotice, .UpdAdminNotice1, .AddAdminNotice, .DelAdminNotice{
+    width: 100%;
+    height: 60px;
+    line-height: 60px;
+    color: red;
+}
+.form{
+    width: 120px;
+    height: 440px;
+    float: left;
+}
+.form span{
+    display: block;
+    height: 52px;
+    line-height: 52px;
+    margin-top: 10px;
+}
+#grade{
+    height: 25px;
+    line-height: 25px;
+}
+#FindAdmin form, #UpdAdmin form, #AddAdmin form, #ListUpdOne form, #DelAdmin form{
+    width: 380px;
+    height: 440px;
+    float: left;
+}
+#FindAdmin form input, #FindAdmin form select, #UpdAdmin form input, #UpdAdmin form select, #AddAdmin form input, #AddAdmin form select, #ListUpdOne form input, #ListUpdOne form select, #DelAdmin form input, #DelAdmin form select{
+    display: block;
+    margin: 0 auto;
+    margin-top: 10px;
+}
+#FindAdmin form input, #UpdAdmin form input, #AddAdmin form input, #ListUpdOne form input, #DelAdmin form input{
+    width: 360px;
+    height: 50px;
+    text-indent: 10px;
+}
+#UpdAdmin form select, #AddAdmin form select, #ListUpdOne form select{
+    width: 100px;
+    height: 25px;
+}
+
+.OneInfo, .ListUpdOnes{
+    width: 100%;
+    height: 100%;
+    background: #FABBDF;
+    /*div透明化*/
+    filter:alpha(opacity:90); 
+    opacity:0.9;
+    position: fixed; 
+    top: 0px; 
+    left: 0px;
+    z-index: 1;
+    display: none;
+}
+#OneInfo{
+    width: 500px;
+    height: 500px;
+    border-radius: 5px;
+    margin: 0 auto;
+    background: #FAF2F3;
+}
+.OneInfoTit{
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    text-indent: 90px;
+    /*border-top-left-radius: 5px;*/
+    /*border-top-right-radius: 5px;*/
+}
+.close{
+    display: block;
+    position: relative; 
+    left: 2px;
+    width: 90px;
+    height: 30px;
+    line-height: 30px;
+    text-indent: 0px;
+    margin-top: 10px;
+    background: #E184F2;
+    float: right;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    /*背景阴影*/
+    filter: progid:DXImageTransform.Microsoft.Shadow(color=#909090,direction=120,strength=3);/*ie*/
+    -moz-box-shadow: 2px 2px 10px #909090;/*firefox*/
+    -webkit-box-shadow: 2px 2px 10px #909090;/*safari或chrome*/
+    box-shadow: 2px 2px 10px #909090;/*opera或ie9*/
+}
+.OneInfoTits{
+    width: 25%;
+    height: 450px;
+    float: left;
+}
+.OneInfoInfo{
+    width: 75%;
+    height: 450px;
+    float: left;
+}
+.OneInfoTits li, .OneInfoInfo li{
+    width: 100%;
+    height: 45px;
+    line-height: 45px;
+}
+#ListInfo{
+    width: 95%;
+    height: 710px;
+    margin: 0 auto;
+    margin-top: 10px !important;
+    margin-bottom: 110px !important;
+    border-radius: 5px;
+    display: none;
+    overflow: hidden;
+}
+.ListInfoTit{
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    /*border-top-left-radius: 5px;*/
+    /*border-top-right-radius: 5px;*/
+}
+.page, .ListInfoTits{
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    border-bottom: 1px solid #D0D0D0;
+}
+.ListInfoTits li{
+    width: 8%;
+    float: left;
+}
+#ListInfoHandle{
+    width: 26%;
+}
+#batch{
+    width: 2%;
+}
+.ListInfoInfo{
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    background: #EAE3E3;
+    border-bottom: 1px solid #D0D0D0;
+}
+.ListInfoInfo li{
+    width: 8%;
+    height: 50px;
+    float: left;
+    overflow: hidden;
+}
+.ListInfoId a:hover, .ListInfoName span:hover, .ListInfoSta a:hover, .ListInfoRtime a:hover, .ListInfoLtime a:hover, .ListInfoLip a:hover, .ListInfoQuXian a:hover, .ListInfoWadd a:hover, .ListInfoGrade a:hover, .ListInfoDel:hover, .ListInfoUpd:hover{
+    color: white;
+    /*渐变色*/
+    /* Webkit: Safari 4-5, Chrome 1-9 */  
+    background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#FFF7FF), to(#AB0CC9)) !important;  
+    /* Webkit: Safari 5.1+, Chrome 10+ */  
+    background: -webkit-linear-gradient(left, #FFF7FF, #AB0CC9) !important;  
+    /* Firefox 3.6+ */  
+    background: -moz-linear-gradient(left, #FFF7FF, #AB0CC9) !important; 
+    /* Opera 11.10+ */  
+    background: -o-linear-gradient(left, #FFF7FF, #AB0CC9) !important; 
+    /* IE 10 */  
+    background: -ms-linear-gradient(left, #FFF7FF, #AB0CC9) !important;
+    /* IE < 10 */  
+    /* 注意：这一行必须写在最后 */  
+    FILTER: progid:DXImageTransform.Microsoft.Gradient(startColorStr=#FFF7FF, endColorStr=#AB0CC9) !important;
+}
+#ListInfoHandle a{
+    display: block;
+    float: left;
+    width: 50%;
+}
+.ListInfoInfo a, .ListInfoInfo span{
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+#ListInfoRtime, #ListInfoLtime{
+    line-height: 25px;
+}

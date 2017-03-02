@@ -1,0 +1,18 @@
+[ 2017-02-22T13:41:06+08:00 ] 127.0.0.1 /ge_ren_zhong_xin/FiltrateIndent/index.php/New/category.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+ERR: 无法加载模块:New
+
+[ 2017-02-22T13:42:39+08:00 ] 127.0.0.1 /ge_ren_zhong_xin/FiltrateIndent/index.php/New/category.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+ERR: 无法加载模块:New
+
+[ 2017-02-22T13:42:42+08:00 ] 127.0.0.1 /ge_ren_zhong_xin/FiltrateIndent/index.php/New/category.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+ERR: 无法加载模块:New
+

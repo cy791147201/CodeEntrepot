@@ -1,0 +1,115 @@
+.father{
+    width: 100%;
+    text-align: center;
+    color: #F6F3F3;
+    font-size: 12px;
+}
+.father div{
+    overflow: hidden;
+    border-radius: 5px;
+}
+.father a{
+    color: white;
+}
+.images{
+    width: 600px;
+    height: 500px;
+    margin: 0 auto; 
+    margin-bottom: 110px;
+    background-color: #E699EA;
+}
+.image{
+    width: 400px;
+    height: 400px;
+    background-color: green;
+    float: left;
+}
+.classify{
+    width: 200px;
+    height: 400px;
+    float: left;
+}
+.NowClassify{
+    width: 95%;
+    height: 50px;
+    line-height: 50px;
+    margin: 0 auto;
+    background-color: green;
+}
+.NowClassify span{
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: blue;
+}
+#AllClassify{
+    width: 100%;
+    height: 350px;
+    /*background-color: #8C3030;*/
+    overflow: auto;
+}
+#AllClassify a{
+    display: block;
+    width: 95%;
+    height: 50px;
+    line-height: 50px;
+    margin: 0 auto;
+    margin-top: 5px;
+    border-radius: 5px;
+    background-color: blue;
+}
+
+
+.shape{
+    width: 580px;
+    height: 100px;
+    margin-left: 10px;
+}
+.shape a{
+    display: block;
+    float: left;
+    width: 116px;
+    height: 40px;
+    margin-top: 30px;
+    margin-left: 14px;
+    margin-right: 14px;
+    border-radius: 5px;
+    line-height: 40px;
+    background-color: red;
+}
+
+/*弹出背景*/
+.ChangeSta{
+    background-color: green;
+    width: 100%;
+    height: 100%;
+    /*div透明化*/
+    filter:alpha(opacity:90); 
+    opacity:0.9;
+    position: absolute; 
+    top: 0px; 
+    left: 0px; 
+    z-index: 10; 
+    display: none;
+    border: 1px solid #29B19C;
+    text-align: center;
+}
+#ClassifyAll{
+    min-width: 450px;
+}
+.ClassifyOne{
+    width: 25%;
+    height: 50px;
+    line-height: 50px;
+    float: left;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.ClassifyOne a{
+    display: block;
+    background-color: pink;
+    width: 95%;
+    color: white;
+    border-radius: 5px;
+    margin: 0 auto;
+}

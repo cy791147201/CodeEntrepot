@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>操作管理员首页</title>
+<meta http-equiv = 'Content-Type' content = 'text/html; charset = utf-8' />
+<link rel = 'stylesheet' type = 'text/css' href = '__ROOT__/Public/Css/home.css'>
+<script src = '__ROOT__/Public/Js/Home.js' type = 'text/javascript' charset = 'utf-8'></script>
+</head>
+<body>
+    <include file = 'Public/Html/head.html' />
+    
+    <div class = 'replace' id = 'AdminHandle'>
+        <div class = 'AdminHandle' onclick = 'Replace("replace", "AddAdmin");'>
+            <span>添加管理员</span>
+        </div>
+        <div class = 'AdminHandle' onclick = 'Replace("replace", "DelAdmin");'>
+            <span>删除管理员</span>
+        </div>
+        <div class = 'AdminList'>
+            <a href = '__APP__/Home/Handle/HandleAdmin?act=list' title = '查看用户列表'>
+                <span>列表</span>
+            </a>
+        </div>
+        <div class = 'AdminHandle' onclick = 'Replace("replace", "UpdAdmin");'>
+            <span>修改管理员</span>
+        </div>
+        <div class = 'AdminHandle' onclick = 'Replace("replace", "FindAdmin");'>
+            <span>查找管理员</span>
+        </div>
+    </div>
+
+    <div class = 'replace' id = 'AddAdmin'>
+        <div class = 'title'>
+            <span>添加管理员</span>
+        </div>
+        <div class = 'AddAdminNotice'>
+            请细心填写
+        </div>
+        <div class = 'form'>
+            <span>用户名</span>
+            <span>用户密码</span>
+            <span>确认密码</span>
+            <span id = 'grade'>权限</span>
+        </div>
+        <form action = '__CONTROLLER__/HandleAdmin?act=add' method = 'post' name = 'form1' onsubmit = 'return CheackReIn("add");'>
+            <input type = 'text' name = 'user1' placeholder = '请填写用户名' />
+            <input type = 'text' name = 'pwd1' placeholder = '请填写用户密码' />
+            <input type = 'text' name = 'repwd1' placeholder = '请确认用户密码' />
+            <select name = 'grade'>
+                <option value = '2'>用户</option>
+                <option value = '1'>管理员</option>
+            </select>
+            <input type = 'submit' value = '确定' class = 'sub'/>
+        </form>
+    </div>
+
+    <div class = 'replace' id = 'DelAdmin'>
+        <div class = 'title'>
+            <span>删除管理员</span>
+        </div>
+        <div class = 'DelAdminNotice'>
+            请细心填写
+        </div>
+        <div class = 'form'>
+            <span>用户名</span>
+            <span>再次确认用户名</span>
+        </div>
+        <form action = '__CONTROLLER__/HandleAdmin?act=del' method = 'post' name = 'form2' onsubmit = 'return CheackReIn("del");'>
+            <input type = 'text' name = 'user2' placeholder = '请填写用户名' />
+            <input type = 'text' name = 'ReUser2' placeholder = '请确认用户名' />
+            <input type = 'submit' value = '确定' class = 'sub'/>
+        </form>
+    </div>
+
+    <div class = 'replace' id = 'UpdAdmin'>
+        <div class = 'title'>
+            <span>修改管理员</span>
+        </div>
+        <div class = 'UpdAdminNotice'>
+            请细心填写
+        </div>
+        <div class = 'form'>
+            <span>用户名</span>
+            <span>用户密码</span>
+            <span>确认密码</span>
+            <span id = 'grade'>权限</span>
+        </div>
+        <form action = '__CONTROLLER__/HandleAdmin?act=upd' method = 'post' name = 'form5' onsubmit = 'return CheackReIn("upd1");'>
+            <input type = 'text' name = 'user5' placeholder = '请填写用户名' />
+            <input type = 'text' name = 'pwd5' placeholder = '请填写用户密码' />
+            <input type = 'text' name = 'repwd5' placeholder = '请确认用户密码' />
+            <select name = 'grade'>
+                <option value = '2'>用户</option>
+                <option value = '1'>管理员</option>
+            </select>
+            <input type = 'submit' value = '确定' class = 'sub'/>
+        </form>
+    </div>
+
+    <div class = 'replace' id = 'FindAdmin'>
+        <div class = 'title'>
+            <span>查找管理员</span>
+        </div>
+        <div class = 'FindAdminNotice'>
+            请细心填写
+        </div>
+        <div class = 'form'>
+            <span>用户名</span>
+            <span>再次确认用户名</span>
+        </div>
+        <form action = '__CONTROLLER__/HandleAdmin?act=find' method = 'post' name = 'form4' onsubmit = 'return CheackReIn("find");'>
+            <input type = 'text' name = 'user4' placeholder = '请填写用户名' />
+            <input type = 'text' name = 'ReUser4' placeholder = '请确认用户名' />
+            <input type = 'submit' value = '确定' class = 'sub'/>
+        </form>
+    </div>
+    
+    <div class = 'OneInfo' style = 'display: {$OneInfoDisplay};'>
+        <div class = 'replace' id = 'OneInfo'>
+            <div class = 'OneInfoTit'>
+                <span>用户个人信息</span>
+                <span class = 'close' onclick = 'ChangeDisplay("OneInfo");'>关闭</span>
+            </div>
+            <div class = 'OneInfoTits'>
+                <ul>
+                    <li>
+                        <span>用户ID</span>
+                    </li>
+                    <li>
+                        <span>用户名</span>
+                    </li>
+                    <li>
+                        <span>用户状态</span>
+                    </li>
+                    <li>
+                        <span>注册时间</span>
+                    </li>
+                    <li>
+                        <span>上次登陆时间</span>
+                    </li>
+                    <li>
+                        <span>上次登陆IP</span>
+                    </li>
+                    <li>
+                        <span>权限</span>
+                    </li>
+                    <li>
+                        <span>添加人员ID</span>
+                    </li>
+                    <li>
+                        <span>用户等级</span>
+                    </li>
+                </ul>
+            </div>
+            <div class = 'OneInfoInfo'>
+                <ul>
+                    <li>
+                        <span>{$OneInfo.u_id}</span>
+                    </li>
+                    <li>
+                        <span>{$OneInfo.u_name}</span>
+                    </li>
+                    <li>
+                        <if condition = "$OneInfo.sta eq 1">
+                            <span>正常</span>
+                        <elseif condition = "$OneInfo.sta eq 0" />
+                            <span>已删除</span>
+                        </if>
+                    </li>
+                    <li>
+                        <span>{$OneInfo.r_time|date='Y-m-d H-i-s',###}</span>
+                    </li>
+                    <li>
+                        <span>{$OneInfo.l_time|date='Y-m-d H-i-s',###}</span>
+                    </li>
+                    <li>
+                        <span>{$OneInfo.l_ip}</span>
+                    </li>
+                    <li>
+                        <if condition = "$OneInfo.jurisdiction eq admin">
+                            <span>管理员</span>
+                        <elseif condition = "$OneInfo.jurisdiction eq user" />
+                            <span>用户</span>
+                        </if>
+                    </li>
+                    <li>
+                        <span>{$OneInfo.w_add}</span>
+                    </li>
+                    <li>
+                        <span>{$OneInfo.grade}</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    
+    <div id = 'ListInfo' class = 'replace' style = 'display: {$ListInfoDisplay};'>
+        <div class = 'ListInfoTit'>
+            <span>管理员列表页</span>
+        </div>
+        <div class = 'ListInfoTits'>
+            <ul>
+                <li id = 'batch'>
+                    &nbsp;
+                </li>
+                <li class = 'ListInfoId'>
+                    <span>用户ID</span>
+                </li>
+                <li class = 'ListInfoName'>
+                    <span>用户名</span>
+                </li>
+                <li class = 'ListInfoSta'>
+                    <span>用户状态</span>
+                </li>
+                <li class = 'ListInfoRtime'>
+                    <span>注册时间</span>
+                </li>
+                <li class = 'ListInfoLtime'>
+                    <span>上次登录</span>
+                </li>
+                <li class = 'ListInfoLip'>
+                    <span>登录IP</span>
+                </li>
+                <li class = 'ListInfoQuXian'>
+                    <span>权限</span>
+                </li>
+                <li class = 'ListInfoWadd'>
+                    <span>添加人员ID</span>
+                </li>
+                <li class = 'ListInfoGrade'>
+                    <span>用户等级</span>
+                </li>
+                <li id = 'ListInfoHandle'>
+                    <span>操作</span>
+                </li>
+            </ul>
+        </div>
+
+        <!-- <form action = '' method = 'post'> -->
+            <foreach name = 'ListInfo' item = 'v'>
+                <div class = 'ListInfoInfo'>
+                    <ul>
+                        <li id = 'batch'>
+                            <!-- <input type = 'radio' name = 'ids[]' /> -->
+                        </li>
+                        <li onmouseover = 'ChangeLineColor(this, 1);' onmouseout = 'ChangeLineColor(this, 2);' class = 'ListInfoId'>
+                            <a href = 'javascript:void(0);' title = '用户的ID'>
+                                <span>{$v.u_id}</span>
+                            </a>
+                        </li>
+                        <li onmouseover = 'ChangeLineColor(this, 1);' onmouseout = 'ChangeLineColor(this, 2);' class = 'ListInfoName'>
+                            <!-- <a href = 'javascript:void(0);' title = '用户名'> -->
+                                <span>{$v.u_name}</span>
+                            <!-- </a> -->
+                        </li>
+                        <li onmouseover = 'ChangeLineColor(this, 1);' onmouseout = 'ChangeLineColor(this, 2);' class = 'ListInfoSta'>
+                            <a href = 'javascript:void(0);' title = '用户账户状态'>
+                                <if condition = "$v.sta eq 1">
+                                    <span>正在使用</span>
+                                <elseif condition = "$v.sta eq 0" />
+                                    <span>已删除</span>
+                                </if>
+                            </a>
+                        </li>
+                        <li id = 'ListInfoRtime' onmouseover = 'ChangeLineColor(this, 1);' onmouseout = 'ChangeLineColor(this, 2);' class = 'ListInfoRtime'>
+                            <a href = 'javascript:void(0);' title = '用户注册时间'>
+                                <span>{$v.r_time|date='Y-m-d H:i:s',###}</span>
+                            </a>
+                        </li>
+                        <li id = 'ListInfoLtime' onmouseover = 'ChangeLineColor(this, 1);' onmouseout = 'ChangeLineColor(this, 2);' class = 'ListInfoLtime'>
+                            <a href = 'javascript:void(0);' title = '用户上次登录时间'>
+                                <span>{$v.l_time|date='Y-m-d H:i:s',###}</span>
+                            </a>
+                        </li>
+                        <li onmouseover = 'ChangeLineColor(this, 1);' onmouseout = 'ChangeLineColor(this, 2);' class = 'ListInfoLip'>
+                            <a href = 'javascript:void(0);' title = '用户上次登录IP'>
+                                <span>{$v.l_ip}</span>
+                            </a>
+                        </li>
+                        <li onmouseover = 'ChangeLineColor(this, 1);' onmouseout = 'ChangeLineColor(this, 2);' class = 'ListInfoQuXian'>
+                            <a href = 'javascript:void(0);' title = '用户权限'>
+                                <if condition = "$v.jurisdiction eq admin">
+                                    <span>管理员</span>
+                                <elseif condition = "$v.jurisdiction eq user" />
+                                    <span>用户</span>
+                                </if>
+                            </a>
+                        </li>
+                        <li onmouseover = 'ChangeLineColor(this, 1);' onmouseout = 'ChangeLineColor(this, 2);' class = 'ListInfoWadd'>
+                            <a href = 'javascript:void(0);' title = '谁添加的该用户'>
+                                <span>{$v.w_add}</span>
+                            </a>
+                        </li>
+                        <li onmouseover = 'ChangeLineColor(this, 1);' onmouseout = 'ChangeLineColor(this, 2);' class = 'ListInfoGrade'>
+                            <a href = 'javascript:void(0);' title = '用户等级'>
+                                <span>{$v.grade}</span>
+                            </a>
+                        </li>
+                        <li id = 'ListInfoHandle' onmouseover = 'ChangeLineColor(this, 1);' onmouseout = 'ChangeLineColor(this, 2);' class = 'ListInfoHandle'>
+                            <if condition = "$v.sta eq 0">
+                                <a href = '__CONTROLLER__/HandleAdmin?act=del&id={$v.u_id}&sta=0' title = '删除管理员' class = 'ListInfoDel'>
+                                    <span>启用</span>
+                                </a>
+                            <elseif condition = "$v.sta eq 1"/>
+                                <a href = '__CONTROLLER__/HandleAdmin?act=del&id={$v.u_id}&sta=1' title = '删除管理员' class = 'ListInfoDel'>
+                                    <span>删除</span>
+                                </a>
+                            </if>
+                            <a href = '__CONTROLLER__/HandleAdmin?act=UpdOne&id={$v.u_id}' title = '修改管理员' class = 'ListInfoUpd'>
+                                <span>修改</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </foreach>
+
+        <div class = 'page'>
+            <!-- <input type = 'submit' value = '批量删除' /> -->
+            {$page}
+        </div>
+
+        <!-- </form> -->
+
+    </div>
+
+    <div class = '{$AdminListUpdOneDisplay}' style = 'display: none;'></div>
+    <div class = 'replace' id = 'ListUpdOne'>
+        <div class = 'title'>
+            <span>修改管理员</span>
+        </div>
+        <div class = 'UpdAdminNotice1'>
+            请细心填写
+        </div>
+        <div class = 'form'>
+            <span>用户名</span>
+            <span>用户密码</span>
+            <span>确认密码</span>
+            <span id = 'grade'>权限</span>
+        </div>
+        <form action = '__CONTROLLER__/HandleAdmin?act=upd' method = 'post' name = 'form3' onsubmit = 'return CheackReIn("upd");'>
+            <input type = 'hidden' name = 'id' value = '{$UpdOneInfo.u_id}'/>
+            <input type = 'text' name = 'user3' value = '{$UpdOneInfo.u_name}'/>
+            <input type = 'text' name = 'pwd3' placeholder = '请输入用户密码' />
+            <input type = 'text' name = 'repwd3' placeholder = '请确认密码' />
+            <select name = 'grade'>
+                <option value = '2'>用户</option>
+                <option value = '1'>管理员</option>
+            </select>
+            <input type = 'submit' value = '确定' class = 'sub'/>
+        </form>
+    </div>
+
+    <include file = 'Public/Html/foot.html' />
+</body>
+</html>

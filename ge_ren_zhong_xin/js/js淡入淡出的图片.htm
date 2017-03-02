@@ -1,0 +1,74 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<style>
+#img1 {filter:alpha(opacity:30); opacity:0.3;}
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>js淡入淡出</title>
+<script type="text/javascript">
+window.onload=function ()
+{
+	var oImg=document.getElementById('img1');
+	
+	oImg.onmouseover=function ()
+	{
+		// 鼠标经过事件，传参透明度等于100
+		startMove(100);
+	}
+	
+	oImg.onmouseout=function ()
+	{
+		// 鼠标移除事件，传参透明度等于30
+		startMove(30);
+	}
+}
+// 设置定时器
+var timer=null;
+// 设置alpha数值
+var alpha=30;
+
+function startMove(iTarget)
+{
+	// 获取对象
+	var oImg=document.getElementById('img1');
+	// 清除定时器
+	clearInterval(timer);
+	// 设置定时器
+	timer=setInterval(function (){
+		// 速度初始值
+		var iSpeed=0;
+		
+		// 如果目标透明度小于目标值
+		if(alpha<iTarget)
+		{
+			iSpeed=1;
+		}
+		// 如果目标透明度大于目标值
+		else
+		{
+			iSpeed=-1;
+		}
+		// 如果目标透明达到目标值，清除定时器
+		if(alpha==iTarget)
+		{
+			clearInterval(timer);
+		}
+		else
+		{
+			alpha+=iSpeed;
+			// 设置目标透明度
+			oImg.style.filter='alpha(opacity:'+alpha+')';
+			oImg.style.opacity=alpha/100;
+			// 修改网页title
+			document.title=alpha;
+		}
+	}, 30);
+}
+</script>
+</head>
+
+<body>
+<img id="img1" src="Desert.jpg" />
+</body>
+</html>

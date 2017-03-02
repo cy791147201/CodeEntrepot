@@ -1,0 +1,44 @@
+{:W("Main",array('module'=>MODULE_NAME,'action'=>ACTION_NAME,'do'=>$_GET['do']))}
+
+<link  href='__PUBLIC__/Alizi/pc/uploads.css' rel='stylesheet' type='text/css'>
+
+<body>
+    <div class = 'layout-main'> 
+        <div id = 'breadclumb' class = 'box'>
+            <h3>
+                <strong>{:lang('breadclumb_colon')}</strong>
+                {:lang(MODULE_NAME)}
+                <span></span>
+                {:lang('upload_item_body')}
+            </h3>
+        </div>
+        <div id="CooperationMain" class="box clear-fix">   
+            <div class = 'father'>
+                <p class = 'tit'>
+                    <span>上传商品页面</span>
+                </p>
+                <form action = "{:U(MODULE_NAME.'/DoUp')}" method = 'post' enctype = "multipart/form-data">
+                    <!-- <input type = 'hidden' name = "goods[g_id]" value = '{$id}' /> -->
+                    <input type = 'hidden' name = "goods[id]" value = '{$id}' />
+                    <input type = 'hidden' name = "goods[from]" value = '{$from}' />
+                    <input type = 'file' name = 'file' class = 'file' value = '选择上传文件'/>
+                    <div class = 'radios'>
+                       <!--  <span class = 'choose'>选择上传文件类型</span>
+                        <span>审核页</span>
+                        <input type = 'radio' name = 'goods[genre]' checked = 'checked' value = '0' />
+                        <span>商品页</span>
+                        <input type = 'radio' name = 'goods[genre]' value = '1' /> -->
+                    </div>
+                    <input type = 'text' name = "goods[name]" placeholder = '请输入商品名称，必填' class = 'goods' />
+                    <select name = "goods[category_id]" class = 'goods'>
+                        <volist name="category" id="v">
+                            <option value="{$v.id}" >{$v.name}</option>
+                        </volist>
+                    </select>
+                    <input type = 'submit' value = '上传' class = 'sub' />
+                </form>
+            </div>
+            <form>
+        </div>
+    </div>
+</body>

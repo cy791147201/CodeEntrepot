@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>生成订单系统__订单地址统计</title>
+<link rel = 'stylesheet' type = 'text/css' href = '__ROOT__/Public/Css/body6.css'>
+<script type = 'text/javascript' src = '__ROOT__/Public/Js/check.js'></script>
+</head>
+    <include file = 'Public/Html/header.html' />
+
+    <div class = 'body2'>
+        <div class = 'form4'>
+            <form action = '__CONTROLLER__/Handles' method = 'post' id = 'Upd' onsubmit = 'return CheckForm(this)'>
+                <div>
+                    <input type = 'text' name = 'sheng' value = '{$info.sheng}' class = 'shuru' />
+                </div>
+                <div>
+                    <input type = 'text' name = 'shi' value = '{$info.shi}' class = 'shuru' />
+                </div>
+                <div>
+                    <input type = 'hidden' name = 'act' value = '{$act}' />
+                    <input type = 'hidden' name = 'g_id' value = '{$info.id}' />
+                    <input type = 'submit' value = '确认' />
+                </div>
+            </form>
+        </div>
+    </div>  
+
+    <include file = 'Public/Html/foot.html' />

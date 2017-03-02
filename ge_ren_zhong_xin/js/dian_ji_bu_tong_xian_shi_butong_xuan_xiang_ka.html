@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>点击按钮显示不同的选项卡</title>
+</head>
+<script type="text/javascript">
+	window.onload = function()
+	{
+		var input = document.getElementsByTagName('input');
+		var div = document.getElementsByTagName('div');
+		var i =0;
+		for(i = 0; i < input.length; i++)
+		{
+			input[i].index = i;
+			input[i].onclick = function()
+			{
+				for(i = 0; i < input.length; i++)
+				{
+					input[i].className = '';
+					// alert(input[i].value);
+					div[i].style.display = 'none';
+				}
+				this.className = 'input';
+				div[this.index].style.display = 'block';
+			}
+		}
+	}
+</script>
+<style type="text/css">
+	div{
+		width: 300px;
+		height: 300px;
+		background-color: green;
+		display: none;
+	}
+	.input{
+		background-color: red;
+	}
+</style>
+<body>
+<input type="button" value = '1' />
+<input type="button" value = '2' />
+<input type="button" value = '3' />
+<div>
+	111
+</div>
+<div>
+	222
+</div>
+<div>
+	333
+</div>
+</body>
+</html>

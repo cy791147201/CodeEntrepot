@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>js匿名函数</title>
+</head>
+<script type="text/javascript">
+	// js匿名函数
+	window.onload = function()
+	{
+		var div = document.getElementById('div');
+		// 这里的调用函数不要加括号
+		div.onmouseover = ToRed;
+		div.onmouseout = ToGreen;
+	};
+	function ToRed()
+	{
+		document.getElementById('div').className = 'one';
+	}
+	function ToGreen()
+	{
+		document.getElementById('div').className = 'two';
+	}
+</script>
+<style type="text/css">
+	.one{
+		width: 300px;
+		height: 300px;
+		background-color: red;
+	}
+	.two{
+		width: 400px;
+		height: 400px;
+		background-color: green;
+	}
+	div{
+		width: 100px;
+		height: 100px;
+		background-color: pink;
+	}
+</style>
+<body>
+<div id = 'div'>
+	
+</div>
+</body>
+</html>

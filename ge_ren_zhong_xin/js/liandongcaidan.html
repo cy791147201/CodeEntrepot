@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	
+</head>
+<body>
+<select id = 'shengfen' onchange = 'caidan()'>
+	<option value = '-1'>请选择</option>
+	<option value = '0'>北京</option>
+	<option value = '1'>河北</option>
+</select>
+<select id = 'area'>
+	
+</select>
+</body>
+	<script>
+		var area = [
+		['朝阳', '昌平'],
+		['邢台', '沙河'],
+		];
+		function caidan(){
+			var sel = document.getElementById('shengfen');
+
+			var opt = '';
+
+			if(sel.value == '-1'){
+				document.getElementById('shengfen').innerHTML = opt;
+				return;
+			}
+			for(var i = 0, len = area[sel.value].length; i <len; i++){
+				opt = opt+'<option value = "'+i+'">'+area[sel.value][i]+'</option>';
+			}
+
+			document.getElementById('area').innerHTML = opt;
+		}
+	</script>
+</html>

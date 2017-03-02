@@ -1,0 +1,19 @@
+.father{
+    width: 100%;
+    text-align: center;
+    color: #F6F3F3;
+    font-size: 12px;
+}
+.body{
+    width: 800px;
+    height: 400px;
+    margin-top: 50px;
+    margin-left: 50px;
+    /*background-color: red;*/
+}
+.body img{
+    width: 100%;
+    border-radius: 50px;
+    /*垂直居中*/
+    /*vertical-align: center;*/
+}

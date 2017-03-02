@@ -1,0 +1,84 @@
+.father{
+    width: 100%;
+    text-align: center;
+    color: #F6F3F3;
+    font-size: 12px;
+}
+.body2{
+    width: 800px;
+    margin-top: 50px;
+    margin-left: 50px;
+    background-color: pink;
+    border: 1px solid #29B19C;
+    border-radius: 3px;
+}
+#form3{
+    width: 80%;
+    height: 90%;
+    margin: 0 auto;
+    background-color: #E3CADB;
+    border-radius: 5px;
+    border: 1px solid #29B19C;
+}
+.xuanxiang{
+    height: 50px;
+    line-height: 50px;
+    margin: 0 auto;
+    background-color: #168C65;
+}
+.xuanxiang p{
+    width: 33.3%;
+    height: 100%;
+    float: left;
+    background-color: #08AC7F;
+}
+.xuanxiang p:hover{
+    background-color: #168C65 !important;
+    color: #555350;
+}
+#form3 form{
+    display: none;
+}
+#form0 input, #form2 input{
+    display: block;
+    width: 90%;
+    max-width: 600px;
+    height: 50px;
+    line-height: 50px;
+    text-indent: 10px;
+    border: 1px solid #E796CA;
+    border-radius: 5px;
+    background-color: #D0C6C6;
+    margin: 0 auto;
+    margin-top: 50px;
+}
+.bot{
+    width: 90%;
+    max-width: 600px;
+    margin: 0 auto;
+}
+#form3 button{
+    height: 45px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    background-color: #18AF86;
+    border: 1px solid #E796CA;
+    border-radius: 5px;
+    color: white;
+}
+#form3 button:hover{
+    background-color: #168C65;
+    color: #555350;
+}
+.bot1{
+    width: 25%;
+}
+.bot2{
+    width: 65%;
+}
+#img{
+    width: 90%;
+    max-width: 450px;
+    margin: 0 auto;
+    margin-top: 50px;
+}

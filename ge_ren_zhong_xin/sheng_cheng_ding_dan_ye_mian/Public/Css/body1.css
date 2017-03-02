@@ -1,0 +1,66 @@
+.father{
+    width: 100%;
+    text-align: center;
+    color: #F6F3F3;
+    font-size: 12px;
+}
+.body{
+    width: 800px;
+    height: 400px;
+    margin-top: 50px;
+    margin-left: 50px;
+    /*background-color: red;*/
+}
+.body img{
+    width: 100%;
+    border-radius: 50px;
+}
+.form{
+    width: 50%;
+    height: 100%;
+    margin: 0 auto;
+    /*background-color: green;*/
+}
+.form input, .form div{
+    width: 80%;
+    height: 45px;
+    line-height: 45px;
+    margin: 0 auto;
+    border: 1px solid #29B19C;
+    margin-top: 10px;
+    background-color: #FF90EA;
+    color: #F3D7EE;
+    border-radius: 3px;
+}
+.form input:hover, .form div:hover{
+    background-color: #CB5BCA;
+    color: #969696;
+}
+/*上文文件按钮样式*/
+.file {
+    position: relative;
+    display: inline-block;
+    background: #D0EEFF;
+    border: 1px solid #99D3F5;
+    border-radius: 3px;
+    padding: 4px 12px;
+    overflow: hidden;
+    color: #1E88C7;
+    text-decoration: none;
+    text-indent: 0;
+    line-height: 35px;
+    float: left;
+}
+.file input {
+    position: absolute;
+    font-size: 100px;
+    right: 0;
+    top: 0;
+    opacity: 0;
+}
+.file:hover {
+    background: #A0CFE9;
+    border-color: #78C3F3;
+    color: #969696;
+    text-decoration: none;
+}

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+<link rel = 'stylesheet' type = 'text/css' href = 'Css/reset.css'>
+</head>
+<style type = 'text/css'>
+    .father{
+        width: 100%;
+        height: 100%;
+        min-width: 500px;
+        min-height: 1500px;
+        background: -moz-linear-gradient(left top,#E6BEF3,#2210F0);
+    }
+    .father div{
+        width: 20%; 
+        height: 20%;
+        min-width: 100px;
+        float: left;
+        /*div模糊层*/
+        /*针对ie*/
+        filter: alpha(Opacity=50);
+        /*针对火狐*/
+        -moz-opacity: 0.6;
+        opacity: 0.6;
+    }
+    .father div img{
+        display: block;
+        width: 100%;
+        height: 100%;
+    }
+    .father div:hover{
+        /*针对ie*/
+        filter: alpha(Opacity=100);
+        /*针对火狐*/
+        -moz-opacity: 1.0;
+        opacity: 1.0;
+    } 
+</style>
+<body>
+    <center>
+        <div class = 'father'>
+            <div class = 'register'>
+                <a href = 'register/register.html' title = '注册所有网站用户名'>
+                    <img src = 'Images/register.jpg' />
+                </a>
+            </div>
+            <div class = 'zhangdan'>
+                <a href = 'zhangdan/admin.php' title = '账单系统'>
+                    <img src = 'Images/zhangdan.jpg' />
+                </a>
+            </div>
+            <div class = 'FiltrateIndent'>
+                <a href = 'FiltrateIndent/index.php' title = '筛选订单'>
+                    <img src = 'Images/FiltrateIndent.jpg' />
+                </a>
+            </div>
+            <div class = 'nanxiwnag'>
+                <a href = 'nanxiwang/adminpanel123.php' title = '订单系统'>
+                    <img src = 'Images/nanxiwang.jpg' />
+                </a>
+            </div>
+            <div class = 'dingdan' title = '生成订单页面系统'>
+                <a href = 'sheng_cheng_ding_dan_ye_mian/index.php'>
+                    <img src = 'Images/dingdan.jpg' />
+                </a>
+            </div>
+            <div class = 'shujuku'>
+                <a href = 'myadmin' title = '数据库学习文件'>
+                    <img src = 'Images/shujuku.jpg' />
+                </a>
+            </div>
+            <div class = 'js'>
+                <a href = 'js' title = 'js学习文件'>
+                    <img src = 'Images/js.jpg' />
+                </a>
+            </div>
+            <div class = 'chengfabiao'>
+                <a href = 'files/chengfabiao.php' title = '学习文件，php乘法表'>
+                    <img src = 'Images/changfabiao.jpg' />
+                </a>
+            </div>
+            <div class = 'up'>
+                <a href = 'upload/uploadfile.php' title = '学习文件，上传文件'>
+                    <img src = 'Images/uploadfile.jpg' />
+                </a>
+            </div>
+            <div class = 'session'>
+                <a href = 'session/' title = '学习文件，session'>
+                    <img src = 'Images/session.jpg' />
+                </a>
+            </div>
+            <div class = 'bei_jing_du_ceng'>
+                <a href = 'files/bei_jing_du_ceng.html' title = '学习文件，div背景浮层'>
+                    <img src = 'Images/bei_jing_du_ceng.jpg' />
+                </a>
+            </div>
+        </div>
+    </center>
+</body>
+</html>

@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html>
+<head>
+<!-- 电脑端 -->
+<meta http-equiv = "Content-Type" content = "text/html; charset = utf-8">
+<meta content = "width = device-width,initial-scale = 1.0,maximum-scale = 1.0, user-scalable = 0" name = "viewport"> 
+<meta content = "yes" name = "apple-mobile-web-app-capable"> 
+<meta content = "yes" name = "apple-touch-fullscreen">
+<meta content = "black" name = "apple-mobile-web-app-status-bar-style">
+<meta content = "320" name = "MobileOptimized">
+<meta content = "telephone = no" name = "format-detection">
+
+
+<link rel="shortcut icon" href="/nanxiwang/Public/Assets/img/alizi.ico" />
+<link href="/nanxiwang/Public/Alizi/pc/nanxiwang.css" rel="stylesheet">
+
+<script src="/nanxiwang/Public/Alizi/djs/jquery-1.js"></script>
+<script src="/nanxiwang/Public/Alizi/djs/time.js"></script>
+
+<!-- 这个跟检测是否检订单提交信息，姓名，地址，收货信息之类 有关-->
+<script type="text/javascript" src="/nanxiwang/Public/Alizi/seajs/seajs/sea.js"></script>
+<!-- 这个跟检测是否检订单提交信息，姓名，地址，收货信息之类 有关-->
+<script type="text/javascript">
+var aliziHost = "http://shenshuang.geren.com/nanxiwang/",aliziRoot = "/nanxiwang/",aliziVersion="Alizi-V2.4.6-Alizi-89881992",lang="zh-cn";
+seajs.config({ base: '/nanxiwang/Public/Alizi/seajs/',alias: {'jquery': 'jquery/jquery','alizi': 'alizi/alizi','lang': 'alizi/lang-'+lang}, map: [['.css', '.css?v=' + aliziVersion],['.js', '.js?v=' + aliziVersion]]});
+</script>
+<script type="text/javascript">
+function change()
+{   
+    // alert(1);
+    var temp = document.getElementsByName('item_params');
+    if(temp)
+    {
+        for(var i=0;i<temp.length;i++){
+            if(temp[i].checked)
+                var id = temp[i].id;
+        }
+    }
+    // console.log(id);
+
+    // 改变所有样式
+    var tags = document.getElementsByClassName('change');
+    if(tags)
+    {
+        for (var i = 0; i < tags.length; i++){
+            tags[i].removeAttribute('style');
+        }
+    }
+    var div1 = document.getElementsByClassName('none1');
+    if(div1)
+    {
+        for(var i = 0, l = div1.length; i < l; i++){
+            var obj = div1[i];
+            obj.style.display = 'none';
+        }  
+    }
+
+    // 显示对应套餐内的属性
+    var e = document.getElementsByName(id);
+    if(e)
+    {
+        for (var i = 0; i < e.length; i++){
+            var obj = e[i];
+            obj.style.display = 'block';
+        }
+    }
+    // 获取对应套餐的单价
+    // var oPrice = document.getElementById('price' + id);
+    // // // console.log(oPrice.innerHTML);
+    // // // 表单里面的价格
+    // var oRealPrice = document.getElementById('item_price');
+    // oRealPrice.value = oPrice.innerHTML;
+    
+    // console.log(oRealPrice.value);
+    // console.log(1);
+    // 显示的价格
+    // var oXianshiPrice = document.getElementsByClassName('alizi-total-price')[0];
+    // // console.log(oXianshiPrice);
+    // oXianshiPrice.innerHTML = oPrice.innerHTML + '.00';
+    // alert(oXianshiPrice.innerHTML);
+}
+
+
+function notice()
+{
+    alert('请先选择套餐');
+}
+
+function huanse(div) 
+{
+    var id = div.id;
+    var className = div.className;
+// alert(className);
+    var x=document.getElementsByClassName("SetRadio");  //获取所有name=brand的元素  
+    for(var i=0;i<x.length;i++)
+    { 
+        //对所有结果进行遍历，如果状态是被选中的，则将其选择取消  
+        if(x[i].checked==true){  
+            x[i].checked=false;  
+        }  
+    }  
+    
+    var tags = document.getElementsByClassName(className);
+    // console.log(tags);
+    for(var i = 0; i < tags.length; i++)
+    {
+        tags[i].removeAttribute('style');
+    }
+
+    // 修改套餐内选项颜色为空, 将套餐以选中的div颜色归零
+    // 有图片
+    if(document.getElementsByClassName('combo-input')[0] !== undefined)
+    {
+        var oDiv = document.getElementsByClassName('combo-input');
+    }
+    else
+    {
+        var oDiv = document.getElementsByClassName('input');
+    }
+
+    var nLen = oDiv.length;
+    for(var i = 0; i < nLen; i ++)
+    {
+        // console.log(oDiv[i]);
+        // console.log(oDiv[i].children);
+        var nLen1 = oDiv[i].children.length;
+        for(var j = 0; j < nLen1; j ++)
+        {
+            // oDiv[i].children[j].style.backgroundColor = 'green';
+            oDiv[i].style.backgroundColor = '#fff';
+        }
+    }
+    var a = document.getElementById(id);
+    a.style.background = '#f60';
+    // alert(1);
+}
+
+function huanse1(div, tag)
+{
+    // 移除所有样式
+    var id = div.id;
+    // console.log(id);
+    // 匹配出来分配的中问input框类名
+    // 套餐属性名字应该为中文
+    // js匹配中文
+    var pattern1 = /[\u4e00-\u9fa5]+/g;
+    // var pattern2 = /\[[\u4e00-\u9fa5]+\]/g;
+    var ClassName = id.match(pattern1);
+    // console.log(ClassName);
+    // 清除该类名下所有js赋给的样式
+    var a = document.getElementById(id);
+    if(tag === 1)
+    {   
+        // 通过name获取节点
+        // console.log(document.getElementsByName(a.parentNode.parentNode.parentNode.getAttribute("name")));
+        var oClass = document.getElementsByName(a.parentNode.parentNode.parentNode.getAttribute("name"));
+        // console.log(document.getElementsByName('套餐一-1'));
+    }
+    else
+    {
+        var oClass = document.getElementsByClassName(ClassName);
+    }
+    // console.log(oClass);
+    var len = oClass.length;
+    for (var i = 0; i < len; i++) 
+    {
+        oClass[i].removeAttribute('style');
+    }
+    a.parentNode.parentNode.parentNode.parentNode.style.background = '#f60';
+}
+</script>
+
+</head>
+<body style = 'width: 100%; max-width: 700px;'>
+<div class = 'father'>
+
+        
+    <section class = "buy">
+        <div class = "row1"> 
+            <strong>
+                ￥888
+            </strong>            <ol>
+                <li>
+                    <p>原价</p>
+                    ￥999
+                </li>
+                <li>
+                    <p>折扣</p>
+                    8.89折
+                </li>
+                <li>
+                    <p>节省</p>
+                    ￥111
+                </li>
+            </ol>        </div>
+        <div class="row2">
+            <strong>1<br>人已购买</strong>
+                <div class = "time">
+                <div id="remainTime_1" class="jltimer"><span>00</span>天<span>01</span>小时<span>18</span>分<span>36</span>秒</div>
+                <script language="javascript">
+                    addTimeLesser(1, 4735);
+                </script>
+            </div>
+        </div>
+        <!-- <article class = "des"></article> -->
+        <a href = "#buy">购买</a> 
+    </section>
+
+    <div class = "btn">
+        <article class = "showcontent">
+                                                                                                        </article>  
+    </div>
+
+    <article id = "buy">  
+        <h2>▼在线下单</h2>    <!-- 订单 -->
+        <div class = "combo">[{"title":"a#\u6d4b\u8bd5\u540d\u5b57\u6d4b\u8bd5\u540d\u5b57\u6d4b\u8bd5\u540d\u5b57\u6d4b\u8bd5\u540d\u5b57\u6d4b\u8bd5\u540d\u5b57\u6d4b\u8bd5\u540d\u5b57","price":"100","image":"\/201702\/589fdbe975a32.jpg","qrcode":null},{"title":"b#bb","price":"200","image":"\/201702\/589fdbf79b233.jpg","qrcode":null}]</div>
+        <div class = "type">radio</div>
+        <div class = "extends">[{"title":"a#\u5957\u9910","value":"\u6d4b\u8bd5\u4e00#\u6d4b\u8bd5\u4e8c#\u6d4b\u8bd5\u4e09#\u6d4b\u8bd5\u56db","type":"radio","image":"\/201702\/58a01d6e33809.jpg#\/201702\/58a01d714dae2.jpg#\/201702\/58a01d75371e8.jpg#\/201702\/58a01d7c63b81.jpg"}]</div>
+        <div class = "content"><p>{[AliziOrder]}</p></div>
+        <div class="container"  >
+            <div class="mainwidth">
+                <div class="alizi-detail-wrap clearfix">
+                    <div class="alizi-detail-content">
+                        <p><div class='alizi-order alizi-theme-thin alizi-lang-zh-cn alizi-border clearfix' id='aliziOrder'><div class='alizi-main alizi-border alizi-full-row'><div class='alizi-title alizi-border ellipsis'><i class='icon-cart'></i>11111111</div><div class='alizi-content alizi-border'><form action='/nanxiwang/index.php?m=Order&a=aliziBooking' method='post' id='aliziForm'><input type='hidden' name='user_id' value='1'><input type='hidden' name='user_pid' value='1'><input type='hidden' name='sn' value='2U1G0p'><input type='hidden' name='item_id' value='2'><input type='hidden' name='item_name' value='11111111'><input type='hidden' name='item_price' id='item_price' value=''><input type='hidden' name='url' value='http://shenshuang.geren.com/nanxiwang/index.php?m=Index&a=DownBody&id=2U1G0p'><input type='hidden' name='redirect' value='http://shenshuang.geren.com/nanxiwang/index.php?m=Index&a=DownBody&id=2U1G0p'><input type='hidden' name='referer' value='http://shenshuang.geren.com/nanxiwang/adminpanel123.php?m=Item&a=index'><input type='hidden' name='order_page' value='index'><input type='hidden' name='channel_id' value=''><input type='hidden' name='qrcode_pay' value='0'><input type='hidden' name='math' value='+0'><input type='hidden' name='page' value='index'><div class='alizi-box' id='alizi-box-1'><div class='alizi-rows clearfix rows-id-params rows-id-params-radio'><label class='rows-head'>套餐选择<span class="alizi-request">*</span></label><div class='rows-params'><label alizi-value='100' alizi-target='#item_price' alizi-fx='alizi.quantity' alizi-fx-params='0' class=' alizi-params-image ellipsis alizi-params  active ' title='a'><div id = '0' class = 'img' onclick='huanse(this);'><p class='item-image'><img src='http://shenshuang.geren.com/nanxiwang/Public/Uploads/201702/589fdbe975a32.jpg' /></p><input type='radio' style = 'display:none;'  onclick='change();' id = 'a' name='item_params'  value='a#测试名字测试名字测试名字测试名字测试名字测试名字' checked ><span>测试名字测试名字测试名字测试名字测试名字测试名字</span></label></div><span id = 'pricea' style = 'display:none;'>100</span><label alizi-value='200' alizi-target='#item_price' alizi-fx='alizi.quantity' alizi-fx-params='0' class=' alizi-params-image ellipsis alizi-params ' title='b'><div id = '1' class = 'img' onclick='huanse(this);'><p class='item-image'><img src='http://shenshuang.geren.com/nanxiwang/Public/Uploads/201702/589fdbf79b233.jpg' /></p><input type='radio' style = 'display:none;'  onclick='change();' id = 'b' name='item_params'  value='b#bb'  ><span>bb</span></label></div><span id = 'priceb' style = 'display:none;'>200</span></div></div><div class='change' name = 'a'><label class='rows-head'>套餐<span class="alizi-request">*</span></label><div class='rows-params'><input name='extends[a#套餐]' type = 'radio' value = '无' checked='' style = 'display:none;' /><div id = "RadioFather"><div class = 'combo-input' name = '套餐-1'><div name = 'noback' class = '套餐' id = 'a#套餐0'><label class='alizi-group alizi-params alizi-radio active' ><span class='alizi-group-box'><p class='item-image'><img src='http://shenshuang.geren.com/nanxiwang/Public/Uploads/201702/58a01d6e33809.jpg' /></p><input style = 'display:none;' alizi-value='测试一' id='a#套餐-0' name='extends[a#套餐]' type='radio' value='测试一' class = 'SetRadio' onclick = 'huanse1(this, 1);'><label class='selected-icon' for='a0'></label>测试一</span></label></div></div><div class = 'combo-input' name = '套餐-1'><div name = 'noback' class = '套餐' id = 'a#套餐1'><label class='alizi-group alizi-params alizi-radio ' ><span class='alizi-group-box'><p class='item-image'><img src='http://shenshuang.geren.com/nanxiwang/Public/Uploads/201702/58a01d714dae2.jpg' /></p><input style = 'display:none;' alizi-value='测试二' id='a#套餐-1' name='extends[a#套餐]' type='radio' value='测试二' class = 'SetRadio' onclick = 'huanse1(this, 1);'><label class='selected-icon' for='a1'></label>测试二</span></label></div></div><div class = 'combo-input' name = '套餐-1'><div name = 'noback' class = '套餐' id = 'a#套餐2'><label class='alizi-group alizi-params alizi-radio ' ><span class='alizi-group-box'><p class='item-image'><img src='http://shenshuang.geren.com/nanxiwang/Public/Uploads/201702/58a01d75371e8.jpg' /></p><input style = 'display:none;' alizi-value='测试三' id='a#套餐-2' name='extends[a#套餐]' type='radio' value='测试三' class = 'SetRadio' onclick = 'huanse1(this, 1);'><label class='selected-icon' for='a2'></label>测试三</span></label></div></div><div class = 'combo-input' name = '套餐-1'><div name = 'noback' class = '套餐' id = 'a#套餐3'><label class='alizi-group alizi-params alizi-radio ' ><span class='alizi-group-box'><p class='item-image'><img src='http://shenshuang.geren.com/nanxiwang/Public/Uploads/201702/58a01d7c63b81.jpg' /></p><input style = 'display:none;' alizi-value='测试四' id='a#套餐-3' name='extends[a#套餐]' type='radio' value='测试四' class = 'SetRadio' onclick = 'huanse1(this, 1);'><label class='selected-icon' for='a3'></label>测试四</span></label></div></div></div></div></div><div class = 'none1'><label class = 'rows-head' >套餐<span class="alizi-request">*</span></label><div class = 'rows-params'><div class = 'inputs'><input type = 'radio' onclick = 'notice();'><span>请先选择套餐</span></div></div></div><div class='alizi-rows clearfix rows-id-quantity'><label class='rows-head'>订购数量<span class='alizi-request '>*</span></label><div class='rows-params'><div class='alizi-quantity-group'><a class='quantity-dec' href='javascript:;' onclick='alizi.quantity(-1)'>-</a><input type='tel' class='alizi-quantity' size='4' value='1' name='quantity' onkeyup='alizi.quantity(0)'><a class='quantity-inc' href='javascript:;' onclick='alizi.quantity(1)'>+</a></div></div></div><div class='alizi-rows clearfix rows-id-price'><label class='rows-head'>订单价格<span class='alizi-request alizi-request-none'>*</span></label><div class='rows-params'><span class='alizi-shipping' style='display:none;'><strong class='alizi-order-price'>0.00</strong>+<strong class='alizi-shipping-price'>0.00</strong>(运费)=</span><strong class='alizi-total-price'>100</strong>元</div></div></div><!--.alizi-box--><div class='alizi-box' id='alizi-box-2'><div><div></div></div><div class='alizi-rows clearfix rows-id-name'><label class='rows-head'>收货人名<span class='alizi-request '>*</span></label><div class='rows-params'><input type='text' name='name' placeholder='输入您的姓名或称呼' autocomplete='off' alizi-request='1' class='alizi-input-text' value=''></div></div><div class='alizi-rows clearfix rows-id-mobile'><label class='rows-head'>手机号码<span class='alizi-request '>*</span></label><div class='rows-params'><input type='tel' name='mobile' placeholder='输入您的手机号码' autocomplete='off' class='alizi-input-text' alizi-request='1' value=''></div></div><div class='alizi-rows clearfix rows-id-region'><label class='rows-head'>选择地区<span class='alizi-request '>*</span></label><div class='rows-params'><select name='region[province]' id='province' class='alizi-region alizi-region-province' alizi-request='1'></select>
+                                    <select name='region[city]' id='city' class='alizi-region alizi-region-city' alizi-request='1'></select>
+                                    <select name='region[area]' id='area' class='alizi-region alizi-region-area' alizi-request='1'></select>
+                                    <script type='text/javascript'>var lang='zh-cn';seajs.use(['alizi/region-'+lang],function(region){ new PCAS('region[province]','region[city]','region[area]','','','');});</script></div></div><div class='alizi-rows clearfix rows-id-address'><label class='rows-head'>详细地址<span class='alizi-request '>*</span></label><div class='rows-params'><input type='text' name='address' placeholder='请填写您的详细地址' autocomplete='off' alizi-request='1' class='alizi-input-text' value=''></div></div><div class='alizi-rows clearfix rows-id-remark'><label class='rows-head'>留言备注<span class='alizi-request alizi-request-none'>*</span></label><div class='rows-params'><textarea name='remark' placeholder=' 如备用电话、商品数量、收货时间等，额外需求请留言' class='alizi-input-text' alizi-request='' rows='2'></textarea></div></div><div class='alizi-rows clearfix rows-id-payment'><label class='rows-head'>支付方式<span class='alizi-request '>*</span></label><div class='rows-params'><div class='alizi-payment clearfix'><label alizi-value='1' alizi-target=':payment' alizi-fx='alizi.payment' alizi-fx-params='1' class='ellipsis alizi-params alizi-payment-1 active'><input type='radio' name='payment' value='1' checked>货到付款</label></div><div id='alizi-payment-info' class='alizi-alert clearfix' ><div class='payment-info'>安全放心</div></div></div></div></div><!--.alizi-box--><div class='alizi-rows alizi-id-btn clearfix'><input type='submit' id='alizi-sumit' class='alizi-btn alizi-submit' value='确认提交' /></div></form></div></div></div><script type='text/javascript'>seajs.config({vars: {'payment':{"1":{"name":"\u8d27\u5230\u4ed8\u6b3e","info":"\u5b89\u5168\u653e\u5fc3","math":"+0"},"5":{"name":"\u626b\u7801\u652f\u4ed8","info":"","math":"+0"}},'shipping':{"id":0}}});</script></p>                    </div>
+                </div>
+            </div>
+        </div>
+    </article>
+        <div class = "f_n"></div>        <div class = "f_n"></div></div>
+
+
+<script type="text/javascript">
+seajs.use(['alizi','jquery/form','lang'],function(alizi){
+    window.alizi = alizi;
+    alizi.quantity(0);
+    var btnSubmit = $('.alizi-submit');
+    $('#aliziForm').ajaxForm({
+        timeout: 50000,
+        dataType: 'json',
+        error:function(){ layer.closeAll(); alert(lang.ajaxError); btnSubmit.attr('disabled',false).val(lang.submit); },
+        beforeSubmit:function(){
+            if(checkForm('#aliziForm')==false) return false;
+            layer.closeAll();layer.load();
+            btnSubmit.attr('disabled',true).val(lang.loading);
+        },
+        success:function(data){
+            layer.closeAll();layer.closeAll();
+            if(data.status=='1'){
+                var redirect = "/nanxiwang/index.php?m=Order&a=pay&order_no=__orderNo__";
+                top.window.location.href = redirect.replace('__orderNo__',data.data.order_no);
+            }else{
+                btnSubmit.attr('disabled',false).val(lang.submit);
+                layer.msg(data.info);
+            }
+        }
+    });
+});
+
+function select()
+{
+    var tags = document.getElementsByClassName('change');
+    for (var i = 0; i < tags.length; i++) {
+        tags[i].removeAttribute('style');
+    }
+
+    var div1 = document.getElementsByClassName('none1');
+    for(var i = 0, l = div1.length; i < l; i++){
+        var obj = div1[i];
+        obj.style.display = 'none';
+    }  
+
+    var e = document.getElementById('key');
+    var id = getSelectValues(e);
+    if(id == '未选择，请选择'){
+        for(var i = 0, l = div1.length; i < l; i++){
+            var obj = div1[i];
+            obj.style.display = 'block';
+        }  
+    }
+    var arr = id[0].split('#');
+
+    var div = document.getElementsByName(arr[0]);
+    for(var i = 0, l = div.length; i < l; i++){
+        var obj = div[i];
+        obj.style.display = 'block';
+    }  
+
+    var x = document.getElementsByClassName('sel');  //获取所有name=brand的元素  
+    for(var i = 0; i < x.length; i++){ //对所有结果进行遍历，如果状态是被选中的，则将其选择取消  
+        if (x[i].selected==true)  
+        {  
+            x[i].selected=false;  
+        }  
+    }  
+}
+
+function getSelectValues(select) 
+{
+    var result = [];
+    var options = select && select.options;
+    var opt;
+
+    for (var i=0, iLen=options.length; i<iLen; i++){
+        opt = options[i];
+
+        if (opt.selected){
+          result.push(opt.value || opt.text);
+        }
+    }
+    return result;
+}
+
+</script>
+</body>
+</html>

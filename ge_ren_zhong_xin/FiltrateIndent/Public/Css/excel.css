@@ -1,0 +1,202 @@
+body{
+    width: 100%;
+    height: 100%;
+    min-width: 1000px;
+}
+#FileUpTempSub, #FileUpTemp, #HandAddTemp1, .HandAddForm input, #HandAddTemp, #FileAddTemp, .tit, .ExcelHandleAct, #AddExcelTemp, .ExcelHandle{
+    /*border: #D0D0D0 1px solid;*/
+    /*背景阴影*/
+    filter: progid:DXImageTransform.Microsoft.Shadow(color=#909090,direction=120,strength=3);/*ie*/
+    -moz-box-shadow: 2px 2px 10px #909090;/*firefox*/
+    -webkit-box-shadow: 2px 2px 10px #909090;/*safari或chrome*/
+    box-shadow: 2px 2px 10px #909090;/*opera或ie9*/
+}
+#FileUpTempSub, #sub, .tit, .ExcelHandleAct, .ExcelHandle{
+    /*渐变色*/
+    /* Webkit: Safari 4-5, Chrome 1-9 */  
+    background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#F7CFF8), to(#C758DC));  
+    /* Webkit: Safari 5.1+, Chrome 10+ */  
+    background: -webkit-linear-gradient(left, #F7CFF8, #C758DC);  
+    /* Firefox 3.6+ */  
+    background: -moz-linear-gradient(left, #F7CFF8, #C758DC); 
+    /* Opera 11.10+ */  
+    background: -o-linear-gradient(left, #F7CFF8, #C758DC); 
+    /* IE 10 */  
+    background: -ms-linear-gradient(left, #F7CFF8, #C758DC);
+    /* IE < 10 */  
+    /* 注意：这一行必须写在最后 */  
+    FILTER: progid:DXImageTransform.Microsoft.Gradient(startColorStr=#F7CFF8, endColorStr=#C758DC);
+}
+#FileUpTempSub:hover, #sub:hover, #AddExcelTemp div:hover, .ExcelHandleAct:hover, .ExcelHandle:hover{
+    /*渐变色*/
+    /* Webkit: Safari 4-5, Chrome 1-9 */  
+    background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#FEFAFE), to(#E067F6));  
+    /* Webkit: Safari 5.1+, Chrome 10+ */  
+    background: -webkit-linear-gradient(left, #FEFAFE, #E067F6);  
+    /* Firefox 3.6+ */  
+    background: -moz-linear-gradient(left, #FEFAFE, #E067F6); 
+    /* Opera 11.10+ */  
+    background: -o-linear-gradient(left, #FEFAFE, #E067F6); 
+    /* IE 10 */  
+    background: -ms-linear-gradient(left, #FEFAFE, #E067F6);
+    /* IE < 10 */  
+    /* 注意：这一行必须写在最后 */  
+    FILTER: progid:DXImageTransform.Microsoft.Gradient(startColorStr=#FEFAFE, endColorStr=#E067F6);
+}
+#ExcelFather{
+    /*width: 910px;*/
+    height: 300px;
+    /*background: red;*/
+    /*margin: 0 auto;*/
+} 
+.ExcelMother{
+    width: 910px;
+    height: 100%;
+    margin: 0 auto;
+    /*background: pink;*/
+}
+.ExcelMother:hover{
+    width: 950px;
+    /*height: 100%;
+    margin: 0 auto;
+    background: pink;*/
+}
+.ExcelHandle{
+    width: 140px;
+    height: 70px;
+    line-height: 70px;
+    margin-top: 115px;
+    margin-left: 10px;
+    float: left;
+    border-radius: 5px;
+    overflow: hidden;
+}
+.ExcelHandle:hover{
+    width: 180px;
+    height: 90px;
+    line-height: 90px;
+    margin-top: 105px;
+    /*color: white !important;*/
+}
+.ExcelHandle a{
+    display: block;
+    width: 100%;
+    height: 100%;
+    /*background: green;*/
+}
+.ExcelHandle a:hover{
+    color: white;
+}
+#AddExcelTemp, #FileAddTemp, #HandAddTemp{
+    width: 520px;
+    height: 170px;
+    margin: 0 auto;
+    /*background: red;*/
+    /*margin-bottom: 300px;*/
+    border-radius: 5px;
+    overflow: hidden;
+    display: none;
+}
+/*#AddExcelTemp div{
+
+}*/
+#AddExcelTemp a, #FileAddTemp a, #HandAddTemp a{
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+#AddExcelTemp a:hover, #FileAddTemp a:hover, #HandAddTemp a:hover{
+    color: white;
+}
+.ExcelHandleAct{
+    width: 140px;
+    height: 70px;
+    line-height: 70px;
+    border-radius: 5px;
+    float: left;
+    margin-left: 80px;
+    margin-top: 50px;
+}
+#HandAddTemp1{
+    width: 95%;
+    border-radius: 5px;
+    margin: 0 auto;
+    margin-top: 20px;
+    margin-bottom: 120px;
+    display: none;
+    overflow: hidden;
+    padding-bottom: 50px;
+}
+.tit{
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+}
+.HandAdd{
+    width: 500px;
+    margin: 0 auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    border-radius: 5px;
+}
+#HandAddButton{
+    width: 100%;
+    height: 50px;
+}
+.HandAddButton{
+    width: 80px;
+    height: 30px;
+    margin-top: 10px;
+    float: left;
+}
+.HandAddForm{
+    width: 100%;
+}
+.HandAddForm span{
+    display: block;
+    float: left;
+    width: 150px;
+    height: 33px;
+    line-height: 33px;
+    /*background: red;*/
+}
+.HandAddForm input{
+    display: block;
+    float: left;
+    width: 330px;
+    height: 30px;
+    /*margin: 0 auto;*/
+    margin-bottom: 10px;
+    border-radius: 5px;
+    text-indent: 10px;
+    /*background: green;*/
+}
+#sub{
+    width: 330px;
+    height: 50px;
+    float: right;
+    margin-right: 18px;
+    border: 1px solid #909090;
+}
+#FileUpTemp{
+    width: 520px;
+    height: 200px;
+    margin: 0 auto;
+    /*background: red;*/
+    border-radius: 5px;
+    overflow: hidden;
+    padding-bottom: 20px;
+}
+.FileUpTempDiv{
+    width: 100%;
+    height: 55px;
+    line-height: 55px;
+    margin-top: 20px;
+    /*background: pink;*/
+}
+#FileUpTempSub{
+    width: 400px;
+    height: 50px;
+    border: 1px solid #909090;
+    border-radius: 5px;
+}

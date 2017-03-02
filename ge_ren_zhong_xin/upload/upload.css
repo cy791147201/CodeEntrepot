@@ -1,0 +1,10 @@
+body{
+	text-align: center;
+}
+table{
+	background-color: pink;
+	margin:0 auto;
+}
+td{
+	border:2px solid black;
+}

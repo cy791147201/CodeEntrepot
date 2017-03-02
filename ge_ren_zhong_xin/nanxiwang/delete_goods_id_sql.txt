@@ -1,0 +1,1 @@
+delete from nxw_goods where nxw_goods.g_id not in (select g_id from nxw_item )

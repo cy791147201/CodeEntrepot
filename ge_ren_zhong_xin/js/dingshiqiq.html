@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <script>
+
+        function Time(){
+        //  var bac = document.getElementById('div');
+
+        //  bac.style.backgroundColor = 'green';
+
+            var inp = document.getElementsByName('Time')[0];
+            var time = parseInt(inp.value)-1;
+            inp.value = time;
+            if(time == 0){
+
+                var bac = document.getElementById('div');
+
+                bac.style.backgroundColor = 'green';
+
+                // clearInterval(clock);
+                clearTimeout(clock)
+
+                inp.value = '';
+            }
+            window.setTimeout('Time()',3000);
+        }
+        // var clock = setInterval('Time()', 3000);
+        var clock = window.setTimeout('Time()', 3000);
+
+    </script>
+</head>
+<body>
+<input type="button" name="Time" value = '3'/><br/>
+<div id = 'div' style = 'width: 200px; height: 200px; background-color: red;' onclick = 'Time()'></div>
+</body>
+</html>

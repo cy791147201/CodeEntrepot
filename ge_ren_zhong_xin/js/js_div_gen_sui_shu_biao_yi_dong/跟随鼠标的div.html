@@ -1,0 +1,36 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<style>
+/*div跟随鼠标移动
+	div需要给绝对定位
+*/
+#div1 {width:100px; height:100px; background:red; position:absolute;}
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>js__div跟随鼠标移动</title>
+<!-- 这个有个小问题
+	如果浏览器窗口出现滚动的话就会有潜在问题
+	解决办法看第二个html
+ -->
+<script>
+document.onmousemove=function (ev)
+{
+	// ie下事件是ev
+	// 火狐下事件是event
+	var oEvent=ev||event;
+	var oDiv=document.getElementById('div1');
+	
+	// div绝对定位的left就等于鼠标的x轴坐标
+	// div绝对定位的top就等于鼠标的y轴坐标
+	oDiv.style.left=oEvent.clientX+'px';
+	oDiv.style.top=oEvent.clientY+'px';
+};
+</script>
+</head>
+
+<body>
+<div id="div1">
+</div>
+</body>
+</html>

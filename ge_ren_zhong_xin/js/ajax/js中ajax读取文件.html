@@ -1,0 +1,31 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>js中ajax读取文件</title>
+<!-- 引入ajax封装文件 -->
+<script src="ajax.js"></script>
+<script>
+window.onload=function ()
+{
+	// 获取对象
+	var oBtn=document.getElementById('btn1');
+	
+	oBtn.onclick=function ()
+	{
+		// ajax读取文件，加上参数t=当前时间戳，阻止读取缓存文件
+		//ajax能且仅能 从服务器读取文件
+		//alert('abc.txt?t='+new Date().getTime());
+		ajax('abc.txt?t='+new Date().getTime(), function (str){
+			alert(str);
+		});
+	};
+};
+</script>
+</head>
+
+<body>
+点击按钮的时候，读取abc.txt<br />
+<input id="btn1" type="button" value="读取" />
+</body>
+</html>

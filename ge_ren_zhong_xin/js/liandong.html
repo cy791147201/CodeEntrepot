@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<meta http-equiv = "Content-Type" content = "text/html; charset = utf-8">
+<head>
+	<title></title>
+<script>
+   	var areas =[
+   		["朝阳","安慧里"],
+   		["邢台","沙河"]
+   	];
+	function area(){
+		var ids = window.document.getElementById("ids");
+		var opt ="";
+
+		alert(ids.value);
+		if(ids.value == -1){	
+			window.document.getElementById("city").innerHTML=opt;
+			return;
+		}
+		for(var i =0 ,len = areas[ids.value].length; i<len;i ++){
+			opt = opt +"<option value =" + i + ">" + areas[ids.value][i] + "</option>";
+		}
+			// alert(opt);
+			window.document.getElementById("city").innerHTML=opt;
+	}
+
+
+
+
+
+</script>
+</head>
+<body>
+	<div>
+		<select name = "" id = "ids" onchange = "area();">
+			<option value = "-1">请选择</option>
+			<option value = "0">北京</option>
+			<option value = "1">河北</option>
+		</select>
+		<select name = "" id = "city"></select>
+	</div>
+</body>
+</html>

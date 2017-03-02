@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>个人账单系统__花费信息列表</title>
+<link rel = 'stylesheet' type = 'text/css' href = '__ROOT__/Public/Css/HuaFeiImage.css'>
+<script type = 'text/javascript' src = '__ROOT__/Public/Js/check.js'></script>
+</head>
+    <include file = './Public/Html/header.html' />
+
+    <div class = 'images'>
+        <div class = 'image'>
+            
+        </div>
+        <div class = 'classify'>
+            <div class = 'NowClassify'>
+                <span>当前分类&nbsp;:&nbsp;{$ClassifyName}</span>
+            </div>
+            <div id = 'AllClassify'>
+                <!-- <foreach name = 'classifys' item = 'v'>
+                <a href = ''>
+                    <span>{$v.names}</span>
+                </a>
+                </foreach> -->
+                <a href = 'javascript:;' onclick = 'ChangeSta("TanChuHuaFeiClassify", 1);'>
+                    <span>其他分类</span>
+                </a>
+            </div>
+        </div>
+        <div class = 'shape'>
+            <a href = ''>
+                <span>3D饼图</span>
+            </a>
+            <a href = ''>
+                <span>柱状图</span>
+            </a>
+            <a href = ''>
+                <span>环状图</span>
+            </a>
+            <a href = ''>
+                <span>横柱图</span>
+            </a>
+        </div>
+    </div>  
+
+    <div class = 'ChangeSta'>
+        <div id = 'ClassifyAll'>
+            <div class = 'ClassifyOne'>
+                <a href = '__CONTROLLER__/HuaFeiImage?classify=all&sta={$sta}' class = 'ClassifyA' style = 'background-color: #247DAD;'>
+                <!-- <a href = ''> -->
+                    <span>全部分类</span>
+                </a>
+            </div>
+            <div class = 'ClassifyOne'>
+                <a href = '__CONTROLLER__/HuaFeiImage?classify=999999999&sta={$sta}' class = 'ClassifyA'>
+                <!-- <a href = ''> -->
+                    <span>未指定</span>
+                </a>
+            </div>
+            <foreach name = 'classifys' item = 'v'>
+            <div class = 'ClassifyOne'>
+                <a href = '__CONTROLLER__/HuaFeiImage?classify={$v.ids}&sta={$sta}' class = 'ClassifyA'>
+                <!-- <a href = ''> -->
+                    <span>{$v.names}</span>
+                </a>
+            </div>
+            </foreach>
+            <div class = 'ClassifyOne'>
+                <a href = 'javascript:;' onclick = 'ChangeSta("GuanBi");' style = 'background-color: #247DAD;'>
+                <!-- <a href = ''> -->
+                    <span>关闭</span>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <include file = './Public/Html/foot.html' />    

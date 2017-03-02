@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>类似轮播</title>
+	<title>js轮播图</title>
+</head>
+<script type="text/javascript">
+	window.onload = function()
+	{
+		var roll = document.getElementById('roll');
+		var ul = roll.getElementsByTagName('ul')[0];
+		var li = ul.getElementsByTagName('li');
+		var a1 = document.getElementById('left');
+		var a2 = document.getElementById('right');
+		var speed = 5;
+		var time = null;
+
+		ul.innerHTML += ul.innerHTML; 
+		ul.style.width = li[0].offsetWidth * li.length + 'px';
+
+		time = setInterval(function()
+		{
+			ul.style.left = ul.offsetLeft - speed + 'px';
+			if(ul.offsetLeft < - ul.offsetWidth / 2 - 39)
+			{
+				ul.style.left = '-60px';
+			}
+			else if(ul.offsetLeft > -39)
+			{	
+				// alert(-ul.offsetWidth/2);
+				ul.style.left = -ul.offsetWidth/2 + 'px';
+			} 
+		}, 30);
+		a1.onmouseover = function()
+		{
+			speed = 5;
+		};
+		a2.onmouseover = function()
+		{
+			speed = -5;
+		};
+		ul.onmouseover = function()
+		{
+			clearInterval(time);
+		};
+		ul.onmouseout = function()
+		{
+			time = setInterval(function()
+			{
+				ul.style.left = ul.offsetLeft - speed + 'px';
+				if(ul.offsetLeft < - ul.offsetWidth / 2 - 39)
+				{
+					ul.style.left = '-50px';
+				}
+				else if(ul.offsetLeft > -39)
+				{	
+					// alert(-ul.offsetWidth/2);
+					ul.style.left = -ul.offsetWidth/2 - 38 + 'px';
+				} 
+			}, 30);
+		};
+	};	
+</script>
+<style type="text/css">
+	#roll{
+		width: 800px;
+		height: 100px;
+		position: relative;
+		overflow: hidden;
+	}
+	.anniu a{
+		display: block;
+		width: 100px;
+		height: 100px;
+		line-height: 100px;
+		text-align: center;
+		background-color: pink;
+		float: left;
+	}
+	.lunbo{
+		width: 600px;
+		height: 100px;
+		background: orange;
+		float: left;
+		position: relative;
+		overflow: hidden;
+	}
+	.lunbo ul{
+		height: 100px;
+		line-height: 100px;
+		overflow: hidden;
+		float: left;
+		position: absolute;
+		left: -39px;
+		top: -15px;
+	}
+	.lunbo li{
+		width: 200px;
+		height: 100px;
+		background-color: red;
+		float: left;
+		list-style: none;
+	}
+</style>
+<body>
+<div id = 'roll'>
+	<div class = 'anniu'>
+		<a href = 'javascript:void(0);' id = 'left'>向左</a>
+	</div>
+	<div class = 'lunbo'>
+		<ul>
+			<li>1111111111</li>
+			<li>2222222222</li>
+			<li>3333333333</li>
+			<li>4444444444</li>
+		</ul>
+	</div>
+	<div class = 'anniu'>
+		<a href = 'javascript:void(0);' id = 'right'>向右</a>
+	</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,157 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+
+<meta http-equiv = "Content-Type" content = "text/html; charset = utf-8">
+<meta content = "width = device-width,initial-scale = 1.0,maximum-scale = 1.0, user-scalable = 0" name = "viewport"> 
+<meta content = "yes" name = "apple-mobile-web-app-capable"> 
+<meta content = "yes" name = "apple-touch-fullscreen">
+<meta content = "black" name = "apple-mobile-web-app-status-bar-style">
+<meta content = "320" name = "MobileOptimized">
+<meta content = "telephone = no" name = "format-detection">
+
+{$info.web_t}
+{$info.cont1}
+{$info.cont2}
+{$info.cont3}
+
+<link rel="shortcut icon" href="__PUBLIC__/Assets/img/alizi.ico" />
+<link href="__PUBLIC__/Alizi/pc/nanxiwang1.css" rel="stylesheet">
+
+<script type="text/javascript" src="__PUBLIC__/Alizi/seajs/seajs/sea.js"></script>
+
+<script type="text/javascript">
+var aliziHost = "{$aliziHost}",aliziRoot = "{:C('ALIZI_ROOT')}",aliziVersion="{$Think.const.ALIZI_VERSION}-{:C('ALIZI_KEY')}",lang="{:C('DEFAULT_LANG')}";
+seajs.config({ base: '__PUBLIC__/Alizi/seajs/',alias: {'jquery': 'jquery/jquery','alizi': 'alizi/alizi','lang': 'alizi/lang-'+lang}, map: [['.css', '.css?v=' + aliziVersion],['.js', '.js?v=' + aliziVersion]]});
+</script>
+
+{$js}
+
+</head>
+<body style = 'width: {$info.wid}px;'>
+<div class = 'father'>
+
+    {$info.tit}
+    {$info.tit_img}
+
+    <section class = "buy">
+        <div class = "row1"> 
+            {$info.price}
+            {$info.original_price}
+        </div>
+        {$info.dao_time}
+        <!-- <article class = "des"></article> -->
+        <a href = "#buy">购买</a> 
+    </section>
+
+    <div class = "btn">
+        <article class = "showcontent">
+            {$info.qiang}
+            {$info.q_info}
+            {$info.buy}
+            {$info.b_info}
+            {$info.chan}
+            {$info.c_info}
+            {$info.ser}
+            {$info.s_info}
+        </article>  
+    </div>
+
+    {$info.in_t}
+    {$info.in_in}
+
+        <div class="container" {$style} >
+            <div class="mainwidth">
+                <div class="alizi-detail-wrap clearfix">
+                    <div class="alizi-detail-content">
+                        <!-- 订单 -->
+                        <php>
+                            if(strstr($info['content'],'{[AliziOrder]}')){
+                                $info['content'] = explode('{[AliziOrder]}',$info['content']);  
+                                foreach($info['content'] as $key=>$content){ 
+                                    echo $content;
+                                    if($key==0){
+                                        W('Order',array_merge($_GET,array('page'=>'index')));
+                                    } 
+                                }
+                            }else{
+                                echo $info['content'];
+                            }
+                        </php>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </article>
+    {$info.ft_img}
+    {$f_n}
+    {$info.comp}
+    {$f_n}
+</div>
+
+{$foot}
+
+<script type="text/javascript">
+seajs.use(['alizi','jquery/form','lang'],function(alizi){
+    window.alizi = alizi;
+    alizi.quantity(0);
+    var btnSubmit = $('.alizi-submit');
+    $('#aliziForm').ajaxForm({
+        timeout: 50000,
+        dataType: 'json',
+        error:function(){ layer.closeAll(); alert(lang.ajaxError); btnSubmit.attr('disabled',false).val(lang.submit); },
+        beforeSubmit:function(){
+            if(checkForm('#aliziForm')==false) return false;
+            layer.closeAll();layer.load();
+            btnSubmit.attr('disabled',true).val(lang.loading);
+        },
+        success:function(data){
+            layer.closeAll();layer.closeAll();
+            if(data.status=='1'){
+                var redirect = "{:U('Order/pay',array('order_no'=>'__orderNo__'))}";
+                top.window.location.href = redirect.replace('__orderNo__',data.data.order_no);
+            }else{
+                btnSubmit.attr('disabled',false).val(lang.submit);
+                layer.msg(data.info);
+            }
+        }
+    });
+});
+
+function select()
+{
+    var tags = document.getElementsByClassName("change");
+    for (var i = 0; i < tags.length; i++) {
+        tags[i].removeAttribute('style');
+    }
+
+    var e = document.getElementById("key");
+    var id = getSelectValues(e);
+    var arr = id[0].split("#");
+
+    var div = document.getElementsByName(arr[0]);
+    for(var i = 0, l = div.length; i < l; i++){
+        var obj = div[i];
+        obj.style.display = 'block';
+    }  
+}
+
+function getSelectValues(select) 
+{
+    var result = [];
+    var options = select && select.options;
+    var opt;
+
+    for (var i=0, iLen=options.length; i<iLen; i++){
+        opt = options[i];
+
+        if (opt.selected){
+          result.push(opt.value || opt.text);
+        }
+    }
+    return result;
+}
+
+</script>
+</body>
+</html>

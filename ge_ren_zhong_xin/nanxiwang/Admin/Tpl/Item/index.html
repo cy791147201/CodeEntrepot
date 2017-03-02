@@ -1,0 +1,187 @@
+{:W("Main",array('module'=>MODULE_NAME,'action'=>ACTION_NAME))}
+
+<div class="layout-main">    
+    <div id="breadclumb" class="box">
+        <h3><strong>{:lang('breadclumb_colon')}</strong>{:lang(MODULE_NAME)}<span></span>{:lang('item_list')}</h3>
+    </div>
+    <div id="CooperationMain" class="box clear-fix">   
+        <div class="layout-block-header">
+            <form action="__SELF__" method="get" id="searchform">
+                <input type="hidden" name="s" value="{$Think.const.MODULE_NAME}" />
+                <input type="hidden" name="a" value="{$Think.const.ACTION_NAME}" />
+                <label>{:lang('search_colon')}</label>
+                <input type="text" name="keyword" value="{$_GET['keyword']|trim}" class="ui-text" autocomplete="off" size="40">
+                <select name="category_id">
+                    <option value="0">{:lang('select_category')}</option>
+                    <volist name="category" id="vo">
+                    <option value="{$v.id}" <eq name="_GET.category_id" value="$v.id">selected='selected'</eq>>{$v.name}</option>
+                    </volist>
+                </select>
+                <button type="submit" class="btn btn-ok">{:lang('search')}</button>
+            </form>
+        </div>
+        
+        <form action="{:U('Item/todo')}" method="post" id="deleteform">
+        <div class="ui-table">
+            <div class="ui-table-body ui-table-body-hover">
+                <table cellpadding="0" cellspacing="0" width="100%" >
+                    <thead>
+                        <tr class="ui-table-head">
+                            <th class="ui-table-hcell" width="20"><input type="checkbox" id="check_box" onclick="$.Select.All(this,'id[]');" ></th>
+                            <th class="ui-table-hcell" width="50">{:lang('sortOrder')}</th>
+                            <th class="ui-table-hcell" width="100">{:lang('item_number')}</th>
+                            <th class="ui-table-hcell">{:lang('name')}</th>
+                            <th class="ui-table-hcell">{:lang('category')}</th>
+                            <th class="ui-table-hcell" width="60">{:lang('price')}</th>
+                            <th class="ui-table-hcell" width="30">{:lang('package')}</th>
+                            <th class="ui-table-hcell" width="30">{:lang('status')}</th>
+                            <th class="ui-table-hcell" width="90">{:lang('body_list')}&nbsp;\&nbsp;{:lang('number')}</th> 
+                            <!-- <th class="ui-table-hcell" width="60">{:lang('body_replace')}</th> -->
+                            <th class="ui-table-hcell" width="60">{:lang('download_body')}</th>
+                            <th class="ui-table-hcell" width="100">{:lang('statics_hua_status')}</th>
+                            <th class="ui-table-hcell" width="380">{:lang('action')}</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <volist name="list" id="v">
+                        <tr id="row-{$v.id}">
+                            <td>
+                                <input type="checkbox" class="itemId" name="id[]" value="{$v.id}" onclick="$.Select.This(this);">
+                            </td>
+                            <!-- 排序的时候使用的id -->
+                            <if condition = "$v.show eq 1">
+                                <!-- <td><input type="text" class="ui-text" size="2" name="sort_order[{$v.g_id}]" value="{$v.sort_order}"></td> -->
+                                <td>
+                                    <input type="text" class="ui-text" size="2" name="sort_order[{$v.g_id}]" />
+                                </td>
+                            <elseif condition = "$v.show eq 2" />
+                                <!-- <td><input type="text" class="ui-text" size="2" name="sort_order[{$v.sn}]" value="{$v.sort_order}"></td> -->
+                                <td>
+                                    <input type="text" class="ui-text" size="2" name="sort_order[{$v.sn}]" />
+                                </td>
+                            </if>
+                            <td>{$v.g_id}</td>
+                            <td>
+                                <a href="{$v.url.url}" target="_blank">{$v.name}</a>
+                                <notempty name="v.image"><a href="{$v.image|imageUrl}" title="{:lang('image')}" target="_blank"><img src="__PUBLIC__/Assets/img/pic.jpg" /></a></notempty>
+                                <eq name="v.is_hot" value="1"> <img src="__PUBLIC__/Assets/img/hot.gif" /></eq>
+                            </td>
+                            <td>{$v.category_id|getFields="Category","name",###}</td>
+                            <td>{$v.price}{:lang('yuan')}</td>
+                            <td>{$v.params|json_decode=true|count}</td>
+                            <td>
+                                <if condition = "($v.status eq 1)">
+                                    {$v.status|status="image"}
+                                <elseif condition = "($v.status eq 0)"/>
+                                    <a href = 'adminpanel123.php?m=Item&a=OnGoods&id={$v.g_id}_{$v.sn}'><span>{:lang('on')}</span></a>
+                                </if>
+                            </td>    
+                            <td>
+                                <if condition = "$v.show eq 1">
+                                    <a href = 'adminpanel123.php?m=Item&a=GidsList&id={$v.g_id}'><span>{:lang('list')}</span></a>
+                                <elseif condition = "$v.show eq 2"/>
+                                    {$v.b_s}
+                                </if>
+                            </td>
+                            <!-- <td>
+                                <if condition = '$v.show eq 1'>
+                                    <a href = 'adminpanel123.php?m=Item&a=GidsList&id={$v.g_id}'><span>{:lang('show_list')}</span></a>
+                                <elseif condition = '$v.show eq 2'/>
+                                    <a href = 'adminpanel123.php?m=Item&a=ReGoods&id={$v.g_id}{$v.b_s}'><span>{:lang('replace')}</span></a>
+                                </if>
+                            </td> -->
+                            <td>
+                                <!-- <if condition = '($v.s eq 0)'>
+                                    <a href = 'index.php?m=Index&a=order&do=sta_down&id={$v.g_id}_{$v.sn}' target = '_blank'><span>{:lang('download')}</span></a>
+                                <elseif condition = '($v.s neq 0) && ($v.status neq 1)' />
+                                    <a href = 'adminpanel123.php?m=Item&a=down&id={$v.g_id}_{$v.sn}_0' target = '_blank'><span>{:lang('download')}</span></a>
+                                <elseif condition = '($v.s neq 0)&& ($v.status eq 1)' />
+                                    <a href = 'adminpanel123.php?m=Item&a=down&id={$v.g_id}_{$v.sn}_1' target = '_blank'><span>{:lang('download')}</span></a>
+                                </if> -->
+                                <a href = 'index.php?m=Index&a=DownBody&id={$v.sn}'><span>{:lang('download_this_body')}</span></a>
+                                
+                            </td>
+                            <td>
+                                <!-- <a href = 'index.php?m=Index&a=order&do=sta_none&id={$v.g_id}_{$v.sn}' target = '_blank'>
+                                    <if condition = '($v.s eq 0)'>
+                                        <span>{:lang('statics_hua')}</span>
+                                    <elseif condition = '($v.s neq 0)' />
+                                        <span>{:lang('again_statics_hua')}</span>
+                                    </if>
+                                </a> -->
+                                <if condition = '($v.s neq 0) && ($v.status eq 0)'>
+                                    <a href = 'index.php?m=Index&a=order&do=sta_none&id={$v.sn}' target = '_blank'><span>__{:lang('__again_statics_hua_this_body')}</span></a>
+                                    <br/>
+                                    <a href = 'adminpanel123.php?m=Item&a=down&id={$v.g_id}_{$v.sn}' target = '_blank'><span>__{:lang(download_this_statics_body)}</span></a>
+                                <elseif condition = '($v.s neq 0) && ($v.status eq 1)' />
+                                    <a href = 'index.php?m=Index&a=order&do=sta_none&id={$v.sn}' target = '_blank'><span>__{:lang('__again_statics_hua_this_body')}</span></a>
+                                    <br/>
+                                    <a href = 'adminpanel123.php?m=Item&a=down&id={$v.g_id}' target = '_blank'><span>__{:lang(download_this_statics_body)}</span></a>
+                                <elseif condition = '($v.s eq 0) && ($v.status eq 0)' />
+                                    <a href = 'index.php?m=Index&a=order&do=sta_none&id={$v.sn}' target = '_blank'><span>__{:lang('statics_hua_this_body')}</span></a>
+                                    <br/>
+                                    <a href = 'index.php?m=Index&a=order&do=sta_down&id={$v.sn}' target = '_blank'><span>__{:lang(download_this_statics_body)}</span></a>
+                                <elseif condition = '($v.s eq 0) && ($v.status eq 1)' />
+                                    <a href = 'index.php?m=Index&a=order&do=sta_none&id={$v.sn}' target = '_blank'><span>__{:lang('statics_hua_this_body')}</span></a>
+                                    <!-- <a href = 'index.php?m=Index&a=order&do=sta_none&id={$v.g_id}_{$v.sn}_1' target = '_blank'><span>未静已启</span></a> -->
+                                    <br/>
+                                    <a href = 'index.php?m=Index&a=order&do=sta_down&id={$v.sn}' target = '_blank'><span>__{:lang(download_this_statics_body)}</span></a>
+                                </if>
+                            </td>
+                            <td class="action">
+                                <if condition = '$v.show eq 1'>
+                                    <a href = 'adminpanel123.php?m=Item&a=uploads&from=Gid_{$v.g_id}'>{:lang('upload_this_item_body')}</a> |
+                                <elseif condition = '$v.show eq 2' />
+                                    <a href = 'adminpanel123.php?m=Item&a=uploads&from=sn_{$v.g_id}_{$v.sn}'>{:lang('upload_edit_this_item_body')}</a> |
+                                </if>
+                                <if condition="in_array('itemModify',$_SESSION['user']['auth'])"><a href="{:U('Item/'.ACTION_NAME,array('do'=>'edit','id'=>$v['id']))}">{:lang('edit')}</a> |</if>
+                                <if condition="in_array('itemAdd',$_SESSION['user']['auth'])"><a href="{:U('Item/'.ACTION_NAME,array('do'=>'copy','id'=>$v['id']))}">{:lang('copy')}</a> |</if>
+                                <q onclick="using('{$v.id}','{$v.name}')">{:lang('using')}</q> |
+                                <if condition="in_array('itemAuth',$_SESSION['user']['auth'])"><q onclick="auth('{$v.id}','{$v.name}')">{:lang('auth')}</q> |</if>
+                                <a <if condition="in_array('itemComments',$_SESSION['user']['auth'])">href="{:U('Item/'.ACTION_NAME,array('do'=>'comments','id'=>$v['id']))}"<else />class="grey"</if>>{:lang('comments')}({:getFields("Comments","count(id)",$v['id'],"item_id")})</a>
+                            </td>
+                        </tr>
+                        </volist>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+          
+        <div class="ui-pager-bar clearfix" style="padding-left:10px;">
+            <div class="float-left">
+                <!-- 显示是什么列表 goods or item -->
+                <input type="hidden" name="model" value="{$what}">
+                <input type="checkbox" id="check_box" onclick="$.Select.All(this,'id[]');" >选择/反选 
+                <input type="button" name="del" value="批量删除" class="btn" onclick="delConfirm()">
+                <input type="submit" name="sort" value="批量排序" class="btn btn-ok">
+                <q class="btn btn-ok" onclick="auth(0,'批量授权')">批量授权</q>
+                <input type="hidden" name="del" value="1">
+            </div>
+            <div class="ui-pager" style="float:right">{$page}</div>
+        </div>
+        </form>
+</div><!--.box-->
+<script type="text/javascript">
+function using(id,title){
+    var url = "?m=Item&a=index&do=using&id="+id;
+    $.open(url,{title:'单页推广 - '+title,width:980,height:580})
+}
+function auth(id,title){
+    if(id===0){
+        var ids = new Array(),i=0;
+         $(".itemId").each(function(){
+            var _this = $(this);
+            if(_this.attr("checked")=="checked"){ ids[i] =_this.val(); i++;}
+        })
+        id = ids.join();
+    }
+    var url = "?m=Item&a=auth&id="+id;
+    $.open(url,{title:'授权 - '+title,width:500,height:250})
+}
+function delConfirm(){
+    $.confirm('是否要删除？',function(){ 
+        $('#deleteform').submit();
+    },true)
+}
+</script>
+{:W("Foot")}   

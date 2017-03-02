@@ -1,0 +1,77 @@
+.father{
+    width: 100%;
+    text-align: center;
+    color: #F6F3F3;
+    font-size: 12px;
+}
+.body2{
+    width: 800px;
+    margin-top: 50px;
+    margin-left: 50px;
+    background-color: pink;
+    border: 1px solid #29B19C;
+    border-radius: 3px;
+}
+.tit, .info{
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    background-color: #D54EAD;
+    border-bottom: 1px solid #29B19C;
+}
+.info{
+    background-color: #E9B5CF;
+}
+.tit li, .info li{
+    width: 18%;
+    float: left;
+    overflow: hidden;
+}
+#ReColor0{
+    width: 8%;
+}
+#shijian{
+    line-height: 25px;
+}
+#handle{
+    width: 20%;
+    height: 50px;
+}
+#page{
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+}
+.info:hover{
+    background-color: #D3E1E0;
+    color: #5E5C5C;
+}
+.info li:hover{
+    /*加!important; 不会让js把样式覆盖了*/
+    background-color: #69B7A8 !important;
+}
+#page:hover{
+    background-color: pink;
+}
+#handle a{
+    display: block;
+    width: 25%;
+    height: 100%;
+    float: left;
+}
+#handle a:hover{
+    background-color: #2E9B86;
+}
+.down{
+    line-height: 25px;
+}
+.red{
+    color: red;
+}
+.green{
+    color: green;
+}
+.blue{
+    color: blue;
+}

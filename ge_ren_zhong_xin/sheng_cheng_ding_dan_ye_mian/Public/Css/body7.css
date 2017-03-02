@@ -1,0 +1,46 @@
+.father{
+    width: 100%;
+    text-align: center;
+    color: #F6F3F3;
+    font-size: 12px;
+}
+.body2{
+    width: 800px;
+    margin-top: 50px;
+    margin-left: 50px;
+    background-color: pink;
+    border: 1px solid #29B19C;
+    border-radius: 3px;
+    padding-bottom: 50px;
+    font-size: 18px;
+    color: #2E2C2C;
+}
+.tit{
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    border-bottom: 1px solid #29B19C;
+}
+.tit li, .sheng li{
+    float: left;
+    width: 25%;
+    height: 100%;
+}
+.sheng{
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    border-bottom: 1px solid #29B19C;
+    background-color: #E1E3E2;
+}
+.sheng:hover{
+    background-color: #D2E4E3;
+}
+.sheng a{
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+.sheng li:hover{
+    background-color: #4F85B9 !important;
+}

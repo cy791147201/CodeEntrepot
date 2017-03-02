@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>js简单时钟</title>
+</head>
+<script type="text/javascript">
+	function ToDouble(num)
+	{
+		if(num < 10)
+		{
+			return '0' + num;
+		}
+		else
+		{
+			return '' + num;
+		}
+	}
+	window.onload = function()
+	{
+		var img = document.getElementsByTagName('img');
+		var i = 0;
+		function UpdateTime()
+		{
+			var date = new Date();
+			var str = ToDouble(date.getHours()) + ToDouble(date.getMinutes()) + ToDouble(date.getSeconds());
+			// alert(str);
+			for(i = 0; i < img.length; i++)
+			{
+				img[i].src = 'images/'+str.charAt(i)+'.png';
+			}
+		};
+		// 由于定时器会一开始有一秒的停顿，所以一开就运行一次更新时间函数
+		setInterval(UpdateTime, 1000);
+		UpdateTime();
+	};
+</script>
+<body style = 'color: pink; background-color: green; font-size: 50px;'>
+<img src="images/0.png" />
+<img src="images/0.png" />
+点
+<img src="images/0.png" />
+<img src="images/0.png" />
+分
+<img src="images/0.png" />
+<img src="images/0.png" />
+秒
+</body>
+</html>

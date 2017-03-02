@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>js添加节点</title>
+<script>
+// 暴力增加节点
+    function adds(){
+        var ul = document.getElementsByTagName('ul')[0];
+        ul.innerHTML += '<li>000</li>';
+    }    
+    function addss(){
+        var ul = document.getElementsByTagName('ul')[0];
+        ul.innerHTML += '<li>999</li>';
+    }
+// 增加节点
+    function add(){
+        var li = document.createElement('li');
+        var txt = document.createTextNode('9');
+        li.appendChild(txt);
+        document.getElementsByTagName('ul')[0].appendChild(li);
+    }
+// 删除节点
+    function del(){
+        var lis = document.getElementsByTagName('li');
+        var LastLi = lis[lis.length-1];
+        LastLi.parentNode.removeChild(LastLi);
+    }
+</script>
+</head>
+<body>
+<div>
+    <input type = 'button' value = '删除最后一个' onclick = 'del()'/>
+    <input type = 'button' value = '增加节点' onclick = 'add()'/>
+    <input type = 'button' value = '暴力增加节点' onclick = 'adds()'/>
+    <input type = 'button' value = '暴力增加节点' onclick = 'addss()'/>
+    <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+    </ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+
+<body>
+<input type="text" id = 'text1'>
+<input id = 'btn1' type='button' value = '创建dom' />
+<ul id = 'ul1'>
+	<li>11111</li>
+</ul>
+</body>
+<script type="text/javascript">
+	// js创建dom元素
+	var oBtn = document.getElementById('btn1');
+	var oText = document.getElementById('text1');
+	var oUl = document.getElementById('ul1');
+
+	oBtn.onclick = function()
+	{
+		var oLi = document.createElement('li');
+		oLi.innerHTML = oText.value;
+		oUl.appendChild(oLi);
+	}
+</script>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<style>
+#div1 {width:100px; height:100px; background:red; position:absolute; right:0;}
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>js控制侧边栏div缓冲运动，距离越远速度越快，距离越近速度越慢</title>
+<script type="text/javascript">
+window.onscroll=function ()
+{
+	// 获取对象
+	var oDiv=document.getElementById('div1');
+	// 获取页面滚动上去的top
+	var scrollTop=document.documentElement.scrollTop||document.body.scrollTop;
+	
+	//oDiv.style.top=scrollTop+(document.documentElement.clientHeight-oDiv.offsetHeight)/2+'px';
+	// 控制div的绝对位置的居中
+	var t=scrollTop+(document.documentElement.clientHeight-oDiv.offsetHeight)/2;
+	// 避免t为小数，出现bug，转换成整形
+	// 调用函数，传参
+	startMove(parseInt(t));
+}
+// 设置定时器
+var timer=null;
+
+function startMove(iTarget)
+{
+	// 获取对象
+	var oDiv=document.getElementById('div1');
+	// 清除定时器， 避免到达指定位置还在运动的bug
+	clearInterval(timer);
+	// 设置定时器
+	timer=setInterval(function (){
+		// 设置速度，距离越远速度越快，距离越近速度越慢
+		var iSpeed=(iTarget-oDiv.offsetTop)/8;
+		// 三元运算判断，速度大于0向上去整，速度小于0向下去整
+		iSpeed=iSpeed>0?Math.ceil(iSpeed):Math.floor(iSpeed);
+		// 设置div的绝对位置的top
+		// 到达指定位置
+		if(oDiv.offsetTop==iTarget)
+		{
+			// 清除定时器
+			clearInterval(timer);
+		}
+		// 未到达指定位置
+		else
+		{
+			// div的绝对位置的top
+			oDiv.style.top=oDiv.offsetTop+iSpeed+'px';
+		}
+		// 显示位置坐标
+		txt1.value=oDiv.offsetTop+',目标：'+iTarget;
+	}, 30);
+}
+</script>
+</head>
+
+<body style="height:2000px;">
+<input id="txt1" type="text" style="position:fixed; top:20px;" />
+<div id="div1"></div>
+</body>
+</html>

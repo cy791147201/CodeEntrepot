@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title> </title>
+<style>
+    div{
+        width: 300px;
+        height: 300px;
+        border-bottom: 2px pink solid;
+    }
+    .a{
+        background-color: red;
+    }
+    .z{
+        background-color: green;
+
+    }
+</style>
+<script>
+
+    // function getStyle(obj,attr){
+    //     return obj.currentStyle ? obj.currentStyle[attr] : window.getComputedStyle(obj,null)[attr];
+    // }
+    function q(){
+        var div = window.document.getElementById('s');
+        if(div.className.indexOf('a') >=0){
+            div.className = 'z';
+        div.style.display = 'none';    
+        }else{
+            div.className = 'a';
+        div.style.display = 'block';    
+        }
+
+        // div.style.height = parseInt(getStyle(div,'height')) +10 +'px';
+        // div.style.borderBottomWidth = parseInt(getStyle(div,'borderBottomWidth')) +10 +'px';
+    }
+    // function del(){  
+    //  var lis =window.document.getElementsByClassName('z');
+    //  var lastli = lis[lis.length-1];
+    //  lastli.parentNode.removeChild(lastli);
+    // }
+    // function add(){
+    //  var txt = window.document.createTextNode('sh'); 
+    //  var li = window.document.createElement('li');
+    //  li.appendChild(txt);
+    //  var div = window.document.getElementsByClassName('a')[0];
+    //  div.appendChild(li);
+
+    // }
+    // function adds(){
+    //  var ul = window.document.getElementsByTagName('ul')[0];
+    //  ul.innerHTML += '<li>a</li><li>aaa</li><li>aaaaa</li>';
+    // }
+    // function addss(){
+    //  var ul = window.document.getElementsByTagName('ul')[0];
+    //  ul.innerHTML += '<li>sss</li>';
+    // }
+</script>
+</head>
+<body>
+
+<div style = 'width: 200px; height: 200px; background: red;' onclick = 'q()'>
+    
+</div>
+    <!-- <input type = 'button' value = '删除最后一个节点' onclick = 'del();'>
+    <input type = 'button' value = '增加一个节点' onclick = 'add();'>
+    <input type = 'button' value = '暴力增加节点' onclick = 'adds();'>
+    <input type = 'button' value = '暴力增加节点' onclick = 'addss();'> -->
+    <div id = 's' class = 'a'  >
+        <!-- <li class = 'z'>1</li> -->
+        <!-- <li class = 'z'>2</li> -->
+        <!-- <li class = 'z'>3</li> -->
+        <!-- <li class = 'z'>4</li> -->
+        <!-- <ul></ul> -->
+    </div>
+    <!-- <div class = 'a' onclick = 'q()'  style = 'width:300px;height:300px;border-bottom:10px pink solid;'></div> -->
+</body>
+</html>

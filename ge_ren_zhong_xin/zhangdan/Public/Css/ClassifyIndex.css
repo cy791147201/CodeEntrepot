@@ -1,0 +1,89 @@
+.father{
+    width: 100%;
+    text-align: center;
+    color: #F6F3F3;
+    font-size: 12px;
+}
+.body{
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 50px;
+    margin-bottom: 150px; 
+    border: 1px solid #29B19C;
+    border-radius: 10px;
+    overflow: hidden;
+}
+.body div{
+    width: 50%;
+    height: 50%;
+    float: left;
+    color: green;
+    font-size: 17px;
+}
+.body div a{
+    display: block;
+    width: 100%;
+    height: 100%;
+    color: #090D09;
+}
+.body div a:hover{
+    background-color: #AD0D77;
+    color: #E2E2E2;
+    font-size: 25px;
+}
+
+.ChangeSta, .ChangeSta1{
+    background-color: green;
+    width: 100%;
+    height: 100%;
+    /*div透明化*/
+    filter:alpha(opacity:90); 
+    opacity:0.9;
+    position: absolute; 
+    top: 0px; 
+    left: 0px; 
+    z-index: 10; 
+    display: none;
+    border: 1px solid #29B19C;
+    /*border-radius: 10px;*/
+    text-align: center;
+}
+.ChangeSta form, .ChangeSta1 form{
+    background-color: #111496;
+    /*div透明化*/
+    /*filter:alpha(opacity:50); */
+    /*opacity:0.5;*/
+    position: absolute; 
+    top: 0px; 
+    left: 0px; 
+    z-index: 10; 
+    border: 1px solid #29B19C;
+    border-radius: 10px;
+    text-align: center;
+    color: black;
+}
+.DynamicInput input,.more, #ReName{
+    width: 90%;
+    height: 50px;
+    line-height: 50px;
+    border: 0px;
+    border-radius: 5px;
+    margin: 0 auto;
+    margin-top: 33px;
+    /*text-indent: 5px;*/
+}
+#ReName{
+    text-indent: 5px;
+}
+.DynamicInput{
+    display: none;
+}
+.GuanBi, .sure{
+    width: 45%;
+    border: 0px;
+    border-radius: 5px;
+    height: 50px;
+    line-height: 50px;
+    margin-top: 33px;
+    margin-bottom: 33px;
+}

@@ -1,0 +1,79 @@
+.father{
+    width: 100%;
+    text-align: center;
+    color: #F6F3F3;
+    font-size: 12px;
+}
+.body{
+    width: 800px;
+    min-width: 500px;
+    height: 400px;
+    min-height: 400px;
+    margin-top: 50px;
+    margin-left: 50px;
+    margin-bottom: 150px !important; 
+    color: #666464;
+    border: 1px solid #29B19C;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+/*.choice{
+    width: 100%;
+    height: 60px;
+    line-height: 60px;
+    background-color: green;
+    border-bottom: 1px solid #29B19C;
+}
+.choice p{
+    float: left;
+    width: 50%;
+    font-size: 17px;
+}
+.choice p a{
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+.choice p a:hover{
+    background-color: #127637;
+}*/
+
+.HuaFeiTit{
+    width: 100%;
+    height: 60px;
+    line-height: 60px;
+    font-size: 17px;
+    color: #D6D4D4;
+    background-color: green;
+    border-bottom: 1px solid #29B19C;
+}
+
+.HuaFeiNotice{
+    width: 100%;
+    height: 60px;
+    line-height: 30px;
+    border-bottom: 1px solid #29B19C;
+    /*background-color: red;*/
+}
+
+.form input{
+    display: block;
+    margin: 0 auto;
+}
+.inputs{
+    width: 90%;
+    height: 60px;
+    line-height: 60px;
+    text-indent: 10px;
+    margin-top: 30px !important;
+    border: 0px;
+    border-radius: 5px;
+}
+#sub{
+    background-color: #DD3BC4;
+    /*margin-bottom: 30px !important;*/
+}
+#sub:hover{
+    background-color: #C109D3;
+}

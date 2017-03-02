@@ -1,0 +1,77 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<style>
+#div1 {width:100px; height:100px; background:red; position:absolute;}
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>js—div随鼠标移动</title>
+<script>
+window.onload=function ()
+{
+	// 获取div对象
+	var oDiv=document.getElementById('div1');
+	
+	var disX=0;
+	var disY=0;
+	
+	// 鼠标按下去事件
+	oDiv.onmousedown=function (ev)
+	{
+		// 鼠标对象
+		var oEvent=ev||event;
+		
+		disX=oEvent.clientX-oDiv.offsetLeft;
+		disY=oEvent.clientY-oDiv.offsetTop;
+		
+		// 鼠标移动事件
+		document.onmousemove=function (ev)
+		{
+			// 鼠标对象
+			var oEvent=ev||event;
+
+			var l=oEvent.clientX-disX;
+			var t=oEvent.clientY-disY;
+			
+			// 控制div不要出去左边跟右边
+			if(l<0)
+			{
+				l=0;
+			}
+			else if(l>document.documentElement.clientWidth-oDiv.offsetWidth)
+			{
+				l=document.documentElement.clientWidth-oDiv.offsetWidth;
+			}
+			
+			// 控制div不要出去上面和下面
+			if(t<0)
+			{
+				t=0;
+			}
+			else if(t>document.documentElement.clientHeight-oDiv.offsetHeight)
+			{
+				t=document.documentElement.clientHeight-oDiv.offsetHeight;
+			}
+			
+			oDiv.style.left=l+'px';
+			oDiv.style.top=t+'px';
+		};
+		
+		// 鼠标抬起，清空鼠标移动和抬起事件，减少内存占用
+		document.onmouseup=function ()
+		{
+			document.onmousemove=null;
+			document.onmouseup=null;
+		};
+		
+		// 取消默认事件
+		return false;
+	};
+};
+</script>
+</head>
+
+<body>
+<div id="div1"></div>
+</body>
+</html>

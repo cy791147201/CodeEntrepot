@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>商品列表全部选中</title>
+</head>
+<script type="text/javascript">
+	window.onload = function()
+	{
+		var div = document.getElementById('div');
+		var div1 = document.getElementById('div1');
+		var input = document.getElementsByTagName('input');
+
+		div.onclick = function()
+		{
+			var i = 0;
+			for(i = 0; i < input.length; i++)
+			{	
+				input[i].checked = true;
+			}
+		}
+		div1.onclick = function()
+		{
+			var i = 0;
+			for(i = 0; i < input.length; i++)
+			{	
+				input[i].checked = false;
+			}
+		}
+	}
+</script>
+<style type="text/css">
+	input{
+		display: block;
+	}
+</style>
+<body>
+<div id = 'div'>
+	全选
+</div>
+<div id = 'div1'>
+	取消全选
+</div>
+<input type="checkbox" name=""/>
+<input type="checkbox" name=""/>
+<input type="checkbox" name=""/>
+<input type="checkbox" name=""/>
+<input type="checkbox" name=""/>
+<input type="checkbox" name=""/>
+<input type="checkbox" name=""/>
+<input type="checkbox" name=""/>
+<input type="checkbox" name=""/>
+<input type="checkbox" name=""/>
+<input type="checkbox" name=""/>
+<input type="checkbox" name=""/>
+<input type="checkbox" name=""/>
+</body>
+</html>

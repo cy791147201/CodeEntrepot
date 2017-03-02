@@ -1,0 +1,77 @@
+.father{
+    width: 50%;
+    /*height: 300px;*/
+    /*background-color: red;*/
+    margin: 0 auto;
+    margin-top: 40px;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+}
+
+.tit{
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    background: #F9F9F9;
+    /*border-bottom: 1px solid #ddd;*/
+    /*css简单的阴影效果*/
+    box-shadow: #666 0px 0px 2px;
+    border-radius: 3px;
+}
+
+.tit span{
+    font-size: 17px;
+}
+
+.father form{
+    width: 300px;
+    /*height: 220px;*/
+    margin: 0 auto;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    /*background-color: red;*/
+}
+
+.sub, .file, .goods, .radios{
+    display: block;
+    width: 250px;
+    /*height: 40px;*/
+    /*line-height: 40px;*/
+    margin: 0 auto;
+    margin-top: 25px;
+    border-radius: 3px;
+    /*background-color: red;*/
+}
+
+.sub, .radio{
+    height: 40px;
+    line-height: 40px;
+}
+
+.goods{
+    width: 248px;
+    height: 38px;
+    line-height: 38px;
+    text-indent: 10px;
+}
+
+.sub{
+    box-shadow: #666 0px 0px 2px;
+    margin-bottom: 25px;
+}
+
+.sub:hover{
+    background-color: #ACAAAA;
+}
+
+.choose{
+    margin-right: 20px;
+}
+
+.radios input{
+    margin-right: 10px;
+    margin-top: -2px;
+}

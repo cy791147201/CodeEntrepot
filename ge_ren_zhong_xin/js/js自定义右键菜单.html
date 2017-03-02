@@ -1,0 +1,47 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<style>
+* {margin:0; padding:0;}
+#ul1 {width:100px; background:#CCC; border:1px solid black; position:absolute; display:none;}
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>js自定义鼠标右键</title>
+<script>
+// 鼠标右键事件
+document.oncontextmenu=function (ev)
+{
+	// 获取滚动页面的top left
+	var nScTop = document.documentElement.scrollTop || document.body.scrollTop;
+    var nScLeft = document.documentElement.scrollLeft || document.body.scrollLeft;
+
+    // 获取鼠标对象
+	var oEvent = ev || event;
+	var oUl = document.getElementById('ul1');
+	
+	oUl.style.display='block';
+	oUl.style.left = oEvent.clientX + nScLeft +'px';
+	oUl.style.top = oEvent.clientY + nScTop + 'px';
+	
+	return false;
+};
+
+// 鼠标点击事件
+document.onclick=function ()
+{
+	var oUl=document.getElementById('ul1');
+	
+	oUl.style.display='none';
+};
+</script>
+</head>
+
+<body>
+<ul id="ul1">
+	<li>登陆</li>
+	<li>回到首页</li>
+	<li>注销</li>
+	<li>加入VIP</li>
+</ul>
+</body>
+</html>

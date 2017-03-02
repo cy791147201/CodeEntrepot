@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html><head>
+<meta http-equiv = 'Content-Type' content = 'text/html; charset = utf8'>
+<meta content = 'width = device-width,initial-scale = 1.0,maximum-scale = 1.0,user-scalable = 0' name = 'viewport'> 
+<meta content = 'yes' name = 'apple-mobile-web-app-capable'> 
+<meta content = 'yes' name = 'apple-touch-fullscreen'>
+<meta content = 'black' name = 'apple-mobile-web-app-status-bar-style'>
+<meta content = '320' name = 'MobileOptimized'>
+<meta content = 'telephone=no' name = 'format-detection'>
+<link rel = 'stylesheet' href = 'images_files/qdwap.css'>
+<link href = 'http://www.joken.cn/favicon.ico' type = 'image/x-icon' rel = 'icon'>
+<title>皮夹克 订购中心</title>
+<meta name = 'keywords' content = '绵羊皮皮毛衣【开箱验货】'>
+<meta name = 'description' content = '绵羊皮皮毛衣【开箱验货】'>
+<meta name = 'author' content = '绵羊皮皮毛衣【开箱验货】'>
+</script><script src = 'images_files/jquery-1.js'></script>
+<script src = 'dai/time.js'></script>
+<script src = 'dai/demo.js'></script>
+<script src = 'dai/diqu.js'></script>
+<script src = 'dai/notorder.js'></script> 
+
+</head>
+<body> 
+<div id = 'page'>
+    <div class = 'banner'>
+        <p>
+            <img src = 'https://img.alicdn.com/imgextra/i3/898568036/TB2IYENaR0kpuFjy1XaXXaFkVXa_!!898568036.jpg'>
+        </p>
+    </div>
+    <!-- 微信 -->
+    <div id = 'weixindiag'>
+        <a id = 'weixinclose' onclick = 'weixin(1)'></a> 
+        <img src = 'images_files/wenxin.jpg' />
+    </div>
+    <div class = 'daojishi'>
+        <div class = 'yuanjia'>
+            <span class = 'yuanjia1'>
+                <span style = 'font-size: 1rem;'>￥</span>10000<span style = 'font-size: 1rem;'>.00</span>
+            </span>
+            <div class = 'miaosha'>
+                <img src = 'images_files/0.png'>
+                <span style = 'text-decoration:line-through;'>￥10.00</span>
+            </div>
+        </div>
+        <div class = 'time-count'>
+            <div class  =  'DTit'>
+                距离活动结束：
+            </div>
+            <div id = 'remainTime_1' class = 'jltimer'>
+                <span id = 'DaoJiShi_H'>00</span>
+                :
+                <span id = 'DaoJiShi_M'>00</span>
+                :
+                <span id = 'DaoJiShi_S'>00</span>
+            </div>
+        </div>
+    </div>
+    <div class = 'tit'>
+        <p>
+            <span>【标题不知道自己改】</span>
+        </p>
+        <p>
+            <span class = 'red' id = 'now'>111</span>
+            &nbsp;
+            <span class = 'red'>不知道</span>
+            &nbsp;
+            <a href = ''><span class = 'red'>其他商品的链接不好意思我没有............</span></a>
+        </p>
+    </div>
+    <div class = 'cuxiao'>
+        <div class = 'CTit'>
+            <a href = 'javascript:void(0);' style = 'color: #969696;' onclick = 'hide("cuxiao1")' ><span>促销</span></a>
+        </div>
+        <div class = 'CInfo'>
+            <p>
+                <img src = 'images_files/c2.png' />
+                <span>促销一</span>
+                <a href = 'javascript:void(0);' class = 'zhankai' onclick = 'hide("cuxiao1")' >
+                    <img src = 'images_files/000.png' />
+                </a>
+            </p>
+            <p>
+                <img src = 'images_files/c2.png' />
+                <span>促销二</span>
+            </p>
+            <p>
+                <img src = 'images_files/c1.png' />
+                <span>促销三</span>
+            </p>
+        </div>
+        <div id = 'cuxiao1'>
+            <p class = 'cuxiao2'>
+                <span>促销</span>
+                <a href = 'javascript:void(0);' class = 'zhankai' onclick = 'hide("cuxiao1")' >
+                    <span style = 'color: #7A7777'>Ⅹ</span>
+                </a>
+            </p>
+            <div class = 'cuxiao3'>
+                <p>
+                    <img src = 'images_files/c2.png' />
+                    <span>促销一</span>
+                </p>
+                <p>
+                    <img src = 'images_files/c2.png' />
+                    <span>促销二</span>
+                </p>
+                <p>
+                    <img src = 'images_files/c1.png' />
+                    <span>促销三</span>
+                </p>
+            </div>
+        </div>
+    </div>
+    <div>
+        <div class = 'taocan'>
+            <a href = 'javascript:void(0);' style = 'color: #969696;' onclick = 'hide("buy")' >已选套餐</a>
+      
+            <span id = 'yixuantaocan'>&nbsp;1508黑色</span>
+            <span id = 'yixuanchicun'>&nbsp;尺码</span>
+            <a href = 'javascript:void(0);' class = 'zhankai' onclick = 'hide("buy")' >
+                <img src = 'images_files/000.png' />
+            </a>
+        </div>
+        <div class = 'geren' style = 'border-bottom: 1px solid #E1DFDF;'>
+            <a href = 'javascript:void(0);' style = 'color: #969696;' onclick = 'hide("buy")' >填写个人信息</a>
+            <span id = 'Ge'>未填</span>
+            <a href = 'javascript:void(0);' class = 'zhankai' onclick = 'hide("buy")' >
+                <img src = 'images_files/000.png' />
+            </a>
+        </div>
+        <div class = 'geren' style = 'margin-bottom: 0px;'>
+            <a href = 'javascript:void(0);' style = 'color: #969696;' onclick = 'hide("buy")' >送至</a>
+            <span id = 'dao'>未选择</span>
+            <a href = 'javascript:void(0);' class = 'zhankai' onclick = 'hide("buy")' >
+                <img src = 'images_files/000.png' />
+            </a>
+        </div>
+        <div class = 'shouhou'>
+            <img src = 'images_files/25.png' />
+        </div>
+    </div>
+    <div class = 'pinglun'>
+        <h2>
+            商品评论
+            <a href = 'pingjia.html' style = 'float: right; line-height: 25px;'>
+                <span style = 'font-size: 12px; color: #606060;'>好评度</span>
+                <span style = 'font-size: 12px; color: #F41313;'>100%</span>
+                <span style = 'font-size: 12px; color: #BFBFBF;'>></span>
+            </a>
+        </h2>
+        <div class = 'one'>
+            <div class = 'PTit'>
+                <p class = 'img'>
+                    <img src = 'images_files/00.png'>
+                </p>
+                <p style = 'float: right;'>张****先生</p>
+            </div>
+            <div class = 'PInfo'>
+                <div>
+                    <p>宝贝收到了，皮面非常好，非常满意，大小正合适，价位不贵，物超所值，卖家还送了礼物</p>
+                </div>
+                <div>
+                    <a href = 'images_files/2.jpg'>
+                        <img src = 'images_files/2.jpg' />
+                    </a>
+                    <a href = 'images_files/3.jpg'>
+                        <img src = 'images_files/3.jpg' />
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class = 'one'>
+            <div class = 'PTit'>
+                <p class = 'img'>
+                    <img src = 'images_files/00.png'>
+                </p>
+                <p style = 'float: right;'>李****先生</p>
+            </div>
+            <div class = 'PInfo'>
+                <div>
+                    <p>不好意思送礼的评价晚了。朋友收到礼物，让他立马打开试穿了一下。皮质柔软光洁，内胆的毛厚穿着舒服加上毛领特漂亮，大气喜欢。这个价能买到这么好的皮衣比实体店还便宜，喜欢的朋友快下单吧这个冬天不怕冷。特感谢老板耐心细致的回答我问题并帮我推荐应需要的尺寸大小，我朋友穿的刚刚好赞赞赞。</p>
+                </div>
+            </div>
+        </div>
+        <div class = 'one'>
+            <div class = 'PTit'>
+                <p class = 'img'>
+                    <img src = 'images_files/00.png'>
+                </p>
+                <p style = 'float: right;'>王****小姐</p>
+            </div>
+            <div class = 'PInfo'>
+                <div>
+                    <p>满意，老公穿上很酷，质量摸起来很舒服，颜色也正。是真皮真羊羔吧！因为我们不是专业人士。现在回老家不怕冷了，比我自己买的1千4的皮衣质量好多了。值的。老板还很热情送了礼物，谢谢。</p>
+                </div>
+            </div>
+        </div>
+        <div class = 'one'>
+            <div class = 'PTit'>
+                <p class = 'img'>
+                    <img src = 'images_files/00.png'>
+                </p>
+                <p style = 'float: right;'>张****先生</p>
+            </div>
+            <div class = 'PInfo'>
+                <div>
+                    <p>选了又选看了又看，最后在这家做了决定，收到货我真的不敢相信几百能买到真么好的宝贝，皮和毛真的没话可说，今年冬天我爸会过一个更暖和的冬天！</p>
+                </div>
+                <div>
+                    <a href = 'images_files/4.jpg'><img src = 'images_files/4.jpg' /></a>
+                </div>
+            </div>
+        </div>
+        <div class = 'one'>
+            <a href = 'pingjia.html'>
+                <span class = 'more'>更多评价(89)</span>
+            </a>
+        </div>
+    </div>
+    <div class = 'btn' id = 'chanpin'>
+        <article class = 'showcontent'>
+            <h2>产品简介</h2>
+            <p>
+                <img src = 'images_files/27_01.jpg' />
+            </p>
+            <p id = 'link'>
+                <a href = '' title = '各种商品任君选择'>
+                    <img src = 'images_files/27_02.jpg' />
+                </a>
+            </p>
+            <p id = 'link'>
+                <a href = '' title = '各种商品任君选择'>
+                    <img src = 'images_files/27_03.jpg' /> 
+                </a>
+            </p>
+            <p id = 'link'>
+                <a href = '' title = '各种商品任君选择'>
+                     <img src = 'images_files/27_04.jpg' />
+                </a>
+            </p>
+            <p id = 'link'>
+                <a href = '' title = '各种商品任君选择'>
+                    <img src = 'images_files/27_05.jpg' />
+                </a>
+            </p>
+            <p><img src="images_files/1.jpg" title="1.jpg" alt="1.jpg"/></p><p><img src="images_files/2.jpg" title="2.jpg" alt="2.jpg"/></p>        </article>  
+    </div>
+    <article class = 'buy' id = 'xianshi'>  
+        <div class = 'dingdan'>
+            <h2>订单信息</h2>
+        </div>
+        <a href = 'javascript:void(0);' class = 'zhankai' id = 'zhankai1' style = 'width: 100%; height: 30px; display: none; float: right; text-align: right; padding-right: 5px;' onclick = 'hide("buy")'>
+            <span style = 'color: #7A7777;'>Ⅹ</span>
+        </a>
+        <form id="form" name="form" action="http://cbu26.alicdn.loomoo.net/notorder.asp?cname=pjk" method="post" onsubmit="return postcheck()" target="_blank">            <input name = 'orderid' id = 'orderid' value = 'no.2016122315160385' type = 'hidden' />
+                <div class = 'trans'></div>
+                <div class = 'prices'>
+                    <p class = 'PImg' id = 'imgs'>
+                        <img src = 'images_files/33.jpg' />
+                    </p>
+                    <p style = 'text-indent: 10px; padding-top: 10px;'>
+                        <span style = 'color: red; font-size: 13px;' class = 'qian'>￥198.00</span>
+                    </p>
+                    <p style = 'text-indent: 10px;font-size: 10px;'>
+                        <span style = 'color: #BDBDBD;' id = 'num'>商品编号&nbsp;:&nbsp;1508黑色</span>
+                        <!-- <span style = 'color: red; font-size: 13px;' class = 'qian'>￥198.00</span> -->
+                        <span style = 'color: #BDBDBD;' id = 'chi'>&nbsp;170/M码</span>
+                    </p>
+                </div>
+                <span>套餐</span>
+                <input id="xzlx" value="1" type="hidden">        <div  id = '0' class = 'input' onclick = 'ReColor(this)' style = 'border: 1px solid red; color: red;'>
+                    <input name="product" id="a1" value="1508黑色(钻戒+皮带)198元" alt="198"  checked="checked" type="radio"><label for="a1">1508黑色(钻戒+皮带)&nbsp;&nbsp;198元</label><br>                </div>
+                            <div  id = '1' class = 'input' onclick = 'ReColor(this)'>
+                    <input name="product" id="a2" value="1508棕色(钻戒+皮带)198元" alt="198"  type="radio"><label for="a2">1508棕色(钻戒+皮带)&nbsp;&nbsp;198元</label><br>                </div>                <div  id = '2' class = 'input' onclick = 'ReColor(this)'>
+                    <input name="product" id="a3" value="1508黑色加绒(钻戒+皮带)	298元" alt="298"  type="radio"><label for="a3">1508黑色加绒(钻戒+皮带)	&nbsp;&nbsp;298元</label><br>                </div>                <div  id = '3' class = 'input' onclick = 'ReColor(this)'>
+                    <input name="product" id="a4" value="1508棕色加绒(钻戒+皮带)298元" alt="298"  type="radio"><label for="a4">1508棕色加绒(钻戒+皮带)&nbsp;&nbsp;298元</label><br>                </div>                <div  id = '4' class = 'input' onclick = 'ReColor(this)'>
+                    <input name="product" id="a5" value="1508黑色+1508棕色加绒(钻戒+皮带)398元" alt="398"  type="radio"><label for="a5">1508黑色+1508棕色加绒(钻戒+皮带)&nbsp;&nbsp;398元</label><br>                </div>                <div  id = '5' class = 'input' onclick = 'ReColor(this)'>
+                    <input name="product" id="a6" value="1508棕色+1508黑色加绒(钻戒+皮带)398元" alt="398"  type="radio"><label for="a6">1508棕色+1508黑色加绒(钻戒+皮带)&nbsp;&nbsp;398元</label><br>                </div>                <span>尺寸</span>
+                <div class = 'inpu' id = '0' onclick = 'ReColor(this)' style = 'border: 1px solid red; color: red;'>
+                        <input name="chanpin1" value="170/M码(100-120斤)  " checked="checked" type="radio">&nbsp;&nbsp;170/M码(100-120斤)  </label><br>                    </div><div class = 'inpu' id = '1' onclick = 'ReColor(this)' style = 'border: 1px solid red; color: red;'>
+                        <input name="chanpin1" value="175/L码(122-140斤) " type="radio">&nbsp;&nbsp;175/L码(122-140斤) </label><br>                    </div><div class = 'inpu' id = '2' onclick = 'ReColor(this)' style = 'border: 1px solid red; color: red;'>
+                        <input name="chanpin1" value="180/XL码(142-155斤)   " type="radio">&nbsp;&nbsp;180/XL码(142-155斤)   </label><br>                    </div><div class = 'inpu' id = '3' onclick = 'ReColor(this)' style = 'border: 1px solid red; color: red;'>
+                        <input name="chanpin1" value="185/XXL码(156-175斤)  " type="radio">&nbsp;&nbsp;185/XXL码(156-175斤)  </label><br>                    </div><div class = 'inpu' id = '4' onclick = 'ReColor(this)' style = 'border: 1px solid red; color: red;'>
+                        <input name="chanpin1" value="190/XXXL码(176-200斤)" type="radio">&nbsp;&nbsp;190/XXXL码(176-200斤)</label><br>                    </div>                <div class = 'shuliang'>
+                    <span>数量</span>
+                    <div>
+                        <a href = 'javascript:void(0);' onclick = 'CheckNum(2)' style = 'color: #929292;'>
+                            +
+                        </a>
+                        <input name = 'mun' value = '1' type = 'text' id = 'number'/>
+                        <a href = 'javascript:void(0);' onclick = 'CheckNum(1)' style = 'color: #929292;'>
+                            -
+                        </a>
+                    </div>
+                </div>
+                <div class = 'jiage'>
+                    <span>总价&nbsp;</span>
+                    <span style = 'display: none;' id = 'CunDan'>198</span>
+                    <span style = 'color: red; font-size: 13px;' class = 'qian'>￥198.00</span>
+                </div>
+                <p class = 'GTit'>
+                    <span>姓名</span>
+                </p>
+                <p class = 'GInput'>
+                    <input name = 'name' type = 'text' id = 'name'>
+                </p>
+                <p class = 'GTit'>
+                    <span>手机号</span>
+                </p>
+                <p class = 'GInput'>
+                    <input name = 'mob' type = 'text' id = 'mob'>
+                </p>
+                <span>配送至</span>
+                <div class = 'area'>
+                    <select name = 'province' class = 'dqxl' id = 's_province'>
+                        <option value = '' selected = 'selected'>选省份</option><option value = '北京市'>北京市</option><option value = '天津市'>天津市</option><option value = '河北省'>河北省</option><option value = '山西省'>山西省</option><option value = '内蒙古自治区'>内蒙古自治区</option><option value = '辽宁省'>辽宁省</option><option value = '吉林省'>吉林省</option><option value = '黑龙江省'>黑龙江省</option><option value = '上海市'>上海市</option><option value = '江苏省'>江苏省</option><option value = '浙江省'>浙江省</option><option value = '安徽省'>安徽省</option><option value = '福建省'>福建省</option><option value = '江西省'>江西省</option><option value = '山东省'>山东省</option><option value = '河南省'>河南省</option><option value = '湖北省'>湖北省</option><option value = '湖南省'>湖南省</option><option value = '广东省'>广东省</option><option value = '广西壮族自治区'>广西壮族自治区</option><option value = '海南省'>海南省</option><option value = '重庆市'>重庆市</option><option value = '四川省'>四川省</option><option value = '贵州省'>贵州省</option><option value = '云南省'>云南省</option><option value = '西藏自治区'>西藏自治区</option><option value = '陕西省'>陕西省</option><option value = '甘肃省'>甘肃省</option><option value = '青海省'>青海省</option><option value = '宁夏回族自治区'>宁夏回族自治区</option><option value = '新疆维吾尔自治区'>新疆维吾尔自治区</option><option value = '香港特别行政区'>香港特别行政区</option><option value = '澳门特别行政区'>澳门特别行政区</option><option value = '台湾省'>台湾省</option>
+                    </select>
+                    <select name = 'city' class = 'dqxl' id = 's_city'>
+                        <option value = '' selected = 'selected'>选城市</option>
+                    </select>
+                    <select name = 'area' class = 'dqxl' id = 's_county'>
+                        <option value = '' selected = 'selected'>选地区</option>
+                    </select>
+                </div>
+                <p class = 'GTit'>
+                    <span>详细地址</span>
+                </p>
+                <p class = 'GInput'>
+                    <input name = 'address' type = 'text' id = 'address'>
+                </p>
+                <p class = 'GTit'>
+                    <span>留言</span>
+                </p>
+                <p>
+                    <textarea name = 'guest' placeholder = '' style = 'color: #A3A3A3;'></textarea>
+                </p>
+                <input name = 'zfbprice' value = '198' type = 'hidden' id = 'zong' />
+                <input name = 'price' value = '198' type = 'hidden' id = 'dan' />
+                <input checked = 'checked' name = 'pay' id = 'b1' value = 'cod' onclick = 'return changeItem(0);' type = 'radio' style = 'display: none;' />
+            <input type = 'submit' value = '提交订单' class = 'submit' onclick = 'hide("buy")' />
+            <script>getfrom();</script>
+        </form>
+    </article> 
+    <div class = 'foot'>
+        <ul>
+            <li>
+                <img src = 'images_files/TB2jiwpqVXXXXa1XXXXXXXXXXXX_254091811.png'>
+            </li>
+            <li>
+                <img src = 'images_files/TB2RXsvqVXXXXXSXXXXXXXXXXXX_254091811.png'>
+            </li>
+            <li style = 'border:0;'>
+                <img src = 'images_files/TB2bdsxqVXXXXXSXXXXXXXXXXXX_254091811.png'>
+            </li>
+            <div style = 'clear:both;'></div>
+        </ul>
+        <center>东莞楚和服装有限公司</center> 
+    </div>
+</div>
+ 
+    <nav>
+        <p class = 'top'>
+            <a href = '#top' target = '_self'>
+                <img src = 'images_files/32.png'>
+            </a>
+        </p>
+        <ul class = 'Transverse'>
+            <li>
+                <a href = 'tel:18519797905' id = 'tubiao'>
+                    <p>
+                        <img src = 'images_files/01.png'>
+                    </p>
+                    <span>联系卖家</span>
+                </a>
+            </li>  
+            <li>
+                <a href = 'javascript:void(0);' class = 'weixin' id = 'tubiao' onclick = 'weixin(0)'>     
+                    <p>
+                        <img src = 'images_files/02.png'>
+                    </p>
+                    <span>收藏</span>
+                </a>
+            </li>
+            <li>
+                <a href = 'sms:18500650283' id = 'tubiao'>
+                    <p>
+                        <img src = 'images_files/03.png'>
+                    </p>
+                    <span>短信订购</span>
+                    
+                </a>
+            </li>
+            <li>
+                <a href = 'tel:15011318991' style = 'background-color: #FF9B00;' >
+                    <strong>电话订购</strong>
+                </a>
+            </li>
+            <li style = 'height: 45px;'>
+                <a href = 'javascript:void(0);' onclick = 'hide("buy")'>
+                    <span style = 'color: white;'>立即购买</span>
+                </a>
+            </li> 
+        </ul>
+    </nav>
+</div>
+</body>
+<script type = 'text/javascript' src = 'dai/not3.js'></script>
+</html>

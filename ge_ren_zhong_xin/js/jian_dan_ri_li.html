@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>js简单日历</title>
+</head>
+<script type="text/javascript">
+	var arr = [
+			'第一月份要干的事',
+			'第二月份要干的事',
+			'第三月份要干的事',
+			'第四月份要干的事',
+			'第五月份要干的事',
+			'第六月份要干的事',
+			'第七月份要干的事',
+			'第八月份要干的事',
+			'第九月份要干的事',
+			'第十月份要干的事',
+			'第十一月份要干的事',
+			'第十二月份要干的事',
+	];
+	window.onload = function()
+	{
+		var li = document.getElementsByTagName('li');
+		var div = document.getElementsByTagName('div')[1];
+		var i = 0;
+		for(i = 0; i < li.length; i++)
+		{
+			li[i].index = i;
+			li[i].onclick = function()
+			{
+				for(i = 0; i < li.length; i++)
+				{
+					li[i].className = '';
+				}
+				this.className = 'active';
+				div.innerHTML = '这是'+(this.index+1)+'月份，'+'应该干的是'+arr[this.index];
+			};
+		}
+	};
+</script>
+<style type="text/css">
+	li{
+		width: 100px; 
+		height: 100px; 
+		background-color: green; 
+		float: left; 
+		border: 3px solid pink;
+	}
+	.active{
+		background-color: red;
+	}
+</style>
+<body>
+<center>
+	<div style = 'width: 400px; height: 500px; background-color: red;'>
+		<li><h2>1</h2><p>月</p></li>
+		<li><h2>2</h2><p>月</p></li>
+		<li><h2>3</h2><p>月</p></li>
+		<li><h2>4</h2><p>月</p></li>
+		<li><h2>5</h2><p>月</p></li>
+		<li><h2>6</h2><p>月</p></li>
+		<li><h2>7</h2><p>月</p></li>
+		<li><h2>8</h2><p>月</p></li>
+		<li><h2>9</h2><p>月</p></li>
+		<li><h2>10</h2><p>月</p></li>
+		<li><h2>11</h2><p>月</p></li>
+		<li><h2>12</h2><p>月</p></li>
+	</div>
+	<div style = 'width: 400px; height: 200px; margin-top: 20px; background-color: pink;'>
+		字
+	</div>
+</center>
+</body>
+</html>

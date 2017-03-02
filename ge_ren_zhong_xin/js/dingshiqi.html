@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+<script>
+	function ding() {
+		var times = document.getElementById('timess');
+		var timesss = parseInt(times.value)-1;
+		times.value = timesss;
+		// alert(timesss);
+		if(timesss == 0){
+			clearInterval(colok);
+			alert('ssssssssssss');
+		}
+	}
+
+	// setTimeout('ding()',3000);
+	var colok = setInterval('ding()',1000);
+</script>
+</head>
+<body>
+<input type = 'button' id = 'timess' value = '5' onclick='ding();'/>
+	<div id = 'ding' ></div>
+</body>
+</html>

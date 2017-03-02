@@ -1,0 +1,72 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>js设置cookie读取cookie设置cookie过期</title>
+<script>
+// 设置cookie
+// cookie名name
+// cookie初始值value
+// cookie过期时间iDay
+function setCookie(name, value, iDay)
+{
+	// 获取当前时间
+	var oDate=new Date();
+	// 设置cookie的过期时间
+	oDate.setDate(oDate.getDate()+iDay);
+	// cookie名=cookie初始值；expires=过期时间
+	document.cookie=name+'='+value+';expires='+oDate;
+}
+// 读取cookie
+function getCookie(name)
+{
+	//'username=abc; password=123456; aaa=123; bbb=4r4er'
+	// 用；号切割cookie字符串
+	var arr=document.cookie.split('; ');
+	var i=0;
+	
+	//arr->['username=abc', 'password=123456', ...]
+	// 用=号切割每个cookie信息
+	for(i=0;i<arr.length;i++)
+	{
+		//arr2->['username', 'abc']
+		var arr2=arr[i].split('=');
+		// 判断是否是需要的cookie名
+		if(arr2[0]==name)
+		{
+			// 是的话返回该初始值
+			return arr2[1];
+		}
+	}
+	// 没有获取的话返回空，可以自定义
+	return '';
+}
+// 移动cookie，就是设置cookie过期时间，为负数则已经过期
+function removeCookie(name)
+{
+	setCookie(name, '1', -1);
+}
+
+alert(getCookie('username'));
+removeCookie('username');
+alert(getCookie('username'));
+
+/*setCookie('username', 'abc', 30);
+setCookie('password', '123456', 300);
+setCookie('aaa', '123', 300);
+setCookie('bbb', '4r4er', 300);*/
+
+/*var oDate=new Date();
+
+oDate.setDate(oDate.getDate()+30);
+
+document.cookie="user=blue;expires="+oDate;
+document.cookie="pass=123";*/
+
+//alert(document.cookie);
+</script>
+</head>
+
+<body>
+</body>
+</html>

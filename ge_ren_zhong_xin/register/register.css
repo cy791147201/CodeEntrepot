@@ -1,0 +1,19 @@
+.form{
+    /*display: block;*/
+    width: 500px;
+    height: 225px;
+    background-color: #E80A9A;
+    border-radius: 5px;
+    margin-top: 50px;
+    padding-top: 15px;
+}
+.input{
+    display: block;
+    width: 95%;
+    height: 60px;
+    line-height: 60px;
+    text-indent: 15px;
+    border: 0px;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}

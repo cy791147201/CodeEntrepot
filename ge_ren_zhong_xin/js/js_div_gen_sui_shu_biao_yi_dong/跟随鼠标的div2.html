@@ -1,0 +1,34 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<style>
+/*div跟随鼠标移动，需要div给绝对定位*/
+#div1 {width:100px; height:100px; border-radius: 50px; background:red; position:absolute;}
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>js_div跟随鼠标移动</title>
+<!-- 这个解决了窗口出现滚动的时间div位置不跟随鼠标的现象 -->
+<script>
+document.onmousemove=function (ev)
+{
+	// ie下事件为ev
+	// 火狐下事件为event
+	var oEvent=ev||event;
+	var oDiv=document.getElementById('div1');
+	// 获取当前滚动上去的窗口的大小
+	// 用两种获取，防止换浏览器获取不到
+	var scrollTop=document.documentElement.scrollTop||document.body.scrollTop;
+	var scrollLeft=document.documentElement.scrollLeft||document.body.scrollLeft;
+	
+	// div当前的位置就等于滚动上去的窗口大小加上当前鼠标的位置
+	oDiv.style.left=oEvent.clientX+scrollLeft+'px';
+	oDiv.style.top=oEvent.clientY+scrollTop+'px';
+};
+</script>
+</head>
+
+<body style="height:2000px;">
+<div id="div1">
+</div>
+</body>
+</html>

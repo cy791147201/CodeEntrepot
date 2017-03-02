@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>js定时器</title>
+</head>
+<script type="text/javascript">
+    function show()
+    {
+    	alert('傻逼');
+    } 
+	window.onload = function()
+	{
+		var but1 = document.getElementById('but1');
+		var but2 = document.getElementById('but2');
+		var times = null;
+		// 点击事件，开启定时器
+		but1.onclick = function()
+		{
+			times = setInterval(show, 2000);
+		};
+		// 点击事件，关闭定时器
+		but2.onclick = function()
+		{
+			clearInterval(times);
+		};
+	};
+</script>
+<body>
+<input id = 'but1' type="button" value = '开启定时器' />
+<input id = 'but2' type="button" value = '关闭定时器' />
+</body>
+</html>

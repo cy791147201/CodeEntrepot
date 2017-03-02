@@ -1,0 +1,40 @@
+<?php
+return array(
+	'SESSION_AUTO_START' =>true,
+	'ORDER_STATUS' => array(
+		0=>'<i class="statis-0">未入金</i>',
+		1=>'<i class="statis-1">入金完了</i>',
+		2=>'<i class="statis-2">確認</i>',
+		3=>'<i class="statis-3">発送</i>',
+		4=>'<i class="statis-4">受け取る</i>',
+		5=>'<i class="statis-5">荷物断る</i>',
+		6=>'<i class="statis-6">閉じる</i>',
+	), 
+	'PAYMENT' => array(
+		1=>array('name'=>'着払い','info'=>''),
+		2=>array('name'=>'alipay','info'=>''),
+		3=>array('name'=>'LINEで支払い','info'=>''),
+		4=>array('name'=>'alipayで支払い','info'=>''),
+		5=>array('name'=>'QRコードで支払い','info'=>''),
+		6=>array('name'=>'銀行振込','info'=>''),
+	), 
+	'TEMPLATE_OPTIONS'=>array(
+		'price'=>array('name'=>'注文商品価格','request'=>false, 'checked'=>true),
+		'salenum'=>array('name'=>'売った数量','request'=>false,'checked'=>false),
+		'quantity'=>array('name'=>'注文数量','request'=>true,'checked'=>true),
+		'datetime'=>array('name'=>'時間選択','request'=>true,'info'=>'時間を選んでください', 'checked'=>true),
+		'name'=>array('name'=>'真実姓名','request'=>true,'info'=>'お名前を入力してください','checked'=>true),
+		'mobile'=>array('name'=>'電話番号','request'=>true,'info'=>'電話番号を入力してください','checked'=>true),
+		'phone'=>array('name'=>'連絡番号','request'=>false,'info'=>'連絡番号を入力してください','checked'=>true),
+		'region'=>array('name'=>'地域選択','request'=>true,'checked'=>true),
+		'address'=>array('name'=>'詳細住所','request'=>true,'info'=>'詳しい住所を入力してください','checked'=>true),
+		'zcode'=>array('name'=>'郵便番号','request'=>false,'info'=>'郵便番号を入力してください','checked'=>false),
+		'qq'=>array('name'=>'QQ 番号','request'=>true,'info'=>'QQ番号を入力してください','checked'=>false),
+		'mail'=>array('name'=>'メール','request'=>true,'info'=>'メールを入力してください','checked'=>false),
+		'remark'=>array('name'=>'メッセージ ','request'=>false,'info'=>'何かありましたらメッセージしてください','checked'=>true),
+		'verify'=>array('name'=>'認証コード','request'=>true,'info'=>'認証コードを入力してください','checked'=>true),
+		'code'=>array('name'=>'メッセージ認証コード','request'=>true,'info'=>'メッセージ認証コードを入力してください','checked'=>true),
+		'payment'=>array('name'=>'支払い方法','request'=>true, 'checked'=>true),
+	),
+);
+?>

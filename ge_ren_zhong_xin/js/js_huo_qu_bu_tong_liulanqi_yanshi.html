@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>获取不同浏览器火狐，ie下的样式</title>
+<script type="text/javascript">
+	// 注意事项 无法获取复合的样式 如backgroundColor 
+	// 获取样式 不同浏览器
+	function GetStyle()
+	{
+		var oDiv = document.getElementsByClassName('div')[0];
+
+		if(oDiv.currentStyle)
+		{
+			// ie 
+			alert(oDvi.currentStyle.width);
+		}
+		else
+		{
+			// 火狐
+			alert(getComputedStyle(oDiv, false).width);
+		}
+	}
+
+	// 封装可重用的获取div样式不同浏览器
+	function GetStyles(obj, attr)
+	{
+		if(obj.currentStyle)
+		{
+			// ie
+			return obj.currentStyle[attr];
+		}
+		else
+		{
+			// 火狐
+			return getComputedStyle(obj, false)[attr];
+		}
+	}
+
+	// 调用GetStyles
+	function GetStyless(obj, attr)
+	{
+		var div = document.getElementsByClassName(obj)[0];
+		alert(GetStyles(div, attr));
+	}
+</script>
+</head>
+<body>
+<button type = 'button' onclick = 'GetStyle();'>获取div样式</button>
+
+<div class = 'div' style = 'width: 200px; height: 200px; background-color: red;'>
+	
+</div>
+
+<button type = 'button' onclick = 'GetStyless("div1", "fontSize");'>获取div样式</button>
+
+<div class = 'div1' style = 'width: 300px; height: 300px; background-color: green;'>
+	
+</div>
+</body>
+</html>

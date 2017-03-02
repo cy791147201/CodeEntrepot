@@ -1,0 +1,18 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<style>
+/*侧边栏div一直居中*/
+/*可以利用css属性，绝对定位*/
+/*绝对定位，据顶部百分之50，margin-top等于当前div的一半高*/
+#div1 {width:100px; height:100px; background:red; position:fixed; right:0; top:50%; margin-top:-50px;}
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>纯css样式控制div一直居中，效果没有js的好看</title>
+</head>
+
+<body style="height:2000px;">
+<div id="div1">
+</div>
+</body>
+</html>

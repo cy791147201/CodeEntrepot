@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<meta http-equiv = 'Content-Type' content = 'text/html; charset = utf8'>
+<head>
+	<title>三级菜单</title>
+</head>
+<style type="text/css">
+	.father{
+		width: 800px;
+	}
+	.yiji{
+		width: 800px;
+		height: 50px;
+		background-color: pink;
+	}
+	.yijicaidan{
+		width: 195px;
+		height: 50px;
+		line-height: 50px;
+		border-right: 5px solid #35EE35;
+		background-color: green;
+		float: left;
+		list-style: none;
+	}
+	.erji{
+		width: 200px;
+		float: left;
+	}
+	.erjicaidan{
+		width: 195px;
+		height: 50px;
+		line-height: 50px;
+		border-right: 5px solid orange;
+		background-color: #E47529;
+		float: left;
+		list-style: none;
+	}
+</style>
+<body>
+<center>
+	<div class = 'father'>
+		<div class = 'yiji'>
+			<!-- <ul> -->
+				<li class = 'yijicaidan'>
+					<span>一级菜单_1</span>
+					<div class = 'erji'>
+						<li class = 'erjicaidan'>
+							<span>二级菜单_1</span>
+						</li>
+					</div>
+				</li>
+				<li class = 'yijicaidan'>
+					<span>一级菜单_1</span>
+					<div class = 'erji'>
+						<li class = 'erjicaidan'>
+							<span>二级菜单_1</span>
+						</li>
+					</div>
+				</li>
+			<!-- </ul> -->
+		</div>
+	</div>
+</center>
+</body>
+</html>

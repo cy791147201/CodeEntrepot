@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+</head>
+<body>
+<form action = 'zhengzeyanzheng.html'>
+    <input type="text" name="name">
+    <input type="text" name="email">
+    <input type="submit" name="">
+</form>
+</body>
+<script>
+    document.getElementsByTagName('form')[0].onsubmit =function(){
+        // js正则验证用户名
+        var patt = /^[a-zA-Z0-9]{6,11}$/;
+        if(!patt.test(document.getElementsByName('name')[0].value)){
+            alert('6-11');
+            return false;
+        }
+        // js正则验证邮箱
+        patt = /^\w+@\w+(\.\w+)+$/;
+        if(!patt.test(document.getElementsByName('email')[0].value)){
+            alert('email');
+            return false;
+        }
+    }
+</script>
+</html>

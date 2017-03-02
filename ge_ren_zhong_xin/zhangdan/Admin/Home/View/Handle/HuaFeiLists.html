@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>个人账单系统__花费信息列表</title>
+<link rel = 'stylesheet' type = 'text/css' href = '__ROOT__/Public/Css/HuaFeiLists.css'>
+<script type = 'text/javascript' src = '__ROOT__/Public/Js/check.js'></script>
+</head>
+    <include file = './Public/Html/header.html' />
+
+    <div class = 'body'>
+        <div class = 'HuaFei'>
+            <!-- <a href = '__CONTROLLER__/HuaFeiList?sta=1' onclick = 'PopupClassify(1);'> -->
+            <a href = 'javascript:;' onclick = 'ChangeSta("TanChuHuaFeiClassify", 1);'>
+                <span>花费信息</span>
+            </a>
+        </div>
+        <div class = 'cansel'>
+            <!-- <a href = '__CONTROLLER__/HuaFeiList?sta=2' onclick = 'PopupClassify(2);'> -->
+            <a href = 'javascript:;' onclick = 'ChangeSta("TanChuHuaFeiClassify", 2);'>
+                <span>已取消的花费信息</span>
+            </a>
+        </div>
+    </div>  
+
+    <div class = 'ChangeSta'>
+        <div id = 'ClassifyAll'>
+            <div class = 'ClassifyOne'>
+                <a href = '__CONTROLLER__/HuaFeiList?classify=classify&id=all' class = 'ClassifyA' style = 'background-color: #247DAD;'>
+                <!-- <a href = ''> -->
+                    <span>全部分类</span>
+                </a>
+            </div>
+            <div class = 'ClassifyOne'>
+                <a href = '__CONTROLLER__/HuaFeiList?classify=classify&id=999999999' class = 'ClassifyA'>
+                <!-- <a href = ''> -->
+                    <span>未指定</span>
+                </a>
+            </div>
+            <foreach name = 'info' item = 'v'>
+            <div class = 'ClassifyOne'>
+                <a href = '__CONTROLLER__/HuaFeiList?classify=classify&id={$v
+                .ids}' class = 'ClassifyA'>
+                <!-- <a href = ''> -->
+                    <span>{$v.names}</span>
+                </a>
+            </div>
+            </foreach>
+            <div class = 'ClassifyOne'>
+                <a href = 'javascript:;' onclick = 'ChangeSta("GuanBi");' style = 'background-color: #247DAD;'>
+                <!-- <a href = ''> -->
+                    <span>关闭</span>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <include file = './Public/Html/foot.html' />

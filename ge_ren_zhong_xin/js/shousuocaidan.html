@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>js收缩菜单</title>
+</head>
+<script type="text/javascript">
+	window.onload = function()
+	{
+		var p = document.getElementById('p');
+		var ul = document.getElementById('ul');
+
+		// onclick 事件操控
+		p.onclick = function()
+		{
+			if(ul.style.display == 'none')
+			{
+				ul.style.display = 'block';
+			}
+			else if(ul.style.display == 'block')
+			{
+				ul.style.display = 'none';
+			}
+		}
+		// onmouseover事件操控 这个实现效果不理想
+		// p.onmouseover = function()
+		// {
+		// 	ul.style.display = 'block';
+		// }
+		// p.onmouseout = function()
+		// {
+		// 	ul.style.display = 'none';
+		// } 
+	}
+</script>
+<body>
+<p id = 'p'>收缩菜单</p>
+<ul id = 'ul' style = 'display: none;'>
+	<li>1</li>
+	<li>2</li>
+	<li>3</li>
+	<li>4</li>
+</ul>
+</body>
+</html>

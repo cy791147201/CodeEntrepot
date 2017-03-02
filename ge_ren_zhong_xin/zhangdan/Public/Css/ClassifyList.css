@@ -1,0 +1,89 @@
+.father{
+    width: 100%;
+    text-align: center;
+    color: #F6F3F3;
+    font-size: 12px;
+}
+.body1{
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 50px; 
+    margin-bottom: 150px; 
+    border: 1px solid #29B19C;
+    border-radius: 10px;
+    overflow: hidden;
+}
+.ListTit{
+    width: 100%;
+    height: 60px;
+    line-height: 60px;
+    font-size: 17px;
+    color: #190F0F;
+    background-color: green;
+    border-bottom: 1px solid #006B5A;
+}
+.ListTit p{
+    float: left;
+    height: 100%;
+    /*width: 50%;*/
+    overflow: hidden;
+}
+.ClassifyName{
+    width: 30%;
+}
+.handle{
+    width: 70%;
+}
+
+.ChangeSta{
+    background-color: green;
+    width: 100%;
+    height: 100%;
+    /*div透明化*/
+    filter:alpha(opacity:90); 
+    opacity:0.9;
+    position: absolute; 
+    top: 0px; 
+    left: 0px; 
+    z-index: 10; 
+    display: none;
+    border: 1px solid #29B19C;
+    /*border-radius: 10px;*/
+    text-align: center;
+}
+.ChangeSta form{
+    background-color: #111496;
+    /*div透明化*/
+    /*filter:alpha(opacity:50); */
+    /*opacity:0.5;*/
+    position: absolute; 
+    top: 0px; 
+    left: 0px; 
+    z-index: 10; 
+    border: 1px solid #29B19C;
+    border-radius: 10px;
+    text-align: center;
+    color: black;
+}
+.DynamicInput input,.more{
+    width: 90%;
+    height: 50px;
+    line-height: 50px;
+    border: 0px;
+    border-radius: 5px;
+    margin: 0 auto;
+    margin-top: 33px;
+    text-indent: 20px;
+}
+.DynamicInput{
+    display: none;
+}
+.GuanBi, .sure{
+    width: 45%;
+    border: 0px;
+    border-radius: 5px;
+    height: 50px;
+    line-height: 50px;
+    margin-top: 33px;
+    margin-bottom: 33px;
+}

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<meta http-equiv = 'Content-Type' content = 'text/html; charset = utf8'>
+<head>
+	<title>评分</title>
+</head>
+<script type="text/javascript">
+	var arr = new Array('1', '2', '3', '4', '5');
+	window.onload = function()
+	{	
+		var div1 = document.getElementsByClassName('div1')[0];
+		var div2 = document.getElementsByClassName('div2')[0];
+		var li = div1.getElementsByTagName('li');
+		var i = 0;
+		var length = li.length;
+		for(i = 0; i < length; i++)
+		{
+			li[i].index = i;
+			li[i].onmouseover = function()
+			{
+				div2.style.display = 'block';
+				div2.innerHTML = arr[this.index];
+				for(i = 0; i <= this.index; i++)
+				{
+					li[i].style.background = 'orange';
+				}
+			};
+			li[i].onmouseout = function()
+			{
+				div2.style.display = 'none';
+				for(i = 0; i <= this.index; i++)
+				{
+					li[i].style.background = '';
+				}
+			}
+			li[i].onclick = function()
+			{
+				alert('评分成功，' + (this.index + 1) + '分');
+			}
+		}
+	};
+</script>
+<style type="text/css">
+	div{
+		width: 300px;
+		height: 90px;
+		line-height: 90px;
+		text-align: center;
+		background-color: red;
+		border: 5px solid pink;
+	}
+	.div2{
+		display: none;
+	}
+	li{
+		width: 50px;
+		height: 80px;
+		float: left;
+		background-color: green;
+		border: 5px solid blue;
+		list-style: none;
+	}
+</style>
+<body>
+<center>
+	<div class = 'div1'>
+		<!-- <ul> -->
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+		<!-- </ul> -->
+	</div>
+	<div class = 'div2'>
+		
+	</div>
+</center>
+</body>
+</html>

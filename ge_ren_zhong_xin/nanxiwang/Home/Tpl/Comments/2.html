@@ -1,0 +1,50 @@
+<style>
+em,i{font-style: normal;font-weight: normal;}
+#comments li{line-height:2.2rem;border-bottom:1px solid #eaeaea;padding:10px;overflow:hidden;position:relative;}
+#comments .omg{border-radius:45px;margin-right:10px;width:2.5rem;height:2.5rem;}
+#comments .right{font-size:1rem;float:right;}
+#comments .ov{line-height:3rem;margin-bottom:6px;color:#999;}
+#comments .con{color:#333;}
+</style>
+<ul class="comment" id="comments"></ul>
+<div><a href="javascript:;" id="commentsAjax" class="alizi-btn" data-page="0">点击加载更多(<i>{$total|intval}</i>)条评论</a></div>
+
+<script id="alizi-query" type="text/html">
+<ul>
+    {{each list as value i}}
+        <li>
+			<div class="ov">
+				<img class="omg" src="__PUBLIC__/Alizi/avatar2.png">
+				<em>{{value.name}}</em><em class="vip"></em><i class="alizi-badge right">{{value.region}}</i>
+			</div>
+			<div class="con">{{#value.content}}</div>
+		</li>
+    {{/each}}
+</ul>
+</script>
+
+<script type="text/javascript">
+seajs.use(['jquery','art/template'],function($,template){
+	$('#commentsAjax').click(function(){ comments(5); })
+	comments(10);
+	function comments(page){
+		var item_id = '{$info.id}',commentsAjax=$('#commentsAjax');
+		var currentPage = commentsAjax.attr('data-page');
+		$.ajax({
+		   type: "POST",
+		   url: "{:U('Order/getComments')}",
+		   data: {item_id:item_id,page:page,currentPage:currentPage},
+		   dataType: 'json',
+		   success: function(data){
+				commentsAjax.attr('data-page',data.data.currentPage)
+				commentsAjax.find('i').html(data.data.leftPage);
+				var html = template('alizi-query', data.data);
+				$('#comments').append(html);
+				if(parseInt(data.data.leftPage)==0){ commentsAjax.hide(); }
+		   }
+		 });
+	}
+});
+
+
+</script>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+<style>
+    table{
+        width: 400px;
+        height: 400px;
+        /*border: 0px;*/
+        border-collapse: collapse;
+        /*子元素border重合*/
+    }
+    td{
+        border: 1px solid pink;
+    }
+</style>
+</head>
+<body>
+<table>
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>   
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>   
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>   
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+</table>
+</body>
+<script>
+    // 事件委托
+    // 方法一 循环绑定td的属性  缺点流程繁琐
+    // var tds = document.getElementsByTagName('td');
+    // var i = 0;
+    // while(i<tds.length){
+    //  tds[i].onclick = function (){
+    //      this.style.backgroundColor = 'pink';
+    //  }
+    //  i++;
+    // }
+
+    // 方法2 利用事件对象的target目标属性，当时点击的元素
+    // document.getElementsByTagName('table')[0].onclick = function (obj){
+    //  var obj = window.event || obj;
+    //  obj.target.style.backgroundColor = 'pink';
+    // }
+    // 利用事件绑定制作出下棋的效果 注意 num应该在获取对象之前
+    var num = 1;
+    document.getElementsByTagName('table')[0].onclick = function(obj){
+        var obj = window.event || obj;
+        obj.target.style.backgroundColor = num++%2?'pink':'orange';
+    }
+</script>
+</html>

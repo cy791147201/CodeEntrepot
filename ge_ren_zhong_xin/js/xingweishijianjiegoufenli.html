@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+<style>
+	div{
+		width: 100px;
+		height: 100px;
+		background-color: red;
+		margin-top: 10px;
+		margin-left: 10px;
+	}
+</style>
+</head>
+<body>
+<div>
+	<p>
+		<ul>
+			<li>
+				<span>
+					hao
+				</span>
+			</li>
+		</ul>
+	</p>
+</div>
+<div class = 'none'>
+	
+</div>
+</body>
+<script>
+// 分离行为事件结构  对象的onclick属性  还有其他属性
+	document.getElementsByTagName('div')[0].onclick = function (){
+		if(this.style.backgroundColor == 'red'){
+			this.style.backgroundColor = 'blue';
+		}else{
+			this.style.backgroundColor ='red';
+		}
+	}
+	// 鼠标经过时 改变对象的属性
+	document.getElementsByClassName('none')[0].onmouseover = function (obj){
+		var obj = window.event || obj;
+		this.style.marginTop = obj.pageX+10+'px';
+		this.style.marginLeft = obj.pageY+10+'px';
+	}
+</script>
+</html>

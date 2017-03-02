@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>个人账单系统__添加分类</title>
+<link rel = 'stylesheet' type = 'text/css' href = '__ROOT__/Public/Css/ClassifyIndex.css'>
+<script type = 'text/javascript' src = '__ROOT__/Public/Js/check.js'></script>
+</head>
+    <include file = './Public/Html/header.html' />
+
+    <div class = 'body'>
+        <div class = 'classify' style = 'background-color: #64C6A3;'>
+            <a href = 'javascript:;' onclick = 'ChangeSta("AddClassify", 1);'>
+                <span>添加分类</span>
+            </a>
+        </div>
+        <div class = 'classify' style = 'background-color: #1FC68A;'>
+            <a href = 'javascript:;' onclick = 'ChangeSta("DelClassify", 1);'>
+                <span>删除分类</span>
+            </a>
+        </div>
+        <div class = 'classify' style = 'background-color: #0B9161;'>
+            <a href = 'javascript:;' onclick = 'ChangeSta("SaveClassify", 1);'>
+                <span>修改分类</span>
+            </a>
+        </div>
+        <div class = 'classify' style = 'background-color: #22B07D;'>
+            <a href = '__CONTROLLER__/ClassifyList'>
+                <span>分类列表</span>
+            </a>
+        </div>
+    </div>  
+
+    <include file = './Public/Html/foot.html' />
+
+    <div class = 'ChangeSta'>
+        <form action = '__CONTROLLER__/ClassifyHandle' method = 'post' id = 'ChangeStaForm' onsubmit = 'return CheckClassifyForm();'>
+            <select class = 'more' name = 'name'>
+                <foreach name = 'opt' item = 'v'>
+                    <option value = '{$v.ids}'>{$v.names}</option>
+                </foreach>
+            </select>
+            <input type = 'hidden' name = 'id' id = 'StaId' />
+            <input type = 'hidden' name = 'sta' id = 'IdSta' />
+            <div class = 'DynamicInput'>
+                
+            </div>
+            <input type = 'button' value = '关闭' class = 'GuanBi' onclick = "ChangeSta('GuanBi');" />
+            <input type = 'submit' value = '确定' class = 'sure' />
+        </form>
+    </div>
+    <div class = 'ChangeSta1'>
+        <form action = '__CONTROLLER__/ClassifyHandle' method = 'post' id = 'ChangeStaForm1' onsubmit = 'return CheckClassifyForm();'>
+            <input type = 'text' name = 'name' placeholder = '分类名称' class = 'more' />
+            <input type = 'hidden' name = 'id' id = 'StaId1' />
+            <input type = 'hidden' name = 'sta' id = 'IdSta1' />
+            <div class = 'DynamicInput'>
+                
+            </div>
+            <input type = 'button' value = '关闭' class = 'GuanBi' onclick = "ChangeSta('GuanBi');" />
+            <input type = 'submit' value = '确定' class = 'sure' />
+        </form>
+    </div>

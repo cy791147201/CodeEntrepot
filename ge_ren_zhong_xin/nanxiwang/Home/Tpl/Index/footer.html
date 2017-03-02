@@ -1,0 +1,23 @@
+<div class="footer">
+	<div class="mainwidth">
+		<!-- <ul class="footcon"> 修改一-->
+			<!-- <li> 修改一-->
+				<div class="copyright">{$aliziConfig.footer}</div>
+			<!-- </li>
+			<li> 修改一-->
+				<div class="foottel">
+					<span class="tell">{:lang('serviceNumber')}<span class="num">{$aliziConfig.contact_tel}</span></span>
+					<notempty name="aliziConfig.contact_qq">
+					<span class="online">{:lang('online_service')}<span class="num"><a href="http://wpa.qq.com/msgrd?v=3&uin={$aliziConfig.contact_qq}&site=qq&menu=yes" target="_blank"><img border="0" src="http://wpa.qq.com/pa?p=2:{$aliziConfig.contact_qq}:51 &amp;r=0.22914223582483828"></a></span></span>
+					<else /><br />
+					</notempty>
+				</div>
+				
+			<!-- </li> 修改一-->
+		<!-- </ul> 修改一-->
+	</div>
+</div>
+<div id="aliziUp"></div>
+<script type="text/javascript">
+seajs.use(['jquery/scrollup'], function(){ $.scrollUp({scrollName: 'aliziUp'}); });
+</script>

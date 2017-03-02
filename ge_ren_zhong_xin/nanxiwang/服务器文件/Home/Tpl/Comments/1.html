@@ -1,0 +1,19 @@
+<php>
+$comments = M('Comments')->where('status=1 AND item_id='.$info['id'])->order('add_time desc')->select();
+</php>
+<div id="alizi-comments">
+   <ul class="list">
+	<volist name="comments" id="vo">
+	<li class="<if condition='$i%2==0'>l<else />r</if>">
+		<div class="text"><span style="float:left;">{$vo.name}：</span>{$vo.content}</div>
+		<span class="corner"></span>
+		<span class="avatar"></span>
+	</li>
+	</volist>
+	</ul>
+</div>	
+<script type="text/javascript">
+seajs.use(['alizi'],function(alizi){
+	alizi.scroll('alizi-comments',3000);
+});
+</script>

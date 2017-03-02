@@ -1,0 +1,72 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<style>
+/*需要给div绝对定位*/
+#div1 {width:100px; height:200px; background:#CCC; position:absolute; left:-100px;}
+/*需要给div绝对定位*/
+#div1 span {width:20px; height:60px; line-height:20px; text-align:center; left:100px; top:70px; background:yellow; position:absolute;}
+
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>js侧边栏类似分享到div框的显示隐藏</title>
+<script type="text/javascript">
+window.onload=function ()
+{
+	var oDiv=document.getElementById('div1');
+	
+	// 鼠标经过事件
+	oDiv.onmouseover=function ()
+	{
+		// 传递参数目标点，需要div绝对定位的left值
+		startMove(0);
+	}
+	// 鼠标移出事件
+	oDiv.onmouseout=function ()
+	{
+		// 传递参数目标点，需要div绝对定位的left值
+		startMove(-100);
+	}
+}
+var timer=null;
+
+function startMove(iTarget)
+{
+	// 获取对象
+	var oDiv=document.getElementById('div1');
+	// 清除定时器，防止div移动速度不断飙块
+	clearInterval(timer);
+	// 设置定时器
+	timer=setInterval(function (){
+		var iSpeed=0;
+		// 如果当前的绝对定位left小于目标点，说明div没有显示，速度则为正，div向右移动
+		if(oDiv.offsetLeft<iTarget)
+		{
+			iSpeed=10;
+		}
+		else
+		{
+			// 如果当前的绝对定位left大于目标点，说明div已经显示，速度则为负，div向左移动
+			iSpeed=-10;
+		}
+		// 如果div的绝对定位的left到达目标点，清除定时器
+		if(oDiv.offsetLeft==iTarget)
+		{
+			clearInterval(timer);
+		}
+		else
+		{
+			// 如果div的绝对定位的left没有到达目标点，div则继续移动
+			oDiv.style.left=oDiv.offsetLeft+iSpeed+'px';
+		}
+	}, 30);
+}
+</script>
+</head>
+
+<body>
+<div id="div1">
+	<span>分享到</span>
+</div>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <script>
+        function t(){
+            document.getElementsByName('name')[0].style.backgroundColor = 'green';
+        }
+        function b(){
+            document.getElementsByName('name')[0].style.backgroundColor = '';
+        }
+        function o(){
+
+            document.getElementsByName('id')[0].style.backgroundColor = 'red';
+        }
+        function check(){
+            alert('请填写完整');
+            return false;
+        }
+    </script>
+</head>
+<body>
+<input type="text" name="name" onfocus = 't()' onblur = 'b()'>
+<!-- 焦点事件 失去焦点事件 -->
+<input type="text" name="id" onmouseover = 'o()'>
+<input type="text" name="pwd">
+<form action = 'shijian.html' onsubmit = 'return check()'>
+    <!-- js检查表单是否为空 -->
+    <input type="submit" name="">
+</form>
+</body>
+</html>
