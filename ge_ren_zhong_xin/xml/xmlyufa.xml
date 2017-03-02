@@ -1,0 +1,8 @@
+<?xml version = "1.0" encoding = "utf-8"?>
+<root>
+	<name>申爽</name>
+	<notice>内容里用字符实体转义  CDATA节点用来放置大段文章，不用考虑实体转换</notice>
+	<spcial>
+		<![CDATA[ dasdsad dsa.d,s.,d.,.,.,.,.,.<><><><><><><><><><>]]>
+	</spcial>
+</root>
