@@ -14,7 +14,7 @@ body{
 .sub, #ListUpdOne form input, #ListUpdOne form select, #AddAdmin form input, #AddAdmin form select, #DelAdmin form input, #DelAdmin form select, #UpdAdmin form input, #UpdAdmin form select, #FindAdmin form input, #FindAdmin form select{
      border: 1px solid #D0D0D0;
 }
-#OneInfo, #FindAdmin, #UpdAdmin, .AdminHandle, #AddAdmin, #DelAdmin, #AdminHandle, .sub, #AddAdmin form input, #AddAdmin form select, #DelAdmin form input, #DelAdmin form select, #UpdAdmin form input, #UpdAdmin form select, #ListUpdOne form input, #ListUpdOne form select, #FindAdmin form input, #FindAdmin form select{
+#OneInfo, #FindAdmin, #UpdAdmin, .AdminHandle, #AddAdmin, #DelAdmin, #AdminHandle, .sub, #AddAdmin form input, #AddAdmin form select, #DelAdmin form input, #DelAdmin form select, #UpdAdmin form input, #UpdAdmin form select, #ListUpdOne form input, #ListUpdOne, #ListUpdOne form select, #FindAdmin form input, #FindAdmin form select{
     border-radius: 5px;
 }
 .page, .ListInfoTit, .AdminList, .AdminHandle, .sub, .title{
@@ -70,7 +70,6 @@ body{
     width: 394px;
     height: 214px;
     margin: 0 auto;
-    /*display: none;*/
 }
 .AdminHandle{
     width: 150px;
@@ -158,14 +157,10 @@ body{
     width: 100px;
     height: 25px;
 }
-
 .OneInfo, .ListUpdOnes{
     width: 100%;
     height: 100%;
-    background: #FABBDF;
-    /*div透明化*/
-    filter:alpha(opacity:90); 
-    opacity:0.9;
+    background: #FDFBFB;
     position: fixed; 
     top: 0px; 
     left: 0px;
@@ -177,15 +172,13 @@ body{
     height: 500px;
     border-radius: 5px;
     margin: 0 auto;
-    background: #FAF2F3;
+    background: #FCFCFC;
 }
 .OneInfoTit{
     width: 100%;
     height: 50px;
     line-height: 50px;
     text-indent: 90px;
-    /*border-top-left-radius: 5px;*/
-    /*border-top-right-radius: 5px;*/
 }
 .close{
     display: block;
@@ -223,10 +216,7 @@ body{
 }
 #ListInfo{
     width: 95%;
-    height: 710px;
     margin: 0 auto;
-    margin-top: 10px !important;
-    margin-bottom: 110px !important;
     border-radius: 5px;
     display: none;
     overflow: hidden;
@@ -235,8 +225,6 @@ body{
     width: 100%;
     height: 50px;
     line-height: 50px;
-    /*border-top-left-radius: 5px;*/
-    /*border-top-right-radius: 5px;*/
 }
 .page, .ListInfoTits{
     width: 100%;

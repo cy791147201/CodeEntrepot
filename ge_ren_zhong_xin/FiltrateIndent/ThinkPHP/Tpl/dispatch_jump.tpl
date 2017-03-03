@@ -21,11 +21,12 @@ body{ background: #fff; font-family: '微软雅黑'; color: #333; font-size: 16p
 </head>
 <body>
 <div class="system-message">
+<!-- 跳转模版提示信息 -->
 <?php if(isset($message)) {?>
-<h1>:)</h1>
+<!-- <h1>:)</h1> -->
 <p class="success"><?php echo($message); ?></p>
 <?php }else{?>
-<h1>:(</h1>
+<!-- <h1>:(</h1> -->
 <p class="error"><?php echo($error); ?></p>
 <?php }?>
 <p class="detail"></p>

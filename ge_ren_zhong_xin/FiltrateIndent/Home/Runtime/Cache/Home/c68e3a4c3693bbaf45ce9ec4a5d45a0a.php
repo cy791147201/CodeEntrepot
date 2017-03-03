@@ -17,8 +17,8 @@
             </a>
         </li>
         <li>
-            <a href = '/ge_ren_zhong_xin/FiltrateIndent/index.php/Home/Excel/index' title = 'Excel操作'>
-                <span>Excel操作</span>
+            <a href = '/ge_ren_zhong_xin/FiltrateIndent/index.php/Home/Excel/index' title = '圆通Excel操作'>
+                <span>圆通Excel操作</span>
             </a>
         </li>
        <!--  <li>
@@ -73,10 +73,10 @@
             <span>确认密码</span>
             <span id = 'grade'>权限</span>
         </div>
-        <form action = '/ge_ren_zhong_xin/FiltrateIndent/index.php/Home/Handle/HandleAdmin?act=add' method = 'post' name = 'form1' onsubmit = 'return CheackReIn("add");'>
-            <input type = 'text' name = 'user1' placeholder = '请填写用户名' />
-            <input type = 'text' name = 'pwd1' placeholder = '请填写用户密码' />
-            <input type = 'text' name = 'repwd1' placeholder = '请确认用户密码' />
+        <form action = '/ge_ren_zhong_xin/FiltrateIndent/index.php/Home/Handle/HandleAdmin?act=add' method = 'post' name = 'form1' onsubmit = 'return CheackReIn("form1", "AddAdminNotice");'>
+            <input type = 'text' name = 'user1' placeholder = '请填写用户名, 6-19位字母数字' />
+            <input type = 'text' name = 'pwd1' placeholder = '请填写用户密码, 6-19位字母数字' />
+            <input type = 'text' name = 'repwd1' placeholder = '请确认用户密码, 6-19位字母数字' />
             <select name = 'grade'>
                 <option value = '2'>用户</option>
                 <option value = '1'>管理员</option>
@@ -96,9 +96,9 @@
             <span>用户名</span>
             <span>再次确认用户名</span>
         </div>
-        <form action = '/ge_ren_zhong_xin/FiltrateIndent/index.php/Home/Handle/HandleAdmin?act=del' method = 'post' name = 'form2' onsubmit = 'return CheackReIn("del");'>
-            <input type = 'text' name = 'user2' placeholder = '请填写用户名' />
-            <input type = 'text' name = 'ReUser2' placeholder = '请确认用户名' />
+        <form action = '/ge_ren_zhong_xin/FiltrateIndent/index.php/Home/Handle/HandleAdmin?act=del' method = 'post' name = 'form2' onsubmit = 'return CheackReIn("form2", "DelAdminNotice");'>
+            <input type = 'text' name = 'user2' placeholder = '请填写用户名, 6-19位字母数字' />
+            <input type = 'text' name = 'ReUser2' placeholder = '请确认用户名, 6-19位字母数字' />
             <input type = 'submit' value = '确定' class = 'sub'/>
         </form>
     </div>
@@ -116,10 +116,10 @@
             <span>确认密码</span>
             <span id = 'grade'>权限</span>
         </div>
-        <form action = '/ge_ren_zhong_xin/FiltrateIndent/index.php/Home/Handle/HandleAdmin?act=upd' method = 'post' name = 'form5' onsubmit = 'return CheackReIn("upd1");'>
-            <input type = 'text' name = 'user5' placeholder = '请填写用户名' />
-            <input type = 'text' name = 'pwd5' placeholder = '请填写用户密码' />
-            <input type = 'text' name = 'repwd5' placeholder = '请确认用户密码' />
+        <form action = '/ge_ren_zhong_xin/FiltrateIndent/index.php/Home/Handle/HandleAdmin?act=upd' method = 'post' name = 'form5' onsubmit = 'return CheackReIn("form5", "UpdAdminNotice");'>
+            <input type = 'text' name = 'user5' placeholder = '请填写用户名, 6-19位字母数字' />
+            <input type = 'text' name = 'pwd5' placeholder = '请填写用户密码, 6-19位字母数字' />
+            <input type = 'text' name = 'repwd5' placeholder = '请确认用户密码, 6-19位字母数字' />
             <select name = 'grade'>
                 <option value = '2'>用户</option>
                 <option value = '1'>管理员</option>
@@ -139,9 +139,9 @@
             <span>用户名</span>
             <span>再次确认用户名</span>
         </div>
-        <form action = '/ge_ren_zhong_xin/FiltrateIndent/index.php/Home/Handle/HandleAdmin?act=find' method = 'post' name = 'form4' onsubmit = 'return CheackReIn("find");'>
-            <input type = 'text' name = 'user4' placeholder = '请填写用户名' />
-            <input type = 'text' name = 'ReUser4' placeholder = '请确认用户名' />
+        <form action = '/ge_ren_zhong_xin/FiltrateIndent/index.php/Home/Handle/HandleAdmin?act=find' method = 'post' name = 'form4' onsubmit = 'return CheackReIn("form4", "FindAdminNotice");'>
+            <input type = 'text' name = 'user4' placeholder = '请填写用户名, 6-19位字母数字' />
+            <input type = 'text' name = 'ReUser4' placeholder = '请确认用户名, 6-19位字母数字' />
             <input type = 'submit' value = '确定' class = 'sub'/>
         </form>
     </div>
@@ -356,11 +356,11 @@
             <span>确认密码</span>
             <span id = 'grade'>权限</span>
         </div>
-        <form action = '/ge_ren_zhong_xin/FiltrateIndent/index.php/Home/Handle/HandleAdmin?act=upd' method = 'post' name = 'form3' onsubmit = 'return CheackReIn("upd");'>
+        <form action = '/ge_ren_zhong_xin/FiltrateIndent/index.php/Home/Handle/HandleAdmin?act=upd' method = 'post' name = 'form3' onsubmit = 'return CheackReIn("form3", "UpdAdminNotice1");'>
             <input type = 'hidden' name = 'id' value = '<?php echo ($UpdOneInfo["u_id"]); ?>'/>
             <input type = 'text' name = 'user3' value = '<?php echo ($UpdOneInfo["u_name"]); ?>'/>
-            <input type = 'text' name = 'pwd3' placeholder = '请输入用户密码' />
-            <input type = 'text' name = 'repwd3' placeholder = '请确认密码' />
+            <input type = 'text' name = 'pwd3' placeholder = '请输入用户密码, 6-19位字母数字' />
+            <input type = 'text' name = 'repwd3' placeholder = '请确认密码, 6-19位字母数字' />
             <select name = 'grade'>
                 <option value = '2'>用户</option>
                 <option value = '1'>管理员</option>

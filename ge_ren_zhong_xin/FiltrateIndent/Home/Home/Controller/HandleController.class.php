@@ -31,8 +31,23 @@ class HandleController extends BeforeController
     // 管理员操作
     public function HandleAdmin()
     {
-        $info = I('post.');
+        $info1 = I('post.');
         $act = I('get.act');
+
+        // 判断表单信息是否全部填写
+        $info = array();
+        foreach($info1 as $k => $v)
+        {
+            if(!empty($v))
+            {
+                $info[$k] = $v;
+            }
+        }
+        if(count($info1) !== count($info))
+        {
+            $this->ReturnJudge('个别表单信息为空，请仔细填写', 'index');
+            exit();
+        }
 
         // 检测是否拥有管理员权限
         $where['id'] = $_SESSION['id'];
@@ -47,11 +62,13 @@ class HandleController extends BeforeController
             {
                 if($info['user1'] && $info['user3'] && $info['user5'])
                 {
-                    $this->ReturnJudge('用户名不能为空');
+                    $this->ReturnJudge('用户名不能为空', 'index');
+                    exit();
                 }
                 if($info['pwd1'] !== $info['repwd1'] && $info['pwd3'] !== $info['repwd3'] && $info['pwd5'] !== $info['repwd5'])
                 {
-                    $this->ReturnJudge('两次输入密码不一致');
+                    $this->ReturnJudge('两次输入密码不一致', 'index');
+                    exit();
                 }
                 else
                 {
@@ -89,20 +106,24 @@ class HandleController extends BeforeController
                                     if($res5)
                                     {
                                         $this->ReturnJudge('修改管理员成功', 'index');
+                                        exit();
                                     }
                                     else
                                     {
-                                        $this->ReturnJudge('修改管理员失败');
+                                        $this->ReturnJudge('修改管理员失败', 'index');
+                                        exit();
                                     }
                                 }
                                 else
                                 {
-                                    $this->ReturnJudge('您没人家牛逼');
+                                    $this->ReturnJudge('您没人家牛逼', 'index');
+                                    exit();
                                 }
                             }
                             else
                             {
-                                $this->ReturnJudge('您没人家牛逼');
+                                $this->ReturnJudge('您没人家牛逼', 'index');
+                                exit();
                             }
                         }
                         // 管理员首页，根据名称更新用户数据
@@ -116,7 +137,7 @@ class HandleController extends BeforeController
                             $res4 = $Admin->where($where5)->find();
                             if($res4)
                             {
-                                if($res['grade'] < $res4['grade'])
+                                if($res['grade'] < $res4['grade'] || $res['u_name'] === $res4['u_name'])
                                 {
                                     $data5['u_pwd'] = $info['pwd5'] ? md5($info['pwd5'].'shenshuang') : 'nothink';
                                     $data5['jurisdiction'] = ($info['grade'] === '1') ? 'admin' : 'user';
@@ -125,20 +146,24 @@ class HandleController extends BeforeController
                                     if($res5)
                                     {
                                         $this->ReturnJudge('修改成功', 'index');
+                                        exit();
                                     }
                                     else
                                     {
-                                        $this->ReturnJudge('修改失败');
+                                        $this->ReturnJudge('修改失败', 'index');
+                                        exit();
                                     }
                                 }
                                 else
                                 {
-                                    $this->ReturnJudge('您没人家牛逼');
+                                    $this->ReturnJudge('您没人家牛逼', 'index');
+                                    exit();
                                 }
                             }
                             else
                             {
-                                $this->ReturnJudge('查无此人');
+                                $this->ReturnJudge('查无此人', 'index');
+                                exit();
                             }
                         }
                     }
@@ -162,15 +187,18 @@ class HandleController extends BeforeController
                             if($res2)
                             {
                                 $this->ReturnJudge('添加'.$user.'成功', 'index');
+                                exit();
                             }
                             else
                             {
-                                $this->ReturnJudge('添加'.$user.'失败');
+                                $this->ReturnJudge('添加'.$user.'失败', 'index');
+                                exit();
                             }
                         }
                         else
                         {
-                            $this->ReturnJudge('已存在该用户名');
+                            $this->ReturnJudge('已存在该用户名', 'index');
+                            exit();
                         }
                     }
                 }
@@ -208,25 +236,30 @@ class HandleController extends BeforeController
                                 if($res33)
                                 {
                                     $this->ReturnJudge('删除成功', 'index');
+                                    exit();
                                 }
                                 else
                                 {
-                                    $this->ReturnJudge('删除失败');
+                                    $this->ReturnJudge('删除失败', 'index');
+                                    exit();
                                 }
                             }
                             else
                             {
-                                $this->ReturnJudge('您没人家牛逼');
+                                $this->ReturnJudge('您不能越级操作', 'index');
+                                exit();
                             }
                         }
                         else
                         {
-                            $this->ReturnJudge('查无此人');
+                            $this->ReturnJudge('查无此人', 'index');
+                            exit();
                         }
                     }
                     else
                     {
-                        $this->ReturnJudge('两次输入用户名不一致');
+                        $this->ReturnJudge('两次输入用户名不一致', 'index');
+                        exit();
                     }
                 }
                 // 管理员列表页删除管理员
@@ -252,32 +285,38 @@ class HandleController extends BeforeController
                                 }
                                 else
                                 {
-                                    $this->ReturnJudge('我很累');
+                                    $this->ReturnJudge('我很累', 'index');
+                                    exit();
                                 }
                                 $data6['w_del'] = $res['u_id'];
                                 $res66 = $Admin->where($where6)->save($data6);
                                 if($res66)
                                 {
                                     $this->ReturnJudge($act1.'用户成功', 'HandleAdmin?act=list');
+                                    exit();
                                 }
                                 else
                                 {
-                                    $this->ReturnJudge($act1.'用户失败');
+                                    $this->ReturnJudge($act1.'用户失败', 'index');
+                                    exit();
                                 }
                             }
                             else
                             {
-                                $this->ReturnJudge('因为所以科学道理');
+                                $this->ReturnJudge('因为所以科学道理', 'index');
+                                exit();
                             }
                         }
                         else
                         {
-                            $this->ReturnJudge('您没人家牛逼');
+                            $this->ReturnJudge('您没人家牛逼', 'index');
+                            exit();
                         }
                     }
                     else
                     {
-                        $this->ReturnJudge('查无此人');
+                        $this->ReturnJudge('查无此人', 'index');
+                        exit();
                     }
                 }
             }
@@ -292,7 +331,10 @@ class HandleController extends BeforeController
                     $res4 = $Admin->where($where4)->find();
                     if($res4)
                     {
-                        if($res['grade'] < $res4['grade'])
+                        // var_dump($res);
+                        // var_dump($res4);
+                        // exit();
+                        if($res['grade'] < $res4['grade'] || $res['u_name'] === $res4['u_name'])
                         {
                             $this->assign('OneInfo', $res4);
                             $this->assign('OneInfoDisplay', 'block');
@@ -300,17 +342,20 @@ class HandleController extends BeforeController
                         }
                         else
                         {
-                            $this->ReturnJudge('您没人家牛逼');
+                            $this->ReturnJudge('您没人家牛逼', 'index');
+                            exit();
                         }
                     }
                     else
                     {
-                        $this->ReturnJudge('查无此人');
+                        $this->ReturnJudge('查无此人', 'index');
+                        exit();
                     }
                 }
                 else
                 {
-                    $this->ReturnJudge('两次输入用户名不一致');
+                    $this->ReturnJudge('两次输入用户名不一致', 'index');
+                    exit();
                 }
             }
             // 管理员列表
@@ -358,17 +403,20 @@ class HandleController extends BeforeController
                 }
                 else
                 {
-                    $this->ReturnJudge('查无此人');
+                    $this->ReturnJudge('查无此人', 'index');
+                    exit();
                 }
             }
             else
             {
-                $this->ReturnJudge('请确认您的操作');
+                $this->ReturnJudge('请确认您的操作', 'index');
+                exit();
             }
         }
         else
         {
-            $this->ReturnJudge('您没有权限');
+            $this->ReturnJudge('您没有权限', 'index');
+            exit();
         }
     }
 }

@@ -1,3 +1,15 @@
+// 获取目标样式属性
+function GetStyle(obj, attr)
+{
+    if(obj.currentStyle)
+    {
+        return obj.currentStyle[attr];
+    }
+    else
+    {
+        return getComputedStyle(obj, false)[attr];
+    }
+}
 // 显示对应头部标题的div
 function Replace(ClassName, Id)
 {
@@ -23,85 +35,49 @@ function Replace(ClassName, Id)
         }
     }
 }
+
 // 检查管理员表单
-function CheackReIn(tag)
+function CheackReIn(name, NoticeObj)
 {
-    // 检查添加表单
-    if(tag == 'add' || tag == 'upd' || tag == 'upd1')
+    var obj = document.getElementsByName(name)[0];
+    var oNoticeDiv = document.getElementsByClassName(NoticeObj)[0];
+    if(obj && oNoticeDiv)
     {
-        if(tag == 'upd')
+        var oInputs = obj.getElementsByTagName('input');
+        var nLen1 = oInputs.length;
+        var oInfo1 = oInputs[nLen1-3].value;
+        var oInfo2 = oInputs[nLen1-2].value;
+
+        // 检测确认信息是否一致
+        if(oInfo1 !== oInfo2)
         {
-            var oUser = document.form3.user3.value;
-            var oPwd = document.form3.pwd3.value;
-            var oRepwd = document.form3.repwd3.value;
-            var oDiv = document.getElementsByClassName('UpdAdminNotice1')[0];
-        }
-        else if(tag == 'add')
-        {
-            var oUser = document.form1.user1.value;
-            var oPwd = document.form1.pwd1.value;
-            var oRepwd = document.form1.repwd1.value;
-            var oDiv = document.getElementsByClassName('AddAdminNotice')[0];
-        }
-        else if(tag == 'upd1')
-        {
-            var oUser = document.form5.user5.value;
-            var oPwd = document.form5.pwd5.value;
-            var oRepwd = document.form5.repwd5.value;
-            var oDiv = document.getElementsByClassName('UpdAdminNotice')[0];
+            oNoticeDiv.innerHTML = '确认信息错误';
+            return false;
         }
 
-        if(oDiv)
+        var i = 0;
+        for(i; i < nLen1; i ++)
         {
-            if(/^[a-zA-Z\d]{6,11}$/.test(oUser) === false || oUser === '' || /^[a-zA-Z\d]{6,11}$/.test(oPwd) === false || oPwd === '' || /^[a-zA-Z\d]{6,11}$/.test(oRepwd) === false || oRepwd === '')
+            oInputs[i].index = i;
+            var oValue = oInputs[i].value;
+            if(oValue === '')
             {
-                oDiv.innerHTML = '请填写正确的用户信息';
+                oNoticeDiv.innerHTML = '用户信息不能为空';
                 return false;
             } 
-            else if(oPwd !== oRepwd)
+            if(oInputs[i].type !== 'submit')
             {
-                oDiv.innerHTML = '两次输入密码不一致';
-                return false;
+                if(/^[a-zA-Z\d]{6,19}$/.test(oValue) === false)
+                {
+                    oNoticeDiv.innerHTML = '请填写正确的用户信息';
+                    return false;
+                } 
             }
-        }
-        else
-        {
-            return false;
         }
     }
-    // 检查删除表单
-    else if(tag == 'del' || tag == 'find')
+    else
     {
-        if(tag == 'find')
-        {
-            var oUser = document.form4.user4.value;
-            var oReUser = document.form4.ReUser4.value;
-            var oDiv = document.getElementsByClassName('FindAdminNotice')[0];
-        }
-        else if(tag == 'del')
-        {
-            var oUser = document.form2.user2.value;
-            var oReUser = document.form2.ReUser2.value;
-            var oDiv = document.getElementsByClassName('DelAdminNotice')[0];
-        }
-
-        if(oDiv)
-        {
-            if(/^[a-zA-Z\d]{6,11}$/.test(oUser) === false || oUser === '' || /^[a-zA-Z\d]{6,11}$/.test(oReUser) === false || oReUser === '')
-            {
-                oDiv.innerHTML = '请填写正确的用户信息';
-                return false;
-            } 
-            else if(oUser !== oReUser)
-            {
-                oDiv.innerHTML = '两次输入用户名不一致';
-                return false;
-            }
-        }
-        else
-        {
-            return false;
-        }
+        return false;
     }
 }
 
@@ -113,7 +89,6 @@ function ChanegDivStyle()
     if(obj1)
     {
         var obj2 = document.getElementById('ListUpdOne');
-        // obj2.style.display = 'block';
         Replace(obj2.className, 'ListUpdOne');
     }
     var oDisplay = document.getElementById('ListInfo');
@@ -131,34 +106,20 @@ function ChanegDivStyle()
     {   
         // 控制div居中显示
         var nBodyHeight = document.documentElement.clientHeight;
-        var nBodyWidth = document.documentElement.clientWidth;
+        // var nBodyWidth = document.documentElement.clientWidth;
         var nMargin = '';
 
         var nLen = obj.length;
         var i = 0;
-        for(i; i < nLen; i ++)
+        if(nBodyHeight)
         {
-            if(nBodyHeight && nBodyWidth)
+            for(i; i < nLen; i ++)
             {
-            // if(nBodyHeight && nBodyWidth)
-                if(obj[i].id === 'AddAdmin' || obj[i].id === 'UpdAdmin'|| obj[i].id === 'ListUpdOne')
-                {
-                    nMargin = (nBodyHeight - 656) / 2;
-                }
-                else if(obj[i].id === 'AdminHandle')
-                {
-                    nMargin = (nBodyHeight - 370) / 2;
-                }
-                else if(obj[i].id === 'OneInfo')
-                {
-                    nMargin = (nBodyHeight - 500) / 2;
-                }
-                else if(obj[i].id === 'DelAdmin' || obj[i].id === 'FindAdmin')
-                {
-                    nMargin = (nBodyHeight - 536) / 2;
-                }
-                obj[i].style.marginTop = nMargin > 60 ? nMargin + 'px': 30 + 'px';
-                obj[i].style.marginBottom = nMargin > 60 ? nMargin + 'px': 132 + 'px';
+                obj[i].index = i;
+                nMargin = (nBodyHeight - parseInt(GetStyle(obj[i], 'height')) - 156) / 2;
+
+                obj[i].style.marginTop = nMargin > 5 ? nMargin + 'px': 32 + 'px';
+                obj[i].style.marginBottom = nMargin > 5 ? nMargin + 'px': 132 + 'px';
             }
         }
     }

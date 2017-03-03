@@ -1,3 +1,15 @@
+// 获取目标样式属性
+function GetStyle(obj, attr)
+{
+    if(obj.currentStyle)
+    {
+        return obj.currentStyle[attr];
+    }
+    else
+    {
+        return getComputedStyle(obj, false)[attr];
+    }
+}
 // 改变div样式
 function ChanegDivStyle()
 {
@@ -6,33 +18,20 @@ function ChanegDivStyle()
     {   
         // 控制div居中显示
         var nBodyHeight = document.documentElement.clientHeight;
-        var nBodyWidth = document.documentElement.clientWidth;
-        // var obj1 = document.getElementsByClassName('ExcelHandles');
-
-        if(nBodyHeight && nBodyWidth)
+        // var nBodyWidth = document.documentElement.clientWidth;
+ 
+        if(nBodyHeight)
         {
             var nMargin = '';
             var nLen1 = obj.length;
             var i = 0;
             for(i; i < nLen1; i ++)
             {
-                if(obj[i].id === 'ExcelFather')
-                {
-                    nMargin = (nBodyHeight - 450) / 2;
-                }
-                else if(obj[i].id === 'FileUpTemp')
-                {
-                    nMargin = (nBodyHeight - 373) / 2;
-                }
-                else if(obj[i].id === 'AddExcelTemp' || obj[i].id === 'HandAddTemp' || obj[i].id === 'FileAddTemp')
-                {
-                    nMargin = (nBodyHeight - 320) / 2;
-                }
-                if(obj[i].id === 'ExcelFather' || obj[i].id === 'AddExcelTemp' || obj[i].id === 'HandAddTemp' || obj[i].id === 'FileAddTemp' || obj[i].id === 'FileUpTemp')
-                {
-                    obj[i].style.marginTop = nMargin > 4 ? nMargin + 'px' : 10 + 'px' ;
-                    obj[i].style.marginBottom = nMargin > 4 ? nMargin + 'px' : 110 + 'px' ;
-                }
+                obj[i].index = i;
+                nMargin = (nBodyHeight - parseInt(GetStyle(obj[i], 'height')) - 156) / 2;
+
+                obj[i].style.marginTop = nMargin > 5 ? nMargin + 'px': 32 + 'px';
+                obj[i].style.marginBottom = nMargin > 5 ? nMargin + 'px': 132 + 'px';
             }
         }
     }
@@ -111,7 +110,7 @@ function AddHandInput()
         {  
             obj1.innerHTML = '第&nbsp;&nbsp;' + nLen1 + '&nbsp;&nbsp;列数据名';
             obj2.placeholder = '请注意不要填写错误，后果自负，仅中文英文数字';
-            obj2.name = 'name[]';
+            obj2.name = 'info[]';
 
             // js动态添加节点
             oForm.appendChild(obj1);
