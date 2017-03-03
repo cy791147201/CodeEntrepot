@@ -140,7 +140,7 @@ class ExcelController extends BeforeController
         $up = new \Think\Upload();// 实例化上传类
         $up->maxSize  = 3145728 ;// 设置附件上传大小
         $up->exts     = array('xlsx', 'xls');// 设置附件上传类型
-        $up->rootPath = './Uploads/'; // 设置附件上传根目录
+        $up->rootPath = './Uploads/excel/'; // 设置附件上传根目录
         $up->savePath = ''; // 设置附件上传（子）目录
         $up->saveName = date('Y-m-d H-i-s', time()) . '_' . mt_rand();
         // 上传文件 
@@ -149,12 +149,21 @@ class ExcelController extends BeforeController
         {
             // 上传错误提示错误信息
             $this->ReturnJudge($up->getError());
-            exit()
+            exit();
         }
         else
         {
             // 上传成功
-            $this->ReturnJudge('上传成功！', 'index');
+            // 获取文件路径
+            $file = '';
+            foreach($res1 as $v){
+                $file = 'Uploads/excel/'.$v['savepath'].$v['savename'];
+            }
+
+            // 获取excel内容
+            $data = $this->ImportExcel($file);
+            var_dump($data);
+            // $this->ReturnJudge('上传成功！', 'index');
         }
     }
 }

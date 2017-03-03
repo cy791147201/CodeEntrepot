@@ -2,15 +2,15 @@
 <html>
 <head>
     <title>导出excel</title>
-    <link rel = 'stylesheet' type = 'text/css' href = '/kefuchoujiang/Public/HomeCss/reset.css'>
-    <link rel = 'stylesheet' type = 'text/css' href = '/kefuchoujiang/Public/HomeCss/excel.css'>
-    <script type = 'text/javascript' src = '/kefuchoujiang/Public/Js/My97DatePicker/WdatePicker.js'></script>
+    <link rel = 'stylesheet' type = 'text/css' href = '/ge_ren_zhong_xin/53kefuchoujiang/Public/HomeCss/reset.css'>
+    <link rel = 'stylesheet' type = 'text/css' href = '/ge_ren_zhong_xin/53kefuchoujiang/Public/HomeCss/excel.css'>
+    <script type = 'text/javascript' src = '/ge_ren_zhong_xin/53kefuchoujiang/Public/Js/My97DatePicker/WdatePicker.js'></script>
     <!DOCTYPE html>
 <html>
 <head>
     <title>楠溪王某系统</title>
-<link rel = 'stylesheet' type = 'text/css' href = '/kefuchoujiang/public/HomeCss/reset.css'>
-<link rel = 'stylesheet' type = 'text/css' href = '/kefuchoujiang/public/HomeCss/tit.css'>
+<link rel = 'stylesheet' type = 'text/css' href = '/ge_ren_zhong_xin/53kefuchoujiang/public/HomeCss/reset.css'>
+<link rel = 'stylesheet' type = 'text/css' href = '/ge_ren_zhong_xin/53kefuchoujiang/public/HomeCss/tit.css'>
 </head>
 <body>
 
@@ -30,13 +30,13 @@
               
                 <div class = 'act'>
                     
-                    <li><a href = '/kefuchoujiang/index.php/Home/Index/ShenShow'><span>返回首页</span></a></li>
+                    <li><a href = '/ge_ren_zhong_xin/53kefuchoujiang/index.php/Home/Index/ShenShow'><span>返回首页</span></a></li>
 
                     <li><a href = 'javascript:location.reload()'><span>刷新</span></a></li>
 
-                    <li><a href = '/kefuchoujiang/index.php/Home/ShenExcel/index'><span>导出excel</span></a></li>
+                    <li><a href = '/ge_ren_zhong_xin/53kefuchoujiang/index.php/Home/ShenExcel/index'><span>导出excel</span></a></li>
 
-                    <li><a href = '/kefuchoujiang/index.php/Home/Index/ShenOut'><span>退出</span></a></li>
+                    <li><a href = '/ge_ren_zhong_xin/53kefuchoujiang/index.php/Home/Index/ShenOut'><span>退出</span></a></li>
 
                 </div>
                 
@@ -55,13 +55,13 @@
             
             <li><span style = 'font-size: 20px; font-weight: 600; background: #9191A6; display: block; ' >可导出excel列表</span></li>
 
-            <li><a href = '/kefuchoujiang/index.php/Home/ShenExcel/ShenCondition?style=2'><span>已处理</span></a></li>
+            <li><a href = '/ge_ren_zhong_xin/53kefuchoujiang/index.php/Home/ShenExcel/ShenCondition?style=2'><span>已处理</span></a></li>
 
-            <li><a href = '/kefuchoujiang/index.php/Home/ShenExcel/ShenCondition?style=9'><span>已处理已删除</span></a></li>
+            <li><a href = '/ge_ren_zhong_xin/53kefuchoujiang/index.php/Home/ShenExcel/ShenCondition?style=9'><span>已处理已删除</span></a></li>
 
-            <li><a href = '/kefuchoujiang/index.php/Home/ShenExcel/ShenCondition?style=1'><span>未处理</span></a></li>
+            <li><a href = '/ge_ren_zhong_xin/53kefuchoujiang/index.php/Home/ShenExcel/ShenCondition?style=1'><span>未处理</span></a></li>
 
-            <li><a href = '/kefuchoujiang/index.php/Home/ShenExcel/ShenCondition?style=8'><span>未处理已删除</span></a></li>
+            <li><a href = '/ge_ren_zhong_xin/53kefuchoujiang/index.php/Home/ShenExcel/ShenCondition?style=8'><span>未处理已删除</span></a></li>
 
         </div>
 
@@ -71,7 +71,7 @@
                     
                 <span class = 'condition' >根据时间查询</span>
 
-                <form action = '/kefuchoujiang/index.php/Home/ShenExcel/ShenCondition' method = 'post' onsubmit = "return submitFun(this);" >
+                <form action = '/ge_ren_zhong_xin/53kefuchoujiang/index.php/Home/ShenExcel/ShenCondition' method = 'post' onsubmit = "return submitFun(this);" >
 
                     <input type = 'text' name = 'start' size = '11' class = 'ui-text Wdate' onclick = "WdatePicker({dateFmt:'yyyy-MM-dd HH:mm:ss'});" id = 'start' />
 
@@ -184,8 +184,8 @@
 
 </script>
 
-<link rel = 'stylesheet' type = 'text/css' href = '/kefuchoujiang/public/HomeCss/reset.css'>
-<link rel = 'stylesheet' type = 'text/css' href = '/kefuchoujiang/public/HomeCss/foot.css'>
+<link rel = 'stylesheet' type = 'text/css' href = '/ge_ren_zhong_xin/53kefuchoujiang/public/HomeCss/reset.css'>
+<link rel = 'stylesheet' type = 'text/css' href = '/ge_ren_zhong_xin/53kefuchoujiang/public/HomeCss/foot.css'>
 
         <div class = 'FootNotice'>
             

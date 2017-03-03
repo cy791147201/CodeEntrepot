@@ -114,9 +114,9 @@
         <div class = 'tit'>
             <span>手动添加Excel模版</span>
         </div>
-        <form action = '' method = 'post' enctype = 'multipart/form-data' id = 'FileUpTempAct'>
+        <form action = '' method = 'post' enctype = 'multipart/form-data' id = 'FileUpTempAct' onsubmit = 'return CheckFileType("1", "file");'>
             <div class = 'FileUpTempDiv'>
-                <input type = 'file' name = 'file' />
+                <input type = 'file' name = 'file' onchange = "CheckFileType('2', this)"/>
             </div>
             <div class = 'FileUpTempDiv'>
                 <input type = 'submit' value = '确认上传' id = 'FileUpTempSub'/>

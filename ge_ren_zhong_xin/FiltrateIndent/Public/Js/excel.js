@@ -124,3 +124,37 @@ window.onload = window.onresize = function()
 {   
     ChanegDivStyle();
 }
+
+// js检查上传文件格式
+// 检查上传文件格式是否是允许的xls，xlsx格式
+function CheckFileType(tag, File)
+{
+    // 提交表单检查是否为空
+    if(tag === '1')
+    {
+        var oInput = document.getElementsByName(File)[0];
+        if(oInput.value === '')
+        {
+            return false;
+        }
+    }
+    // 检查文件格式
+    else if(tag === '2')
+    {
+        // 取出文件的名字
+        var oFileName = File.value;
+        // 如果存在文件，并且文件名字为真的话
+        if(oFileName.length > 1 && oFileName) 
+        {       
+            // 分割字符串，取出文件后缀
+            var oSubstr = oFileName.lastIndexOf(".");
+            var type = oFileName.substring(oSubstr + 1);
+             
+            if(type !== 'xls' && type !== 'xlsx') 
+            {
+                //清除当前所选文件
+                File.outerHTML = File.outerHTML.replace(/(value=\").+\"/i,"$1\"");
+            }       
+        }
+    }
+}
