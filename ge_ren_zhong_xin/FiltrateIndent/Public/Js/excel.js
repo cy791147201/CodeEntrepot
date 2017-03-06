@@ -38,67 +38,34 @@ function ChanegDivStyle()
 }
 
 // 改变div显示
-function ChangeDisplay(arg1, arg2, arg3)
+function ChangeDisplay(arg1)
 {
-    // 隐藏所有之后类名一样的选项
-    var obj2 = document.getElementsByClassName(arg1);
-    if(obj2)
+    if(arg1)
     {
-        var nLen1 = obj2.length;
-        var i = 0;
-        for(i; i < nLen1; i ++)
+        // 显示对应的模版
+        var obj1 = document.getElementsByClassName('ExcelFather');
+        var obj2 = document.getElementById(arg1);
+        if(obj1 && obj2)
         {
-            obj2[i].style.display = 'none';
+            var nLen1 = obj1.length;
+            var i = 0;
+            for(i; i < nLen1; i ++)
+            {
+                obj1[i].index = i;
+                obj1[i].style.display = 'none';
+            }
+            obj2.style.display = 'block';
         }
     }
-
-    // 显示需要的选项
-    var obj3 = document.getElementById(arg2);
-    if(obj3)
-    {
-        obj3.style.display = 'block';
-    }
-    if(arg3 === 1 || arg3 === 2)
-    {
-        var oForm = document.getElementById('ExcelTempAct');
-        if(oForm)
-        {
-            // 手动添加我们自己的模版
-            if(arg3 === 1)
-            {
-                oForm.action = 'DoHandAdd?temp=myself';
-            }
-            // 手动添加快递的模版
-            else if(arg3 === 2)
-            {
-                oForm.action = 'DoHandAdd?temp=express';
-            }
-        }
-    }
-    else if(arg3 === 3 || arg3 === 4)
-    {
-        var oForm = document.getElementById('FileUpTempAct');
-        if(oForm)
-        {
-            // 手动添加我们自己的模版
-            if(arg3 === 3)
-            {
-                oForm.action = 'DoExcelAdd?temp=myself';
-            }
-            // 手动添加快递的模版
-            else if(arg3 === 4)
-            {
-                oForm.action = 'DoExcelAdd?temp=express';
-            }
-        }
-    }
+    // var who = document.getElementById('who');
+    // alert(who.innerHTML);
 }
 
 // 手动添加Excel模版
 // 添加input框
-function AddHandInput()
+function AddHandInput(obj)
 {
-    var oForm = document.getElementById('HandAddInpit');
+    var oForm = document.getElementById(obj);
 
     if(oForm)
     {
@@ -109,7 +76,7 @@ function AddHandInput()
         if(obj1 && obj2)
         {  
             obj1.innerHTML = '第&nbsp;&nbsp;' + nLen1 + '&nbsp;&nbsp;列数据名';
-            obj2.placeholder = '请注意不要填写错误，后果自负，仅中文英文数字';
+            obj2.placeholder = '请注意不要填写错误，后果自负';
             obj2.name = 'info[]';
 
             // js动态添加节点
@@ -127,34 +94,34 @@ window.onload = window.onresize = function()
 
 // js检查上传文件格式
 // 检查上传文件格式是否是允许的xls，xlsx格式
-function CheckFileType(tag, File)
-{
-    // 提交表单检查是否为空
-    if(tag === '1')
-    {
-        var oInput = document.getElementsByName(File)[0];
-        if(oInput.value === '')
-        {
-            return false;
-        }
-    }
-    // 检查文件格式
-    else if(tag === '2')
-    {
-        // 取出文件的名字
-        var oFileName = File.value;
-        // 如果存在文件，并且文件名字为真的话
-        if(oFileName.length > 1 && oFileName) 
-        {       
-            // 分割字符串，取出文件后缀
-            var oSubstr = oFileName.lastIndexOf(".");
-            var type = oFileName.substring(oSubstr + 1);
+// function CheckFileType(tag, File)
+// {
+//     // 提交表单检查是否为空
+//     if(tag === '1')
+//     {
+//         var oInput = document.getElementsByName(File)[0];
+//         if(oInput.value === '')
+//         {
+//             return false;
+//         }
+//     }
+//     // 检查文件格式
+//     else if(tag === '2')
+//     {
+//         // 取出文件的名字
+//         var oFileName = File.value;
+//         // 如果存在文件，并且文件名字为真的话
+//         if(oFileName.length > 1 && oFileName) 
+//         {       
+//             // 分割字符串，取出文件后缀
+//             var oSubstr = oFileName.lastIndexOf(".");
+//             var type = oFileName.substring(oSubstr + 1);
              
-            if(type !== 'xls' && type !== 'xlsx') 
-            {
-                //清除当前所选文件
-                File.outerHTML = File.outerHTML.replace(/(value=\").+\"/i,"$1\"");
-            }       
-        }
-    }
-}
+//             if(type !== 'xls' && type !== 'xlsx') 
+//             {
+//                 //清除当前所选文件
+//                 File.outerHTML = File.outerHTML.replace(/(value=\").+\"/i,"$1\"");
+//             }       
+//         }
+//     }
+// }

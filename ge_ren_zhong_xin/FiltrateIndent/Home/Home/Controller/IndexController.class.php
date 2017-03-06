@@ -27,8 +27,8 @@ class IndexController extends Controller
     {
         $data = I('post.');
         preg_match_all('/^[a-zA-Z0-9]{5,19}/', $data['user'], $name);
-        $where['u_name'] = $name[0][0] ? $name[0][0] : 'nothink';
-        $where['u_pwd'] = $data['pwd'] ? md5($data['pwd'].'shenshuang') : 'nothink';
+        $where['u_name'] = $this->PreventSql($name[0][0]) ? $this->PreventSql($name[0][0]) : 'nothink';
+        $where['u_pwd'] = $this->PreventSql($data['pwd']) ? md5($data['pwd'].'shenshuang') : 'nothink';
         $where['sta'] = 1;
   
         $Admin = M('Admin');
@@ -71,6 +71,7 @@ class IndexController extends Controller
         {
             echo '<center>';
             $this->error('用户信息错误');
+            exit();
             echo '</center>';
         }
     }
@@ -96,5 +97,23 @@ class IndexController extends Controller
             $ip = "Unknow";
         }
         return $ip;
+    }
+
+    // 防止sql注入
+    public function PreventSql($info)
+    {
+        if(is_array($info))
+        {
+            $data = array();
+            foreach($info as $v)
+            {
+                $data[] = str_replace('find', '', str_replace('select', '', str_replace('update', '',  str_replace('delete', '', str_replace('insert', '', str_replace('>', '', str_replace('<', '', str_replace('=', '', $v))))))));
+            }
+        }
+        else
+        {
+            $data = str_replace('find', '', str_replace('select', '', str_replace('update', '',  str_replace('delete', '', str_replace('insert', '', str_replace('>', '', str_replace('<', '', str_replace('=', '', $info))))))));
+        }
+        return $data;
     }
 }

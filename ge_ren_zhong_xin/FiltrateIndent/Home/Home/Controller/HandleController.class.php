@@ -48,7 +48,9 @@ class HandleController extends BeforeController
             $this->ReturnJudge('个别表单信息为空，请仔细填写', 'index');
             exit();
         }
-
+        // var_dump($info);
+        $info = $this->PreventSql($info);
+        // var_dump($info);exit();
         // 检测是否拥有管理员权限
         $where['id'] = $_SESSION['id'];
         $where['jurisdiction'] = $_SESSION['jurisdiction'];
@@ -197,6 +199,7 @@ class HandleController extends BeforeController
                         }
                         else
                         {
+                            // var_dump($res1);exit();
                             $this->ReturnJudge('已存在该用户名', 'index');
                             exit();
                         }

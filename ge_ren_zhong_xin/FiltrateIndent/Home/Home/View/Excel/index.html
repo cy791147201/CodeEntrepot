@@ -12,24 +12,34 @@
     <!-- Excel首页操作 -->
     <div class = 'ExcelFather' id = 'ExcelFather'>
         <div class = 'ExcelMother'>
-            <div class = 'ExcelHandle'>
+          <!--   <div class = 'ExcelHandle'>
                 <a href = 'javascript:void(0);' onclick = 'ChangeDisplay("ExcelFather", "AddExcelTemp");' title = '添加Excel模版'>
                     <span>添加Excel模版</span>
+                </a>
+            </div> -->
+            <div class = 'ExcelHandle'>
+                <a href = 'javascript:void(0);' onclick = 'ChangeDisplay("ExcelTemp");' title = 'Excel模版操作'>
+                    <span>Excel模版</span>
                 </a>
             </div>
             <div class = 'ExcelHandle'>
                 <a href = 'javascript:void(0);' onclick = 'ChangeDisplay("ExcelFather", "LeadInExcel");' title = '导入Excel数据'>
-                    <span>导入Excel数据</span>
+                    <span>导入数据</span>
                 </a>
             </div>
             <div class = 'ExcelHandle'>
+                <a href = 'javascript:void(0);' onclick = 'ChangeDisplay("ExcelFather", "LeadInExcel");' title = '导入Excel数据'>
+                    <span>筛选数据</span>
+                </a>
+            </div>
+            <!-- <div class = 'ExcelHandle'>
                 <a href = 'javascript:void(0);' title = '导出快递Excel中有而用户Excel中没有的数据'>
                     <span>导出用户缺失的数据</span>
                 </a>
             </div>
             <div class = 'ExcelHandle'>
                 <a href = 'javascript:void(0);' title = '导出快递Excel中没有有而用户Excel中有的数据'>
-                    <span>导出他们缺失的数据</span>
+                    <span>导出快递缺失的数据</span>
                 </a>
             </div>
             <div class = 'ExcelHandle'>
@@ -41,80 +51,90 @@
                 <a href = 'javascript:void(0);' title = '更新用户Excel表中的快递状态'>
                     <span>更新订单状态</span>
                 </a>
+            </div> -->
+        </div>
+    </div>
+    
+    <!-- Excel模版界面 -->
+    <div class = 'ExcelFather' id = 'ExcelTemp'>
+        <div class = 'ExcelTempHome'>
+            <span class = 'ExcelTempHomeSpan'>用户</span>
+            <div>
+                <a href = '__CONTROLLER__/ShowTemp?temp=user' title = '用户当前模版'>
+                    <span>当前模版</span>
+                </a>
+            </div>
+            <div>
+                <a href = 'javascript:void(0);' onclick = 'ChangeDisplay("FileUpUserTemp");' title = 'Excel导入用户模版'>
+                    <span>Excel导入模版</span>
+                </a>
+            </div>
+            <div>
+                <a href = 'javascript:void(0);' onclick = 'ChangeDisplay("HandAddUserTemp");' title = '手动添加&nbsp;&nbsp;用户&nbsp;&nbsp;模版'>
+                    <span>手动添加模版</span>
+                </a>
             </div>
         </div>
-    </div>
-
-    <!-- 添加Excel模版 -->
-    <div class = 'ExcelFather' id = 'AddExcelTemp'>
-        <div class = 'ExcelHandleAct'>
-            <a href = 'javascript:void(0);' onclick = 'ChangeDisplay("ExcelFather", "HandAddTemp");' title = '手动添加Excel模版'>
-                <span>手动添加模版</span>
-            </a>
-        </div>
-        <div class = 'ExcelHandleAct'>
-            <a href = 'javascript:void(0);' onclick = 'ChangeDisplay("ExcelFather", "FileAddTemp");' title = '导入Excel文件添加Excel模版'>
-                <span>Excel添加模版</span>
-            </a>
-        </div>
-    </div>
-
-    <!-- 手动填写模版选择模版类型 -->
-    <div class = 'ExcelFather' id = 'HandAddTemp'>
-        <!-- 选择是快递订单模版 -->
-        <div class = 'ExcelHandleAct'>
-            <a href = 'javascript:void(0);' onclick = 'ChangeDisplay("ExcelFather", "HandAddTemp1", 1);' title = '添加用户的模版'>
-                <span>添加用户自己的模版</span>
-            </a>
-        </div>
-        <!-- 选择是快递订单模版 -->
-        <div class = 'ExcelHandleAct'>
-            <a href = 'javascript:void(0);' onclick = 'ChangeDisplay("ExcelFather", "HandAddTemp1", 2);' title = '添加快递模版'>
-                <span>添加快递模版</span>
-            </a>
+        <div class = 'ExcelTempHome' style = 'margin-top: 10px;'>
+            <span class = 'ExcelTempHomeSpan'>快递</span>
+            <div>
+                <a href = '__CONTROLLER__/ShowTemp?temp=express' title = '快递当前模版'>
+                    <span>当前模版</span>
+                </a>
+            </div>
+            <div>
+                <a href = 'javascript:void(0);' onclick = 'ChangeDisplay("FileUpExpressTemp");' title = 'Excel导入快递模版'>
+                    <span>Excel导入模版</span>
+                </a>
+            </div>
+            <div>
+                <a href = 'javascript:void(0);' onclick = 'ChangeDisplay("HandAddExpressTemp");' title = '手动添加&nbsp;&nbsp;快递&nbsp;&nbsp;Excel模版'>
+                    <span>手动添加模版</span>
+                </a>
+            </div>
         </div>
     </div>
 
     <!-- 手动添加Excel模版 -->
-    <div class = 'ExcelFather' id = 'HandAddTemp1'>
+    <div class = 'ExcelFather' id = 'HandAddUserTemp'>
         <div class = 'tit'>
-            <span>手动添加Excel模版</span>
+            <span>手动添加&nbsp;&nbsp;用户&nbsp;&nbsp;Excel模版</span>
         </div>
         <div class = 'HandAdd'>
             <div id = 'HandAddButton'>
-                <button type = 'button' class = 'HandAddButton' onclick = 'AddHandInput();'>添加</button>
+                <button type = 'button' class = 'HandAddButton' onclick = 'AddHandInput("HandAddInpit1");'>添加</button>
             </div>
             <div class = 'HandAddForm'>
-                <form action = '' method = 'post' id = 'ExcelTempAct'>
-                    <div id = 'HandAddInpit'></div>
+                <form action = '__CONTROLLER__/DoHandAdd?temp=myself' method = 'post'>
+                    <div id = 'HandAddInpit1'></div>
+                    <input type = 'submit' value = '提交' id = 'sub' />
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class = 'ExcelFather' id = 'HandAddExpressTemp'>
+        <div class = 'tit'>
+            <span>手动添加&nbsp;&nbsp;快递&nbsp;&nbsp;Excel模版</span>
+        </div>
+        <div class = 'HandAdd'>
+            <div id = 'HandAddButton'>
+                <button type = 'button' class = 'HandAddButton' onclick = 'AddHandInput("HandAddInpit2");'>添加</button>
+            </div>
+            <div class = 'HandAddForm'>
+                <form action = '__CONTROLLER__/DoHandAdd?temp=express' method = 'post'>
+                    <div id = 'HandAddInpit2'></div>
                     <input type = 'submit' value = '提交' id = 'sub' />
                 </form>
             </div>
         </div>
     </div>
 
-    <!-- Excel文件上传Excel模版 -->
-    <div class = 'ExcelFather' id = 'FileAddTemp'>
-        <!-- 选择是快递订单模版 -->
-        <div class = 'ExcelHandleAct'>
-            <a href = 'javascript:void(0);' onclick = 'ChangeDisplay("ExcelFather", "FileUpTemp", 3);' title = '添加用户的模版'>
-                <span>用户Excel模版</span>
-            </a>
-        </div>
-        <!-- 选择是快递订单模版 -->
-        <div class = 'ExcelHandleAct'>
-            <a href = 'javascript:void(0);' onclick = 'ChangeDisplay("ExcelFather", "FileUpTemp", 4);' title = '添加快递模版'>
-                <span>快递Excel模版</span>
-            </a>
-        </div>
-    </div>
-
     <!-- Excel上传文件模版 -->
-    <div class = 'ExcelFather' id = 'FileUpTemp'>
+    <div class = 'ExcelFather' id = 'FileUpUserTemp'>
         <div class = 'tit'>
-            <span>手动添加Excel模版</span>
+            <span>手动添加&nbsp;&nbsp;用户&nbsp;&nbsp;Excel模版</span>
         </div>
-        <form action = '' method = 'post' enctype = 'multipart/form-data' id = 'FileUpTempAct' onsubmit = 'return CheckFileType("1", "file");'>
+        <form action = '__CONTROLLER__/DoExcelAdd?temp=myself' method = 'post' enctype = 'multipart/form-data' id = 'FileUpTempAct' onsubmit = 'return CheckFileType("1", "file");'>
             <div class = 'FileUpTempDiv'>
                 <input type = 'file' name = 'file' onchange = "CheckFileType('2', this)"/>
             </div>
@@ -123,11 +143,21 @@
             </div>
         </form>
     </div>
-    <!-- 导入Excel数据 -->
-    <!-- 导出用户缺失的数据 -->
-    <!-- 导出快递缺失的数据 -->
-    <!-- 导出问题件 -->
-    <!-- 更新订单状态 -->
+    <div class = 'ExcelFather' id = 'FileUpExpressTemp'>
+        <div class = 'tit'>
+            <span>手动添加&nbsp;&nbsp;快递&nbsp;&nbsp;Excel模版</span>
+        </div>
+        <form action = '__CONTROLLER__/DoExcelAdd?temp=express' method = 'post' enctype = 'multipart/form-data' id = 'FileUpTempAct' onsubmit = 'return CheckFileType("1", "file");'>
+            <div class = 'FileUpTempDiv'>
+                <input type = 'file' name = 'file' onchange = "CheckFileType('2', this)"/>
+            </div>
+            <div class = 'FileUpTempDiv'>
+                <input type = 'submit' value = '确认上传' id = 'FileUpTempSub'/>
+            </div>
+        </form>
+    </div>
+    
+
 
     <include file = 'Public/Html/foot.html' />
 </body>

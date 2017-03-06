@@ -1,17 +1,13 @@
-body{
-    width: 100%;
-    height: 100%;
-    min-width: 1000px;
-}
-#FileUpTempSub, #FileUpTemp, #HandAddTemp1, .HandAddForm input, #HandAddTemp, #FileAddTemp, .tit, .ExcelHandleAct, #AddExcelTemp, .ExcelHandle{
+#FileUpExpressTemp, #FileUpTempSub, #FileUpUserTemp, #HandAddExpressTemp, .HandAddForm input, .tit, #HandAddUserTemp, .ExcelHandle, .ExcelTempHome div{
     /*border: #D0D0D0 1px solid;*/
     /*背景阴影*/
     filter: progid:DXImageTransform.Microsoft.Shadow(color=#909090,direction=120,strength=3);/*ie*/
     -moz-box-shadow: 2px 2px 10px #909090;/*firefox*/
     -webkit-box-shadow: 2px 2px 10px #909090;/*safari或chrome*/
     box-shadow: 2px 2px 10px #909090;/*opera或ie9*/
+    border-radius: 5px;
 }
-#FileUpTempSub, #sub, .tit, .ExcelHandleAct, .ExcelHandle{
+#FileUpTempSub, .tit, .ExcelHandle, #sub, .ExcelTempHome div{
     /*渐变色*/
     /* Webkit: Safari 4-5, Chrome 1-9 */  
     background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#F7CFF8), to(#C758DC));  
@@ -27,7 +23,7 @@ body{
     /* 注意：这一行必须写在最后 */  
     FILTER: progid:DXImageTransform.Microsoft.Gradient(startColorStr=#F7CFF8, endColorStr=#C758DC);
 }
-#FileUpTempSub:hover, #sub:hover, #AddExcelTemp div:hover, .ExcelHandleAct:hover, .ExcelHandle:hover{
+#FileUpTempSub:hover, .ExcelHandle:hover, #sub:hover,.ExcelTempHome div:hover{
     /*渐变色*/
     /* Webkit: Safari 4-5, Chrome 1-9 */  
     background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#FEFAFE), to(#E067F6));  
@@ -43,107 +39,107 @@ body{
     /* 注意：这一行必须写在最后 */  
     FILTER: progid:DXImageTransform.Microsoft.Gradient(startColorStr=#FEFAFE, endColorStr=#E067F6);
 }
+
+.ExcelHandle, .ExcelTempHomeSpan, .ExcelTempHome div{
+    height: 60px;
+    line-height: 60px;
+    /*overflow: hidden;*/
+}
+/*Excel首页*/
 #ExcelFather{
-    height: 300px;
+    height: 60px;
 } 
 .ExcelMother{
-    width: 910px;
+    width: 430px;
     height: 100%;
-    margin: 0 auto;
+    /*margin: 0 auto;*/
 }
 .ExcelMother:hover{
-    width: 950px;
+    width: 440px;
 }
 .ExcelHandle{
-    width: 140px;
-    height: 70px;
-    line-height: 70px;
-    margin-top: 115px;
+    width: 130px;
     margin-left: 10px;
     float: left;
-    border-radius: 5px;
-    overflow: hidden;
 }
 .ExcelHandle:hover{
-    width: 180px;
-    height: 90px;
-    line-height: 90px;
-    margin-top: 105px;
-    /*color: white !important;*/
-}
-.ExcelHandle a{
-    display: block;
-    width: 100%;
-    height: 100%;
-    /*background: green;*/
-}
-.ExcelHandle a:hover{
-    color: white;
-}
-#AddExcelTemp, #FileAddTemp, #HandAddTemp{
-    width: 520px;
-    height: 170px;
-    margin: 0 auto;
-    /*background: red;*/
-    /*margin-bottom: 300px;*/
-    border-radius: 5px;
-    overflow: hidden;
-    display: none;
-}
-/*#AddExcelTemp div{
-
-}*/
-#AddExcelTemp a, #FileAddTemp a, #HandAddTemp a{
-    display: block;
-    width: 100%;
-    height: 100%;
-}
-#AddExcelTemp a:hover, #FileAddTemp a:hover, #HandAddTemp a:hover{
-    color: white;
-}
-.ExcelHandleAct{
     width: 140px;
     height: 70px;
     line-height: 70px;
-    border-radius: 5px;
-    float: left;
-    margin-left: 80px;
-    margin-top: 50px;
+    margin-top: -5px;
 }
-#HandAddTemp1{
+/*.ExcelHandle a:hover{
+    color: white;
+}
+*/
+#FileUpExpressTemp, #FileUpUserTemp, #ExcelTemp, #HandAddUserTemp{
+    display: none;
+}
+/*Excel模版页面*/
+#ExcelTemp{
+    width: 520px;
+    height: 130px;
+    /*margin: 0 auto;*/
+    padding: 10px;
+}
+.ExcelTempHome{
+    height: 60px;
+}
+.ExcelTempHomeSpan{
+    display: block;
+    width: 100px;
+    float: left;
+}
+.ExcelTempHome div{
+    width: 130px;
+    margin-left: 10px;
+    float: left;
+}
+
+/*手动添加模版*/
+#HandAddUserTemp, #HandAddExpressTemp{
     width: 95%;
-    border-radius: 5px;
-    margin: 0 auto;
-    margin-top: 20px;
-    margin-bottom: 120px;
+    /*border-radius: 5px;*/
+    /*margin: 0 auto;*/
+    /*margin-top: 20px;*/
+    /*margin-bottom: 120px;*/
     display: none;
     overflow: hidden;
+    /*padding-top: 150px;*/
     padding-bottom: 50px;
+    /*background: red;*/
 }
 .tit{
     width: 100%;
     height: 50px;
     line-height: 50px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+    /*background: green;*/
 }
 .HandAdd{
     width: 500px;
-    margin: 0 auto;
+    /*margin: 0 auto;*/
     margin-top: 30px;
-    margin-bottom: 30px;
-    border-radius: 5px;
+    /*margin-bottom: 30px;*/
+    /*border-radius: 5px;*/
+    /*background: pink;*/
 }
 #HandAddButton{
     width: 100%;
     height: 50px;
+    /*background: orange;*/
 }
 .HandAddButton{
     width: 80px;
     height: 30px;
     margin-top: 10px;
     float: left;
+    /*background: grey;*/
 }
 .HandAddForm{
     width: 100%;
+    /*background: blue;*/
 }
 .HandAddForm span{
     display: block;
@@ -161,22 +157,23 @@ body{
     /*margin: 0 auto;*/
     margin-bottom: 10px;
     border-radius: 5px;
-    text-indent: 10px;
+    /*text-indent: 10px;*/
     /*background: green;*/
 }
 #sub{
-    width: 330px;
     height: 50px;
     float: right;
     margin-right: 18px;
     border: 1px solid #909090;
 }
-#FileUpTemp{
+
+/*上传excel添加模版*/
+#FileUpExpressTemp, #FileUpUserTemp{
     width: 520px;
     height: 200px;
-    margin: 0 auto;
-    border-radius: 5px;
-    overflow: hidden;
+    /*margin: 0 auto;*/
+    /*border-radius: 5px;*/
+    /*overflow: hidden;*/
     padding-bottom: 20px;
     display: none;
 }
@@ -190,5 +187,5 @@ body{
     width: 400px;
     height: 50px;
     border: 1px solid #909090;
-    border-radius: 5px;
+    /*border-radius: 5px;*/
 }

@@ -58,7 +58,7 @@ class BeforeController extends Controller
         return $ip;
     }
 
-    // 导入excel
+    // thinkphp导入excel
     public function ImportExcel($file)
     {
         // 判断文件是什么格式
@@ -98,4 +98,92 @@ class BeforeController extends Controller
         }  
         return $data;
     }
+
+    // 防止sql注入
+    public function PreventSql($info)
+    {
+        if(is_array($info))
+        {
+            $data = array();
+            foreach($info as $k => $v)
+            {
+                $data[$k] = str_replace('find', '', str_replace('select', '', str_replace('update', '',  str_replace('delete', '', str_replace('insert', '', str_replace('>', '', str_replace('<', '', str_replace('=', '', $v))))))));
+            }
+        }
+        else
+        {
+            $data = str_replace('find', '', str_replace('select', '', str_replace('update', '',  str_replace('delete', '', str_replace('insert', '', str_replace('>', '', str_replace('<', '', str_replace('=', '', $info))))))));
+        }
+        return $data;
+    }
+
+    // thinkphp 更新数组
+    /*
+    * @param $SaveWhere ：想要更新主键ID数组 格式array('需要更新的键值'=>array(1,2,3....));
+    * @param $SaveData ：想要更新的ID数组所对应的数据 格式array(array('需要更新的键值'=>'value'); array('需要更新的键值'=>'value')....);
+    * @param $TableName : 想要更新的表明
+    * @param $SaveWhere : 返回更新成功后的主键ID数组
+    * */
+    public function SaveAll($SaveWhere, &$SaveData, $TableName)
+    {
+        if($SaveWhere == null || $TableName == null)
+        {
+            return false;
+        }
+        
+        //获取更新的主键id名称
+        $key = array_keys($SaveWhere)[0];
+        //获取更新列表的长度
+        $len = count($SaveWhere[$key]);
+        $flag = true;
+        // $model = isset($model)?$model:M($TableName);
+        $model = M($TableName);
+        //开启事务处理机制
+        $model->startTrans();
+        //记录更新失败ID
+        $error = [];
+        for($i = 0; $i < $len; $i++)
+        {
+            //预处理sql语句
+            $isRight = $model->where($key.'='.$SaveWhere[$key][$i])->save($SaveData[$i]);
+            // var_dump($model->_sql());
+            if($isRight == 0)
+            {
+                //将更新失败的记录下来
+                $error[] = $i;
+                $flag = false;
+            }
+            //$flag=$flag&&$isRight;
+        }
+
+        if($flag)
+        {
+            //如果都成立就提交
+            $model->commit();
+            return $SaveWhere;
+        }
+        else if(count($error)>0&count($error)<$len)
+        {
+            //先将原先的预处理进行回滚
+            $model->rollback();
+            for($i = 0; $i < count($error); $i++)
+            {
+                //删除更新失败的ID和Data
+                unset($SaveWhere[$key][$error[$i]]);
+                unset($SaveData[$error[$i]]);
+            }
+            //重新将数组下标进行排序
+            $SaveWhere[$key] = array_merge($SaveWhere[$key]);
+            $SaveData = array_merge($SaveData);
+            //进行第二次递归更新
+            $this->saveAll($SaveWhere, $SaveData, $TableName);
+            return $SaveWhere;
+        }
+        else
+        {
+            //如果都更新就回滚
+            $model->rollback();
+            return false;
+        }
+    }  
 }

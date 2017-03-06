@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Excel操作首页</title>
+<link rel = 'stylesheet' type = 'text/css' href = '__ROOT__/Public/Css/reset.css'>
+<link rel = 'stylesheet' type = 'text/css' href = '__ROOT__/Public/Css/ShowTemp.css'>
+<script src = '__ROOT__/Public/Js/excel.js' type = 'text/javascript' charset = 'utf-8'></script>
+</head> 
+<body>
+    <include file = 'Public/Html/head.html' />
+    
+    <div class = 'ExcelFather' id = 'Temp'> 
+        <div class = 'tit'>
+            <span>
+                当前页面为&nbsp;
+                <if condition = "$who eq 1">
+                    用户
+                <elseif condition = "$who eq 2" />
+                    快递
+                </if>
+                &nbsp;模版
+            </span>
+            <span>添加者&nbsp;{$user}</span>
+            <span>添加时间&nbsp;{$time|date='Y-m-d H:i:s',###}</span>
+        </div>
+        <div class = 'infos'>
+            <form action = '__CONTROLLER__/UpdTemp?temp={$who}' method = 'post' >
+                <foreach name = 'info' item = 'v'>
+                    <div class = 'info'>
+                        <ul>
+                            <li class = 'InfoTitOne'>第</li>
+                            <li class = 'InfoTitTwo'>{$v.line}</li>
+                            <li class = 'InfoTitThree'>列数据名称为</li>
+                            <li class = 'InfoTitFour'>{$v.l_val}</li>
+                            <li class = 'InfoTitFive'>修改为</li>
+                            <li class = 'InfoTitSeven'>
+                                <input type = 'text' name = 'val[{$v.id}]' placeholder = '输入想要修改的名称' />
+                            </li>
+                        </ul>
+                    </div>
+                </foreach>
+                <input type = 'submit' value = '确认修改' class = 'sub'/>
+            </form>
+        </div>
+    </div>    
+
+    <include file = 'Public/Html/foot.html' />
+</body>
+</html>
