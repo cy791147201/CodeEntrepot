@@ -58,7 +58,7 @@
                         <span><strong style = 'color: red;'>快递</strong>表中</span>
                     </div>
                     <div class = 'ScreenDataHandleField'>
-                        <select name = "shenshuang[Express1]">
+                        <select name = "shenshuang1[Express]">
                             <option value = 'shenshuang' selected = ''><span>选择该项则表示此项为空</span></option>
                             <?php if(is_array($ExpressTemp)): foreach($ExpressTemp as $key=>$v): ?><option value = '<?php echo ($v["line"]); ?>'><span><?php echo ($v["l_val"]); ?></span></option><?php endforeach; endif; ?>
                         </select>
@@ -67,7 +67,7 @@
                         <span><strong style = 'color: #FF7256;'>用户</strong>表中</span>
                     </div>
                     <div class = 'ScreenDataHandleField'>
-                        <select name = "shenshuang[User1]">
+                        <select name = "shenshuang1[User]">
                             <option value = 'shenshuang' selected = ''><span>选择该项则表示此项为空</span></option>
                             <?php if(is_array($UserTemp)): foreach($UserTemp as $key=>$v): ?><option value = '<?php echo ($v["line"]); ?>'><span><?php echo ($v["l_val"]); ?></span></option><?php endforeach; endif; ?>
                         </select>
@@ -79,7 +79,7 @@
                         <span><strong style = 'color: red;'>自定义</strong>名称</span>
                     </div>
                     <div class = 'ScreenDataHandleName'>
-                        <input type = 'text' name = "shenshuang[name1]" placeholder = '请输入自定义名称，尽量短' />
+                        <input type = 'text' name = "shenshuang1[name]" placeholder = '请输入自定义名称，尽量短' />
                     </div>
                 </div>
                 <div class = 'ScreenDataHandle'>
@@ -93,7 +93,7 @@
                         <span><strong style = 'color: red;'>快递</strong>表中</span>
                     </div>
                     <div class = 'ScreenDataHandleField'>
-                        <select name = "shenshuang[Express2]">
+                        <select name = "shenshuang2[Express]">
                             <option value = 'shenshuang' selected = ''><span>选择该项则表示此项为空</span></option>
                             <?php if(is_array($ExpressTemp)): foreach($ExpressTemp as $key=>$v): ?><option value = '<?php echo ($v["line"]); ?>'><span><?php echo ($v["l_val"]); ?></span></option><?php endforeach; endif; ?>
                         </select>
@@ -102,7 +102,7 @@
                         <span><strong style = 'color: #FF7256;'>用户</strong>表中</span>
                     </div>
                     <div class = 'ScreenDataHandleField'>
-                        <select name = "shenshuang[User2]">
+                        <select name = "shenshuang2[User]">
                             <option value = 'shenshuang' selected = ''><span>选择该项则表示此项为空</span></option>
                             <?php if(is_array($UserTemp)): foreach($UserTemp as $key=>$v): ?><option value = '<?php echo ($v["line"]); ?>'><span><?php echo ($v["l_val"]); ?></span></option><?php endforeach; endif; ?>
                         </select>
@@ -114,7 +114,7 @@
                         <span><strong style = 'color: red;'>自定义</strong>名称</span>
                     </div>
                     <div class = 'ScreenDataHandleName'>
-                        <input type = 'text' name = "shenshuang[name2]" placeholder = '请输入自定义名称，尽量短' />
+                        <input type = 'text' name = "shenshuang2[name]" placeholder = '请输入自定义名称，尽量短' />
                     </div>
                 </div>
                 <div class = 'ScreenDataHandle'>
@@ -128,7 +128,7 @@
                         <span><strong style = 'color: red;'>快递</strong>表中</span>
                     </div>
                     <div class = 'ScreenDataHandleField'>
-                        <select name = "shenshuang[Express3]">
+                        <select name = "shenshuang3[Express]">
                             <option value = 'shenshuang' selected = ''><span>选择该项则表示此项为空</span></option>
                             <?php if(is_array($ExpressTemp)): foreach($ExpressTemp as $key=>$v): ?><option value = '<?php echo ($v["line"]); ?>'><?php echo ($v["l_val"]); ?></option><?php endforeach; endif; ?>
                         </select>
@@ -137,7 +137,7 @@
                         <span><strong style = 'color: #FF7256;'>用户</strong>表中</span>
                     </div>
                     <div class = 'ScreenDataHandleField'>
-                        <select name = "shenshuang[User3]">
+                        <select name = "shenshuang3[User]">
                             <option value = 'shenshuang' selected = ''><span>选择该项则表示此项为空</span></option>
                             <?php if(is_array($UserTemp)): foreach($UserTemp as $key=>$v): ?><option value = '<?php echo ($v["line"]); ?>'><span><?php echo ($v["l_val"]); ?></span></option><?php endforeach; endif; ?>
                         </select>
@@ -149,7 +149,7 @@
                         <span><strong style = 'color: red;'>自定义</strong>名称</span>
                     </div>
                     <div class = 'ScreenDataHandleName'>
-                        <input type = 'text' name = "shenshuang[name3]" placeholder = '请输入自定义名称，尽量短' />
+                        <input type = 'text' name = "shenshuang3[name]" placeholder = '请输入自定义名称，尽量短' />
                     </div>
                 </div>
                 <div class = 'ScreenDataHandle'>
@@ -163,7 +163,7 @@
                         <span><strong style = 'color: red;'>快递</strong>表中</span>
                     </div>
                     <div class = 'ScreenDataHandleField'>
-                        <select name = "shenshuang[Express4]">
+                        <select name = "shenshuang4[Express]">
                             <option value = 'shenshuang' selected = ''><span>选择该项则表示此项为空</span></option>
                             <?php if(is_array($ExpressTemp)): foreach($ExpressTemp as $key=>$v): ?><option value = '<?php echo ($v["line"]); ?>'><span><?php echo ($v["l_val"]); ?></span></option><?php endforeach; endif; ?>
                         </select>
@@ -172,7 +172,7 @@
                         <span><strong style = 'color: #FF7256;'>用户</strong>表中</span>
                     </div>
                     <div class = 'ScreenDataHandleField'>
-                        <select name = "shenshuang[User4]">
+                        <select name = "shenshuang4[User]">
                             <option value = 'shenshuang' selected = ''><span>选择该项则表示此项为空</span></option>
                             <?php if(is_array($UserTemp)): foreach($UserTemp as $key=>$v): ?><option value = '<?php echo ($v["line"]); ?>'><span><?php echo ($v["l_val"]); ?></span></option><?php endforeach; endif; ?>
                         </select>
@@ -184,7 +184,7 @@
                         <span><strong style = 'color: red;'>自定义</strong>名称</span>
                     </div>
                     <div class = 'ScreenDataHandleName'>
-                        <input type = 'text' name = "shenshuang[name4]" placeholder = '请输入自定义名称，尽量短' />
+                        <input type = 'text' name = "shenshuang4[name]" placeholder = '请输入自定义名称，尽量短' />
                     </div>
                 </div>
                 <input type = 'submit' value = '确认提交' class = 'sub'/>

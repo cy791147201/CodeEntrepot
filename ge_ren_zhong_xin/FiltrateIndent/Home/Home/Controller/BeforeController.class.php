@@ -107,13 +107,11 @@ class BeforeController extends Controller
             $data = array();
             foreach($info as $k => $v)
             {
-                // $data[$k] = str_replace('find', '', str_replace('select', '', str_replace('update', '',  str_replace('delete', '', str_replace('insert', '', str_replace('>', '', str_replace('<', '', str_replace('=', '', $v))))))));
                 $data[$k] = $this->RePlaceStr($v);
             }
         }
         else
         {
-            // $data = str_replace('find', '', str_replace('select', '', str_replace('update', '',  str_replace('delete', '', str_replace('insert', '', str_replace('>', '', str_replace('<', '', str_replace('=', '', $info))))))));
             $data = $this->RePlaceStr($info);
         }
         return $data;
@@ -141,12 +139,13 @@ class BeforeController extends Controller
         $str = str_replace('"','',$str);
         $str = str_replace("'",'',$str);
         $str = str_replace('=','',$str);
-        $str = str_replace('<','',$str);
+        // $str = str_replace('<','',$str);
         // $str = str_replace(' ','',$str); 
         $str = str_replace(';','',$str); 
         return $str;
     }
-    // thinkphp 更新数组
+    
+    // thinkphp 更新二维数组数据
     /*
     * @param $SaveWhere ：想要更新主键ID数组 格式array('需要更新的键值'=>array(1,2,3....));
     * @param $SaveData ：想要更新的ID数组所对应的数据 格式array(array('需要更新的键值'=>'value'); array('需要更新的键值'=>'value')....);

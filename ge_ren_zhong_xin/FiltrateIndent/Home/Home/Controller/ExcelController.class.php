@@ -471,6 +471,13 @@ class ExcelController extends BeforeController
         if($res1)
         {
             // $this->display('ScreenSet');
+            $data = $this->GetTempSetting();
+            $UserTemp = $data['UserTemp'];
+            $ExpressTemp = $data['ExpressTemp'];
+
+            $this->assign('UserTemp', $UserTemp);
+            $this->assign('ExpressTemp', $ExpressTemp);
+            $this->display('ScreenSet');
         }
         // 不存在
         else
@@ -528,7 +535,89 @@ class ExcelController extends BeforeController
     {
         $info = I('post.');
         $info = $this->PreventSql($info);
-    
-        var_dump($info);
+        
+        // 删除空数据
+        foreach($info as $k => $v)
+        {
+            if($v['Express'] === 'shenshuang' && $v['User'] === 'shenshuang')
+            {
+                unset($info[$k]);
+            }
+        }
+        
+        // 如果添加筛选配置为空的话返回
+        if(empty($info))
+        {
+            $this->ReturnJudge('添加筛选配置数据不能为空', 'index');
+            exit();
+        }
+
+        $where1['sta'] = 1;
+        $Model = M('Screen');
+        $res1 = $Model->where($where1)->max('s_tag');
+
+        // 筛选配置表中存在数据
+        if($res1)
+        {
+            $where3['s_tag'] = $_SESSION['s_tag'] = $res1;
+            $data3['sta'] = 0;
+
+            $res3 = $Model->where($where3)->save($data3);
+            if($res3)
+            {
+                $max = $res1 + 1;
+            }
+            else
+            {
+                $this->ReturnJudge('更新配置表失败', 'index');
+                exit();
+            }
+        }
+        // 筛选数据表中不存在数据
+        else
+        {
+            $max = 1;
+        }
+
+        $time = time();
+        $data2 = array();
+        $data22 = array();
+        foreach($info as $k => $v)
+        {
+            if($v['Express'] === 'shenshuang')
+            {
+                $v['Express'] = '';
+            }
+            if($v['User'] === 'shenshuang')
+            {
+                $v['User'] = '';
+            }
+
+            $data2['w_ad'] = $_SESSION['id'];
+            $data2['a_t'] = $time;
+            $data2['s_tag'] = $max;
+            $data2['ex_val'] = $v['Express'];
+            $data2['u_val'] = $v['User'];
+            $data2['name'] = $v['name'];
+            $data2['sta'] = 1;
+
+            $data22[] = $data2;
+        }
+
+        $res2 = $Model->addAll($data22);
+        if($res2)
+        {
+            $this->ReturnJudge('添加筛选配置数据成功', 'index');
+            exit();
+        }
+        else
+        {
+            $data4['sta'] = 1;
+            $Model->where($where3)->save($data4);
+            $where44['s_tag'] = $max;
+            $Model->where($where44)->delete();
+            $this->ReturnJudge('添加筛选配置数据失败', 'index');
+            exit();
+        }
     }
 }
