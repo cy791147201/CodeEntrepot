@@ -107,16 +107,45 @@ class BeforeController extends Controller
             $data = array();
             foreach($info as $k => $v)
             {
-                $data[$k] = str_replace('find', '', str_replace('select', '', str_replace('update', '',  str_replace('delete', '', str_replace('insert', '', str_replace('>', '', str_replace('<', '', str_replace('=', '', $v))))))));
+                // $data[$k] = str_replace('find', '', str_replace('select', '', str_replace('update', '',  str_replace('delete', '', str_replace('insert', '', str_replace('>', '', str_replace('<', '', str_replace('=', '', $v))))))));
+                $data[$k] = $this->RePlaceStr($v);
             }
         }
         else
         {
-            $data = str_replace('find', '', str_replace('select', '', str_replace('update', '',  str_replace('delete', '', str_replace('insert', '', str_replace('>', '', str_replace('<', '', str_replace('=', '', $info))))))));
+            // $data = str_replace('find', '', str_replace('select', '', str_replace('update', '',  str_replace('delete', '', str_replace('insert', '', str_replace('>', '', str_replace('<', '', str_replace('=', '', $info))))))));
+            $data = $this->RePlaceStr($info);
         }
         return $data;
     }
 
+    // 替换字符串
+    public function RePlaceStr($str)
+    {
+        $str = str_replace('and','',$str);
+        $str = str_replace('execute','',$str);
+        $str = str_replace('count','',$str);
+        $str = str_replace('chr','',$str);
+        $str = str_replace('mid','',$str);
+        $str = str_replace('master','',$str);
+        $str = str_replace('truncate','',$str);
+        $str = str_replace('char','',$str);
+        $str = str_replace('declare','',$str);
+        $str = str_replace('create','',$str);
+        $str = str_replace('insert','',$str);
+        $str = str_replace('delete','',$str);
+        $str = str_replace('update','',$str);
+        $str = str_replace('select','',$str);
+        $str = str_replace('find','',$str);
+        $str = str_replace('or','',$str);
+        $str = str_replace('"','',$str);
+        $str = str_replace("'",'',$str);
+        $str = str_replace('=','',$str);
+        $str = str_replace('<','',$str);
+        // $str = str_replace(' ','',$str); 
+        $str = str_replace(';','',$str); 
+        return $str;
+    }
     // thinkphp 更新数组
     /*
     * @param $SaveWhere ：想要更新主键ID数组 格式array('需要更新的键值'=>array(1,2,3....));
@@ -186,4 +215,49 @@ class BeforeController extends Controller
             return false;
         }
     }  
+
+    // 封装自己比较数组不同的函数
+    // 返回数组中不同的函数
+    public function ArraYDif($arr1, $arr2) 
+    {
+        $ArrTemp1 = $arr1;
+        $ArrTemp2 = $arr2;
+        
+        // 将数组的值作为键
+        $ArrTemp2 = array_flip($ArrTemp2);
+        foreach($ArrTemp1 as $key => $item) 
+        {   
+            if(isset($ArrTemp2[$item]) && $ArrTemp2[$item] == $key) 
+            {
+                unset($ArrTemp1[$key]);
+            }
+        }
+        if(!empty($arr1))
+        {
+            $dif = $ArrTemp1;
+        }
+        else
+        {
+            $arr1 = array_flip($arr1);
+            foreach($arr2 as $key => $item) 
+            {   
+                if(isset($arr1[$item]) && $arr1[$item] == $key) 
+                {
+                    unset($arr2[$key]);
+                }
+            }
+            $dif = $arr2;
+        }
+        return $dif;
+    }
+
+    // 生成数据唯一标志
+    public function CreateDataTag($table)
+    {
+        $Model = M($table);
+        $tag = $_SESSION['id']. '_' .time();
+        $sql = 'select d_tag from ' . $table . " where d_tag = '$tag' ";
+
+        return $Model->query($sql)?$this->CreateDataTag():$tag;
+    }   
 }

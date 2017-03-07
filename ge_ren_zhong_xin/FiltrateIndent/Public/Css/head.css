@@ -30,7 +30,7 @@
     opacity: 0.6;
 }
 .HeadFather, .HeadFather ul li a:hover{
-    color: white;
+    /*color: white;*/
     /*div模糊层*/
     /*针对ie*/
     filter: alpha(Opacity=100);

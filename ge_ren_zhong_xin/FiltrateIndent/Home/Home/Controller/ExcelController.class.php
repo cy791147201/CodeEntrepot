@@ -82,8 +82,28 @@ class ExcelController extends BeforeController
 
             // 获取excel内容
             $data = $this->ImportExcel($file);
+            $data = $this->PreventSql($data);
+            // var_dump($who);exit();
             // 调用导入模版模块
-            $this->InsertTemp($who, $data[1]);
+            if($who === 'myself' || $who === 'express')
+            {
+                // echo '模版';
+                // 只传参Excel表头
+                $this->InsertTemp($who, $data[1]);
+            }
+            // 调用导入数据模块
+            else if($who === 'MyData' || $who === 'ExData')
+            {
+                // 删除Excel表头
+                // unset($data[1]);
+                // $data = array_values($data);
+                $this->InsertData($who, $data);
+            }
+            else
+            {
+                $this->ReturnJudge('what are you 弄啥勒？', 'index');
+                exit();
+            }
 
         }
     }
@@ -214,6 +234,117 @@ class ExcelController extends BeforeController
         }
     }
 
+    // 插入数据
+    public function InsertData($who, $data)
+    {
+        // var_dump($who);
+        // var_dump($data);
+        if($who === 'MyData')
+        {
+            $Temp = M('self_temp');
+            $TagModel = M('self_data_tag');
+            $DataModel = M('self_data');
+            // $DataTable = M();
+        }
+        else if($who === 'ExData')
+        {
+            $Temp = M('yuantong_temp');
+            $TagModel = M('yuantong_data_tag');
+            $DataModel = M('yuantong_data');
+        }
+        else
+        {
+            $this->ReturnJudge('不认你', 'index');
+            exit();
+        }
+
+        // 查询当前模版的当前配置
+        $where1['sta'] = 1;
+        $res1 = $Temp->where($where1)->select();
+        if($res1)
+        {
+            $val = array();
+            foreach($res1 as $v)
+            {
+                $val[] = $v["l_val"];
+            }
+        }
+        else
+        {
+            $this->ReturnJudge('当前模版配置为空', 'index');
+            exit();
+        }
+
+        // 调用自己封装的函数，查看两个数组有什么不同
+        $diff = $this->ArraYDif($val, $data[1]);
+        // 模版配置文件与文件标题不同
+        if($diff)
+        {   
+            $this->ReturnJudge('当前模版配置与当前文件的标题不同，请仔细检查', 'index');
+            exit();
+        }
+        // 模版配置文件与文件标题相同
+        else
+        {
+            $time = time();
+            $data2['d_tag'] = $_SESSION['d_tag'] = $this->CreateDataTag('self_data_tag');
+            $data2['w_ad'] = $_SESSION['id'];
+            $data2['a_t'] = $time;
+            $data2['s_tag'] = 0;
+            
+            $res2 = $TagModel->add($data2);
+            if($res2)
+            {
+                unset($data[1]);
+                $data22 = array();
+                $data222 = array();
+                foreach($data as $k => $v)
+                {
+                    foreach($v as $key => $val)
+                    { 
+                        if(!empty($val))
+                        {
+                            $data22['d_tags'] = $_SESSION['d_tag'];
+                            $data22['r'] = $k;
+                            $data22['l'] = $key;
+                            $data22['l_val'] = $val;
+                            $data222[] = $data22;
+                        }
+                    }
+                }
+                $res22 = $DataModel->addALL($data222);
+                if($res22)
+                {
+                    $this->ReturnJudge('添加数据成功', 'index');
+                    exit();
+                }
+                else
+                {
+                    $where3['d_tag'] = $_SESSION['d_tag'];
+                    $where33['d_tags'] = $_SESSION['d_tag'];
+                    $res3 = $TagModel->where($where3)->delete();
+                    $res33 = $DataModel->where($where33)->delete();
+                    if($res3 && $res33)
+                    {
+                        $this->ReturnJudge('添加数据失败唲', 'index');
+                        exit();
+                    }
+                    else
+                    {
+                        $this->ReturnJudge('请联系管理员', 'index');
+                        exit();
+                    }
+                }
+            }
+            else
+            {
+                $this->ReturnJudge('添加数据失败咦', 'index');
+                exit();
+            }
+        
+        }
+    }
+
     // 展示当前模版
     public function ShowTemp()
     {
@@ -232,7 +363,7 @@ class ExcelController extends BeforeController
         }
         else
         {
-            $this->ReturnJudge('你想干森么');
+            $this->ReturnJudge('你想干森么', 'index');
             exit();
         }
         $where1['sta'] = 1; 
@@ -326,5 +457,78 @@ class ExcelController extends BeforeController
             $this->ReturnJudge('更新失败', 'index');
             exit();
         }
+    }
+
+    // 筛选数据
+    public function ScreenData()
+    {
+        $where1['sta'] = 1;
+        
+        $Model = M('Screen');
+        $res1 = $Model->where($where1)->select();
+
+        // 存在筛选数据的配置 
+        if($res1)
+        {
+            // $this->display('ScreenSet');
+        }
+        // 不存在
+        else
+        {
+            $data = $this->GetTempSetting();
+            $UserTemp = $data['UserTemp'];
+            $ExpressTemp = $data['ExpressTemp'];
+
+            $this->assign('UserTemp', $UserTemp);
+            $this->assign('ExpressTemp', $ExpressTemp);
+            $this->display('ScreenSet');
+        }
+    }
+
+    // 读取模版配置表
+    public function GetTempSetting()
+    {
+        $where1['sta'] = 1;
+
+        $Model1 = M('self_temp');
+        $Model2 = M('yuantong_temp');
+
+        $where2['tag'] = $Model1->where($where1)->max('tag');
+        $where22['tag'] = $Model2->where($where1)->max('tag');
+
+        $res1 = $Model1->where($where2)->select();
+        $res2 = $Model2->where($where22)->select();
+
+        if(!$res1)
+        {
+            $this->ReturnJudge('用户配置表为空，请更新用户配置表', 'index');
+            exit();
+        }
+        else if(!$res2)
+        {
+            $this->ReturnJudge('快递配置表为空，请更新快递配置表', 'index');
+            exit();
+        }
+        else if($res1 && $res2)
+        {
+            $data['UserTemp'] = $res1; 
+            $data['ExpressTemp'] = $res2; 
+
+            return $data;
+        }
+        else
+        {
+            $this->ReturnJudge('嘿嘿', 'index');
+            exit();
+        }
+    }
+
+    // 设置筛选配置
+    public function DoScreenData()
+    {
+        $info = I('post.');
+        $info = $this->PreventSql($info);
+    
+        var_dump($info);
     }
 }

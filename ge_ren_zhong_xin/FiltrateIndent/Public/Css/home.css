@@ -51,6 +51,7 @@ body{
 }
 .AdminList:hover, .AdminHandle:hover, .sub:hover{
     /*渐变色*/
+    color: white;
     /* Webkit: Safari 4-5, Chrome 1-9 */  
     background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#FCE2FD), to(#AB0CC9));  
     /* Webkit: Safari 5.1+, Chrome 10+ */  
@@ -101,7 +102,7 @@ body{
     width: 500px;
     /*margin: 0 auto;*/
     display: none;
-    /*overflow: hidden;*/
+    overflow: hidden;
 }
 #UpdAdmin, #AddAdmin, #ListUpdOne{
     height: 500px;
@@ -219,7 +220,7 @@ body{
     /*margin: 0 auto;*/
     border-radius: 5px;
     display: none;
-    /*overflow: hidden;*/
+    overflow: hidden;
 }
 .ListInfoTit{
     width: 100%;
@@ -256,7 +257,7 @@ body{
     /*overflow: hidden;*/
 }
 .ListInfoId a:hover, .ListInfoName span:hover, .ListInfoSta a:hover, .ListInfoRtime a:hover, .ListInfoLtime a:hover, .ListInfoLip a:hover, .ListInfoQuXian a:hover, .ListInfoWadd a:hover, .ListInfoGrade a:hover, .ListInfoDel:hover, .ListInfoUpd:hover{
-    color: white;
+    /*color: white;*/
     /*渐变色*/
     /* Webkit: Safari 4-5, Chrome 1-9 */  
     background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#FFF7FF), to(#AB0CC9)) !important;  

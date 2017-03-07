@@ -1,0 +1,41 @@
+{
+    /*border: #D0D0D0 1px solid;*/
+    /*背景阴影*/
+    filter: progid:DXImageTransform.Microsoft.Shadow(color=#909090,direction=120,strength=3);/*ie*/
+    -moz-box-shadow: 2px 2px 10px #909090;/*firefox*/
+    -webkit-box-shadow: 2px 2px 10px #909090;/*safari或chrome*/
+    box-shadow: 2px 2px 10px #909090;/*opera或ie9*/
+    border-radius: 5px;
+}
+{
+    /*渐变色*/
+    /* Webkit: Safari 4-5, Chrome 1-9 */  
+    background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#F7CFF8), to(#C758DC));  
+    /* Webkit: Safari 5.1+, Chrome 10+ */  
+    background: -webkit-linear-gradient(left, #F7CFF8, #C758DC);  
+    /* Firefox 3.6+ */  
+    background: -moz-linear-gradient(left, #F7CFF8, #C758DC); 
+    /* Opera 11.10+ */  
+    background: -o-linear-gradient(left, #F7CFF8, #C758DC); 
+    /* IE 10 */  
+    background: -ms-linear-gradient(left, #F7CFF8, #C758DC);
+    /* IE < 10 */  
+    /* 注意：这一行必须写在最后 */  
+    FILTER: progid:DXImageTransform.Microsoft.Gradient(startColorStr=#F7CFF8, endColorStr=#C758DC);
+}
+{
+    /*渐变色*/
+    /* Webkit: Safari 4-5, Chrome 1-9 */  
+    background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#FEFAFE), to(#E067F6));  
+    /* Webkit: Safari 5.1+, Chrome 10+ */  
+    background: -webkit-linear-gradient(left, #FEFAFE, #E067F6);  
+    /* Firefox 3.6+ */  
+    background: -moz-linear-gradient(left, #FEFAFE, #E067F6); 
+    /* Opera 11.10+ */  
+    background: -o-linear-gradient(left, #FEFAFE, #E067F6); 
+    /* IE 10 */  
+    background: -ms-linear-gradient(left, #FEFAFE, #E067F6);
+    /* IE < 10 */  
+    /* 注意：这一行必须写在最后 */  
+    FILTER: progid:DXImageTransform.Microsoft.Gradient(startColorStr=#FEFAFE, endColorStr=#E067F6);
+}

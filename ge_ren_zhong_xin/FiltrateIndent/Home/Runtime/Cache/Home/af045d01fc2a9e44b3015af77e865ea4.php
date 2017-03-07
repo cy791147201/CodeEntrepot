@@ -43,46 +43,21 @@
     <!-- Excel首页操作 -->
     <div class = 'ExcelFather' id = 'ExcelFather'>
         <div class = 'ExcelMother'>
-          <!--   <div class = 'ExcelHandle'>
-                <a href = 'javascript:void(0);' onclick = 'ChangeDisplay("ExcelFather", "AddExcelTemp");' title = '添加Excel模版'>
-                    <span>添加Excel模版</span>
-                </a>
-            </div> -->
             <div class = 'ExcelHandle'>
                 <a href = 'javascript:void(0);' onclick = 'ChangeDisplay("ExcelTemp");' title = 'Excel模版操作'>
                     <span>Excel模版</span>
                 </a>
             </div>
             <div class = 'ExcelHandle'>
-                <a href = 'javascript:void(0);' onclick = 'ChangeDisplay("ExcelFather", "LeadInExcel");' title = '导入Excel数据'>
+                <a href = 'javascript:void(0);' onclick = 'ChangeDisplay("LeadInExcel");' title = '导入Excel数据'>
                     <span>导入数据</span>
                 </a>
             </div>
             <div class = 'ExcelHandle'>
-                <a href = 'javascript:void(0);' onclick = 'ChangeDisplay("ExcelFather", "LeadInExcel");' title = '导入Excel数据'>
+                <a href = '/ge_ren_zhong_xin/FiltrateIndent/index.php/Home/Excel/ScreenData' title = '筛选数据'>
                     <span>筛选数据</span>
                 </a>
             </div>
-            <!-- <div class = 'ExcelHandle'>
-                <a href = 'javascript:void(0);' title = '导出快递Excel中有而用户Excel中没有的数据'>
-                    <span>导出用户缺失的数据</span>
-                </a>
-            </div>
-            <div class = 'ExcelHandle'>
-                <a href = 'javascript:void(0);' title = '导出快递Excel中没有有而用户Excel中有的数据'>
-                    <span>导出快递缺失的数据</span>
-                </a>
-            </div>
-            <div class = 'ExcelHandle'>
-                <a href = 'javascript:void(0);' title = '导出快递Excel中的处理结果为问题件的数据'>
-                    <span>导出问题件</span>
-                </a>
-            </div>
-            <div class = 'ExcelHandle'>
-                <a href = 'javascript:void(0);' title = '更新用户Excel表中的快递状态'>
-                    <span>更新订单状态</span>
-                </a>
-            </div> -->
         </div>
     </div>
     
@@ -163,11 +138,11 @@
     <!-- Excel上传文件模版 -->
     <div class = 'ExcelFather' id = 'FileUpUserTemp'>
         <div class = 'tit'>
-            <span>手动添加&nbsp;&nbsp;用户&nbsp;&nbsp;Excel模版</span>
+            <span>Excel文件添加&nbsp;&nbsp;用户&nbsp;&nbsp;Excel模版</span>
         </div>
-        <form action = '/ge_ren_zhong_xin/FiltrateIndent/index.php/Home/Excel/DoExcelAdd?temp=myself' method = 'post' enctype = 'multipart/form-data' id = 'FileUpTempAct' onsubmit = 'return CheckFileType("1", "file");'>
+        <form action = '/ge_ren_zhong_xin/FiltrateIndent/index.php/Home/Excel/DoExcelAdd?temp=myself' method = 'post' enctype = 'multipart/form-data' id = 'FileUpTempAct' onsubmit = 'return CheckFileType("1", "file1");'>
             <div class = 'FileUpTempDiv'>
-                <input type = 'file' name = 'file' onchange = "CheckFileType('2', this)"/>
+                <input type = 'file' name = 'file1' onchange = "CheckFileType('2', this)"/>
             </div>
             <div class = 'FileUpTempDiv'>
                 <input type = 'submit' value = '确认上传' id = 'FileUpTempSub'/>
@@ -176,11 +151,11 @@
     </div>
     <div class = 'ExcelFather' id = 'FileUpExpressTemp'>
         <div class = 'tit'>
-            <span>手动添加&nbsp;&nbsp;快递&nbsp;&nbsp;Excel模版</span>
+            <span>Excel文件添加&nbsp;&nbsp;快递&nbsp;&nbsp;Excel模版</span>
         </div>
-        <form action = '/ge_ren_zhong_xin/FiltrateIndent/index.php/Home/Excel/DoExcelAdd?temp=express' method = 'post' enctype = 'multipart/form-data' id = 'FileUpTempAct' onsubmit = 'return CheckFileType("1", "file");'>
+        <form action = '/ge_ren_zhong_xin/FiltrateIndent/index.php/Home/Excel/DoExcelAdd?temp=express' method = 'post' enctype = 'multipart/form-data' id = 'FileUpTempAct' onsubmit = 'return CheckFileType("1", "file2");'>
             <div class = 'FileUpTempDiv'>
-                <input type = 'file' name = 'file' onchange = "CheckFileType('2', this)"/>
+                <input type = 'file' name = 'file2' onchange = "CheckFileType('2', this)"/>
             </div>
             <div class = 'FileUpTempDiv'>
                 <input type = 'submit' value = '确认上传' id = 'FileUpTempSub'/>
@@ -188,8 +163,39 @@
         </form>
     </div>
     
+    <!-- 导入数据模版 -->
+    <div class = 'ExcelFather' id = 'LeadInExcel'>
+        <span onclick = 'ChangeDisplay("FileUpUserData");'>导入用户数据</span>
+        <span onclick = 'ChangeDisplay("FileUpExpressData");'>导入快递数据</span>
+    </div>
 
-
+    <div class = 'ExcelFather' id = 'FileUpUserData'>
+        <div class = 'tit'>
+            <span>添加&nbsp;&nbsp;用户&nbsp;&nbsp;Excel数据</span>
+        </div>
+        <form action = '/ge_ren_zhong_xin/FiltrateIndent/index.php/Home/Excel/DoExcelAdd?temp=MyData' method = 'post' enctype = 'multipart/form-data' id = 'FileUpTempAct' onsubmit = 'return CheckFileType("1", "file3");'>
+            <div class = 'FileUpTempDiv'>
+                <input type = 'file' name = 'file3' onchange = "CheckFileType('2', this)"/>
+            </div>
+            <div class = 'FileUpTempDiv'>
+                <input type = 'submit' value = '确认上传' id = 'FileUpTempSub'/>
+            </div>
+        </form>
+    </div>
+    <div class = 'ExcelFather' id = 'FileUpExpressData'>
+        <div class = 'tit'>
+            <span>添加&nbsp;&nbsp;快递&nbsp;&nbsp;Excel数据</span>
+        </div>
+        <form action = '/ge_ren_zhong_xin/FiltrateIndent/index.php/Home/Excel/DoExcelAdd?temp=ExData' method = 'post' enctype = 'multipart/form-data' id = 'FileUpTempAct' onsubmit = 'return CheckFileType("1", "file4");'>
+            <div class = 'FileUpTempDiv'>
+                <input type = 'file' name = 'file4' onchange = "CheckFileType('2', this)"/>
+            </div>
+            <div class = 'FileUpTempDiv'>
+                <input type = 'submit' value = '确认上传' id = 'FileUpTempSub'/>
+            </div>
+        </form>
+    </div>
+    
     <link rel = 'stylesheet' type = 'text/css' href = '/ge_ren_zhong_xin/FiltrateIndent/Public/Css/foot.css'>
 <div class = 'foot'>
     <span class = 'FootNotice'>细心永远是对的</span>
