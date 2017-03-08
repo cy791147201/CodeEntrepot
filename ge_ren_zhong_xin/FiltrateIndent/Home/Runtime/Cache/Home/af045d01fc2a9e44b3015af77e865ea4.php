@@ -54,7 +54,7 @@
                 </a>
             </div>
             <div class = 'ExcelHandle'>
-                <a href = '/ge_ren_zhong_xin/FiltrateIndent/index.php/Home/Excel/ScreenData' title = '筛选数据'>
+                <a href = '/ge_ren_zhong_xin/FiltrateIndent/index.php/Home/Excel/ScreenData?act=screen' title = '筛选数据'>
                     <span>筛选数据</span>
                 </a>
             </div>

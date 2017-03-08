@@ -9,13 +9,13 @@
 <body>
     <include file = 'Public/Html/head.html' />
 
-    <!-- 筛选数据 -->
     <div class = 'ExcelFather' id = 'ScreenData'>
         <div class = 'tit'>
-            <span>添加&nbsp;&nbsp;筛选数据&nbsp;&nbsp;配置</span>
+            <span>{$sta}&nbsp;&nbsp;筛选数据&nbsp;&nbsp;配置</span>
         </div>
         <div class = 'ScreenDataInfo'>
-            <form action = '__CONTROLLER__/DoScreenData' method = 'post'>
+            <form action = '__CONTROLLER__/DoScreenData?act=adds' method = 'post'>
+
                 <div class = 'ScreenDataHandle'>
                     <div class = 'ScreenDataHandleNotice'>
                         <span>筛选<strong style = 'color: #FF7256;'>用户</strong>缺失数据</span>
@@ -29,7 +29,7 @@
                     <div class = 'ScreenDataHandleField'>
                         <select name = "shenshuang1[Express]">
                             <option value = 'shenshuang' selected = ''><span>选择该项则表示此项为空</span></option>
-                            <foreach name = 'ExpressTemp' item = 'v'>
+                            <foreach name = 'data.ExpressTemp' item = 'v'>
                                 <option value = '{$v.line}'><span>{$v.l_val}</span></option>
                             </foreach>
                         </select>
@@ -40,7 +40,7 @@
                     <div class = 'ScreenDataHandleField'>
                         <select name = "shenshuang1[User]">
                             <option value = 'shenshuang' selected = ''><span>选择该项则表示此项为空</span></option>
-                            <foreach name = 'UserTemp' item = 'v'>
+                            <foreach name = 'data.UserTemp' item = 'v'>
                                 <option value = '{$v.line}'><span>{$v.l_val}</span></option>
                             </foreach>
                         </select>
@@ -53,8 +53,10 @@
                     </div>
                     <div class = 'ScreenDataHandleName'>
                         <input type = 'text' name = "shenshuang1[name]" placeholder = '请输入自定义名称，尽量短' />
+                        <input type = 'hidden' name = 'shenshuang1[act]' value = '1' />
                     </div>
                 </div>
+
                 <div class = 'ScreenDataHandle'>
                     <div class = 'ScreenDataHandleNotice'>
                         <span>筛选<strong style = 'color: red;'>快递</strong>缺失数据</span>
@@ -63,23 +65,23 @@
                         <span>根据</span>
                     </div>
                     <div class = 'ScreenDataHandleUser'>
-                        <span><strong style = 'color: red;'>快递</strong>表中</span>
-                    </div>
-                    <div class = 'ScreenDataHandleField'>
-                        <select name = "shenshuang2[Express]">
-                            <option value = 'shenshuang' selected = ''><span>选择该项则表示此项为空</span></option>
-                            <foreach name = 'ExpressTemp' item = 'v'>
-                                <option value = '{$v.line}'><span>{$v.l_val}</span></option>
-                            </foreach>
-                        </select>
-                    </div>
-                    <div class = 'ScreenDataHandleUser'>
                         <span><strong style = 'color: #FF7256;'>用户</strong>表中</span>
                     </div>
                     <div class = 'ScreenDataHandleField'>
                         <select name = "shenshuang2[User]">
                             <option value = 'shenshuang' selected = ''><span>选择该项则表示此项为空</span></option>
-                            <foreach name = 'UserTemp' item = 'v'>
+                            <foreach name = 'data.UserTemp' item = 'v'>
+                                <option value = '{$v.line}'><span>{$v.l_val}</span></option>
+                            </foreach>
+                        </select>
+                    </div>
+                    <div class = 'ScreenDataHandleUser'>
+                        <span><strong style = 'color: red;'>快递</strong>表中</span>
+                    </div>
+                    <div class = 'ScreenDataHandleField'>
+                        <select name = "shenshuang2[Express]">
+                            <option value = 'shenshuang' selected = ''><span>选择该项则表示此项为空</span></option>
+                            <foreach name = 'data.ExpressTemp' item = 'v'>
                                 <option value = '{$v.line}'><span>{$v.l_val}</span></option>
                             </foreach>
                         </select>
@@ -92,8 +94,10 @@
                     </div>
                     <div class = 'ScreenDataHandleName'>
                         <input type = 'text' name = "shenshuang2[name]" placeholder = '请输入自定义名称，尽量短' />
+                        <input type = 'hidden' name = 'shenshuang2[act]' value = '2' />
                     </div>
                 </div>
+
                 <div class = 'ScreenDataHandle'>
                     <div class = 'ScreenDataHandleNotice'>
                         <span>导出问题件</span>
@@ -107,32 +111,27 @@
                     <div class = 'ScreenDataHandleField'>
                         <select name = "shenshuang3[Express]">
                             <option value = 'shenshuang' selected = ''><span>选择该项则表示此项为空</span></option>
-                            <foreach name = 'ExpressTemp' item = 'v'>
+                            <foreach name = 'data.ExpressTemp' item = 'v'>
                                 <option value = '{$v.line}'>{$v.l_val}</option>
                             </foreach>
                         </select>
                     </div>
                     <div class = 'ScreenDataHandleUser'>
-                        <span><strong style = 'color: #FF7256;'>用户</strong>表中</span>
                     </div>
                     <div class = 'ScreenDataHandleField'>
-                        <select name = "shenshuang3[User]">
-                            <option value = 'shenshuang' selected = ''><span>选择该项则表示此项为空</span></option>
-                            <foreach name = 'UserTemp' item = 'v'>
-                                <option value = '{$v.line}'><span>{$v.l_val}</span></option>
-                            </foreach>
-                        </select>
                     </div>
                     <div class = 'ScreenDataHandleScreen'>
-                        <span>筛选</span>
+                        <span>导出</span>
                     </div>
                     <div class = 'ScreenDataHandleCustom'>
                         <span><strong style = 'color: red;'>自定义</strong>名称</span>
                     </div>
                     <div class = 'ScreenDataHandleName'>
                         <input type = 'text' name = "shenshuang3[name]" placeholder = '请输入自定义名称，尽量短' />
+                        <input type = 'hidden' name = 'shenshuang3[act]' value = '3' />
                     </div>
                 </div>
+
                 <div class = 'ScreenDataHandle'>
                     <div class = 'ScreenDataHandleNotice'>
                         <span>更新用户表订单状态</span>
@@ -146,30 +145,24 @@
                     <div class = 'ScreenDataHandleField'>
                         <select name = "shenshuang4[Express]">
                             <option value = 'shenshuang' selected = ''><span>选择该项则表示此项为空</span></option>
-                            <foreach name = 'ExpressTemp' item = 'v'>
+                            <foreach name = 'data.ExpressTemp' item = 'v'>
                                 <option value = '{$v.line}'><span>{$v.l_val}</span></option>
                             </foreach>
                         </select>
                     </div>
                     <div class = 'ScreenDataHandleUser'>
-                        <span><strong style = 'color: #FF7256;'>用户</strong>表中</span>
                     </div>
                     <div class = 'ScreenDataHandleField'>
-                        <select name = "shenshuang4[User]">
-                            <option value = 'shenshuang' selected = ''><span>选择该项则表示此项为空</span></option>
-                            <foreach name = 'UserTemp' item = 'v'>
-                                <option value = '{$v.line}'><span>{$v.l_val}</span></option>
-                            </foreach>
-                        </select>
                     </div>
                     <div class = 'ScreenDataHandleScreen'>
-                        <span>筛选</span>
+                        <span>更新</span>
                     </div>
                     <div class = 'ScreenDataHandleCustom'>
                         <span><strong style = 'color: red;'>自定义</strong>名称</span>
                     </div>
                     <div class = 'ScreenDataHandleName'>
                         <input type = 'text' name = "shenshuang4[name]" placeholder = '请输入自定义名称，尽量短' />
+                        <input type = 'hidden' name = 'shenshuang4[act]' value = '4' />
                     </div>
                 </div>
                 <input type = 'submit' value = '确认提交' class = 'sub'/>

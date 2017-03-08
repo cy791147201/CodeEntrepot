@@ -40,9 +40,15 @@
 </div>
 
 
-    <!-- 筛选数据 -->
     <div class = 'ExcelFather' id = 'ScreenData'>
-       sssssssss
+        <div class = 'ScreenName'>
+            <div>
+                <a href = '/ge_ren_zhong_xin/FiltrateIndent/index.php/Home/Excel/ScreenData?act=upds'>
+                    <span>修改筛选配置</span>
+                </a>
+            </div>
+            <?php if(is_array($screen)): foreach($screen as $key=>$v): ?><span><?php echo ($v["name"]); ?></span><?php endforeach; endif; ?>
+        </div>
     </div>
 
     <link rel = 'stylesheet' type = 'text/css' href = '/ge_ren_zhong_xin/FiltrateIndent/Public/Css/foot.css'>

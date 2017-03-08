@@ -40,13 +40,13 @@
 </div>
 
 
-    <!-- 筛选数据 -->
     <div class = 'ExcelFather' id = 'ScreenData'>
         <div class = 'tit'>
-            <span>添加&nbsp;&nbsp;筛选数据&nbsp;&nbsp;配置</span>
+            <span><?php echo ($sta); ?>&nbsp;&nbsp;筛选数据&nbsp;&nbsp;配置</span>
         </div>
         <div class = 'ScreenDataInfo'>
-            <form action = '/ge_ren_zhong_xin/FiltrateIndent/index.php/Home/Excel/DoScreenData' method = 'post'>
+            <form action = '/ge_ren_zhong_xin/FiltrateIndent/index.php/Home/Excel/DoScreenData?act=adds' method = 'post'>
+
                 <div class = 'ScreenDataHandle'>
                     <div class = 'ScreenDataHandleNotice'>
                         <span>筛选<strong style = 'color: #FF7256;'>用户</strong>缺失数据</span>
@@ -60,7 +60,7 @@
                     <div class = 'ScreenDataHandleField'>
                         <select name = "shenshuang1[Express]">
                             <option value = 'shenshuang' selected = ''><span>选择该项则表示此项为空</span></option>
-                            <?php if(is_array($ExpressTemp)): foreach($ExpressTemp as $key=>$v): ?><option value = '<?php echo ($v["line"]); ?>'><span><?php echo ($v["l_val"]); ?></span></option><?php endforeach; endif; ?>
+                            <?php if(is_array($data["ExpressTemp"])): foreach($data["ExpressTemp"] as $key=>$v): ?><option value = '<?php echo ($v["line"]); ?>'><span><?php echo ($v["l_val"]); ?></span></option><?php endforeach; endif; ?>
                         </select>
                     </div>
                     <div class = 'ScreenDataHandleUser'>
@@ -69,7 +69,7 @@
                     <div class = 'ScreenDataHandleField'>
                         <select name = "shenshuang1[User]">
                             <option value = 'shenshuang' selected = ''><span>选择该项则表示此项为空</span></option>
-                            <?php if(is_array($UserTemp)): foreach($UserTemp as $key=>$v): ?><option value = '<?php echo ($v["line"]); ?>'><span><?php echo ($v["l_val"]); ?></span></option><?php endforeach; endif; ?>
+                            <?php if(is_array($data["UserTemp"])): foreach($data["UserTemp"] as $key=>$v): ?><option value = '<?php echo ($v["line"]); ?>'><span><?php echo ($v["l_val"]); ?></span></option><?php endforeach; endif; ?>
                         </select>
                     </div>
                     <div class = 'ScreenDataHandleScreen'>
@@ -80,8 +80,10 @@
                     </div>
                     <div class = 'ScreenDataHandleName'>
                         <input type = 'text' name = "shenshuang1[name]" placeholder = '请输入自定义名称，尽量短' />
+                        <input type = 'hidden' name = 'shenshuang1[act]' value = '1' />
                     </div>
                 </div>
+
                 <div class = 'ScreenDataHandle'>
                     <div class = 'ScreenDataHandleNotice'>
                         <span>筛选<strong style = 'color: red;'>快递</strong>缺失数据</span>
@@ -90,21 +92,21 @@
                         <span>根据</span>
                     </div>
                     <div class = 'ScreenDataHandleUser'>
-                        <span><strong style = 'color: red;'>快递</strong>表中</span>
-                    </div>
-                    <div class = 'ScreenDataHandleField'>
-                        <select name = "shenshuang2[Express]">
-                            <option value = 'shenshuang' selected = ''><span>选择该项则表示此项为空</span></option>
-                            <?php if(is_array($ExpressTemp)): foreach($ExpressTemp as $key=>$v): ?><option value = '<?php echo ($v["line"]); ?>'><span><?php echo ($v["l_val"]); ?></span></option><?php endforeach; endif; ?>
-                        </select>
-                    </div>
-                    <div class = 'ScreenDataHandleUser'>
                         <span><strong style = 'color: #FF7256;'>用户</strong>表中</span>
                     </div>
                     <div class = 'ScreenDataHandleField'>
                         <select name = "shenshuang2[User]">
                             <option value = 'shenshuang' selected = ''><span>选择该项则表示此项为空</span></option>
-                            <?php if(is_array($UserTemp)): foreach($UserTemp as $key=>$v): ?><option value = '<?php echo ($v["line"]); ?>'><span><?php echo ($v["l_val"]); ?></span></option><?php endforeach; endif; ?>
+                            <?php if(is_array($data["UserTemp"])): foreach($data["UserTemp"] as $key=>$v): ?><option value = '<?php echo ($v["line"]); ?>'><span><?php echo ($v["l_val"]); ?></span></option><?php endforeach; endif; ?>
+                        </select>
+                    </div>
+                    <div class = 'ScreenDataHandleUser'>
+                        <span><strong style = 'color: red;'>快递</strong>表中</span>
+                    </div>
+                    <div class = 'ScreenDataHandleField'>
+                        <select name = "shenshuang2[Express]">
+                            <option value = 'shenshuang' selected = ''><span>选择该项则表示此项为空</span></option>
+                            <?php if(is_array($data["ExpressTemp"])): foreach($data["ExpressTemp"] as $key=>$v): ?><option value = '<?php echo ($v["line"]); ?>'><span><?php echo ($v["l_val"]); ?></span></option><?php endforeach; endif; ?>
                         </select>
                     </div>
                     <div class = 'ScreenDataHandleScreen'>
@@ -115,8 +117,10 @@
                     </div>
                     <div class = 'ScreenDataHandleName'>
                         <input type = 'text' name = "shenshuang2[name]" placeholder = '请输入自定义名称，尽量短' />
+                        <input type = 'hidden' name = 'shenshuang2[act]' value = '2' />
                     </div>
                 </div>
+
                 <div class = 'ScreenDataHandle'>
                     <div class = 'ScreenDataHandleNotice'>
                         <span>导出问题件</span>
@@ -130,28 +134,25 @@
                     <div class = 'ScreenDataHandleField'>
                         <select name = "shenshuang3[Express]">
                             <option value = 'shenshuang' selected = ''><span>选择该项则表示此项为空</span></option>
-                            <?php if(is_array($ExpressTemp)): foreach($ExpressTemp as $key=>$v): ?><option value = '<?php echo ($v["line"]); ?>'><?php echo ($v["l_val"]); ?></option><?php endforeach; endif; ?>
+                            <?php if(is_array($data["ExpressTemp"])): foreach($data["ExpressTemp"] as $key=>$v): ?><option value = '<?php echo ($v["line"]); ?>'><?php echo ($v["l_val"]); ?></option><?php endforeach; endif; ?>
                         </select>
                     </div>
                     <div class = 'ScreenDataHandleUser'>
-                        <span><strong style = 'color: #FF7256;'>用户</strong>表中</span>
                     </div>
                     <div class = 'ScreenDataHandleField'>
-                        <select name = "shenshuang3[User]">
-                            <option value = 'shenshuang' selected = ''><span>选择该项则表示此项为空</span></option>
-                            <?php if(is_array($UserTemp)): foreach($UserTemp as $key=>$v): ?><option value = '<?php echo ($v["line"]); ?>'><span><?php echo ($v["l_val"]); ?></span></option><?php endforeach; endif; ?>
-                        </select>
                     </div>
                     <div class = 'ScreenDataHandleScreen'>
-                        <span>筛选</span>
+                        <span>导出</span>
                     </div>
                     <div class = 'ScreenDataHandleCustom'>
                         <span><strong style = 'color: red;'>自定义</strong>名称</span>
                     </div>
                     <div class = 'ScreenDataHandleName'>
                         <input type = 'text' name = "shenshuang3[name]" placeholder = '请输入自定义名称，尽量短' />
+                        <input type = 'hidden' name = 'shenshuang3[act]' value = '3' />
                     </div>
                 </div>
+
                 <div class = 'ScreenDataHandle'>
                     <div class = 'ScreenDataHandleNotice'>
                         <span>更新用户表订单状态</span>
@@ -165,26 +166,22 @@
                     <div class = 'ScreenDataHandleField'>
                         <select name = "shenshuang4[Express]">
                             <option value = 'shenshuang' selected = ''><span>选择该项则表示此项为空</span></option>
-                            <?php if(is_array($ExpressTemp)): foreach($ExpressTemp as $key=>$v): ?><option value = '<?php echo ($v["line"]); ?>'><span><?php echo ($v["l_val"]); ?></span></option><?php endforeach; endif; ?>
+                            <?php if(is_array($data["ExpressTemp"])): foreach($data["ExpressTemp"] as $key=>$v): ?><option value = '<?php echo ($v["line"]); ?>'><span><?php echo ($v["l_val"]); ?></span></option><?php endforeach; endif; ?>
                         </select>
                     </div>
                     <div class = 'ScreenDataHandleUser'>
-                        <span><strong style = 'color: #FF7256;'>用户</strong>表中</span>
                     </div>
                     <div class = 'ScreenDataHandleField'>
-                        <select name = "shenshuang4[User]">
-                            <option value = 'shenshuang' selected = ''><span>选择该项则表示此项为空</span></option>
-                            <?php if(is_array($UserTemp)): foreach($UserTemp as $key=>$v): ?><option value = '<?php echo ($v["line"]); ?>'><span><?php echo ($v["l_val"]); ?></span></option><?php endforeach; endif; ?>
-                        </select>
                     </div>
                     <div class = 'ScreenDataHandleScreen'>
-                        <span>筛选</span>
+                        <span>更新</span>
                     </div>
                     <div class = 'ScreenDataHandleCustom'>
                         <span><strong style = 'color: red;'>自定义</strong>名称</span>
                     </div>
                     <div class = 'ScreenDataHandleName'>
                         <input type = 'text' name = "shenshuang4[name]" placeholder = '请输入自定义名称，尽量短' />
+                        <input type = 'hidden' name = 'shenshuang4[act]' value = '4' />
                     </div>
                 </div>
                 <input type = 'submit' value = '确认提交' class = 'sub'/>

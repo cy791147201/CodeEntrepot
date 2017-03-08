@@ -274,7 +274,9 @@ class ExcelController extends BeforeController
             $this->ReturnJudge('当前模版配置为空', 'index');
             exit();
         }
-
+// var_dump($val);
+// var_dump($data[1]);
+// exit();
         // 调用自己封装的函数，查看两个数组有什么不同
         $diff = $this->ArraYDif($val, $data[1]);
         // 模版配置文件与文件标题不同
@@ -296,21 +298,52 @@ class ExcelController extends BeforeController
             if($res2)
             {
                 unset($data[1]);
+                if(empty($data))
+                {
+                    $this->ReturnJudge('添加数据不能为空', 'index');
+                    exit();
+                }
+                // exit();
                 $data22 = array();
                 $data222 = array();
+                // $time = time();
+                // var_dump($data);exit();
                 foreach($data as $k => $v)
                 {
-                    foreach($v as $key => $val)
-                    { 
-                        if(!empty($val))
-                        {
+                    // foreach($v as $key => $val)
+                    // { 
+                    //     if(!empty($val))
+                    //     {
+                            // $data22['w_ad'] = $_SESSION['id'];
+                            // $data22['a_t'] = $time;
                             $data22['d_tags'] = $_SESSION['d_tag'];
-                            $data22['r'] = $k;
-                            $data22['l'] = $key;
-                            $data22['l_val'] = $val;
+                            $data22['l1'] = $v[0];
+                            $data22['l2'] = $v[1];
+                            $data22['l3'] = $v[2];
+                            $data22['l4'] = $v[3];
+                            $data22['l5'] = $v[4];
+                            $data22['l6'] = $v[5];
+                            $data22['l7'] = $v[6];
+                            $data22['l8'] = $v[7];
+                            $data22['l9'] = $v[8];
+                            $data22['l10'] = $v[9];
+                            $data22['l11'] = $v[10];
+                            $data22['l12'] = $v[11];
+                            $data22['l13'] = $v[12];
+                            $data22['l14'] = $v[13];
+                            $data22['l15'] = $v[14];
+                            $data22['l16'] = $v[15];
+                            $data22['l17'] = $v[16];
+                            $data22['l18'] = $v[17];
+                            $data22['l19'] = $v[18];
+                            $data22['l20'] = $v[19];
+                            $data22['l21'] = $v[20];
+                            $data22['l22'] = $v[21];
+                            $data22['l23'] = $v[22];
+
                             $data222[] = $data22;
-                        }
-                    }
+                        // }
+                    // }
                 }
                 $res22 = $DataModel->addALL($data222);
                 if($res22)
@@ -462,32 +495,125 @@ class ExcelController extends BeforeController
     // 筛选数据
     public function ScreenData()
     {
+        // echo 1;
+        $act = I('get.act');
+        $act = $this->PreventSql($act);
+
         $where1['sta'] = 1;
         
         $Model = M('Screen');
-        $res1 = $Model->where($where1)->select();
+        $res1 = $Model->where($where1)->getField('s_id, s_act, e_val, u_val, name');
 
+        // var_dump($res1);
         // 存在筛选数据的配置 
         if($res1)
-        {
-            // $this->display('ScreenSet');
-            $data = $this->GetTempSetting();
-            $UserTemp = $data['UserTemp'];
-            $ExpressTemp = $data['ExpressTemp'];
+        {   
+            // echo 2;
+            if($act === 'screen')
+            {
+                // echo 1;
+                $this->assign('screen', $res1);
+                $this->display('ScreenData');
+            }
+            else if($act === 'upds')
+            {
+                // 获取当前配置数据
+                // 并且获取各自配置表中的line
+                $ExpressTemp1 = array();
+                $UserTemp1 = array();
+                foreach($res1 as $k => $v)
+                {
+                    $ExpressTemp1[] = $v['e_val'];
+                    $UserTemp1[] = $v['u_val'];
+                    $data2[$k] = $v;
+                }
 
-            $this->assign('UserTemp', $UserTemp);
-            $this->assign('ExpressTemp', $ExpressTemp);
-            $this->display('ScreenSet');
+                // 删除空line与重复的line
+                // 用户配置表
+                $UserTemp2 = array();
+                foreach($UserTemp1 as $k => $v)
+                {
+                    if(!empty($v))
+                    {
+                        $UserTemp2[$v] = $v;
+                    }
+                }
+
+                // 快递配置表
+                $ExpressTemp2 = array();
+                foreach($ExpressTemp1 as $k => $v)
+                {
+                    if(!empty($v))
+                    {
+                        $ExpressTemp2[$v] = $v;
+                    }
+                }
+
+                // 查找对应表中的line，l_val
+                $where3['sta'] = $where33['sta'] = 1;
+                $where3['line'] = array('in', implode(',', $UserTemp2));
+                $where33['line'] = array('in', implode(',', $ExpressTemp2));
+
+                $Model3 = M('self_temp');
+                $Model33 = M('yuantong_temp');
+
+                $res3 = $Model3->where($where3)->getField('line, l_val');
+                $res33 = $Model33->where($where33)->getField('line, l_val');
+                if(!$res3 || !$res33)
+                {
+                    $this->ReturnJudge('未知错误，请联系管理员', 'index');
+                    exit();
+                }
+
+                // 拼接数据
+                $data22 = array();
+                foreach($data2 as $k => $v)
+                {
+                    if(!empty($v['e_val']))
+                    {
+                        if(isset($res33[$v['e_val']]))
+                        {
+                            $v['value1'] = $res33[$v['e_val']];
+                        }
+                    }
+                    if(!empty($v['u_val']))
+                    {
+                        if(isset($res3[$v['u_val']]))
+                        {
+                            $v['value2'] = $res3[$v['u_val']];
+                        }
+                    }
+                    $data22[] = $v;
+                }   
+                $data222 = $this->GetTempSetting();
+                // $UserTemp = $data222['UserTemp'];
+                // $ExpressTemp = $data222['ExpressTemp'];
+
+                $data2222 = array();
+                foreach($data22 as $k => $v)
+                {
+                    $data2222[$k] = $v;
+                    $data2222[$k]['UserTemp'] = $data222['UserTemp'];
+                    $data2222[$k]['ExpressTemp'] = $data222['ExpressTemp'];
+                }
+// var_dump($data22);
+// var_dump($data2222);
+// var_dump($UserTemp);
+                // $this->assign('UserTemp', $UserTemp);
+                // $this->assign('ExpressTemp', $ExpressTemp);
+                $this->assign('data', $data2222);
+                $this->assign('sta', '修改');
+                $this->display('ScreenSeted');
+            }
         }
-        // 不存在
+        // 不存在筛选数据的配置
         else
         {
-            $data = $this->GetTempSetting();
-            $UserTemp = $data['UserTemp'];
-            $ExpressTemp = $data['ExpressTemp'];
-
-            $this->assign('UserTemp', $UserTemp);
-            $this->assign('ExpressTemp', $ExpressTemp);
+            // echo 3;
+            $data1 = $this->GetTempSetting();
+// var_dump($data1);
+            $this->assign('sta', '添加');
+            $this->assign('data', $data1);
             $this->display('ScreenSet');
         }
     }
@@ -533,13 +659,19 @@ class ExcelController extends BeforeController
     // 设置筛选配置
     public function DoScreenData()
     {
+        // var_dump($_POST);
+        // var_dump($_GET);
+        // echo 1;
+        // exit();
         $info = I('post.');
+        $act = I('get.act');
         $info = $this->PreventSql($info);
-        
+        $act = $this->PreventSql($act);
+
         // 删除空数据
         foreach($info as $k => $v)
         {
-            if($v['Express'] === 'shenshuang' && $v['User'] === 'shenshuang')
+            if($v['Express'] === 'shenshuang' && $v['User'] === 'shenshuang' && $v['name'] === '')
             {
                 unset($info[$k]);
             }
@@ -548,75 +680,86 @@ class ExcelController extends BeforeController
         // 如果添加筛选配置为空的话返回
         if(empty($info))
         {
-            $this->ReturnJudge('添加筛选配置数据不能为空', 'index');
+            $this->ReturnJudge('筛选配置数据不能为空', 'index');
             exit();
         }
 
-        $where1['sta'] = 1;
-        $Model = M('Screen');
-        $res1 = $Model->where($where1)->max('s_tag');
-
-        // 筛选配置表中存在数据
-        if($res1)
+        // 添加筛选配置表
+        // 更新筛选配置表
+        if($act === 'adds' || $act === 'upds')
         {
-            $where3['s_tag'] = $_SESSION['s_tag'] = $res1;
-            $data3['sta'] = 0;
+            $where1['sta'] = 1;
+            $Model = M('Screen');
+            $res1 = $Model->where($where1)->max('s_tag');
 
-            $res3 = $Model->where($where3)->save($data3);
-            if($res3)
+            // 筛选配置表中存在数据
+            if($res1)
             {
-                $max = $res1 + 1;
+                $where3['s_tag'] = $_SESSION['s_tag'] = $res1;
+                $data3['sta'] = 0;
+
+                $res3 = $Model->where($where3)->save($data3);
+                if($res3)
+                {
+                    $max = $res1 + 1;
+                }
+                else
+                {
+                    $this->ReturnJudge('更新配置表失败', 'index');
+                    exit();
+                }
+            }
+            // 筛选数据表中不存在数据
+            else
+            {
+                $max = 1;
+            }
+
+            $time = time();
+            $data2 = array();
+            $data22 = array();
+            foreach($info as $k => $v)
+            {
+                if($v['Express'] === 'shenshuang')
+                {
+                    $v['Express'] = '';
+                }
+                if($v['User'] === 'shenshuang')
+                {
+                    $v['User'] = '';
+                }
+// var_dump($v);exit();
+                $data2['w_ad'] = $_SESSION['id'];
+                $data2['a_t'] = $time;
+                $data2['s_tag'] = $max;
+                $data2['e_val'] = $v['Express'];
+                $data2['u_val'] = $v['User'];
+                $data2['name'] = $v['name'];
+                $data2['s_act'] = $v['act'];
+                $data2['sta'] = 1;
+
+                $data22[] = $data2;
+            }
+
+            $res2 = $Model->addAll($data22);
+            if($res2)
+            {
+                $this->ReturnJudge('添加筛选配置数据成功', 'index');
+                exit();
             }
             else
             {
-                $this->ReturnJudge('更新配置表失败', 'index');
+                $data4['sta'] = 1;
+                $Model->where($where3)->save($data4);
+                $where44['s_tag'] = $max;
+                $Model->where($where44)->delete();
+                $this->ReturnJudge('添加筛选配置数据失败', 'index');
                 exit();
             }
         }
-        // 筛选数据表中不存在数据
         else
         {
-            $max = 1;
-        }
-
-        $time = time();
-        $data2 = array();
-        $data22 = array();
-        foreach($info as $k => $v)
-        {
-            if($v['Express'] === 'shenshuang')
-            {
-                $v['Express'] = '';
-            }
-            if($v['User'] === 'shenshuang')
-            {
-                $v['User'] = '';
-            }
-
-            $data2['w_ad'] = $_SESSION['id'];
-            $data2['a_t'] = $time;
-            $data2['s_tag'] = $max;
-            $data2['ex_val'] = $v['Express'];
-            $data2['u_val'] = $v['User'];
-            $data2['name'] = $v['name'];
-            $data2['sta'] = 1;
-
-            $data22[] = $data2;
-        }
-
-        $res2 = $Model->addAll($data22);
-        if($res2)
-        {
-            $this->ReturnJudge('添加筛选配置数据成功', 'index');
-            exit();
-        }
-        else
-        {
-            $data4['sta'] = 1;
-            $Model->where($where3)->save($data4);
-            $where44['s_tag'] = $max;
-            $Model->where($where44)->delete();
-            $this->ReturnJudge('添加筛选配置数据失败', 'index');
+            $this->ReturnJudge('哈哈', 'index');
             exit();
         }
     }

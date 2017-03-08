@@ -9,9 +9,17 @@
 <body>
     <include file = 'Public/Html/head.html' />
 
-    <!-- 筛选数据 -->
     <div class = 'ExcelFather' id = 'ScreenData'>
-       sssssssss
+        <div class = 'ScreenName'>
+            <div>
+                <a href = '__CONTROLLER__/ScreenData?act=upds'>
+                    <span>修改筛选配置</span>
+                </a>
+            </div>
+            <foreach name = 'screen' item = 'v'>
+                <span>{$v.name}</span>
+            </foreach>
+        </div>
     </div>
 
     <include file = 'Public/Html/foot.html' />

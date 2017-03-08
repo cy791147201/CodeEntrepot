@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Excel操作首页</title>
+<link rel = 'stylesheet' type = 'text/css' href = '__ROOT__/Public/Css/reset.css'>
+<link rel = 'stylesheet' type = 'text/css' href = '__ROOT__/Public/Css/ScreenSet.css'>
+<script src = '__ROOT__/Public/Js/excel.js' type = 'text/javascript' charset = 'utf-8'></script>
+</head> 
+<body>
+    <include file = 'Public/Html/head.html' />
+
+    <!-- 筛选数据 -->
+    <div class = 'ExcelFather' id = 'ScreenData'>
+        <div class = 'tit'>
+            <span>{$sta}&nbsp;&nbsp;筛选数据&nbsp;&nbsp;配置</span>
+        </div>
+        <div class = 'ScreenDataInfo'>
+            <form action = '__CONTROLLER__/DoScreenData?act=upds' method = 'post'>
+                <foreach name = 'data' item = 'v'>
+                    <input type = 'hidden' name = 'shenshuang{$v.s_id}["id"]' value = '{$v.s_id}' />
+                    <div class = 'ScreenDataHandle'>
+                        <div class = 'ScreenDataHandleNotice'>
+                            <span>
+                                <if condition = '$v.s_act eq 1'>
+                                    筛选<strong style = 'color: #FF7256;'>用户</strong>缺失数据
+                                <elseif condition = '$v.s_act eq 2'/>
+                                    筛选<strong style = 'color: #FF7256;'>快递</strong>缺失数据
+                                <elseif condition = '$v.s_act eq 3'/>
+                                    导出问题件
+                                <elseif condition = '$v.s_act eq 4'/>
+                                    更新用户表
+                                </if>
+                            </span>
+                        </div>
+                        <div class = 'ScreenDataHandleReason'>
+                            <span>根据</span>
+                        </div>
+                        <div class = 'ScreenDataHandleUser'>
+                            <span>
+                                <strong style = 'color: red;'>
+                                    <if condition = '$v.s_act eq 2'>
+                                        用户
+                                    <else/>
+                                        快递
+                                    </if>
+                                </strong>表中
+                            </span>
+                        </div>
+                        <!-- 第一列select -->
+                        <div class = 'ScreenDataHandleField'>
+                            <if condition = '$v.s_act eq 2'>
+                                <select name = "shenshuang{$v.s_id}[User]">
+                                    <option value = '{$v.u_val}' selected = ''><span>当前选择----{$v.value2}</span></option>
+                                    <option value = 'shenshuang'><span>空</span></option>
+                                    <foreach name = 'v.UserTemp' item = 'val'>
+                                        <option value = '{$val.line}'><span>{$val.l_val}</span></option>
+                                    </foreach>
+                                </select>
+                            <else />
+                                <select name = "shenshuang{$v.s_id}[Express]">
+                                    <option value = '{$v.e_val}' selected = ''><span>当前选择----{$v.value1}</span></option>
+                                    <option value = 'shenshuang'><span>空</span></option>
+                                    <foreach name = 'v.ExpressTemp' item = 'val'>
+                                        <option value = '{$val.line}'><span>{$val.l_val}</span></option>
+                                    </foreach>
+                                </select>
+                            </if>
+                        </div>
+                        <div class = 'ScreenDataHandleUser'>
+                            <span>
+                                <if condition = '$v.s_act eq 1'>
+                                    <strong style = 'color: #FF7256;'>用户</strong>表中
+                                <elseif condition = '$v.s_act eq 2'/>
+                                    <strong style = 'color: #FF7256;'>快递</strong>表中
+                                </if>
+                            </span>
+                        </div>
+                        <!-- 第二列 -->
+                        <div class = 'ScreenDataHandleField'>
+                            <if condition = '$v.s_act eq 1'>
+                                <select name = "shenshuang{$v.s_id}[User]">
+                                    <option value = '{$v.e_val}' selected = ''><span>当前选择----{$v.value1}</span></option>
+                                    <option value = 'shenshuang'><span>空</span></option>
+                                    <if condition = '$v.s_act eq 1'>
+                                        <foreach name = 'v.UserTemp' item = 'val'>
+                                            <option value = '{$val.line}'><span>{$val.l_val}</span></option>
+                                        </foreach>
+                                    <elseif condition = '$v.s_act eq 2' />
+                                        <foreach name = 'v.ExpressTemp' item = 'val'>
+                                            <option value = '{$val.line}'><span>{$val.l_val}</span></option>
+                                        </foreach>
+                                    </if>
+                                </select>
+                            <elseif condition = '$v.s_act eq 2'/>
+                                <select name = "shenshuang{$v.s_id}[Express]">
+                                    <option value = '{$v.u_val}' selected = ''><span>当前选择----{$v.value2}</span></option>
+                                    <option value = 'shenshuang'><span>空</span></option>
+                                    <if condition = '$v.s_act eq 1'>
+                                        <foreach name = 'v.UserTemp' item = 'val'>
+                                            <option value = '{$val.line}'><span>{$val.l_val}</span></option>
+                                        </foreach>
+                                    <elseif condition = '$v.s_act eq 2' />
+                                        <foreach name = 'v.ExpressTemp' item = 'val'>
+                                            <option value = '{$val.line}'><span>{$val.l_val}</span></option>
+                                        </foreach>
+                                    </if>
+                                </select>
+                            </if>
+                        </div>
+                        <div class = 'ScreenDataHandleScreen'>
+                            <strong style = 'color: red;'>
+                                <if condition = '$v.s_act eq 1'>
+                                    <span>筛选</span>
+                                <elseif condition = '$v.s_act eq 2'/>
+                                    <span>筛选</span>
+                                <elseif condition = '$v.s_act eq 3'/>
+                                    <span>导出</span>
+                                <elseif condition = '$v.s_act eq 4'/>
+                                    <span>更新</span>
+                                </if>
+                            </strong>
+                        </div>
+                        <div class = 'ScreenDataHandleCustom'>
+                            <span><strong style = 'color: red;'>自定义</strong>名称</span>
+                        </div>
+                        <div class = 'ScreenDataHandleName'>
+                            <if condition = '$v.s_act eq 1'>
+                                <input type = 'text' name = "shenshuang{$v.s_id}[name]" value = '{$v.name}' placeholder = '自定义操作名称，尽量短' />
+                                <input type = 'hidden' name = 'shenshuang{$v.s_id}[act]' value = '{$v.s_act}'>
+                            <elseif condition = '$v.s_act eq 2'/>
+                                <input type = 'text' name = "shenshuang{$v.s_id}[name]" value = '{$v.name}' placeholder = '自定义操作名称，尽量短' />
+                                <input type = 'hidden' name = 'shenshuang{$v.s_id}[act]' value = '{$v.s_act}'>
+                            <elseif condition = '$v.s_act eq 3'/>
+                                <input type = 'text' name = "shenshuang{$v.s_id}[name]" value = '{$v.name}' placeholder = '自定义操作名称，尽量短' />
+                                <input type = 'hidden' name = 'shenshuang{$v.s_id}[act]' value = '{$v.s_act}'>
+                            <elseif condition = '$v.s_act eq 4'/>
+                                <input type = 'text' name = "shenshuang{$v.s_id}[name]" value = '{$v.name}' placeholder = '自定义操作名称，尽量短' />
+                                <input type = 'hidden' name = 'shenshuang{$v.s_id}[act]' value = '{$v.s_act}'>
+                            </if>
+                        </div>
+                    </div>
+                </foreach>
+                <input type = 'submit' value = '确认提交' class = 'sub'/>
+            </form>
+        </div>
+    </div>
+
+    <include file = 'Public/Html/foot.html' />
+</body>
+</html>
