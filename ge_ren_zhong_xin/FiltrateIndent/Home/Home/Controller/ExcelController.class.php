@@ -279,6 +279,10 @@ class ExcelController extends BeforeController
 // exit();
         // 调用自己封装的函数，查看两个数组有什么不同
         $diff = $this->ArraYDif($val, $data[1]);
+        // var_dump($val);
+        // var_dump($data[1]);
+        // var_dump($diff);
+        // exit();
         // 模版配置文件与文件标题不同
         if($diff)
         {   
@@ -287,13 +291,14 @@ class ExcelController extends BeforeController
         }
         // 模版配置文件与文件标题相同
         else
-        {
+        {   
             $time = time();
             $data2['d_tag'] = $_SESSION['d_tag'] = $this->CreateDataTag('self_data_tag');
             $data2['w_ad'] = $_SESSION['id'];
             $data2['a_t'] = $time;
-            $data2['s_tag'] = 0;
-            
+
+            $data2['s_tag'] = 1;
+
             $res2 = $TagModel->add($data2);
             if($res2)
             {
@@ -303,48 +308,67 @@ class ExcelController extends BeforeController
                     $this->ReturnJudge('添加数据不能为空', 'index');
                     exit();
                 }
-                // exit();
+           
                 $data22 = array();
                 $data222 = array();
-                // $time = time();
-                // var_dump($data);exit();
-                foreach($data as $k => $v)
+                
+                if($who === 'ExData')
                 {
-                    // foreach($v as $key => $val)
-                    // { 
-                    //     if(!empty($val))
-                    //     {
-                            // $data22['w_ad'] = $_SESSION['id'];
-                            // $data22['a_t'] = $time;
-                            $data22['d_tags'] = $_SESSION['d_tag'];
-                            $data22['l1'] = $v[0];
-                            $data22['l2'] = $v[1];
-                            $data22['l3'] = $v[2];
-                            $data22['l4'] = $v[3];
-                            $data22['l5'] = $v[4];
-                            $data22['l6'] = $v[5];
-                            $data22['l7'] = $v[6];
-                            $data22['l8'] = $v[7];
-                            $data22['l9'] = $v[8];
-                            $data22['l10'] = $v[9];
-                            $data22['l11'] = $v[10];
-                            $data22['l12'] = $v[11];
-                            $data22['l13'] = $v[12];
-                            $data22['l14'] = $v[13];
-                            $data22['l15'] = $v[14];
-                            $data22['l16'] = $v[15];
-                            $data22['l17'] = $v[16];
-                            $data22['l18'] = $v[17];
-                            $data22['l19'] = $v[18];
-                            $data22['l20'] = $v[19];
-                            $data22['l21'] = $v[20];
-                            $data22['l22'] = $v[21];
-                            $data22['l23'] = $v[22];
+                    foreach($data as $k => $v)
+                    {
+                        $data22['d_tags'] = $_SESSION['d_tag'];
+                        $data22['l0'] = isset($v[0]) ? $v[0] : '';
+                        $data22['l1'] = isset($v[1]) ? $v[1] : '';
+                        $data22['l2'] = isset($v[2]) ? $v[2] : '';
+                        $data22['l3'] = isset($v[3]) ? $v[3] : '';
+                        $data22['l4'] = isset($v[4]) ? $v[4] : '';
+                        $data22['l5'] = isset($v[5]) ? $v[5] : '';
+                        $data22['l6'] = isset($v[6]) ? $v[6] : '';
+                        $data22['l7'] = isset($v[7]) ? $v[7] : '';
+                        $data22['l8'] = isset($v[8]) ? $v[8] : '';
+                        $data22['l9'] = isset($v[9]) ? $v[9] : '';
+                        $data22['l10'] = isset($v[10]) ? $v[10] : '';
+                        $data22['l11'] = isset($v[11]) ? $v[11] : '';
+                        $data22['l12'] = isset($v[12]) ? $v[12] : '';
+                        $data22['l13'] = isset($v[13]) ? $v[13] : '';
 
-                            $data222[] = $data22;
-                        // }
-                    // }
+                        $data222[] = $data22;
+                    }    
                 }
+                else if($who === 'MyData')
+                {
+                    foreach($data as $k => $v)
+                    {
+                        $data22['d_tags'] = $_SESSION['d_tag'];
+                        $data22['l0'] = isset($v[0]) ? $v[0] : '';
+                        $data22['l1'] = isset($v[1]) ? $v[1] : '';
+                        $data22['l2'] = isset($v[2]) ? $v[2] : '';
+                        $data22['l3'] = isset($v[3]) ? $v[3] : '';
+                        $data22['l4'] = isset($v[4]) ? $v[4] : '';
+                        $data22['l5'] = isset($v[5]) ? $v[5] : '';
+                        $data22['l6'] = isset($v[6]) ? $v[6] : '';
+                        $data22['l7'] = isset($v[7]) ? $v[7] : '';
+                        $data22['l8'] = isset($v[8]) ? $v[8] : '';
+                        $data22['l9'] = isset($v[9]) ? $v[9] : '';
+                        $data22['l10'] = isset($v[10]) ? $v[10] : '';
+                        $data22['l11'] = isset($v[11]) ? $v[11] : '';
+                        $data22['l12'] = isset($v[12]) ? $v[12] : '';
+                        $data22['l13'] = isset($v[13]) ? $v[13] : '';
+                        $data22['l14'] = isset($v[14]) ? $v[14] : '';
+                        $data22['l15'] = isset($v[15]) ? $v[15] : '';
+                        $data22['l16'] = isset($v[16]) ? $v[16] : '';
+                        $data22['l17'] = isset($v[17]) ? $v[17] : '';
+                        $data22['l18'] = isset($v[18]) ? $v[18] : '';
+                        $data22['l19'] = isset($v[19]) ? $v[19] : '';
+                        $data22['l20'] = isset($v[20]) ? $v[20] : '';
+                        $data22['l21'] = isset($v[21]) ? $v[21] : '';
+                        $data22['l22'] = isset($v[22]) ? $v[22] : '';
+                        $data22['l23'] = isset($v[23]) ? $v[23] : '';
+
+                        $data222[] = $data22;
+                    }
+                }
+
                 $res22 = $DataModel->addALL($data222);
                 if($res22)
                 {
@@ -612,7 +636,7 @@ class ExcelController extends BeforeController
             // echo 3;
             $data1 = $this->GetTempSetting();
 // var_dump($data1);
-            $this->assign('sta', '添加');
+            $this->assign('sta', '当前筛选数据模版为空，请添加');
             $this->assign('data', $data1);
             $this->display('ScreenSet');
         }
@@ -686,6 +710,7 @@ class ExcelController extends BeforeController
 
         // 添加筛选配置表
         // 更新筛选配置表
+        // var_dump($act);exit();
         if($act === 'adds' || $act === 'upds')
         {
             $where1['sta'] = 1;

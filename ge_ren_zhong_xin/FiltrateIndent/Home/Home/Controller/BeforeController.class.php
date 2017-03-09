@@ -4,7 +4,7 @@ use Think\Controller;
 class BeforeController extends Controller 
 {
     // 检查用户是否登陆
-    public function _initialize()
+    protected function _initialize()
     {   
         if(empty($_SESSION['id']) || empty($_SESSION['name']) || empty($_SESSION['sta']) || empty($_SESSION['r_time']) || empty($_SESSION['last_time']) || empty($_SESSION['last_ip']))
         {
@@ -15,7 +15,7 @@ class BeforeController extends Controller
     }
 
     // 返回判断
-    public function ReturnJudge($msg = '', $jump = '')
+    protected function ReturnJudge($msg = '', $jump = '')
     {
         echo '<center>';
         if(empty($jump))
@@ -36,7 +36,7 @@ class BeforeController extends Controller
     }
     
     // php获取ip
-    function GetIp()
+    protected function GetIp()
     {
         global $ip;
         if(getenv("HTTP_CLIENT_IP"))
@@ -59,7 +59,7 @@ class BeforeController extends Controller
     }
 
     // thinkphp导入excel
-    public function ImportExcel($file)
+    protected function ImportExcel($file)
     {
         // 判断文件是什么格式
         $type = pathinfo($file); 
@@ -97,10 +97,11 @@ class BeforeController extends Controller
             } 
         }  
         return $data;
+        // var_dump($data);
     }
 
     // 防止sql注入
-    public function PreventSql($info)
+    protected function PreventSql($info)
     {
         if(is_array($info))
         {
@@ -118,7 +119,7 @@ class BeforeController extends Controller
     }
 
     // 替换字符串
-    public function RePlaceStr($str)
+    private function RePlaceStr($str)
     {
         $str = str_replace('and','',$str);
         $str = str_replace('execute','',$str);
@@ -131,6 +132,7 @@ class BeforeController extends Controller
         $str = str_replace('declare','',$str);
         $str = str_replace('create','',$str);
         $str = str_replace('insert','',$str);
+        // $str = str_replace('add','',$str);
         $str = str_replace('delete','',$str);
         $str = str_replace('update','',$str);
         $str = str_replace('select','',$str);
@@ -152,7 +154,7 @@ class BeforeController extends Controller
     * @param $TableName : 想要更新的表明
     * @param $SaveWhere : 返回更新成功后的主键ID数组
     * */
-    public function SaveAll($SaveWhere, &$SaveData, $TableName)
+    protected function SaveAll($SaveWhere, &$SaveData, $TableName)
     {
         if($SaveWhere == null || $TableName == null)
         {
@@ -217,11 +219,13 @@ class BeforeController extends Controller
 
     // 封装自己比较数组不同的函数
     // 返回数组中不同的函数
-    public function ArraYDif($arr1, $arr2) 
+    protected function ArraYDif($arr1, $arr2) 
     {
         $ArrTemp1 = $arr1;
         $ArrTemp2 = $arr2;
-        
+// var_dump($ArrTemp1);       
+// var_dump($ArrTemp2);
+// exit();       
         // 将数组的值作为键
         $ArrTemp2 = array_flip($ArrTemp2);
         foreach($ArrTemp1 as $key => $item) 
@@ -251,7 +255,7 @@ class BeforeController extends Controller
     }
 
     // 生成数据唯一标志
-    public function CreateDataTag($table)
+    protected function CreateDataTag($table)
     {
         $Model = M($table);
         $tag = $_SESSION['id']. '_' .time();
