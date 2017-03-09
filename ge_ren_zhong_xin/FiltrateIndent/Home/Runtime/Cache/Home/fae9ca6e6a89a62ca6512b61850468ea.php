@@ -47,7 +47,9 @@
                     <span>修改筛选配置</span>
                 </a>
             </div>
-            <?php if(is_array($screen)): foreach($screen as $key=>$v): ?><span><?php echo ($v["name"]); ?></span><?php endforeach; endif; ?>
+            <?php if(is_array($screen)): foreach($screen as $key=>$v): ?><a href = '/ge_ren_zhong_xin/FiltrateIndent/index.php/?act=<?php echo ($v["s_act"]); ?>'>
+                    <span><?php echo ($v["name"]); ?></span>
+                </a><?php endforeach; endif; ?>
         </div>
     </div>
 

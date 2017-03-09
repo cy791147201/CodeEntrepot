@@ -17,7 +17,9 @@
                 </a>
             </div>
             <foreach name = 'screen' item = 'v'>
-                <span>{$v.name}</span>
+                <a href = '__APP__/?act={$v.s_act}'>
+                    <span>{$v.name}</span>
+                </a>
             </foreach>
         </div>
     </div>
