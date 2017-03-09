@@ -40,6 +40,8 @@
                                 <strong style = 'color: red;'>
                                     <if condition = '$v.s_act eq 2'>
                                         用户
+                                    <elseif condition = '$v.s_act eq 3'/>
+                                        当
                                     <else/>
                                         快递
                                     </if>
@@ -72,6 +74,8 @@
                                     <strong style = 'color: #FF7256;'>用户</strong>表中
                                 <elseif condition = '$v.s_act eq 2'/>
                                     <strong style = 'color: #FF7256;'>快递</strong>表中
+                                <elseif condition = '$v.s_act eq 3'/>
+                                    <span>的值为</span>
                                 </if>
                             </span>
                         </div>
@@ -105,6 +109,8 @@
                                         </foreach>
                                     </if>
                                 </select>
+                            <elseif condition = '$v.s_act eq 3'/>
+                                <input type = 'text' name = 'shenshuang3[User]' placeholder = '空的话使用空字表示，多个使用,隔开' value = '{$v.u_val}' />
                             </if>
                         </div>
                         <div class = 'ScreenDataHandleScreen'>
@@ -114,7 +120,7 @@
                                 <elseif condition = '$v.s_act eq 2'/>
                                     <span>筛选</span>
                                 <elseif condition = '$v.s_act eq 3'/>
-                                    <span>导出</span>
+                                    <span>为问题件</span>
                                 <elseif condition = '$v.s_act eq 4'/>
                                     <span>更新</span>
                                 </if>

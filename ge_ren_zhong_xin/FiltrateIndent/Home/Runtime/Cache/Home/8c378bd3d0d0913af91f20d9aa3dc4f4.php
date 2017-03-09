@@ -67,6 +67,8 @@
                             <span>
                                 <strong style = 'color: red;'>
                                     <?php if($v["s_act"] == 2): ?>用户
+                                    <?php elseif($v["s_act"] == 3): ?>
+                                        当
                                     <?php else: ?>
                                         快递<?php endif; ?>
                                 </strong>表中
@@ -90,7 +92,9 @@
                             <span>
                                 <?php if($v["s_act"] == 1): ?><strong style = 'color: #FF7256;'>用户</strong>表中
                                 <?php elseif($v["s_act"] == 2): ?>
-                                    <strong style = 'color: #FF7256;'>快递</strong>表中<?php endif; ?>
+                                    <strong style = 'color: #FF7256;'>快递</strong>表中
+                                <?php elseif($v["s_act"] == 3): ?>
+                                    <span>的值为</span><?php endif; ?>
                             </span>
                         </div>
                         <!-- 第二列 -->
@@ -109,7 +113,9 @@
                                     <?php if($v["s_act"] == 1): if(is_array($v["UserTemp"])): foreach($v["UserTemp"] as $key=>$val): ?><option value = '<?php echo ($val["line"]); ?>'><span><?php echo ($val["l_val"]); ?></span></option><?php endforeach; endif; ?>
                                     <?php elseif($v["s_act"] == 2): ?>
                                         <?php if(is_array($v["ExpressTemp"])): foreach($v["ExpressTemp"] as $key=>$val): ?><option value = '<?php echo ($val["line"]); ?>'><span><?php echo ($val["l_val"]); ?></span></option><?php endforeach; endif; endif; ?>
-                                </select><?php endif; ?>
+                                </select>
+                            <?php elseif($v["s_act"] == 3): ?>
+                                <input type = 'text' name = 'shenshuang3[User]' placeholder = '空的话使用空字表示，多个使用,隔开' value = '<?php echo ($v["u_val"]); ?>' /><?php endif; ?>
                         </div>
                         <div class = 'ScreenDataHandleScreen'>
                             <strong style = 'color: red;'>
@@ -117,7 +123,7 @@
                                 <?php elseif($v["s_act"] == 2): ?>
                                     <span>筛选</span>
                                 <?php elseif($v["s_act"] == 3): ?>
-                                    <span>导出</span>
+                                    <span>为问题件</span>
                                 <?php elseif($v["s_act"] == 4): ?>
                                     <span>更新</span><?php endif; ?>
                             </strong>

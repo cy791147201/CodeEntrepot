@@ -1,4 +1,4 @@
-.ScreenDataHandleField select, .ScreenDataHandleName input, #ScreenData, .tit, .sub, .ScreenDataHandle{
+.ScreenDataHandleField select, .ScreenDataHandleName input, #ScreenData, .tit, .sub, .ScreenDataHandle, .ScreenDataHandleField input{
     /*border: #D0D0D0 1px solid;*/
     /*背景阴影*/
     filter: progid:DXImageTransform.Microsoft.Shadow(color=#909090,direction=120,strength=3);/*ie*/
@@ -87,7 +87,7 @@
     width: 20%;
     /*background: red;*/
 }
-.ScreenDataHandleField select{
+.ScreenDataHandleField select, .ScreenDataHandleField input{
     width: 90%;
     height: 30px;
 }

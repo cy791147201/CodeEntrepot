@@ -126,7 +126,7 @@
                         <span>导出问题件</span>
                     </div>
                     <div class = 'ScreenDataHandleReason'>
-                        <span>根据</span>
+                        <span>当</span>
                     </div>
                     <div class = 'ScreenDataHandleUser'>
                         <span><strong style = 'color: red;'>快递</strong>表中</span>
@@ -138,11 +138,13 @@
                         </select>
                     </div>
                     <div class = 'ScreenDataHandleUser'>
+                        <span>的值为</span>
                     </div>
                     <div class = 'ScreenDataHandleField'>
+                        <input type = 'text' name = 'shenshuang3[User]' placeholder = '空的话使用空字表示，多个使用,隔开' />
                     </div>
                     <div class = 'ScreenDataHandleScreen'>
-                        <span>导出</span>
+                        <span>为问题件</span>
                     </div>
                     <div class = 'ScreenDataHandleCustom'>
                         <span><strong style = 'color: red;'>自定义</strong>名称</span>
