@@ -100,6 +100,46 @@ class BeforeController extends Controller
         // var_dump($data);
     }
 
+    // thinkphp导出excel
+    protected function ExportExcel($data, $FileName = 'simple')
+    {
+        ini_set('max_execution_time', '0');
+        Vendor('PHPExcel.PHPExcel');
+
+        // 新建对象
+        // 记得加 \ 以免找不到excel类
+        $PhpExcel = new \PHPExcel();
+
+        // 生成excel
+        $PhpExcel->getProperties()
+                 ->setCreator("Maarten Balliauw")
+                 ->setLastModifiedBy("Maarten Balliauw")
+                 ->setTitle("Office 2007 XLSX Test Document")
+                 ->setSubject("Office 2007 XLSX Test Document")
+                 ->setDescription("Test document for Office 2007 XLSX, generated using PHP classes.")
+                 ->setKeywords("office 2007 openxml php")
+                 ->setCategory("Test result file");
+        $PhpExcel->getActiveSheet()->fromArray($data);
+        $PhpExcel->getActiveSheet()->setTitle('Sheet1');
+        $PhpExcel->setActiveSheetIndex(0);
+
+        // 输出文件
+        header('Content-Type: application/vnd.ms-excel');
+        header("Content-Disposition: attachment;FileName=$FileName");
+        header('Cache-Control: max-age=0');
+        header('Cache-Control: max-age=1');
+        header ('Expires: Mon, 26 Jul 1997 05:00:00 GMT');
+        header ('Last-Modified: '.gmdate('D, d M Y H:i:s').' GMT');
+        header ('Cache-Control: cache, must-revalidate');
+        header ('Pragma: public');
+
+        // 记得加 \ 以免找不到文件
+        $objwriter = \PHPExcel_IOFactory::createWriter($PhpExcel, 'Excel5');
+        $objwriter->save('php://output');
+
+        exit;
+    }
+
     // 防止sql注入
     protected function PreventSql($info)
     {
@@ -263,4 +303,32 @@ class BeforeController extends Controller
 
         return $Model->query($sql)?$this->CreateDataTag():$tag;
     }   
+
+    protected function ArraySort($arr, $keys, $type = 'desc') 
+    {
+        $keysvalue = $new_array = array();
+
+        foreach($arr as $k => $v) 
+        {
+            $keysvalue[$k] = $v[$keys];
+        }
+
+        if($type == 'asc') 
+        {
+            asort($keysvalue);
+        } 
+        else 
+        {
+            arsort($keysvalue);
+        }
+
+        reset($keysvalue);
+
+        foreach($keysvalue as $k => $v) 
+        {
+            $new_array[$k] = $arr[$k];
+        }
+        
+        return $new_array;
+    }
 }

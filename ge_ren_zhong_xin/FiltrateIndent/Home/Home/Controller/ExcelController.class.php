@@ -691,7 +691,7 @@ class ExcelController extends BeforeController
         $act = I('get.act');
         $info = $this->PreventSql($info);
         $act = $this->PreventSql($act);
-
+// var_dump($info);exit();
         // 删除空数据
         foreach($info as $k => $v)
         {
@@ -720,6 +720,7 @@ class ExcelController extends BeforeController
             // 筛选配置表中存在数据
             if($res1)
             {
+                // echo 1;exit();
                 $where3['s_tag'] = $_SESSION['s_tag'] = $res1;
                 $data3['sta'] = 0;
 
@@ -743,6 +744,7 @@ class ExcelController extends BeforeController
             $time = time();
             $data2 = array();
             $data22 = array();
+
             foreach($info as $k => $v)
             {
                 if($v['Express'] === 'shenshuang')

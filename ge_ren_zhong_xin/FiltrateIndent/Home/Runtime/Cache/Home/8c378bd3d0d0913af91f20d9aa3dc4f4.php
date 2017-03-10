@@ -115,7 +115,7 @@
                                         <?php if(is_array($v["ExpressTemp"])): foreach($v["ExpressTemp"] as $key=>$val): ?><option value = '<?php echo ($val["line"]); ?>'><span><?php echo ($val["l_val"]); ?></span></option><?php endforeach; endif; endif; ?>
                                 </select>
                             <?php elseif($v["s_act"] == 3): ?>
-                                <input type = 'text' name = 'shenshuang3[User]' placeholder = '空的话使用空字表示，多个使用,隔开' value = '<?php echo ($v["u_val"]); ?>' /><?php endif; ?>
+                                <input type = 'text' name = 'shenshuang<?php echo ($v["s_id"]); ?>[User]' placeholder = '空的话使用空字表示，多个使用,隔开' value = '<?php echo ($v["u_val"]); ?>' /><?php endif; ?>
                         </div>
                         <div class = 'ScreenDataHandleScreen'>
                             <strong style = 'color: red;'>
