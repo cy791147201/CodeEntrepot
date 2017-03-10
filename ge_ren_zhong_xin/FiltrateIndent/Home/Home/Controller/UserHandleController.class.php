@@ -12,17 +12,17 @@ class UserHandleController extends BeforeController
         // 导出用户缺失的数据
         if($act === '1')
         {
-            $this->DeficiencyUser();
+            $this->DeficiencyData($act);
         }
         // 导出快递缺失的数据
         else if($act === '2')
         {
-            $this->DeficiencyExpress();
+            $this->DeficiencyData($act);
         }
         // 导出问题件
         else if($act === '3')
         {
-            $this->ProblemExpress();
+            $this->ProblemExpress($act);
         }
         // 更新用户表
         else if($act === '4')
@@ -41,44 +41,142 @@ class UserHandleController extends BeforeController
         }
     }
 
-    // 导出用户缺失的数据
-    private function DeficiencyUser()
+    // 导出缺失的数据
+    private function DeficiencyData($act = '')
     {
-        echo 1;
-    }
+        if(empty($act))
+        {
+            $this->ReturnJudge('嘿嘿', 'Excel/index');
+            exit();
+        }
 
-    // 导出快递缺失的数据
-    private function DeficiencyExpress()
-    {
-        echo 2;
+        $where1['sta'] = 1;
+        $Model1 = M('Screen');
+        $res1 = $Model1->where($where1)->max('s_tag');
+        $res11 = $Model1->max('s_tag');
+
+        if($res1 === $res11)
+        {
+            $where11['s_act'] = $act;
+        
+            $where11['s_tag'] = $res1;
+            $res11 = $Model1->where($where11)->getField('e_val, u_val, name');
+            if(!$res11)
+            {
+                $this->ReturnJudge('不存在该筛选', 'Excel/index');
+                exit();
+            }
+            else
+            {
+                $data2 = array();
+                foreach($res11 as $v)
+                {
+                    $data = $v;
+                }
+                $FileName = $data['name'];
+// var_dump($data);
+                $where2['w_ad'] = $_SESSION['id'];
+                $where2['s_tag'] = array('neq', $act + 1);
+   
+                $Model21 = M('self_data_tag');
+                $Model22 = M('yuantong_data_tag');
+
+                $data21 = 'l' . ($data['u_val'] - 1);
+                $data22 = 'l' . ($data['e_val'] - 1);
+
+                $Model23 = M('self_data');
+                $Model24 = M('yuantong_data');
+
+                $res21 = $Model21->where($where2)->getField('d_tag', true);
+                $res22 = $Model22->where($where2)->getField('d_tag', true);
+                // var_dump($Model2->_sql());
+                // var_dump($res21);
+                // var_dump($res22);
+                // exit();
+                if($res21 && $res22)
+                {   
+                    $where21['d_tags'] = array('in', implode(',', $res21));
+                    $where22['d_tags'] = array('in', implode(',', $res22));
+                    
+                    $res23 = $Model23->where($where21)->getField($data21, true);
+                    $res24 = $Model24->where($where22)->getField($data22, true);
+                    // var_dump($Model22->_sql());
+                    // var_dump($res23);
+                    // var_dump($res24);
+                    // exit();
+                    if($res23 && $res24)
+                    {   
+                        // 用户缺失的
+                        if($act === '1')
+                        {
+                            var_dump($res23);
+                            var_dump($res24);
+                        }
+                        // 快递缺失的
+                        else if($act === '2')
+                        {
+                            var_dump($res24);
+                            var_dump($res23);
+                        }
+                        else
+                        {
+                            $this->ReturnJudge('哎呦喂', 'Excel/index');
+                            exit();
+                        }
+                    }
+                    else
+                    {
+                        $this->ReturnJudge('没有找到符合条件数据', 'Excel/index');
+                        exit();
+                    }
+                }
+                else
+                {
+                    $this->ReturnJudge('没有找到符合条件的数据', 'Excel/index');
+                    exit();
+                }
+            }
+        }
+        else
+        {
+            $this->ReturnJudge('筛选配置表出现未知错误', 'Excel/index');
+            exit();
+        }
     }
 
     // 导出问题件
-    private function ProblemExpress()
+    private function ProblemExpress($act = '')
     {
+        if(empty($act))
+        {
+            $this->ReturnJudge('嘿嘿', 'Excel/index');
+            exit();
+        }
         // 检查筛选配置表是否出错
         $where1['sta'] = 1;
-        $where1['s_act'] = '3';
+        $where1['s_act'] = $act;
 
         $Model1 = M('Screen');
         $MaxTag1 = $Model1->max('s_tag');
-
-        $res1 = $Model1->where($where1)->getField('sta, s_tag, e_val, u_val');
-
+        $res1 = $Model1->where($where1)->getField('sta, s_tag, e_val, u_val, name');
+        // 两种方法查询max_tag，如果不一样则出错，直接退出
         if(!$MaxTag1 || !$res1)
         {
             $this->ReturnJudge('未知筛选配置表错误', 'Excel/ScreenData?act=screen');
             exit();
         }
-// echo 1;exit();
+        
+        // 设置到处文件名为设置的筛选名称
+        $FileName = $res1[1]['name'];
+
         // 筛选配置表没有问题
         // 获取问题件标志
         if($MaxTag1 === $res1[1]['s_tag'])
         {
-// echo 2;exit();
             // 问题件标志
             $ScreenRule = explode(',', str_replace(',', ',', str_replace('，', ',', $res1[1]['u_val'])));
 
+            // 如果筛选条件中有空字的话，单独查询字段为空项
             $null = false;
             foreach($ScreenRule as $k => $v)
             {
@@ -97,16 +195,13 @@ class UserHandleController extends BeforeController
                 }
             }
 
-// echo 4;exit();
             // 获取快递配置表
             $where2['line'] = $res1[1]['e_val'];
             $where2['sta'] = 1;
-
             $Model2 = M('yuantong_temp');
             $MaxTag2 = $Model2->max('tag');
-
             $res2 = $Model2->where($where2)->getField('tag', true);
-         
+            // 比较两种方式查询的max_tag是否一致，不一致则快递模版存在错误，直接退出
             if(!$MaxTag2 || !$res2)
             {
                 $this->ReturnJudge('快递模版未知错误', 'Excel/ScreenData?act=screen');
@@ -117,12 +212,11 @@ class UserHandleController extends BeforeController
             if($MaxTag2 === $res2[0]['tag'])
             {
                 // 筛选快递表问题件
-                // 获取快递未处理数据
+                // 获取当前用户快递未处理数据
                 $where3['s_tag'] = array('neq', 4);
                 $where3['w_ad'] = $_SESSION['id'];
                 $Model3 = M('yuantong_data_tag');
                 $res3 = $Model3->where($where3)->getField('d_tag', true);
-// var_dump($Model3->_sql());exit();
                 if(!$res3)
                 {
                     $this->ReturnJudge('不存在符合条件的数据', 'Excel/ScreenData?act=screen');
@@ -133,17 +227,15 @@ class UserHandleController extends BeforeController
                 $line = $where2['line'] - 1;
                 $where4['l' . $line] = array('in', implode(',', $ScreenRule));
                 $where44['d_tags'] = $where4['d_tags'] = array('in', implode(',', $res3));
-                
                 $Model4 = M('yuantong_data');
 
+                // 单独处理筛选条件存在空字的
                 if($null === true)
                 {
-                    // echo 1;
                     $where44['l' . $line] = ' ';
                     $res44 = $Model4->where($where44)->getField('d_id, l0, l1, l2, l3, l4, l5, l6, l7, l8, l9, l10, l11, l12, l13', true);
                 }
                 $res4 = $Model4->where($where4)->getField('d_id, l0, l1, l2, l3, l4, l5, l6, l7, l8, l9, l10, l11, l12, l13', true);
-// var_dump($Model4->_sql());
 
                 if(!$res4)
                 {
@@ -152,14 +244,14 @@ class UserHandleController extends BeforeController
                 }
                 else
                 {
-// var_dump($res4);
-// var_dump($res44);
+                    // 处理数据格式
                     foreach($res4 as $k => $v)
                     {
                         unset($v['d_id']);
                         $res4[$k] = array_values($v);
                     }
 
+                    // 存在单独处理筛选条件空字
                     if(!empty($res44))
                     {
                         foreach($res44 as $k => $v)
@@ -168,8 +260,8 @@ class UserHandleController extends BeforeController
                             $res44[$k] = array_values($v);
                         }
                         $data444 = array_merge($res4, $res44);
-                        // echo  1;
                     }
+                    // 不存在筛选条件空字
                     else
                     {
                         $data444 = $res4;
@@ -177,22 +269,22 @@ class UserHandleController extends BeforeController
 
                     $where22['sta'] = 1;
                     $res22 = $Model2->where($where22)->getField('line, l_val');
-
                     $res22 = array_values($res22);
 
+                    // 合并数据
                     $res222[] = $res22;
                     $data4444 = array_merge($res222, $data444);
 
+                    // 更新快递模版
                     $time = time();
                     $where33['d_tag'] = array('in', implode(',', $res3));
                     $data3['s_tag'] = 4;
                     $data3['w_s'] = $_SESSION['id'];
                     $data3['s_t'] = $time;
                     $res33 = $Model3->where($where33)->save($data3);
-                    // var_dump($res33);
-            // exit();
-                    // exit();
-                    $this->ExportExcel($data4444, '导出问题件');
+
+                    // 导出符合条件的excel
+                    $this->ExportExcel($data4444, $FileName);
                 }
             }
             else
