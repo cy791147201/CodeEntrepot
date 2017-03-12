@@ -33,15 +33,19 @@
                             </span>
                         </div>
                         <div class = 'ScreenDataHandleReason'>
-                            <span>根据</span>
+                            <span>
+                                <if condition = '$v.s_act eq 3'>
+                                    当
+                                <else />
+                                    根据
+                                </if>
+                            </span>
                         </div>
                         <div class = 'ScreenDataHandleUser'>
                             <span>
                                 <strong style = 'color: red;'>
                                     <if condition = '$v.s_act eq 2'>
                                         用户
-                                    <elseif condition = '$v.s_act eq 3'/>
-                                        当
                                     <else/>
                                         快递
                                     </if>

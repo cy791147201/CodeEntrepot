@@ -61,14 +61,16 @@
                             </span>
                         </div>
                         <div class = 'ScreenDataHandleReason'>
-                            <span>根据</span>
+                            <span>
+                                <?php if($v["s_act"] == 3): ?>当
+                                <?php else: ?>
+                                    根据<?php endif; ?>
+                            </span>
                         </div>
                         <div class = 'ScreenDataHandleUser'>
                             <span>
                                 <strong style = 'color: red;'>
                                     <?php if($v["s_act"] == 2): ?>用户
-                                    <?php elseif($v["s_act"] == 3): ?>
-                                        当
                                     <?php else: ?>
                                         快递<?php endif; ?>
                                 </strong>表中

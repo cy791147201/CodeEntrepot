@@ -196,11 +196,14 @@ class BeforeController extends Controller
     * */
     protected function SaveAll($SaveWhere, &$SaveData, $TableName)
     {
+        // var_dump($SaveWhere);
+        // var_dump($SaveData);
+        // var_dump($TableName);
+        // exit();
         if($SaveWhere == null || $TableName == null)
         {
             return false;
         }
-        
         //获取更新的主键id名称
         $key = array_keys($SaveWhere)[0];
         //获取更新列表的长度
@@ -216,14 +219,13 @@ class BeforeController extends Controller
         {
             //预处理sql语句
             $isRight = $model->where($key.'='.$SaveWhere[$key][$i])->save($SaveData[$i]);
-            // var_dump($model->_sql());
+  
             if($isRight == 0)
             {
                 //将更新失败的记录下来
                 $error[] = $i;
                 $flag = false;
             }
-            //$flag=$flag&&$isRight;
         }
 
         if($flag)
@@ -263,9 +265,7 @@ class BeforeController extends Controller
     {
         $ArrTemp1 = $arr1;
         $ArrTemp2 = $arr2;
-// var_dump($ArrTemp1);       
-// var_dump($ArrTemp2);
-// exit();       
+
         // 将数组的值作为键
         $ArrTemp2 = array_flip($ArrTemp2);
         foreach($ArrTemp1 as $key => $item) 
