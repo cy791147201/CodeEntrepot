@@ -5,29 +5,33 @@ class HandleController extends BeforeController
 {
     public function HandleHome()
     {
-        $this->display();
+        // $this->display();
+        $this->CheckAdmin('HandleHome', 'HandleHome1');
     }
 
     public function index()
     {
-        $where['id'] = $_SESSION['id'];
-        $where['jurisdiction'] = $_SESSION['jurisdiction'];
-        $Admin = M('Admin');
-        $res = $Admin->where($where)->find();
-        if($res && $where['jurisdiction'] !== 'admin')
-        {
-            $this->display('index1');
-        }
-        else if($res && $res['jurisdiction'] === 'admin')
-        {   
-            $this->assign('OneInfoDisplay', 'none');
-            $this->display('index');
-        }
-        else
-        {
-            $_SESSION = array();
-        }
+        // $where['id'] = $_SESSION['id'];
+        // $where['jurisdiction'] = $_SESSION['jurisdiction'];
+        // $Admin = M('Admin');
+        // $res = $Admin->where($where)->find();
+        // if($res && $where['jurisdiction'] !== 'admin')
+        // {
+        //     $this->display('index1');
+        // }
+        // else if($res && $res['jurisdiction'] === 'admin')
+        // {   
+        //     $this->assign('OneInfoDisplay', 'none');
+        //     $this->display('index');
+        // }
+        // else
+        // {
+        //     $_SESSION = array();
+        // }
+
+        $this->CheckAdmin('index', 'index1');
     }
+
     // 管理员操作
     public function HandleAdmin()
     {

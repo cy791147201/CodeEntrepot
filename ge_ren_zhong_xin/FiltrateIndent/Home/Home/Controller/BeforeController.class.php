@@ -6,12 +6,37 @@ class BeforeController extends Controller
     // 检查用户是否登陆
     protected function _initialize()
     {   
-        if(empty($_SESSION['id']) || empty($_SESSION['name']) || empty($_SESSION['sta']) || empty($_SESSION['r_time']) || empty($_SESSION['last_time']) || empty($_SESSION['last_ip']))
+        if(empty($_SESSION['id']) || empty($_SESSION['name']) || empty($_SESSION['sta']) || empty($_SESSION['r_time']) || empty($_SESSION['last_time']) || empty($_SESSION['last_ip']) || $_SESSION['CheckName'] !== md5($_SESSION['name'] . 'shenshuang'))
         {
             echo '<center>';
             $this->redirect('Index/index', null, 3, '请重新登陆');
             echo '</center>';
-        }  
+        }
+    }
+
+    // 检查权限
+    protected function CheckAdmin($jump1, $jump2)
+    {
+        $CheckJurisdiction = $_SESSION['CheckJurisdiction'];
+        $Admin = md5($_SESSION['jurisdiction'] . 'shenshuang');
+        if($CheckJurisdiction !== $Admin)
+        {   
+            $_SESSION = array();
+        }
+        else
+        {
+            if($_SESSION['jurisdiction'] === 'admin')
+            {
+                // echo 1;
+                // $this->assign('OneInfoDisplay', 'none');
+                $this->display($jump1);
+            }
+            else
+            {
+                // echo 2;
+                $this->display($jump2);
+            }
+        }
     }
 
     // 返回判断

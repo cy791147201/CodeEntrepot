@@ -21655,3 +21655,803 @@ SQL: SELECT MAX(tag) AS tp_max FROM `self_temp` WHERE `sta` = 1 LIMIT 1   [ RunT
 SQL: SELECT MAX(tag) AS tp_max FROM `self_temp` LIMIT 1   [ RunTime:0.0000s ]
 SQL: SELECT `id`,`line`,`l_val` FROM `self_temp` WHERE `tag` = 1  [ RunTime:0.0000s ]
 
+[ 2017-03-12T21:36:25+08:00 ] 127.0.0.1 /ge_ren_zhong_xin/FiltrateIndent/index.php
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-03-12T21:36:29+08:00 ] 127.0.0.1 /ge_ren_zhong_xin/FiltrateIndent/index.php/Home/Index/CheckLogin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0120s ]
+SQL: SELECT * FROM `admin` WHERE `u_name` = 'shenshuang' AND `u_pwd` = 'a0d0a782871ffa5f8fdb5baab61e29a8' AND `sta` = 1 LIMIT 1   [ RunTime:0.0030s ]
+NOTIC: [8] Undefined index: save C:\myself\code\www\ge_ren_zhong_xin\FiltrateIndent\Home\Home\Controller\IndexController.class.php 第 42 行.
+NOTIC: [8] Undefined index: save C:\myself\code\www\ge_ren_zhong_xin\FiltrateIndent\Home\Home\Controller\IndexController.class.php 第 47 行.
+SQL: UPDATE `admin` SET `l_time`='1489325789',`l_ip`='127.0.0.1' WHERE `u_name` = 'shenshuang' AND `u_pwd` = 'a0d0a782871ffa5f8fdb5baab61e29a8' AND `sta` = 1 [ RunTime:0.0020s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-03-12T21:36:31+08:00 ] 127.0.0.1 /ge_ren_zhong_xin/FiltrateIndent/index.php/Home/Handle/HandleHome.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-03-12T21:36:33+08:00 ] 127.0.0.1 /ge_ren_zhong_xin/FiltrateIndent/index.php/Home/Handle/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `admin` WHERE `jurisdiction` = 'admin' LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: OneInfo C:\myself\code\www\ge_ren_zhong_xin\FiltrateIndent\Home\Runtime\Cache\Home\c68e3a4c3693bbaf45ce9ec4a5d45a0a.php 第 189 行.
+NOTIC: [8] Undefined variable: OneInfo C:\myself\code\www\ge_ren_zhong_xin\FiltrateIndent\Home\Runtime\Cache\Home\c68e3a4c3693bbaf45ce9ec4a5d45a0a.php 第 192 行.
+NOTIC: [8] Undefined variable: OneInfo C:\myself\code\www\ge_ren_zhong_xin\FiltrateIndent\Home\Runtime\Cache\Home\c68e3a4c3693bbaf45ce9ec4a5d45a0a.php 第 195 行.
+NOTIC: [8] Undefined variable: OneInfo C:\myself\code\www\ge_ren_zhong_xin\FiltrateIndent\Home\Runtime\Cache\Home\c68e3a4c3693bbaf45ce9ec4a5d45a0a.php 第 196 行.
+NOTIC: [8] Undefined variable: OneInfo C:\myself\code\www\ge_ren_zhong_xin\FiltrateIndent\Home\Runtime\Cache\Home\c68e3a4c3693bbaf45ce9ec4a5d45a0a.php 第 200 行.
+NOTIC: [8] Undefined variable: OneInfo C:\myself\code\www\ge_ren_zhong_xin\FiltrateIndent\Home\Runtime\Cache\Home\c68e3a4c3693bbaf45ce9ec4a5d45a0a.php 第 203 行.
+NOTIC: [8] Undefined variable: OneInfo C:\myself\code\www\ge_ren_zhong_xin\FiltrateIndent\Home\Runtime\Cache\Home\c68e3a4c3693bbaf45ce9ec4a5d45a0a.php 第 206 行.
+NOTIC: [8] Undefined variable: OneInfo C:\myself\code\www\ge_ren_zhong_xin\FiltrateIndent\Home\Runtime\Cache\Home\c68e3a4c3693bbaf45ce9ec4a5d45a0a.php 第 209 行.
+NOTIC: [8] Use of undefined constant admin - assumed 'admin' C:\myself\code\www\ge_ren_zhong_xin\FiltrateIndent\Home\Runtime\Cache\Home\c68e3a4c3693bbaf45ce9ec4a5d45a0a.php 第 209 行.
+NOTIC: [8] Undefined variable: OneInfo C:\myself\code\www\ge_ren_zhong_xin\FiltrateIndent\Home\Runtime\Cache\Home\c68e3a4c3693bbaf45ce9ec4a5d45a0a.php 第 210 行.
+NOTIC: [8] Use of undefined constant user - assumed 'user' C:\myself\code\www\ge_ren_zhong_xin\FiltrateIndent\Home\Runtime\Cache\Home\c68e3a4c3693bbaf45ce9ec4a5d45a0a.php 第 210 行.
+NOTIC: [8] Undefined variable: OneInfo C:\myself\code\www\ge_ren_zhong_xin\FiltrateIndent\Home\Runtime\Cache\Home\c68e3a4c3693bbaf45ce9ec4a5d45a0a.php 第 214 行.
+NOTIC: [8] Undefined variable: OneInfo C:\myself\code\www\ge_ren_zhong_xin\FiltrateIndent\Home\Runtime\Cache\Home\c68e3a4c3693bbaf45ce9ec4a5d45a0a.php 第 217 行.
+NOTIC: [8] Undefined variable: ListInfoDisplay C:\myself\code\www\ge_ren_zhong_xin\FiltrateIndent\Home\Runtime\Cache\Home\c68e3a4c3693bbaf45ce9ec4a5d45a0a.php 第 224 行.
+NOTIC: [8] Undefined variable: ListInfo C:\myself\code\www\ge_ren_zhong_xin\FiltrateIndent\Home\Runtime\Cache\Home\c68e3a4c3693bbaf45ce9ec4a5d45a0a.php 第 267 行.
+NOTIC: [8] Undefined variable: page C:\myself\code\www\ge_ren_zhong_xin\FiltrateIndent\Home\Runtime\Cache\Home\c68e3a4c3693bbaf45ce9ec4a5d45a0a.php 第 338 行.
+NOTIC: [8] Undefined variable: AdminListUpdOneDisplay C:\myself\code\www\ge_ren_zhong_xin\FiltrateIndent\Home\Runtime\Cache\Home\c68e3a4c3693bbaf45ce9ec4a5d45a0a.php 第 345 行.
+NOTIC: [8] Undefined variable: UpdOneInfo C:\myself\code\www\ge_ren_zhong_xin\FiltrateIndent\Home\Runtime\Cache\Home\c68e3a4c3693bbaf45ce9ec4a5d45a0a.php 第 360 行.
+NOTIC: [8] Undefined variable: UpdOneInfo C:\myself\code\www\ge_ren_zhong_xin\FiltrateIndent\Home\Runtime\Cache\Home\c68e3a4c3693bbaf45ce9ec4a5d45a0a.php 第 361 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-03-12T21:36:34+08:00 ] 127.0.0.1 /ge_ren_zhong_xin/FiltrateIndent/index.php/Home/Excel/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `admin` WHERE `jurisdiction` = 'admin' LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-03-12T21:36:42+08:00 ] 127.0.0.1 /ge_ren_zhong_xin/FiltrateIndent/index.php/Home/Excel/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `admin` WHERE `jurisdiction` = 'admin' LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-03-12T21:36:43+08:00 ] 127.0.0.1 /ge_ren_zhong_xin/FiltrateIndent/index.php/Home/Excel/ScreenData?act=screen
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `screen` [ RunTime:0.0070s ]
+SQL: SELECT `s_id`,`s_act`,`e_val`,`u_val`,`name` FROM `screen` WHERE `sta` = 1  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-03-12T21:36:44+08:00 ] 127.0.0.1 /ge_ren_zhong_xin/FiltrateIndent/index.php/Home/Excel/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `admin` WHERE `jurisdiction` = 'admin' LIMIT 1   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-03-12T21:36:49+08:00 ] 127.0.0.1 /ge_ren_zhong_xin/FiltrateIndent/index.php/Home/Excel/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `admin` WHERE `jurisdiction` = 'admin' LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-03-12T21:36:53+08:00 ] 127.0.0.1 /ge_ren_zhong_xin/FiltrateIndent/index.php/Home/Excel/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `admin` WHERE `jurisdiction` = 'admin' LIMIT 1   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-03-12T21:36:53+08:00 ] 127.0.0.1 /ge_ren_zhong_xin/FiltrateIndent/index.php/Home/Excel/ScreenData?act=screen
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `screen` [ RunTime:0.0010s ]
+SQL: SELECT `s_id`,`s_act`,`e_val`,`u_val`,`name` FROM `screen` WHERE `sta` = 1  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-03-12T21:37:14+08:00 ] 127.0.0.1 /ge_ren_zhong_xin/FiltrateIndent/index.php/Home/Excel/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `admin` WHERE `jurisdiction` = 'admin' LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-03-12T21:37:26+08:00 ] 127.0.0.1 /ge_ren_zhong_xin/FiltrateIndent/index.php/Home/Excel/DoExcelAdd?temp=MyData
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2] call_user_func() expects parameter 1 to be a valid callback, no array or string given C:\myself\code\www\ge_ren_zhong_xin\FiltrateIndent\ThinkPHP\Library\Think\Upload.class.php 第 170 行.
+SQL: SHOW COLUMNS FROM `self_temp` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `self_data_tag` [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `self_data` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `self_temp` WHERE `sta` = 1  [ RunTime:0.0010s ]
+SQL: select d_tag from self_data_tag where d_tag = '1_1489325846'  [ RunTime:0.0000s ]
+SQL: INSERT INTO `self_data_tag` (`d_tag`,`w_ad`,`a_t`) VALUES ('1_1489325846','1','1489325846') [ RunTime:0.0010s ]
+SQL: INSERT INTO `self_data` (`d_tags`,`l0`,`l1`,`l2`,`l3`,`l4`,`l5`,`l6`,`l7`,`l8`,`l9`,`l10`,`l11`,`l12`,`l13`,`l14`,`l15`,`l16`,`l17`,`l18`,`l19`,`l20`,`l21`,`l22`,`l23`) VALUES ('1_1489325846','1','','','','','','','','','','','','','','','','','','','','','','',''),('1_1489325846','2','','','','','','','','','','','','','','','','','','','','','','',''),('1_1489325846','3','','','','','','','','','','','','','','','','','','','','','','',''),('1_1489325846','4','','','','','','','','','','','','','','','','','','','','','','',''),('1_1489325846','5','','','','','','','','','','','','','','','','','','','','','','',''),('1_1489325846','6','','','','','','','','','','','','','','','','','','','','','','',''),('1_1489325846','7','','','','','','','','','','','','','','','','','','','','','','','') [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-03-12T21:37:28+08:00 ] 127.0.0.1 /ge_ren_zhong_xin/FiltrateIndent/index.php/Home/Excel/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `admin` WHERE `jurisdiction` = 'admin' LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-03-12T21:37:32+08:00 ] 127.0.0.1 /ge_ren_zhong_xin/FiltrateIndent/index.php/Home/Excel/DoExcelAdd?temp=ExData
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2] call_user_func() expects parameter 1 to be a valid callback, no array or string given C:\myself\code\www\ge_ren_zhong_xin\FiltrateIndent\ThinkPHP\Library\Think\Upload.class.php 第 170 行.
+SQL: SHOW COLUMNS FROM `yuantong_temp` [ RunTime:0.0070s ]
+SQL: SHOW COLUMNS FROM `yuantong_data_tag` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `yuantong_data` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `yuantong_temp` WHERE `sta` = 1  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `self_data_tag` [ RunTime:0.0010s ]
+SQL: select d_tag from self_data_tag where d_tag = '1_1489325852'  [ RunTime:0.0010s ]
+SQL: INSERT INTO `yuantong_data_tag` (`d_tag`,`w_ad`,`a_t`) VALUES ('1_1489325852','1','1489325852') [ RunTime:0.0000s ]
+SQL: INSERT INTO `yuantong_data` (`d_tags`,`l0`,`l1`,`l2`,`l3`,`l4`,`l5`,`l6`,`l7`,`l8`,`l9`,`l10`,`l11`,`l12`,`l13`) VALUES ('1_1489325852','3','问题件','','','','','','','','','','','',''),('1_1489325852','4','已退回','','','','','','','','','','','',''),('1_1489325852','5','问题件','','','','','','','','','','','',''),('1_1489325852','6','已退回','','','','','','','','','','','',''),('1_1489325852','7','问题件','','','','','','','','','','','',''),('1_1489325852','8','已退回','','','','','','','','','','','',''),('1_1489325852','9','问题件','','','','','','','','','','','','') [ RunTime:0.0020s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-03-12T21:37:33+08:00 ] 127.0.0.1 /ge_ren_zhong_xin/FiltrateIndent/index.php/Home/Excel/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `admin` WHERE `jurisdiction` = 'admin' LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-03-12T21:37:34+08:00 ] 127.0.0.1 /ge_ren_zhong_xin/FiltrateIndent/index.php/Home/Excel/ScreenData?act=screen
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `screen` [ RunTime:0.0010s ]
+SQL: SELECT `s_id`,`s_act`,`e_val`,`u_val`,`name` FROM `screen` WHERE `sta` = 1  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-03-12T21:37:35+08:00 ] 127.0.0.1 /ge_ren_zhong_xin/FiltrateIndent/index.php/Home/Excel/ScreenData?act=upds
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `screen` [ RunTime:0.0010s ]
+SQL: SELECT `s_id`,`s_act`,`e_val`,`u_val`,`name` FROM `screen` WHERE `sta` = 1  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `self_temp` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `yuantong_temp` [ RunTime:0.0000s ]
+SQL: SELECT `line`,`l_val` FROM `self_temp` WHERE `sta` = 1 AND `line` IN ('1','空','问题件，已退回')  [ RunTime:0.0000s ]
+SQL: SELECT `line`,`l_val` FROM `yuantong_temp` WHERE `sta` = 1 AND `line` IN ('1','2')  [ RunTime:0.0000s ]
+SQL: SELECT MAX(tag) AS tp_max FROM `self_temp` WHERE `sta` = 1 LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT MAX(tag) AS tp_max FROM `yuantong_temp` WHERE `sta` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `self_temp` WHERE `tag` = 1  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `yuantong_temp` WHERE `tag` = 1  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.016001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-03-12T21:37:37+08:00 ] 127.0.0.1 /ge_ren_zhong_xin/FiltrateIndent/index.php/Home/Excel/DoScreenData?act=upds
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `screen` [ RunTime:0.0010s ]
+SQL: SELECT MAX(s_tag) AS tp_max FROM `screen` WHERE `sta` = 1 LIMIT 1   [ RunTime:0.0050s ]
+SQL: UPDATE `screen` SET `sta`='0' WHERE `s_tag` = 2 [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: User C:\myself\code\www\ge_ren_zhong_xin\FiltrateIndent\Home\Home\Controller\ExcelController.class.php 第 754 行.
+NOTIC: [8] Undefined index: User C:\myself\code\www\ge_ren_zhong_xin\FiltrateIndent\Home\Home\Controller\ExcelController.class.php 第 763 行.
+SQL: INSERT INTO `screen` (`w_ad`,`a_t`,`s_tag`,`e_val`,`u_val`,`name`,`s_act`,`sta`) VALUES ('1','1489325857','3','1','1','用户缺失','1','1'),('1','1489325857','3','1','1','快递缺失','2','1'),('1','1489325857','3','2','空,问题件，已退回','问题件','3','1'),('1','1489325857','3','2',NULL,'更新用户表','4','1') [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-03-12T21:37:38+08:00 ] 127.0.0.1 /ge_ren_zhong_xin/FiltrateIndent/index.php/Home/Excel/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `admin` WHERE `jurisdiction` = 'admin' LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-03-12T21:37:39+08:00 ] 127.0.0.1 /ge_ren_zhong_xin/FiltrateIndent/index.php/Home/Excel/ScreenData?act=screen
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `screen` [ RunTime:0.0010s ]
+SQL: SELECT `s_id`,`s_act`,`e_val`,`u_val`,`name` FROM `screen` WHERE `sta` = 1  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-03-12T21:37:41+08:00 ] 127.0.0.1 /ge_ren_zhong_xin/FiltrateIndent/index.php/Home/UserHandle?act=3
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `screen` [ RunTime:0.0010s ]
+SQL: SELECT MAX(s_tag) AS tp_max FROM `screen` LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `sta`,`s_tag`,`e_val`,`u_val`,`name` FROM `screen` WHERE `sta` = 1 AND `s_act` = 3  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `yuantong_temp` [ RunTime:0.0010s ]
+SQL: SELECT MAX(tag) AS tp_max FROM `yuantong_temp` LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `tag` FROM `yuantong_temp` WHERE `line` = 2 AND `sta` = 1  [ RunTime:0.0000s ]
+NOTIC: [2] Illegal string offset 'tag' C:\myself\code\www\ge_ren_zhong_xin\FiltrateIndent\Home\Home\Controller\UserHandleController.class.php 第 360 行.
+SQL: SHOW COLUMNS FROM `yuantong_data_tag` [ RunTime:0.0010s ]
+SQL: SELECT `d_tag` FROM `yuantong_data_tag` WHERE `issue` <> 1 AND `w_ad` = 1  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `yuantong_data` [ RunTime:0.0000s ]
+SQL: SELECT `d_id`,`l0`,`l1`,`l2`,`l3`,`l4`,`l5`,`l6`,`l7`,`l8`,`l9`,`l10`,`l11`,`l12`,`l13` FROM `yuantong_data` WHERE `d_tags` IN ('1_1489311610','1_1489311638','1_1489311687','1_1489311811','1_1489311883','1_1489311932','1_1489312005','1_1489312038','1_1489312077','1_1489325852') AND `l1` = ' '  [ RunTime:0.0000s ]
+SQL: SELECT `d_id`,`l0`,`l1`,`l2`,`l3`,`l4`,`l5`,`l6`,`l7`,`l8`,`l9`,`l10`,`l11`,`l12`,`l13` FROM `yuantong_data` WHERE `l1` IN ('问题件','已退回') AND `d_tags` IN ('1_1489311610','1_1489311638','1_1489311687','1_1489311811','1_1489311883','1_1489311932','1_1489312005','1_1489312038','1_1489312077','1_1489325852')  [ RunTime:0.0010s ]
+SQL: SELECT `line`,`l_val` FROM `yuantong_temp` WHERE `sta` = 1  [ RunTime:0.0000s ]
+SQL: UPDATE `yuantong_data_tag` SET `issue`='1',`w_s`='1',`s_t`='1489325861' WHERE `d_tag` IN ('1_1489311610','1_1489311638','1_1489311687','1_1489311811','1_1489311883','1_1489311932','1_1489312005','1_1489312038','1_1489312077','1_1489325852') [ RunTime:0.0010s ]
+
+[ 2017-03-12T21:37:52+08:00 ] 127.0.0.1 /ge_ren_zhong_xin/FiltrateIndent/index.php/Home/UserHandle?act=3
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `screen` [ RunTime:0.0010s ]
+SQL: SELECT MAX(s_tag) AS tp_max FROM `screen` LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `sta`,`s_tag`,`e_val`,`u_val`,`name` FROM `screen` WHERE `sta` = 1 AND `s_act` = 3  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `yuantong_temp` [ RunTime:0.0010s ]
+SQL: SELECT MAX(tag) AS tp_max FROM `yuantong_temp` LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `tag` FROM `yuantong_temp` WHERE `line` = 2 AND `sta` = 1  [ RunTime:0.0000s ]
+NOTIC: [2] Illegal string offset 'tag' C:\myself\code\www\ge_ren_zhong_xin\FiltrateIndent\Home\Home\Controller\UserHandleController.class.php 第 360 行.
+SQL: SHOW COLUMNS FROM `yuantong_data_tag` [ RunTime:0.0010s ]
+SQL: SELECT `d_tag` FROM `yuantong_data_tag` WHERE `issue` <> 1 AND `w_ad` = 1  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-03-12T21:37:55+08:00 ] 127.0.0.1 /ge_ren_zhong_xin/FiltrateIndent/index.php/Home/UserHandle?act=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `screen` [ RunTime:0.0010s ]
+SQL: SELECT MAX(s_tag) AS tp_max FROM `screen` WHERE `sta` = 1 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT MAX(s_tag) AS tp_max FROM `screen` LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `e_val`,`u_val`,`name` FROM `screen` WHERE `s_act` = 1 AND `s_tag` = 3  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `self_temp` [ RunTime:0.0010s ]
+SQL: SELECT MAX(tag) AS tp_max FROM `self_temp` WHERE `sta` = 1 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT MAX(tag) AS tp_max FROM `self_temp` LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `id`,`line`,`l_val` FROM `self_temp` WHERE `tag` = 1  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `yuantong_temp` [ RunTime:0.0010s ]
+SQL: SELECT MAX(tag) AS tp_max FROM `yuantong_temp` WHERE `sta` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT MAX(tag) AS tp_max FROM `yuantong_temp` LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `id`,`line`,`l_val` FROM `yuantong_temp` WHERE `tag` = 1  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `self_data_tag` [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `yuantong_data_tag` [ RunTime:0.0010s ]
+SQL: SELECT `d_tag` FROM `self_data_tag` WHERE `w_ad` = 1 AND `u_hiatus` <> 1  [ RunTime:0.0000s ]
+SQL: SELECT `d_tag` FROM `yuantong_data_tag` WHERE `w_ad` = 1 AND `u_hiatus` <> 1  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `yuantong_data` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `self_data` [ RunTime:0.0010s ]
+SQL: SELECT `l0` FROM `self_data` WHERE `d_tags` IN ('1_1489311877','1_1489311927','1_1489312001','1_1489312033','1_1489312071','1_1489325846')  [ RunTime:0.0040s ]
+SQL: SELECT `l0`,`l1`,`l2`,`l3`,`l4`,`l5`,`l6`,`l7`,`l8`,`l9`,`l10`,`l11`,`l12`,`l13` FROM `yuantong_data` WHERE `l0` NOT IN ('1','2','3','4','5','6','7','1','2','3','4','5','6','7','1','2','3','4','5','6','7','1','2','3','4','5','6','7','1','2','3','4','5','6','7','1','2','3','4','5','6','7')  [ RunTime:0.0000s ]
+SQL: UPDATE `yuantong_data_tag` SET `u_hiatus`='1',`w_s`='1',`s_t`='1489325875' WHERE `d_tag` IN ('1_1489311883','1_1489311932','1_1489312005','1_1489312038','1_1489312077','1_1489325852') [ RunTime:0.0010s ]
+SQL: UPDATE `self_data_tag` SET `u_hiatus`='1',`w_s`='1',`s_t`='1489325875' WHERE `d_tag` IN ('1_1489311877','1_1489311927','1_1489312001','1_1489312033','1_1489312071','1_1489325846') [ RunTime:0.0000s ]
+
+[ 2017-03-12T21:38:26+08:00 ] 127.0.0.1 /ge_ren_zhong_xin/FiltrateIndent/index.php
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-03-12T21:38:29+08:00 ] 127.0.0.1 /ge_ren_zhong_xin/FiltrateIndent/index.php/Home/Index/CheckLogin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `admin` WHERE `u_name` = 'shenshuang' AND `u_pwd` = 'a0d0a782871ffa5f8fdb5baab61e29a8' AND `sta` = 1 LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: save C:\myself\code\www\ge_ren_zhong_xin\FiltrateIndent\Home\Home\Controller\IndexController.class.php 第 42 行.
+NOTIC: [8] Undefined index: save C:\myself\code\www\ge_ren_zhong_xin\FiltrateIndent\Home\Home\Controller\IndexController.class.php 第 47 行.
+SQL: UPDATE `admin` SET `l_time`='1489325909',`l_ip`='127.0.0.1' WHERE `u_name` = 'shenshuang' AND `u_pwd` = 'a0d0a782871ffa5f8fdb5baab61e29a8' AND `sta` = 1 [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-03-12T21:38:31+08:00 ] 127.0.0.1 /ge_ren_zhong_xin/FiltrateIndent/index.php/Home/Handle/HandleHome.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-03-12T21:38:32+08:00 ] 127.0.0.1 /ge_ren_zhong_xin/FiltrateIndent/index.php/Home/Excel/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `admin` WHERE `jurisdiction` = 'admin' LIMIT 1   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001001s ]
+
+[ 2017-03-12T21:38:36+08:00 ] 127.0.0.1 /ge_ren_zhong_xin/FiltrateIndent/index.php/Home/Excel/DoExcelAdd?temp=MyData
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2] call_user_func() expects parameter 1 to be a valid callback, no array or string given C:\myself\code\www\ge_ren_zhong_xin\FiltrateIndent\ThinkPHP\Library\Think\Upload.class.php 第 170 行.
+SQL: SHOW COLUMNS FROM `self_temp` [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `self_data_tag` [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `self_data` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `self_temp` WHERE `sta` = 1  [ RunTime:0.0000s ]
+SQL: select d_tag from self_data_tag where d_tag = '1_1489325916'  [ RunTime:0.0010s ]
+SQL: INSERT INTO `self_data_tag` (`d_tag`,`w_ad`,`a_t`) VALUES ('1_1489325916','1','1489325916') [ RunTime:0.0000s ]
+SQL: INSERT INTO `self_data` (`d_tags`,`l0`,`l1`,`l2`,`l3`,`l4`,`l5`,`l6`,`l7`,`l8`,`l9`,`l10`,`l11`,`l12`,`l13`,`l14`,`l15`,`l16`,`l17`,`l18`,`l19`,`l20`,`l21`,`l22`,`l23`) VALUES ('1_1489325916','1','','','','','','','','','','','','','','','','','','','','','','',''),('1_1489325916','2','','','','','','','','','','','','','','','','','','','','','','',''),('1_1489325916','3','','','','','','','','','','','','','','','','','','','','','','',''),('1_1489325916','4','','','','','','','','','','','','','','','','','','','','','','',''),('1_1489325916','5','','','','','','','','','','','','','','','','','','','','','','',''),('1_1489325916','6','','','','','','','','','','','','','','','','','','','','','','',''),('1_1489325916','7','','','','','','','','','','','','','','','','','','','','','','','') [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-03-12T21:38:37+08:00 ] 127.0.0.1 /ge_ren_zhong_xin/FiltrateIndent/index.php/Home/Excel/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `admin` WHERE `jurisdiction` = 'admin' LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003000s ]
+
+[ 2017-03-12T21:38:41+08:00 ] 127.0.0.1 /ge_ren_zhong_xin/FiltrateIndent/index.php/Home/Excel/DoExcelAdd?temp=ExData
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2] call_user_func() expects parameter 1 to be a valid callback, no array or string given C:\myself\code\www\ge_ren_zhong_xin\FiltrateIndent\ThinkPHP\Library\Think\Upload.class.php 第 170 行.
+SQL: SHOW COLUMNS FROM `yuantong_temp` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `yuantong_data_tag` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `yuantong_data` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `yuantong_temp` WHERE `sta` = 1  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `self_data_tag` [ RunTime:0.0000s ]
+SQL: select d_tag from self_data_tag where d_tag = '1_1489325921'  [ RunTime:0.0010s ]
+SQL: INSERT INTO `yuantong_data_tag` (`d_tag`,`w_ad`,`a_t`) VALUES ('1_1489325921','1','1489325921') [ RunTime:0.0000s ]
+SQL: INSERT INTO `yuantong_data` (`d_tags`,`l0`,`l1`,`l2`,`l3`,`l4`,`l5`,`l6`,`l7`,`l8`,`l9`,`l10`,`l11`,`l12`,`l13`) VALUES ('1_1489325921','3','问题件','','','','','','','','','','','',''),('1_1489325921','4','已退回','','','','','','','','','','','',''),('1_1489325921','5','问题件','','','','','','','','','','','',''),('1_1489325921','6','已退回','','','','','','','','','','','',''),('1_1489325921','7','问题件','','','','','','','','','','','',''),('1_1489325921','8','已退回','','','','','','','','','','','',''),('1_1489325921','9','问题件','','','','','','','','','','','','') [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-03-12T21:38:42+08:00 ] 127.0.0.1 /ge_ren_zhong_xin/FiltrateIndent/index.php/Home/Excel/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `admin` WHERE `jurisdiction` = 'admin' LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-03-12T21:38:43+08:00 ] 127.0.0.1 /ge_ren_zhong_xin/FiltrateIndent/index.php/Home/Excel/ScreenData?act=screen
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `screen` [ RunTime:0.0010s ]
+SQL: SELECT `s_id`,`s_act`,`e_val`,`u_val`,`name` FROM `screen` WHERE `sta` = 1  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-03-12T21:38:44+08:00 ] 127.0.0.1 /ge_ren_zhong_xin/FiltrateIndent/index.php/Home/UserHandle?act=3
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `screen` [ RunTime:0.0020s ]
+SQL: SELECT MAX(s_tag) AS tp_max FROM `screen` LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `sta`,`s_tag`,`e_val`,`u_val`,`name` FROM `screen` WHERE `sta` = 1 AND `s_act` = 3  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `yuantong_temp` [ RunTime:0.0010s ]
+SQL: SELECT MAX(tag) AS tp_max FROM `yuantong_temp` LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `tag` FROM `yuantong_temp` WHERE `line` = 2 AND `sta` = 1  [ RunTime:0.0000s ]
+NOTIC: [2] Illegal string offset 'tag' C:\myself\code\www\ge_ren_zhong_xin\FiltrateIndent\Home\Home\Controller\UserHandleController.class.php 第 360 行.
+SQL: SHOW COLUMNS FROM `yuantong_data_tag` [ RunTime:0.0010s ]
+SQL: SELECT `d_tag` FROM `yuantong_data_tag` WHERE `issue` <> 1 AND `w_ad` = 1  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `yuantong_data` [ RunTime:0.0010s ]
+SQL: SELECT `d_id`,`l0`,`l1`,`l2`,`l3`,`l4`,`l5`,`l6`,`l7`,`l8`,`l9`,`l10`,`l11`,`l12`,`l13` FROM `yuantong_data` WHERE `d_tags` IN ('1_1489325921') AND `l1` = ' '  [ RunTime:0.0000s ]
+SQL: SELECT `d_id`,`l0`,`l1`,`l2`,`l3`,`l4`,`l5`,`l6`,`l7`,`l8`,`l9`,`l10`,`l11`,`l12`,`l13` FROM `yuantong_data` WHERE `l1` IN ('问题件','已退回') AND `d_tags` IN ('1_1489325921')  [ RunTime:0.0010s ]
+SQL: SELECT `line`,`l_val` FROM `yuantong_temp` WHERE `sta` = 1  [ RunTime:0.0000s ]
+SQL: UPDATE `yuantong_data_tag` SET `issue`='1',`w_s`='1',`s_t`='1489325924' WHERE `d_tag` IN ('1_1489325921') [ RunTime:0.0000s ]
+

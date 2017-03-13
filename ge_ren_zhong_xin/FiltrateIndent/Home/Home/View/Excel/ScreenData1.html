@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Excel操作首页</title>
+<link rel = 'stylesheet' type = 'text/css' href = '__ROOT__/Public/Css/reset.css'>
+<link rel = 'stylesheet' type = 'text/css' href = '__ROOT__/Public/Css/ScreenData.css'>
+<script src = '__ROOT__/Public/Js/excel.js' type = 'text/javascript' charset = 'utf-8'></script>
+</head> 
+<body>
+    <include file = 'Public/Html/head1.html' />
+
+    <div class = 'ExcelFather' id = 'ScreenData'>
+        <div class = 'ScreenName'>
+           <!--  <div>
+                <a href = '__CONTROLLER__/ScreenData?act=upds'>
+                    <span>修改筛选配置</span>
+                </a>
+            </div> -->
+            <foreach name = 'screen' item = 'v'>
+                <a href = '__APP__/Home/UserHandle?act={$v.s_act}'>
+                    <span>{$v.name}</span>
+                </a>
+            </foreach>
+        </div>
+    </div>
+
+    <include file = 'Public/Html/foot.html' />
+</body>
+</html>

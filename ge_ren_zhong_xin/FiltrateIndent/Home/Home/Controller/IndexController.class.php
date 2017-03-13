@@ -28,7 +28,7 @@ class IndexController extends Controller
         $data = I('post.');
         preg_match_all('/^[a-zA-Z0-9]{5,19}/', $data['user'], $name);
         $where['u_name'] = $this->PreventSql($name[0][0]) ? $this->PreventSql($name[0][0]) : 'nothink';
-        $where['u_pwd'] = $this->PreventSql($data['pwd']) ? md5($data['pwd'].'shenshuang') : 'nothink';
+        $where['u_pwd'] = $this->PreventSql($data['pwd']) ? md5($this->PreventSql($data['pwd']) . 'shenshuang') : 'nothink';
         $where['sta'] = 1;
   
         $Admin = M('Admin');
@@ -58,6 +58,8 @@ class IndexController extends Controller
             $_SESSION['last_time'] = $res['l_time']?$res['l_time']:'1';
             $_SESSION['last_ip'] = $res['l_ip']?$res['l_ip']:'1';
             $_SESSION['jurisdiction'] = $res['jurisdiction'];
+            $_SESSION['CheckJurisdiction'] = md5($res['jurisdiction'] . 'shenshuang');
+            $_SESSION['CheckName'] = md5($res['u_name'] . 'shenshuang');
 
             $data['l_time'] = time();
             $data['l_ip'] = $this->GetIp();
@@ -77,7 +79,7 @@ class IndexController extends Controller
     }
 
     // php获取ip
-    function GetIp()
+    private function GetIp()
     {
         global $ip;
         if(getenv("HTTP_CLIENT_IP"))
@@ -100,20 +102,49 @@ class IndexController extends Controller
     }
 
     // 防止sql注入
-    public function PreventSql($info)
+    private function PreventSql($info)
     {
         if(is_array($info))
         {
             $data = array();
-            foreach($info as $v)
+            foreach($info as $k => $v)
             {
-                $data[] = str_replace('find', '', str_replace('select', '', str_replace('update', '',  str_replace('delete', '', str_replace('insert', '', str_replace('>', '', str_replace('<', '', str_replace('=', '', $v))))))));
+                $data[$k] = $this->RePlaceStr($v);
             }
         }
         else
         {
-            $data = str_replace('find', '', str_replace('select', '', str_replace('update', '',  str_replace('delete', '', str_replace('insert', '', str_replace('>', '', str_replace('<', '', str_replace('=', '', $info))))))));
+            $data = $this->RePlaceStr($info);
         }
         return $data;
+    }
+
+    // 替换字符串
+    private function RePlaceStr($str)
+    {
+        $str = str_replace('and','',$str);
+        $str = str_replace('execute','',$str);
+        $str = str_replace('count','',$str);
+        $str = str_replace('chr','',$str);
+        $str = str_replace('mid','',$str);
+        $str = str_replace('master','',$str);
+        $str = str_replace('truncate','',$str);
+        $str = str_replace('char','',$str);
+        $str = str_replace('declare','',$str);
+        $str = str_replace('create','',$str);
+        $str = str_replace('insert','',$str);
+        // $str = str_replace('add','',$str);
+        $str = str_replace('delete','',$str);
+        $str = str_replace('update','',$str);
+        $str = str_replace('select','',$str);
+        $str = str_replace('find','',$str);
+        $str = str_replace('or','',$str);
+        $str = str_replace('"','',$str);
+        $str = str_replace("'",'',$str);
+        $str = str_replace('=','',$str);
+        // $str = str_replace('<','',$str);
+        $str = str_replace(' ','',$str); 
+        $str = str_replace(';','',$str); 
+        return $str;
     }
 }

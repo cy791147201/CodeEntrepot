@@ -1,13 +1,44 @@
-<!DOCTYPE html>
+<?php if (!defined('THINK_PATH')) exit();?><!DOCTYPE html>
 <html>
 <head>
     <title>Excel操作首页</title>
-<link rel = 'stylesheet' type = 'text/css' href = '__ROOT__/Public/Css/reset.css'>
-<link rel = 'stylesheet' type = 'text/css' href = '__ROOT__/Public/Css/excel.css'>
-<script src = '__ROOT__/Public/Js/excel.js' type = 'text/javascript' charset = 'utf-8'></script>
+<link rel = 'stylesheet' type = 'text/css' href = '/ge_ren_zhong_xin/FiltrateIndent/Public/Css/reset.css'>
+<link rel = 'stylesheet' type = 'text/css' href = '/ge_ren_zhong_xin/FiltrateIndent/Public/Css/excel.css'>
+<script src = '/ge_ren_zhong_xin/FiltrateIndent/Public/Js/excel.js' type = 'text/javascript' charset = 'utf-8'></script>
 </head> 
 <body>
-    <include file = 'Public/Html/head1.html' />
+    <link rel = 'stylesheet' type = 'text/css' href = '/ge_ren_zhong_xin/FiltrateIndent/Public/Css/reset.css'>
+<link rel = 'stylesheet' type = 'text/css' href = '/ge_ren_zhong_xin/FiltrateIndent/Public/Css/head.css'>
+<div class = 'HeadFather'>
+    <ul>
+        <li>
+            <a href = '/ge_ren_zhong_xin/FiltrateIndent/index.php/Home/Handle/HandleHome' title = 'Excel操作'>
+                <span>首页</span>
+            </a>
+        </li>
+        <li>
+            <a href = '/ge_ren_zhong_xin/FiltrateIndent/index.php/Home/Excel/index' title = '圆通Excel操作'>
+                <span>圆通Excel操作</span>
+            </a>
+        </li>
+       <!--  <li>
+            <a href = 'javascript:void(0);' title = '管理员操作，添加，删除，修改，查找等操作，必须拥有管理员权限，如果你不是管理员又看到这条信息，请联系系统拥有者' onclick = 'Replace("replace", "AdminHandle");'>
+                <span>操作管理员</span>
+            </a>
+        </li> -->
+      <!--   <li>
+            <a href = '/ge_ren_zhong_xin/FiltrateIndent/index.php/Home/Handle/index' title = '管理员操作，添加，删除，修改，查找等操作，必须拥有管理员权限，如果你不是管理员又看到这条信息，请联系系统拥有者'>
+                <span>操作管理员</span>
+            </a>
+        </li> -->
+        <li>
+            <a href = '/ge_ren_zhong_xin/FiltrateIndent/index.php/Home/Excel/LoginOut' title = '退出并清空登录信息'>
+                <span>退出</span>
+            </a>
+        </li>
+    </ul>
+</div>
+
     
     <!-- Excel首页操作 -->
     <div class = 'ExcelFather' id = 'ExcelFather'>
@@ -23,7 +54,7 @@
                 </a>
             </div>
             <div class = 'ExcelHandle'>
-                <a href = '__CONTROLLER__/ScreenData?act=screen' title = '筛选数据'>
+                <a href = '/ge_ren_zhong_xin/FiltrateIndent/index.php/Home/Excel/ScreenData?act=screen' title = '筛选数据'>
                     <span>筛选数据</span>
                 </a>
             </div>
@@ -35,7 +66,7 @@
         <div class = 'ExcelTempHome'>
             <span class = 'ExcelTempHomeSpan'>用户</span>
             <div>
-                <a href = '__CONTROLLER__/ShowTemp?temp=user' title = '用户当前模版'>
+                <a href = '/ge_ren_zhong_xin/FiltrateIndent/index.php/Home/Excel/ShowTemp?temp=user' title = '用户当前模版'>
                     <span>当前模版</span>
                 </a>
             </div>
@@ -53,7 +84,7 @@
         <div class = 'ExcelTempHome' style = 'margin-top: 10px;'>
             <span class = 'ExcelTempHomeSpan'>快递</span>
             <div>
-                <a href = '__CONTROLLER__/ShowTemp?temp=express' title = '快递当前模版'>
+                <a href = '/ge_ren_zhong_xin/FiltrateIndent/index.php/Home/Excel/ShowTemp?temp=express' title = '快递当前模版'>
                     <span>当前模版</span>
                 </a>
             </div>
@@ -80,7 +111,7 @@
                 <button type = 'button' class = 'HandAddButton' onclick = 'AddHandInput("HandAddInpit1");'>添加</button>
             </div>
             <div class = 'HandAddForm'>
-                <form action = '__CONTROLLER__/DoHandAdd?temp=myself' method = 'post'>
+                <form action = '/ge_ren_zhong_xin/FiltrateIndent/index.php/Home/Excel/DoHandAdd?temp=myself' method = 'post'>
                     <div id = 'HandAddInpit1'></div>
                     <input type = 'submit' value = '提交' id = 'sub' />
                 </form>
@@ -96,7 +127,7 @@
                 <button type = 'button' class = 'HandAddButton' onclick = 'AddHandInput("HandAddInpit2");'>添加</button>
             </div>
             <div class = 'HandAddForm'>
-                <form action = '__CONTROLLER__/DoHandAdd?temp=express' method = 'post'>
+                <form action = '/ge_ren_zhong_xin/FiltrateIndent/index.php/Home/Excel/DoHandAdd?temp=express' method = 'post'>
                     <div id = 'HandAddInpit2'></div>
                     <input type = 'submit' value = '提交' id = 'sub' />
                 </form>
@@ -109,7 +140,7 @@
         <div class = 'tit'>
             <span>Excel文件添加&nbsp;&nbsp;用户&nbsp;&nbsp;Excel模版</span>
         </div>
-        <form action = '__CONTROLLER__/DoExcelAdd?temp=myself' method = 'post' enctype = 'multipart/form-data' id = 'FileUpTempAct' onsubmit = 'return CheckFileType("1", "file1");'>
+        <form action = '/ge_ren_zhong_xin/FiltrateIndent/index.php/Home/Excel/DoExcelAdd?temp=myself' method = 'post' enctype = 'multipart/form-data' id = 'FileUpTempAct' onsubmit = 'return CheckFileType("1", "file1");'>
             <div class = 'FileUpTempDiv'>
                 <input type = 'file' name = 'file1' onchange = "CheckFileType('2', this)"/>
             </div>
@@ -122,7 +153,7 @@
         <div class = 'tit'>
             <span>Excel文件添加&nbsp;&nbsp;快递&nbsp;&nbsp;Excel模版</span>
         </div>
-        <form action = '__CONTROLLER__/DoExcelAdd?temp=express' method = 'post' enctype = 'multipart/form-data' id = 'FileUpTempAct' onsubmit = 'return CheckFileType("1", "file2");'>
+        <form action = '/ge_ren_zhong_xin/FiltrateIndent/index.php/Home/Excel/DoExcelAdd?temp=express' method = 'post' enctype = 'multipart/form-data' id = 'FileUpTempAct' onsubmit = 'return CheckFileType("1", "file2");'>
             <div class = 'FileUpTempDiv'>
                 <input type = 'file' name = 'file2' onchange = "CheckFileType('2', this)"/>
             </div>
@@ -142,7 +173,7 @@
         <div class = 'tit'>
             <span>添加&nbsp;&nbsp;用户&nbsp;&nbsp;Excel数据</span>
         </div>
-        <form action = '__CONTROLLER__/DoExcelAdd?temp=MyData' method = 'post' enctype = 'multipart/form-data' id = 'FileUpTempAct' onsubmit = 'return CheckFileType("1", "file3");'>
+        <form action = '/ge_ren_zhong_xin/FiltrateIndent/index.php/Home/Excel/DoExcelAdd?temp=MyData' method = 'post' enctype = 'multipart/form-data' id = 'FileUpTempAct' onsubmit = 'return CheckFileType("1", "file3");'>
             <div class = 'FileUpTempDiv'>
                 <input type = 'file' name = 'file3' onchange = "CheckFileType('2', this)"/>
             </div>
@@ -155,7 +186,7 @@
         <div class = 'tit'>
             <span>添加&nbsp;&nbsp;快递&nbsp;&nbsp;Excel数据</span>
         </div>
-        <form action = '__CONTROLLER__/DoExcelAdd?temp=ExData' method = 'post' enctype = 'multipart/form-data' id = 'FileUpTempAct' onsubmit = 'return CheckFileType("1", "file4");'>
+        <form action = '/ge_ren_zhong_xin/FiltrateIndent/index.php/Home/Excel/DoExcelAdd?temp=ExData' method = 'post' enctype = 'multipart/form-data' id = 'FileUpTempAct' onsubmit = 'return CheckFileType("1", "file4");'>
             <div class = 'FileUpTempDiv'>
                 <input type = 'file' name = 'file4' onchange = "CheckFileType('2', this)"/>
             </div>
@@ -165,6 +196,9 @@
         </form>
     </div>
     
-    <include file = 'Public/Html/foot.html' />
+    <link rel = 'stylesheet' type = 'text/css' href = '/ge_ren_zhong_xin/FiltrateIndent/Public/Css/foot.css'>
+<div class = 'foot'>
+    <span class = 'FootNotice'>细心永远是对的</span>
+</div>
 </body>
 </html>

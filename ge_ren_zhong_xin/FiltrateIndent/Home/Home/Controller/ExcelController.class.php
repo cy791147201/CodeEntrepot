@@ -5,22 +5,23 @@ class ExcelController extends BeforeController
 {
     public function index() 
     {
-        $where['id'] = $_SESSION['id'];
-        $where['jurisdiction'] = $_SESSION['jurisdiction'];
-        $Admin = M('Admin');
-        $res = $Admin->where($where)->find();
-        if($res && $where['jurisdiction'] !== 'admin')
-        {
-            $this->display('index1');
-        }
-        else if($res && $res['jurisdiction'] === 'admin')
-        {   
-            $this->display('index');
-        }
-        else
-        {
-            $_SESSION = array();
-        }
+        // $where['id'] = $_SESSION['id'];
+        // $where['jurisdiction'] = $_SESSION['jurisdiction'];
+        // $Admin = M('Admin');
+        // $res = $Admin->where($where)->find();
+        // if($res && $where['jurisdiction'] !== 'admin')
+        // {
+        //     $this->display('index1');
+        // }
+        // else if($res && $res['jurisdiction'] === 'admin')
+        // {   
+        //     $this->display('index');
+        // }
+        // else
+        // {
+        //     $_SESSION = array();
+        // }
+        $this->CheckAdmin('index', 'index1');
     }
 
     // 处理手动添加Excel模版
@@ -519,7 +520,6 @@ class ExcelController extends BeforeController
     // 筛选数据
     public function ScreenData()
     {
-        // echo 1;
         $act = I('get.act');
         $act = $this->PreventSql($act);
 
@@ -537,7 +537,8 @@ class ExcelController extends BeforeController
             {
                 // echo 1;
                 $this->assign('screen', $res1);
-                $this->display('ScreenData');
+                $this->CheckAdmin('ScreenData', 'ScreenData1');
+                // $this->display('ScreenData');
             }
             else if($act === 'upds')
             {

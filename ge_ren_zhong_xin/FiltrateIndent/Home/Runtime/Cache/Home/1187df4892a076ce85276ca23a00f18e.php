@@ -1,11 +1,11 @@
 <?php if (!defined('THINK_PATH')) exit();?><!DOCTYPE html>
 <html>
 <head>
-    <title>操作管理员首页</title>
-<meta http-equiv = 'Content-Type' content = 'text/html; charset = utf-8' />
-<link rel = 'stylesheet' type = 'text/css' href = '/ge_ren_zhong_xin/FiltrateIndent/Public/Css/home.css'>
-<script src = '/ge_ren_zhong_xin/FiltrateIndent/Public/Js/Home.js' type = 'text/javascript' charset = 'utf-8'></script>
-</head>
+    <title>Excel操作首页</title>
+<link rel = 'stylesheet' type = 'text/css' href = '/ge_ren_zhong_xin/FiltrateIndent/Public/Css/reset.css'>
+<link rel = 'stylesheet' type = 'text/css' href = '/ge_ren_zhong_xin/FiltrateIndent/Public/Css/ScreenData.css'>
+<script src = '/ge_ren_zhong_xin/FiltrateIndent/Public/Js/excel.js' type = 'text/javascript' charset = 'utf-8'></script>
+</head> 
 <body>
     <link rel = 'stylesheet' type = 'text/css' href = '/ge_ren_zhong_xin/FiltrateIndent/Public/Css/reset.css'>
 <link rel = 'stylesheet' type = 'text/css' href = '/ge_ren_zhong_xin/FiltrateIndent/Public/Css/head.css'>
@@ -32,13 +32,26 @@
             </a>
         </li> -->
         <li>
-            <a href = '/ge_ren_zhong_xin/FiltrateIndent/index.php/Home/Handle/LoginOut' title = '退出并清空登录信息'>
+            <a href = '/ge_ren_zhong_xin/FiltrateIndent/index.php/Home/Excel/LoginOut' title = '退出并清空登录信息'>
                 <span>退出</span>
             </a>
         </li>
     </ul>
 </div>
 
+
+    <div class = 'ExcelFather' id = 'ScreenData'>
+        <div class = 'ScreenName'>
+           <!--  <div>
+                <a href = '/ge_ren_zhong_xin/FiltrateIndent/index.php/Home/Excel/ScreenData?act=upds'>
+                    <span>修改筛选配置</span>
+                </a>
+            </div> -->
+            <?php if(is_array($screen)): foreach($screen as $key=>$v): ?><a href = '/ge_ren_zhong_xin/FiltrateIndent/index.php/Home/UserHandle?act=<?php echo ($v["s_act"]); ?>'>
+                    <span><?php echo ($v["name"]); ?></span>
+                </a><?php endforeach; endif; ?>
+        </div>
+    </div>
 
     <link rel = 'stylesheet' type = 'text/css' href = '/ge_ren_zhong_xin/FiltrateIndent/Public/Css/foot.css'>
 <div class = 'foot'>
