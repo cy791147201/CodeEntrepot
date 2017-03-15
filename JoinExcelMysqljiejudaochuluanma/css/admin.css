@@ -1,0 +1,208 @@
+    body{
+        background: #DFDAE0;
+    }
+
+    .father{
+        width: 1200px;
+        margin: 0 auto;
+        margin-top: 100px;
+        border: 3px solid #4CE0D0;
+    }
+
+    .father li{
+        list-style-type: none;
+    }
+
+    .tit{
+        display: block; 
+        width: 1196px;
+        height: 50px;
+        line-height: 50px;
+        text-align: center;
+        font-size: 25px;
+        border: 1px solid #4CE0D0;
+        margin: 1px;
+    }
+
+    .handle{
+        width: 1200px;
+        height: 50px;
+    }
+
+    .handle li{
+        width: 159px;
+        height: 50px;
+        line-height: 50px;
+        text-align: center;
+        border: 1px solid #4CE0D0;
+        margin: 1px;
+        float: left;
+    }
+
+    .act:hover{
+        background: #11D3B6;
+    }
+
+    .form{
+        width: 381px;
+        height: 50px;
+        float: left;
+        border: 1px solid #4CE0D0;
+        margin: 1px;
+    }
+
+    .user{
+        width: 200px;
+        height: 30px;
+        line-height: 30px;
+        margin-top: 9px;
+        border: 0px;
+        text-indent: 10px;
+        margin-left: 30px;
+    }
+
+    .sub{
+        width: 100px;
+        height: 32px;
+        background: #E90CE7;
+        border: 0px;
+    }
+
+    .sub:hover{
+        background: #11D3B6;
+    }
+
+
+
+
+    .info, .infos{
+        width: 1200px;
+        height: 50px;
+        clear: both;
+    }
+
+    .info li, .infos li{
+        height: 50px;
+        line-height: 50px;
+        border: 1px solid #4CE0D0;
+        margin: 1px;
+        float: left;
+    }
+
+    .info li{
+        text-align: center;
+    }
+
+    .infos li{
+        text-indent: 20px;
+    }
+
+    .name{
+        width: 450px;
+    }
+
+    .grade{
+        width: 200px;
+    }
+
+    .operate{
+        width: 538px;
+    }
+
+    .operate a{
+        display: block;
+        width: 269px;
+        height: 50px;
+        text-align: center;
+        float: left;
+    }
+
+    .operate a:hover{
+        background: #11D3B6; 
+    }
+
+    .none{
+        width: 1196px;
+        height: 1px;
+        background: #730D95;
+        clear: both;
+        margin: 0 auto;
+    }
+
+    .page{
+        width: 1196px;
+        height: 60px;
+        line-height: 60px;
+        text-align: center;
+        border: 1px solid #4CE0D0;
+        margin: 1px;
+    }
+
+    .tit, .page{
+        background: #93B2AA;
+    }
+
+
+
+    .add{
+        width: 1196px;
+        height: 500px;
+        border: 1px solid #4CE0D0;
+        margin: 1px;
+        clear: both;
+    }
+
+    .add form{
+        width: 750px;
+        height: 400px;
+        margin: 0 auto;
+        margin-top: 50px;
+    }
+
+    .tits{
+        width: 200px;
+        height: 220px;
+        float: left;
+    }
+
+    .tits span{
+        display: block;
+        width: 200px;
+        height: 55px;
+        line-height: 55px;
+        text-indent: 20px;
+        margin-top: 10px;
+    }
+
+    .inputs{
+        width: 550px;
+        height: 220px;
+        float:left; 
+    }
+
+    .inputs input{
+        width: 500px;
+        height: 55px;
+        border: 0px;
+        margin-top: 10px;
+        text-indent: 20px;
+    }
+
+    .sub1{
+        width: 400px;
+        height: 50px;
+        border: 0px;
+        margin-left: 175px;
+        font-size: 20px;
+        background: #E210CF;
+    }
+
+    .sub1:hover{
+        background: #11D3B6;
+    }
+
+    .none1{
+        width: 1100px;
+        height: 1px;
+        clear: both;
+    }

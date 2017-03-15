@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+<script type="text/javascript">
+    
+// 创建xhr对象
+function createXHR(){
+
+    var xhr = null;
+
+    if(window.XMLHttpRequest){
+
+        xhr = new XMLHttpRequest();
+
+    }else if(window.ActiveXObject){
+
+        xhr = new ActiveXObject('Microsoft.XMLHTTP');
+
+    }
+
+    return xhr;
+
+}
+
+var xhr = createXHR();
+// alert(xhr);
+function ajaxreg()
+{
+    // 步骤1
+    // 手机表单数据
+    // 步骤二
+    // 打开到后端服务器的连接
+    // 步骤三
+    // 发送数据
+    // 步骤四
+    // 监听回调
+    // return false;
+
+    // 制造xhr
+    var xhr = createXHR();
+
+    // 打开POST链接
+    xhr.open('POST', './test5.php', true);
+
+    xhr.onreadystatechange = function()
+    {
+        if(this.readyState == 4){
+
+            alert(this.responseText);
+
+        }
+    }
+
+    // 收集表单数据
+    var name = document.getElementsByName('name')[0].value;
+    var email = document.getElementsByName('email')[0].value;
+
+    // 发送数据
+    // alert('username=' + name + '&email=' + email);
+    // 作为form表单提交内容个必须加上这句
+    xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+    xhr.send('username=' + name + '&email=' + email);
+
+    return false;
+
+//     // 打开链接
+//     xhr.open('GET', './test5.php', true);
+
+//     // 发送请求
+//     xhr.send(null);
+
+//     // 绑定状态变化的回调函数
+//     xhr.onreadystatechange = funxtion()
+//     {
+//         if(this.readyState == 4 && this.status == 200){
+
+//             var str = '';
+
+//             str = '状态码是' + this.status + '<br/>';
+
+//             str = str + '状态文字是' + this.statusText + '<br/>';
+
+//             str = str + '返回类型是' + this.getresponseheader('Content-Type') + '<br/>';
+
+//             str = str + '返回的主题长度是' + this.getRresponseHeader('Content-Length') + '<br/>';
+
+//             str = str + '返回的主题内容是' + this.responseText + '<br/>';
+
+//             str = str + '所有头信息' + this.getAllResponseHeaders();
+
+//             document.getElementById('text').innerHTML = str;
+// // alert(str);
+//         }
+//     }
+
+}
+
+</script>
+</head>
+<body>
+
+<center>
+    
+    <h1>ajax注册</h1>
+
+ajax post
+
+    获取头信息
+
+    getresponseheader
+
+    getallresponseheaders
+
+    <div id = 'text'></div>
+
+    <form action = './test5.php' target = 'regzone' method = 'post' onsubmit = 'return ajaxreg();'>
+
+        <input type = 'text' name = 'name'/>
+
+        <input type = 'text' name = 'email' />
+
+        <input type = 'submit' value = '注册 ' />
+
+    </form>
+
+    <iframe width = '500' height = '500' framenorder = '0' name = 'regzone'></iframe>
+
+</center>
+
+</body>
+</html>

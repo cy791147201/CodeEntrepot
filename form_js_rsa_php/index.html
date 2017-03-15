@@ -1,0 +1,65 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+<title>js加密form表单rsa后台php处理解密</title>
+</head>
+
+<script language = 'JavaScript' type = 'text/javascript' src = './js/jsbn.js'></script>
+<script language = 'JavaScript' type = 'text/javascript' src = './js/prng4.js'></script>
+<script language = 'JavaScript' type = 'text/javascript' src = './js/rng.js'></script>
+<script language = 'JavaScript' type = 'text/javascript' src = './js/rsa.js'></script>
+
+<script language = 'JavaScript'> 
+function DoEncrypt() 
+{
+    // 加密前时间戳
+    var Before = new Date();
+    // 新建RSA对象
+    var rsa = new RSAKey();  
+    // 私钥的modulus
+    var Modulus = "C976E12628232F36756A9046EF4366FF74B76DB1209EEE5BBAD322FC68C28E47491354E449A60102140B46726813EFA81D541E5DC636CBDDE7AC7B144D4D25B2AC8FC48C148BE93F46464E23318F17A6A1170797D767FB896109DB602EDD1C42496B1E5BBE268702F424281A192741DBEFAEE5730810E5A65C41EFDD4A7941B3";  
+    // 私钥的Exponent
+    var Exponent = "10001";  
+    // 根据Modulus Exponent 生成公钥
+    rsa.setPublic(Modulus, Exponent); 
+    // 使用公钥加密 
+    var data = document.form.PlainText.value;
+    // 加密数据
+    var res = rsa.encrypt(data);
+    // 加密后时间戳
+    var After = new Date();
+    // 填写加密后的数据信息
+    document.form.CipherText.value = res;
+    // 加密所耗时间
+    document.form.ExpendTime.value = (After - Before) + 'ms';
+
+    return true;
+}
+</script>
+<style type = 'text/css'>
+    .input{
+        width: 400px;
+    }
+    textarea{
+        width: 400px;
+        height: 200px;
+    }
+</style>
+<body>
+    <center>
+        <form name = 'form' action = 'DoData.php' method = 'post' onsubmit = 'return DoEncrypt();'>
+            原字符串(string):<br/>
+            <input name = 'PlainText' type = 'text' placeholder = '输入要加密的字符串' class = 'input' />
+            <br/>
+            加密后字符串(hex):<br/>
+            <textarea name = 'CipherText'></textarea>
+            <br/>
+            耗时:<br/>
+            <input name = 'ExpendTime' type = 'text' class = 'input' />
+            <br/>
+            <input type = 'button' value = '显示加密后数据' onclick = 'DoEncrypt();' />
+            <input type = 'submit' value = '提交' />
+        </form>
+    </center>
+</body>
+</html>

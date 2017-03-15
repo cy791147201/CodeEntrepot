@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+<script type="text/javascript">
+function createXHR(){
+	var xhr = null;
+	if(window.XMLHttpRequest){
+		xhr = new XMLHttpRequest();
+	}else if(window.ActiveXObject){
+		xhr = new ActiveXObject('Microsoft.XMLHTTP');
+	}
+	return xhr;
+} // ajax 返回XMl类型
+function test1(){
+	var xhr = createXHR();
+	// alert(xhr);
+	xhr.open('GET','3.php',true);
+	xhr.onreadystatechange = function(){
+		if(this.readyState == 4){
+			// alert(this.responseXML);
+			var xmldom = this.responseXML;
+			var book = xmldom.getElementsByTagName('book')[0];
+			document.getElementById('tit').value = (book.firstChild.firstChild.wholeText);
+			document.getElementById('info').value =(book.lastChild.firstChild.wholeText);
+		}
+	}
+	xhr.send(null);
+}
+// ajax返回text
+function test2(){
+	var xhr = createXHR();
+	// alert(xhr);
+	xhr.open('GET','30.php',true);
+	xhr.onreadystatechange = function(){
+		if(this.readyState == 4){
+			document.getElementById('test').innerHTML =this.responseText;
+		}
+	}
+	xhr.send(null);
+}
+// 返回json
+function test3(){
+	var xhr = createXHR();
+	// alert(xhr);
+	xhr.open('GET','31.php',true);
+	xhr.onreadystatechange = function(){
+		if(this.readyState == 4){
+			var shen = eval("("+this.responseText+")");
+		// alert(shen);
+			document.getElementById('names').value=shen.name;
+		}
+	}
+	xhr.send(null);
+}
+
+// 跨域调用 看十八哥视频jsonp跨域 借用第三方搜索制造自己的搜索
+</script>
+</head>
+<body>
+	<input type="text" id = 'tit'/>
+	<input type="text" id = 'info'/>
+	<input type="text" id = 'names'/>
+	<input type="button" value="测试返回xml" onclick="test1();"/>
+	<input type="button" value="测试返回普通文本" onclick="test2();"/>
+	<input type="button" value="测试返回json" onclick="test3();"/>
+	<div id = 'test'>
+		
+	</div>
+</body>
+</html>

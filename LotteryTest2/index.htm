@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html><head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf8">
+<meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0" name="viewport"> 
+<meta content="yes" name="apple-mobile-web-app-capable"> 
+<meta content="yes" name="apple-touch-fullscreen">
+<meta content="black" name="apple-mobile-web-app-status-bar-style">
+<meta content="320" name="MobileOptimized">
+<meta content="telephone=no" name="format-detection">
+<link rel="stylesheet" href="images_files/qdwap.css">
+<link href="http://www.joken.cn/favicon.ico" type="image/x-icon" rel="icon">
+<title>冬季爆款 厂家直销 绵羊皮皮毛衣</title>
+<meta name="keywords" content="绵羊皮皮毛衣【开箱验货】">
+<meta name="description" content="绵羊皮皮毛衣【开箱验货】">
+<meta name="author" content="绵羊皮皮毛衣【开箱验货】">
+<script src="images_files/jquery-1.js"></script>
+<script src="images_files/time.js"></script>
+<script src="images_files/demo.js"></script>
+<script src="images_files/notorder.js"></script>
+<script src = 'tanchuang/tanchuang.js'></script>
+<!-- 引进填写手机号区域css -->
+<link type = 'text/css' rel = 'stylesheet' href = 'tanchuang/PopUp.css' />
+<!-- 转盘抽奖css -->
+<link href="zhuanpan/style.css" rel="stylesheet" type="text/css">
+<!-- 转盘抽奖js -->
+<script type="text/javascript" src="zhuanpan/awardRotate.js"></script>
+<script type="text/javascript" src="zhuanpan/choujiang.js"></script>
+<style>
+body{background: #856D35;}
+#page{max-width:620px; }
+.foot ul{ width:100%; background:#fff; padding:0;}
+.foot ul li{ width:33%; float:left; margin:0; border-right:1px solid #ddd; text-align:center;}
+.foot ul li img{ width:45%;}
+</style>
+</head>
+ 
+<body>
+<div id="page">
+<!-- 下单就送填写手机号from区域 -->
+        <div class = 'popup' id = 'popup'>
+            <div class = 'top_nav' id = 'top_nav'>
+                <!-- <span>欢迎选购</span> -->
+                <a class = 'guanbi' onclick="closes()"></a>
+            </div>
+            
+            <div class = 'right'>
+                <span>填写信息领取海量赠品</span>
+                <form method = 'post'  action = 'http://lyj1209a.shi-teng.cn/kefuchoujiang/index.php/Home/ShenInsert/ShenInsert' onsubmit = 'return CheckTel();' > 
+                    <strong class = 'strong'>手机号&nbsp;<strong style = 'color:red;'>*</strong>&nbsp;</strong>
+                    <input type = 'text' name = 'phone' id = 'phone' placeholder = '请填写真实手机号' autocomplete = 'off' class = 'input_mm' />
+                    <input type = 'hidden' name = 'prize' id = 'prize' value = '' />
+                    <strong class = 'strong'>姓名&nbsp;<strong style = 'color:red;'>*</strong>&nbsp;</strong>
+                    <input type = 'text' name = 'user' placeholder = '领奖人或收货人姓名' class = 'input_mm' />
+                    <strong class = 'strong'>地址&nbsp;<strong style = 'color:red;'>*</strong>&nbsp;</strong>
+                    <input type = 'text' name = 'address' placeholder = '收货地址' class = 'input_mm' />
+                    <input type = 'submit' class = 'button' title = 'Sign In' value = '提交信息' />
+                    <span style = 'margin-top: 5px;'><strong style = 'color: red;'>*</strong>&nbsp;&nbsp;带星号为必填项</span>
+                </form> 
+            </div>
+        </div>
+
+        <!-- 转盘 body背景色 -->
+        <div style = 'display: none;' id = 'zhuanpan'>
+            <div style = 'width: 100%; height: 40px;'>
+                <button onclick="removeElement()" class = 'close' style = 'background-color: #FD5A31; border-radius: 3px;'><span style = 'color: white; font-size: 1.5rem;'>X&nbsp;关闭</span></button>
+            </div>
+        <!-- <div id = 'zhuanpan'> -->
+            <!-- 奖品区域 -->
+            <img src = 'zhuanpan/1.png' id = 'shan-img' style = 'display:none;' />
+            <!-- 谢谢参与区域 -->
+            <img src = 'zhuanpan/2.png' id = 'sorry-img' style = 'display:none;' />
+            <!-- 转盘区域 -->
+            <div class = 'banners'>
+                <!-- 转盘圆边框 -->
+                <!-- <div class = 'turnplate' style = 'background-image:url(zhuanpan/turnplate-bg.png);background-size:100% 100%;'> -->
+                <div class = 'turnplate' style = 'background-image:url(zhuanpan/turnplate-bg.png);background-size:100% 100%;'>
+                    <!-- 转盘主体 -->
+                    <canvas class = 'item' id = 'wheelcanvas' width = '422px' height = '422px'></canvas>
+                    <!-- 转盘中间指针区域 -->
+                    <img class = 'pointer' src = 'zhuanpan/turnplate-pointer.png'/>
+                </div>
+            </div>
+
+            <!-- 引入百度js文件 不隐藏区域会显示百度cnzz图标 -->
+            <div style = 'display:none'>
+            <script type = 'text/javascript'>
+            var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+            document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F6f798e51a1cd93937ee8293eece39b1a' type='text/javascript'%3E%3C/script%3E"));
+            </script>
+            <script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_5718743'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s9.cnzz.com/stat.php%3Fid%3D5718743%26show%3Dpic2' type='text/javascript'%3E%3C/script%3E"));</script>
+            </div>
+        </div>
+   <header>
+    <h1>楠溪王官方旗舰店</h1>
+   </header>
+  
+<div class="banner">
+<p><img src="https://img.alicdn.com/imgextra/i2/2135463462/TB2FD45XW8lpuFjy0FpXXaGrpXa_!!2135463462.jpg" alt="a-08"></p>
+</div>
+   <section class="buy">
+    <div class="row1"></div><article class="des"></article>
+    <a class="btn" href="#buy">立即购买</a> </section><div class="btn">
+  <article class="showcontent">
+    <h2>抢购描述</h2>
+<div class="btn">
+	<p></p><p><span style="color: rgb(31, 73, 125); text-decoration: underline;"><strong>厂家直销: 买皮衣买一送二，送保暖手套,和高档钱包一个!! 承诺全国包邮，货到付款，支持十五天无理由退换货！</strong></span><span style="color: rgb(255, 0, 0);"><strong>发现非正品，商家承担来回运费，真正放心购物！</strong></span></p>
+	<h1 label="标题居中" style="font-size: 32px; font-weight: bold; border-bottom-color: rgb(204, 204, 204); border-bottom-width: 2px; border-bottom-style: solid; padding: 0px 4px 0px 0px; text-align: center; margin: 10px 0px 20px;"><span style="background-color: rgb(255, 0, 0);">免费试穿！！！</span></h1>
+<p><img></p>
+<p><img src="https://img.alicdn.com/imgextra/i1/2135463462/TB2NjHDadXnpuFjSZFoXXXLcpXa_!!2135463462.jpg"></p>
+<p><img src="https://img.alicdn.com/imgextra/i4/2135463462/TB2M5HCaipnpuFjSZFkXXc4ZpXa_!!2135463462.jpg"></p>
+<p><img src="https://img.alicdn.com/imgextra/i1/2135463462/TB22psRXY8kpuFjy0FcXXaUhpXa_!!2135463462.jpg"></p>
+<p><img src="https://img.alicdn.com/imgextra/i2/2135463462/TB2A56DabJmpuFjSZFBXXXaZXXa_!!2135463462.jpg"></p>
+<p><img src="images_files/88859.jpg"></p>
+<p><img src="https://img.alicdn.com/imgextra/i4/2135463462/TB2l28Ic71M.eBjSZPiXXawfpXa_!!2135463462.jpg"></p>
+<p><img src="https://img.alicdn.com/imgextra/i1/2135463462/TB2SRJRc3CN.eBjSZFoXXXj0FXa_!!2135463462.gif"></p>
+<p><img src="https://img.alicdn.com/imgextra/i4/2135463462/TB2bxwNccaJ.eBjy0FbXXcwrFXa_!!2135463462.jpg"></p>
+<p><img src="https://img.alicdn.com/imgextra/i4/2135463462/TB2XnpOc9iK.eBjSZFyXXaS4pXa_!!2135463462.gif"></p>
+<p><img src="https://img.alicdn.com/imgextra/i2/2135463462/TB2pO6WXr0kpuFjy0FjXXcBbVXa_!!2135463462.jpg"></p>
+<p><img src="https://img.alicdn.com/imgextra/i2/2135463462/TB2mOkScg1I.eBjSszeXXc2hpXa_!!2135463462.jpg"></p>
+<h2>产品简介</h2>
+    <p><img src="https://img.alicdn.com/imgextra/i3/898568036/TB2.6wkailnpuFjSZFgXXbi7FXa_!!898568036.jpg" ><p>
+	<p><img src="https://img.alicdn.com/imgextra/i4/2135463462/TB2M.h4XYplpuFjSspiXXcdfFXa_!!2135463462.jpg" ></p>
+    <p><img src="https://img.alicdn.com/imgextra/i4/2135463462/TB2CEZVcb1J.eBjy1zeXXX9kVXa_!!2135463462.jpg" ></p>
+    <p><img src="https://img.alicdn.com/imgextra/i1/2135463462/TB2atUZcb1J.eBjSspnXXbUeXXa_!!2135463462.jpg" ></p>
+    <p><img src="https://img.alicdn.com/imgextra/i1/2135463462/TB2.i7RcheJ.eBjy1zdXXXfmFXa_!!2135463462.jpg" ></p>
+    <p><img src="https://img.alicdn.com/imgextra/i3/2135463462/TB27RtBc.5O.eBjSZFxXXaaJFXa_!!2135463462.jpg" ></p>
+    <p><img src="https://img.alicdn.com/imgextra/i1/2135463462/TB2J4l2XYXlpuFjSszfXXcSGXXa_!!2135463462.jpg" ></p>
+   <p><img src="https://img.alicdn.com/imgextra/i4/2135463462/TB2CzQlXZtnpuFjSZFvXXbcTpXa_!!2135463462.jpg" ></p>
+    </p><img src="https://img.alicdn.com/imgextra/i3/2135463462/TB2xz7nX4lmpuFjSZPfXXc9iXXa_!!2135463462.gif" >
+    <p>
+    <p><img src="https://img.alicdn.com/imgextra/i1/2135463462/TB24q43X4XkpuFjy0FiXXbUfFXa_!!2135463462.gif" ></p>
+    <p>
+    <p><img src="https://img.alicdn.com/imgextra/i3/2135463462/TB2_UEnX90mpuFjSZPiXXbssVXa_!!2135463462.jpg" ></p>
+    <p><img src="https://img.alicdn.com/imgextra/i1/2135463462/TB2Fh.oX5BnpuFjSZFzXXaSrpXa_!!2135463462.jpg" ></p>
+    <p><img src="https://img.alicdn.com/imgextra/i4/2135463462/TB2hVAmX4xmpuFjSZFNXXXrRXXa_!!2135463462.jpg" ></p>
+    <p><img src="https://img.alicdn.com/imgextra/i4/2135463462/TB2iUAnX98mpuFjSZFMXXaxpVXa_!!2135463462.jpg" ></p>
+    <p><img src="https://img.alicdn.com/imgextra/i2/2135463462/TB285IjX0BopuFjSZPcXXc9EpXa_!!2135463462.jpg" ></p>
+    <p><img src="https://img.alicdn.com/imgextra/i3/2135463462/TB2RHwmX.hnpuFjSZFpXXcpuXXa_!!2135463462.jpg" ></p>
+    <p><img src="https://img.alicdn.com/imgextra/i1/2135463462/TB2.Wh7X3xlpuFjy0FoXXa.lXXa_!!2135463462.jpg" ></p>
+    <p><img src="https://img.alicdn.com/imgextra/i2/2135463462/TB2wDF2X9hlpuFjSspkXXa1ApXa_!!2135463462.jpg" ></p>
+    <p><img src="https://img.alicdn.com/imgextra/i2/2135463462/TB2JaUlX.lnpuFjSZFjXXXTaVXa_!!2135463462.jpg" ></p>
+    <p><img src="https://img.alicdn.com/imgextra/i4/2135463462/TB2cigoX5BnpuFjSZFzXXaSrpXa_!!2135463462.jpg"></p>
+    <p><img src="https://img.alicdn.com/imgextra/i3/2135463462/TB28346XY8kpuFjy0FcXXaUhpXa_!!2135463462.jpg" ></p>    
+    <p><img src="https://img.alicdn.com/imgextra/i4/2135463462/TB2kkN2X80lpuFjSszdXXcdxFXa_!!2135463462.jpg" ></p>
+    <p><img src="https://img.alicdn.com/imgextra/i3/2135463462/TB2r0Iic2TJXuFjSspeXXapipXa_!!2135463462.jpg" ></p>
+    <p><img src="https://img.alicdn.com/imgextra/i4/2135463462/TB26mWfdr1J.eBjSszcXXbFzVXa_!!2135463462.jpg" ></p>
+    
+    
+   
+    <p><img src="https://img.alicdn.com/imgextra/i3/2135463462/TB2kt4QXohnpuFjSZFEXXX0PFXa_!!2135463462.jpg" ></p>
+     <p><img src="https://img.alicdn.com/imgextra/i4/2135463462/TB2_3GOXmBjpuFjSsplXXa5MVXa_!!2135463462.jpg" ></p>
+      <p><img src="https://img.alicdn.com/imgextra/i4/2135463462/TB2euaOXgJlpuFjSspjXXcT.pXa_!!2135463462.jpg" ></p>
+    <p><img src="https://img.alicdn.com/imgextra/i4/2135463462/TB290qOXm0jpuFjy0FlXXc0bpXa_!!2135463462.jpg" > </p>
+        <p><img src="https://img.alicdn.com/imgextra/i4/2135463462/TB2HQqOXbXlpuFjy1zbXXb_qpXa_!!2135463462.jpg" >
+      </p>
+    <p><img src="https://img.alicdn.com/imgextra/i1/2135463462/TB2QAK7XmVmpuFjSZFFXXcZApXa_!!2135463462.jpg" ></p>
+            <p><img src="https://img.alicdn.com/imgextra/i3/2135463462/TB2pX19XbBmpuFjSZFuXXaG_XXa_!!2135463462.jpg" alt="d-08">
+      </p>
+                  <p><img src="https://img.alicdn.com/imgextra/i3/2135463462/TB2KEu8XblmpuFjSZFlXXbdQXXa_!!2135463462.jpg" alt="d-08">
+      </p>
+                  <p><img src="https://img.alicdn.com/imgextra/i1/2135463462/TB28cm7Xd0opuFjSZFxXXaDNVXa_!!2135463462.jpg" alt="d-08">
+      </p>
+                  <p><img src="https://img.alicdn.com/imgextra/i2/2135463462/TB2uECudCuJ.eBjy0FgXXXBBXXa_!!2135463462.jpg" >
+      </p>
+                  <p><img src="https://img.alicdn.com/imgextra/i4/2135463462/TB2XQWudraI.eBjSszdXXaB6XXa_!!2135463462.jpg" >
+      </p>
+                  <p><img src="https://img.alicdn.com/imgextra/i2/2135463462/TB2KM.ydCKI.eBjy1zcXXXIOpXa_!!2135463462.jpg" >
+      </p>
+                  <p><img src="https://img.alicdn.com/imgextra/i1/2135463462/TB2NjHDadXnpuFjSZFoXXXLcpXa_!!2135463462.jpg" >
+                 
+      </p>
+      <p><img src="https://img.alicdn.com/imgextra/i4/2135463462/TB2M5HCaipnpuFjSZFkXXc4ZpXa_!!2135463462.jpg" >
+      </p>
+      <p><img src="https://img.alicdn.com/imgextra/i1/2135463462/TB22psRXY8kpuFjy0FcXXaUhpXa_!!2135463462.jpg" >
+      </p>
+      <p><img src="https://img.alicdn.com/imgextra/i2/2135463462/TB2A56DabJmpuFjSZFBXXXaZXXa_!!2135463462.jpg" ></p>
+	  <p><img src="https://img.alicdn.com/imgextra/i4/898568036/TB2hqzlaxXkpuFjy0FiXXbUfFXa_!!898568036.jpg"></p>
+      <p><img src="https://img.alicdn.com/imgextra/i1/2135463462/TB2dUSmdCOI.eBjy1zkXXadxFXa_!!2135463462.gif" >
+      </p>
+     
+<h2>客户服务</h2>
+<div class="btn">
+<p><span style="font: 16px/24px Helvetica, Arial, san-serif; color: rgb(0, 0, 0); text-transform: none; text-indent: 0px; letter-spacing: normal; word-spacing: 0px; float: none; display: inline !important; white-space: normal; font-size-adjust: none; font-stretch: normal; background-color: rgb(249, 249, 249); -webkit-text-stroke-width: 0px;"></span></p><p><span style="color: rgb(255, 0, 0);">
+1、由于抢购太过火爆，订单量巨大，请直接购买！
+<br>2、电话爆线，接通较慢，请直接下单！<br>
+3、正品保障，支持专业人士验货！
+<br>4、如有问题，直接拨打下方热线咨询电话！<br></span></span></p>
+
+
+
+
+<a class="btn" href="tel:18519797905">热线咨询：18519797905</a>
+<a class="btn" href="tel:15011319030">热线咨询：15011319030</a>
+<a class="btn" href="sms:18500650283">短信订购：18500650283</a> 
+
+
+</div>
+
+    </article>  
+
+   
+<article>  
+</div>
+
+</article>
+     
+     <article id="buy">  
+
+<h2>订单信息</h2>
+
+<script src="images_files/order.js"></script>
+
+
+
+  </article>  
+
+<div class="foot">
+	<ul>
+    	<li><img src="images_files/TB2jiwpqVXXXXa1XXXXXXXXXXXX_254091811.png"></li>
+        <li><img src="images_files/TB2RXsvqVXXXXXSXXXXXXXXXXXX_254091811.png"></li>
+        <li style="border:0;"><img src="images_files/TB2bdsxqVXXXXXSXXXXXXXXXXXX_254091811.png"></li>
+        <div style="clear:both;"></div>
+       <p style="text-align:center; line-height:240%; font-size:12px; color:#999;"></p>
+    </ul>
+        <p></p><center>
+</center>	
+	
+</div>
+</div><!--/page-->
+ 
+<nav>
+  <div style = 'width: 180px; float: right;'>
+                <button onclick="removeElement()" style = 'background: transparent; border: 0px; outline：none; filter:chroma(color=#000000); float: left;'><img src = 'zhuanpan/lingjiang2.gif' /></button>
+                <div style = 'width: 100%; height: 60px; background-color: #ff8000; text-align: center; margin-top: 42px;'>
+                    <button onclick="removeElement()" style = 'background: transparent; border: 0px; outline：none; filter:chroma(color=#000000); line-height: 60px;'><span style = 'color: white;'>点击领奖</span></button>
+                </div>
+            </div>
+  <ul class="Transverse">
+    <li><a href="#buy"><strong>立即购买</strong></a></li> 
+	  <li><a href="tel:18519797905" style = 'background-color: white; color: black;'><strong>电话咨询</strong></a></li>  
+  	<li><a href="sms:18500650283" style = 'background-color: white; color: black;'><strong>短信订购</strong></a></li>
+    <li><a href="sms:18500650283" style = 'background-color: white; color: black;' onclick = 'weixin()'><strong>关注威信公众号</strong></a></li>
+  </ul>
+</nav>
+
+
+
+
+
+
+</div>
+
+
+<div style="display:none;">  <script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?49711bf1eedaf67d0967d3cb0852cad5";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>   
+
+</div>
+        
+
+
+
+
+
+
+
+
+
+
+
+</body></html>

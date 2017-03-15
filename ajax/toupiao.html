@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+<script type="text/javascript">
+
+// 创建xhr
+	function createXHR(){
+		var xhr = null;
+		if(window.XMLHttpRequest){
+			xhr = new XMLHttpRequest();
+		}else if(window.ActiveXObject){
+			xhr = new ActiveXObject('Microsoft.XMlHTTP');
+		}
+		return xhr;
+	}
+function vate(){
+	// 1制造xhr
+	var xhr = createXHR();
+	// 2打开链接
+	// 同步,同步比较符合人类思维.
+	xhr.open('GET','./toupiao.php',true);
+	// 3发请求
+	xhr.send(null);
+	// alert(xhr.responseText);
+	// 绑定状态变化的回调函数
+	// xhr.onreadystatechange = function(){
+	// 	if(this.readyState == 4){
+	// 		// var one = document.getElementById('ss');
+	// 		// one.innerHTML = one.innerHTML+'状态现在变成'+this.readyState+'<br/>';
+	// 		// alert('请求完成');
+	// 		if(this.responseText == '1'){
+	// 			// alert('q');
+	// 		    document.getElementById('ss').innerHTML = 'cheng';
+	// 		}else if(this.responseText == '0'){
+	// 		    document.getElementById('ss').innerHTML = '失败';
+	// 		    // alert('s');
+	// 		}else{
+	// 			document.getElementById('ss').innerHTML = this.responseText;
+	// 		}
+	// 	}
+	// }
+
+	// 测试返回值
+	xhr.onreadystatechange = function(){
+		if(this.readyState == 4 && this.status == 200){
+			var str = '';
+			str = '状态码是' + this.status+'<br/>';
+			str = str +'状态文字是'+this.statusText+'<br/>';
+			str = str + '返回类型是'+this.getResponseHeader('Content-type')+'<br/>';
+			str = str+'返回的主题长度'+this.getResponseHeader('Content-length')+'<br/>';
+			str = str+'返回的主题内容'+this.responseText+'<br/>';
+			str = str+'所有头信息'+this.getAllResponseHeaders();
+			document.getElementById('ss').innerHTML =str;
+		}
+	}
+    // xhr.about();暂停
+	alert('hello');
+
+}
+</script>
+</head>
+<body>
+	<div>
+		<div style="width:100px;height:100px;background:pink;"></div>
+		<input type="button" name="" value = 'tou' onclick = 'vate();'/>
+	</div>
+	<div id = 'ss'>
+		s
+	</div>
+</body>
+</html>

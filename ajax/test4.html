@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>现代化ajax投票</title>
+<script type="text/javascript">
+    
+function creacteXHR(){
+
+    var xhr = null;
+
+    if(window.XMLHttpRequest){
+
+        xhr = new XMLHttpRequest();
+
+    }else if(window.ActiveXObject){
+
+        xhr = new ActiveXObject('Microsoft.XMLHtpp');
+
+    }
+
+    return xhr;
+
+}
+
+</script>
+</head>
+<body>
+
+    <div>
+        
+        <a href="test4.php">投票方法1</a>
+
+        <input type="botton" value = '投票方法2' onclick= 'vote()'/>
+
+    </div>
+
+</body>
+</html>

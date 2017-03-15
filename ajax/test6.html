@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+<script type="text/javascript">
+    
+function createXHR()
+{
+
+    var xhr = null;
+
+    if(window.XMLHttpRequest){
+
+        xhr = new XMLHttpRequest();
+
+    }else if(window.ActiveXObject){
+
+        xhr = new ActiveXObject('Microsoft.XMLHTTP');
+
+    }
+
+    return xhr;
+
+}
+
+function test1()
+{
+
+    var xhr = createXHR();
+
+    xhr.open('GET', './test6.php', true);
+
+    xhr.onreadystatechange = function()
+    {
+        if(this.readyState == 4){
+
+            // alert(this.responseText);
+            
+            var XmlDom = this.responseXML;
+
+            var chs = XmlDom.getElementsByTagName('book')[0];
+
+            document.getElementById('atit').value = chs.firstChild.firstChild.wholeText;
+
+            document.getElementById('aintro').value = chs.lastChild.firstChild.wholeText;
+
+        }
+    }
+
+    xhr.send(null);
+
+}
+
+function test2()
+{
+    var xhr = createXHR();
+
+    xhr.open('GET', './test7.php', true);
+
+    xhr.onreadystatechange = function()
+    {
+        if(this.readyState == 4){
+
+            document.getElementById('info').innerHTML = this.responseText;
+
+        }
+    }
+
+    xhr.send(null);
+
+}
+
+</script>
+</head>
+<body>
+
+<center>
+        
+<h1>ajax返回xml</h1>
+
+<input type = 'text' id = 'atit' />
+
+<input type = 'text' id = 'aintro' />
+
+<input type = 'button' value = '测试xml' onclick = 'test1();'> 
+
+<input type = 'button' value = '测试返回文档' onclick = 'test2();'> 
+
+<input type = 'button' value = '测试jsonp' onclick = 'test3();'> 
+
+<div id = 'info'>
+    
+
+</div>
+
+</center>
+
+</body>
+</html>

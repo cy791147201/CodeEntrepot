@@ -1,0 +1,27 @@
+﻿/* 大转盘样式 */
+.banners{display:block;width:95%;margin-left:auto;margin-right:auto;margin-bottom: 20px;}
+.banners .turnplate{display:block;width:100%;position:relative;}
+.banners .turnplate canvas.item{width:100%;}
+.banners .turnplate img.pointer{position:absolute;width:31.5%;height:42.5%;left:34.6%;top:23%;}
+#zhuanpan{
+    width: 100%;
+    max-width: 620px;
+    background: transparent;
+    overflow-y:hidden;
+    overflow-x: hidden;
+    /*position: fixed;*/
+    margin-top: 1rem;
+    /*margin-left:100px;*/
+    position: fixed;
+    bottom: 6.7rem;
+    margin: 0 auto;
+}
+
+.close{
+    width: 30%;
+    min-width: 50px;
+    height: 100%;
+    border: 0px;
+    background: transparent;
+    float: right;
+}

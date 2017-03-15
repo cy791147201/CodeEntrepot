@@ -1,0 +1,34 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+  <meta charset="utf-8">
+  <title>iframe提交表单</title>
+</head>
+<body>
+  <iframe name="myiframe" style="display:none;" onload="iframeLoad(this);"></iframe>
+  <form action="0.php" target="myiframe" method="POST">
+   用户名:<input type="text" name="username" /><br/>
+   密 码:<input type="password" name="userpwd" /><br/>
+    
+   <input type="submit" value="登录" />
+  </form>
+   
+  <script type="text/javascript">
+   function iframeLoad(iframe){
+    var doc = iframe.contentWindow.document;
+    var html = doc.body.innerHTML;
+    if(html != ''){
+     //将获取到的json数据转为json对象
+     var obj = eval("("+html+")");
+     //判断返回的状态
+     if(obj.status < 1){
+      alert(obj.msg);
+     }else{
+      alert(obj.msg);
+      window.location.href="http://www.baidu.com";
+     }
+    }
+   }
+  </script>
+</body>
+</html>

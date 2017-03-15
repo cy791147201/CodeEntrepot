@@ -1,0 +1,62 @@
+
+.father{
+    width: 900px;
+    margin: 0 auto;
+    margin-top: 200px;
+}
+
+.left{
+    background: url(../../image/login.jpg) no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+    width: 450px;
+    height: 379px;
+    float: left;
+}
+
+.right{
+    width: 450px;
+    height: 379px;
+    float: left;
+}
+
+form{
+    width: 450px;
+    height: 300px;
+    margin-top: 79px;
+}
+
+.span{
+    width: 100px;
+    height: 130px;
+    float: left;
+}
+
+.span span{
+    display: block;
+    width: 95px;
+    height: 55px;
+    line-height: 55px;
+    margin-top: 10px;
+    text-indent: 15px;
+}
+
+.inputs{
+    width: 350px;
+    height: 130px;
+    float: left;
+}
+
+.inputs input{
+    width: 340px;
+    height: 50px;
+    margin-top: 10px;
+    text-indent: 20px;
+}
+
+.sub{
+    width: 340px;
+    height: 50px;
+    border: 0px;
+    margin-left: 100px;
+    margin-top: 20px;
+    background: #E40FC4;
+}

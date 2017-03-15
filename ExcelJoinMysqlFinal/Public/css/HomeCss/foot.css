@@ -1,0 +1,10 @@
+.FootInfo{
+	width: 90%;
+	height: 100px;
+	line-height: 100px;
+	/*background: green;*/
+	margin: 0 auto;
+	margin-top: 10px;
+	text-align: center;
+	border-top: 1px solid #D3EEEE;
+}

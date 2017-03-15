@@ -1,0 +1,160 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>excel信息插入mysql数据库</title>
+    <meta http-equiv = 'Content-Type' content = 'text/html; charset = utf-8' />
+    <meta name = 'keywords' content = 'excel信息插入mysql数据库' />
+    <link rel = 'stylesheet' type = 'text/css' href = '../css/index.css' />
+</head>
+
+<body>
+
+    <div class = 'father'>
+
+        <div class = 'admin'>
+            
+            <a href = '../c/admin.php?act=show'><span>管理员操作</span></a>
+            <a href = '../c/loout.php'><span>退出</span></a>
+
+        </div>
+
+        <div class = 'form'>
+            
+            <form action = '../c/upload.php?act=UpExcel' method = 'post' enctype = 'multipart/form-data' >
+
+                <h2>注意信息</h2>
+
+                <span>
+                    (&nbsp;*&nbsp;注意&nbsp;1&nbsp;:&nbsp;excel&nbsp;文件名请不要使用中文字符&nbsp;*&nbsp;)
+                </span>
+
+                <br/>
+
+                <span>
+                    (&nbsp;*&nbsp;注意&nbsp;2&nbsp;:&nbsp;excel&nbsp;文件头信息即首行字段值不会插入&nbsp;*&nbsp;)
+                </span>
+
+                <br/>
+
+                <span>
+                    (&nbsp;*&nbsp;注意&nbsp;3&nbsp;:&nbsp;excel&nbsp;文件最后一行总信息不会插入&nbsp;*&nbsp;)
+                </span>
+
+                <br/>
+
+                <span>
+                    (&nbsp;*&nbsp;注意&nbsp;4&nbsp;:&nbsp;excel&nbsp;文件报保存格式为xlsx&nbsp;*&nbsp;)
+                </span>
+
+
+                <h2>
+                    excel插入mysql数据库
+                </h2>
+
+                <span>请选择文件：</span>
+
+                <input type = 'file' name = 'up' class = 'up' />
+          
+                <input type = 'submit' value = '添加订单信息excel' class = 'sub' />
+
+            </form> 
+
+        </div>
+
+        <div class = 'form'>
+
+            <form action = '../c/searchs.php' method = 'post'>
+
+                <h2>
+                    查询买家订单信息
+                </h2>
+                
+                <span>
+                    (&nbsp;*&nbsp;只需输入一个输入框&nbsp;*&nbsp;)
+                </span>
+
+                <br/>
+
+                <input type = 'text' name = 'name' placeholder = '&nbsp;&nbsp;输入买家姓名'  class = 'text'/>
+
+                <input type = 'submit' value = '买家姓名查询信息' class = 'sub'/>
+                
+            </form>
+
+            <form action = '../c/select.php' method = 'post' >
+                
+                <input type = 'text' name = 'express' placeholder = '&nbsp;&nbsp;输入买家物流订单号'  class = 'text'/>
+
+                <input type = 'submit' value = '物流订单号查询信息' class = 'sub'/><br/>
+
+                <input type = 'text' name = 'indent' placeholder = '&nbsp;&nbsp;输入买家面单订单号'  class = 'text'/>
+
+                <input type = 'submit' value = '面单订单号查询信息' class = 'sub'/><br/>
+
+                <input type = 'text' name = 'tel' placeholder = '&nbsp;&nbsp;输入买家手机号'  class = 'text'/>
+
+                <input type = 'submit' value = '手机号查询信息' class = 'sub'/><br/>  
+
+                <input type = 'text' name = 'id' placeholder = '&nbsp;&nbsp;输入excel表单id'  class = 'text'/>
+
+                <input type = 'submit' value = 'excel表单id查询信息   ' class = 'sub'/><br/> 
+
+            </form>
+                
+        </div>
+
+         <div class = 'form'>
+
+            <form action = '../c/upload.php?act=UpNoSend' method = 'post' enctype = 'multipart/form-data' >
+
+                <h2>
+                    筛选发货订单
+                </h2>
+
+                <span>请选择文件：</span>
+
+                <input type = 'file' name = 'up' class = 'up' />
+          
+                <input type = 'submit' value = '添加不派送地址excel' class = 'sub' />
+
+            </form> 
+            
+            <form action = '../c/upload.php?act=UpIndent' method = 'post' enctype = 'multipart/form-data' >
+
+                <h2>
+                    excel插入mysql数据库
+                </h2>
+
+                <span>请选择文件：</span>
+
+                <input type = 'file' name = 'up' class = 'up' />
+          
+                <input type = 'submit' value = '添加订单信息excel' class = 'sub' />
+
+            </form> 
+
+            <div class = 'inputs'>
+                
+                <li class = 'input'><a href = '../c/filtrate.php'>筛选上下午重复订单</a></li>
+
+                <li class = 'input'>暂时占位</li>
+
+                <li class = 'input'><a href = '../c/filtrates.php'>筛选重复订单</a></li>
+
+                <li class = 'input'><a href = '../c/export.php?status=3'>导出重复订单</a></li>
+
+                <li class = 'input'><a href = '../c/screen.php'>筛选不货到付款订单</a></li>
+
+                <li class = 'input'><a href = '../c/export.php?status=4'>导出发不了货的订单</a></li>
+
+                <li class = 'input'><a href = '../c/export.php?status=1'>导出可以发货的订单</a></li>
+
+            </div>
+                
+        </div>
+
+    </div>
+
+</body>
+
+</html>

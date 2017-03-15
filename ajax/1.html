@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>ajax入门</title>
+<script type="text/javascript">
+	// console.log(new XMLHttpRequest());
+	// ie低版本下用以下
+	// console.log(new AcctiveXObject('Microsoft.XMlHTTP'));
+
+
+	function createXHR(){
+		var xhr = null;
+		if(window.XMLHttpRequest){
+			xhr = new XMLHttpRequest();
+		}else if(window.AcctiveXObject){
+			xhr = new AcctiveXObject('Microsoft.XMlHTTP');
+		}
+		return xhr;
+	}
+</script>
+</head>
+<body>
+
+</body>
+</html>

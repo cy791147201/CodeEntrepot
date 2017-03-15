@@ -1,0 +1,125 @@
+    body{
+        background: #DFDAE0;
+    }
+
+    h2, .act{
+        text-align: center;
+    }
+
+    .father{
+        width: 1215px;
+        margin: 0 auto;
+        margin-top: 20px;
+        border: 6px solid #03B895;
+        margin-bottom: 150px;
+        padding: 3px;
+    }
+
+    .father div:hover{
+        background: #89B9B6;
+    }
+
+    .indent div,.buyer div{
+        width: 401px;
+        height: 50px;
+        background: #DFDAE0;
+        float: left;
+        line-height: 50px;
+        text-indent: 10px;
+        border: 1px solid #03B895;
+        margin: 1px;
+    }
+
+    #tit, #tits{
+        width: 1211px;
+        height: 40px;
+        text-align: center;
+        line-height: 40px;
+        font-size: 18px;
+    }
+
+    #tits{
+        background: #93B2AA;
+    }
+
+    #name, #address{
+        width: 1211px;
+    }
+
+    #remarks{
+        width: 1215px;
+        height: 124px;
+        clear: both;
+    }
+
+    #remarks:hover{
+        background: #DFDAE0;
+    }
+
+    #name{
+        height: 100px;
+        line-height: 50px;
+    }
+
+    .remark1, .remark2{
+        height: 120px;
+        line-height: 40px;
+        text-indent: 10px;
+        float: left;
+        border: 1px solid #03B895;
+        margin: 1px;
+    }
+
+    .remark1:hover{
+        background: #DFDAE0;
+    }
+
+    .remark1{
+        width: 603px;
+    }
+
+    .remark2{
+        width: 604px;
+    }
+
+    .UpMore{
+        width: 602px;
+        height: 60px;
+        max-width: 602px;
+        max-height: 60px;
+        border: 0px;
+        margin-left: -10px;
+        margin-top: 0px;
+        text-indent: 10px;
+        line-height: 30px;
+        background: #DFDAE0;
+    }
+
+    .UpMore:hover{
+        background: #99C5D2;
+    }
+
+    .sub1, .sub2{
+        width: 200px;
+        height: 42px;
+        border: 0px;
+        margin-left: 58px;
+        font-size: 20px;
+    }
+
+    .sub1{
+        background: #6A72F6;
+    } 
+
+    .sub2{
+        background: #E753EF;
+    }   
+
+    .end{
+        width: 1212px;
+        height: 50px;
+        line-height: 50px;
+        text-align: center;
+        border: 1px solid #03B895;
+        background: #93B2AA;
+    }

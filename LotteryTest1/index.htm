@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html><head>
+<meta http-equiv = 'Content-Type' content = 'text/html; charset = utf-8'>
+<meta content = 'width = device-width,initial-scale = 1.0,maximum-scale = 1.0,user-scalable = 0' name = 'viewport'> 
+<meta content = 'yes' name = 'apple-mobile-web-app-capable'> 
+<meta content = 'yes' name = 'apple-touch-fullscreen'>
+<meta content = 'black' name = 'apple-mobile-web-app-status-bar-style'>
+<meta content = '320' name = 'MobileOptimized'>
+<meta content = 'telephone = no' name = 'format-detection'>
+<link rel = 'stylesheet' href = 'tanchuang/qdwap.css'>
+<link href = 'http://www.joken.cn/favicon.ico' type = 'image/x-icon' rel = 'icon'>
+<title>冬季爆款 厂家直销 绵羊皮皮毛衣</title>
+<meta name = 'keywords' content = '绵羊皮皮毛衣【开箱验货】'>
+<meta name = 'description' content = '绵羊皮皮毛衣【开箱验货】'>
+<meta name = 'author' content = '绵羊皮皮毛衣【开箱验货】'>
+
+<!-- 引入jquery -->
+<script src = 'tanchuang/jquery.js'></script>
+<!-- 弹窗js -->
+<script src = 'tanchuang/tanchuang.js'></script>
+<!-- 引进填写手机号区域css -->
+<link type = 'text/css' rel = 'stylesheet' href = 'tanchuang/PopUp.css' />
+<!-- 转盘抽奖css -->
+<link href="zhuanpan/style.css" rel="stylesheet" type="text/css">
+<!-- 转盘抽奖js -->
+<script type="text/javascript" src="zhuanpan/awardRotate.js"></script>
+<script type="text/javascript" src="zhuanpan/choujiang.js"></script>
+<style>
+#page{max-width:620px; }
+</style>
+</head>
+<body style = 'background: #856D35;'>
+    <div id = 'page' >
+        <header>
+            <h1>莱佛仕帝旗舰店</h1>
+        </header>
+        测试数据，随便写写
+        测试数据，随便写写
+        测试数据，随便写写
+        测试数据，随便写写
+        测试数据，随便写写
+        测试数据，随便写写
+        测试数据，随便写写
+        测试数据，随便写写
+        测试数据，随便写写
+        测试数据，随便写写
+        <!-- 下单就送填写手机号from区域 -->
+        <div class = 'popup' id = 'popup'>
+            <div class = 'top_nav' id = 'top_nav'>
+                <span>欢迎选购</span>
+                <a class = 'guanbi'></a>
+            </div>
+            
+            <div class = 'right'>
+                <span>填写信息领取海量赠品</span>
+                <!-- <form method = 'post'  action = 'http://www.caifuwanguo.com/index.php/Home/ShenInsert/ShenInsert ' >  -->
+                <form method = 'post'  action = '../kefuchoujiang/index.php/Home/ShenInsert/ShenInsert' onsubmit = 'return CheckTel();' > 
+                    <strong class = 'strong'>手机号&nbsp;<strong style = 'color:red;'>*</strong>&nbsp;</strong>
+                    <input type = 'text' name = 'phone' id = 'phone' placeholder = '请填写真实手机号' autocomplete = 'off' class = 'input_mm' />
+                    <input type = 'hidden' name = 'prize' id = 'prize' value = '' />
+                    <strong class = 'strong'>姓名&nbsp;<strong style = 'color:red;'>*</strong>&nbsp;</strong>
+                    <input type = 'text' name = 'user' placeholder = '领奖人或收货人姓名' class = 'input_mm' />
+                    <strong class = 'strong'>地址&nbsp;<strong style = 'color:red;'>*</strong>&nbsp;</strong>
+                    <input type = 'text' name = 'address' placeholder = '收货地址' class = 'input_mm' />
+                    <input type = 'submit' class = 'button' title = 'Sign In' value = '提交信息' />
+                    <span style = 'margin-top: 5px;'><strong style = 'color: red;'>*</strong>&nbsp;&nbsp;带星号为必填项</span>
+                </form> 
+            </div>
+        </div>
+
+        <!-- 转盘 body背景色 -->
+        <div style = 'display: none;' id = 'zhuanpan'>
+            <div style = 'width: 100%; height: 40px;'>
+                <button onclick="removeElement()" class = 'close' style = 'background-color: #FD5A31; border-radius: 3px;'><span style = 'color: white; font-size: 1.5rem;'>X&nbsp;关闭</span></button>
+            </div>
+        <!-- <div id = 'zhuanpan'> -->
+            <!-- 奖品区域 -->
+            <img src = 'zhuanpan/1.png' id = 'shan-img' style = 'display:none;' />
+            <!-- 谢谢参与区域 -->
+            <img src = 'zhuanpan/2.png' id = 'sorry-img' style = 'display:none;' />
+            <!-- 转盘区域 -->
+            <div class = 'banner'>
+                <!-- 转盘圆边框 -->
+                <!-- <div class = 'turnplate' style = 'background-image:url(zhuanpan/turnplate-bg.png);background-size:100% 100%;'> -->
+                <div class = 'turnplate' style = 'background-image:url(zhuanpan/turnplate-bg.png);background-size:100% 100%;'>
+                    <!-- 转盘主体 -->
+                    <canvas class = 'item' id = 'wheelcanvas' width = '422px' height = '422px'></canvas>
+                    <!-- 转盘中间指针区域 -->
+                    <img class = 'pointer' src = 'zhuanpan/turnplate-pointer.png'/>
+                </div>
+            </div>
+
+            <!-- 引入百度js文件 不隐藏区域会显示百度cnzz图标 -->
+            <div style = 'display:none'>
+            <script type = 'text/javascript'>
+            var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+            document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F6f798e51a1cd93937ee8293eece39b1a' type='text/javascript'%3E%3C/script%3E"));
+            </script>
+            <script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_5718743'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s9.cnzz.com/stat.php%3Fid%3D5718743%26show%3Dpic2' type='text/javascript'%3E%3C/script%3E"));</script>
+            </div>
+        </div>
+
+        <nav>
+            <div style = 'width: 180px; float: right;'>
+                <button onclick="removeElement()" style = 'background: transparent; border: 0px; outline：none; filter:chroma(color=#000000); float: left;'><img src = 'zhuanpan/lingjiang1.gif' /></button>
+                <div style = 'width: 100%; height: 60px; background-color: #ff8000; text-align: center; margin-top: 42px;'>
+                    <button onclick="removeElement()" style = 'background: transparent; border: 0px; outline：none; filter:chroma(color=#000000); line-height: 60px;'><span style = 'color: white;'>点击领奖</span></button>
+                </div>
+            </div>
+            <ul class = 'Transverse'>
+                <li><a href = '#buy'><span style = 'color: white; font-size: 0.8rem;'>在线下单</span></a></li> 
+                <li><a href = 'tel:18519797905'><span style = 'color: white; font-size: 0.8rem;'>电话咨询</span></a></li>  
+                <li><a href = 'sms:18500650283'><span style = 'color: white; font-size: 0.8rem;'>短信订购</span></a></li>
+            </ul>
+        </nav>
+
+        <!-- 限距div -->
+        <div style = 'width: 100%; height: 50px; background-color: #f9f9f9;'></div>
+
+    </div>
+</body>
+</html>
